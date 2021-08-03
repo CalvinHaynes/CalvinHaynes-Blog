@@ -1,6 +1,6 @@
-logoText = "Zzo"
+logoText = "Calvin Haynes's Blog"
 logoType = "short" # long, short
-description = "The Zzo theme for Hugo example site."
+description = "The site of Calvin Haynes's Blog"
 custom_css = []
 custom_js = []
 useFaviconGenerator = true # https://www.favicon-generator.org/

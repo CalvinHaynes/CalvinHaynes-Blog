@@ -1,5 +1,5 @@
 baseURL = "https://calvinhaynes.github.io/"
-title = "Hugo Zzo Theme"
+title = "Calvin Haynes's Blog"
 theme = "zzo"
 
 defaultContentLanguage = "en"
