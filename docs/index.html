@@ -1744,12 +1744,49 @@
             
 <header class="header ">
     
-          
+        <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.13.1/dist/core.js" integrity="sha256-dsvC/UolMujQ/UQ7lVeJ7Q/FV3BSzWO0rc8iz1rqHQo=" crossorigin="anonymous"></script>
+
+
   
+    
+      <div class="site-header__title site-header__title--shadow basicflex-column site-header__align-center" data-ani="true" style="width: 100%; height: 190px; padding: px 50px; font-size: 44px; ;">
+        <div id="typewriter"></div>
+      </div>
+
+      <script>
+        
+        
+
+        var methods = JSON.parse("[{\"typeString\":\"Hi There,I am \\u003cstrong\\u003eCalvin Haynes!\\u003c/strong\\u003e\"},{\"pauseFor\":2500},{\"deleteChars\":11},{\"typeString\":\"\\u003cstrong\\u003eGuitarist!\\u003c/strong\\u003e\"},{\"pauseFor\":2500},{\"deleteChars\":11},{\"typeString\":\"\\u003cstrong\\u003eCS Lover!\\u003c/strong\\u003e\"},{\"pauseFor\":2500},{\"deleteChars\":11},{\"typeString\":\"\\u003cstrong\\u003eundergraduate!\\u003c/strong\\u003e\"},{\"pauseFor\":2500},{\"deleteChars\":13}]");
+        var options = JSON.parse("{\"autoStart\":false,\"loop\":true}");
+        var typeElem = document.getElementById("typewriter");
+        var typewriter = new Typewriter(typeElem, options);
+        
+        for (var i = 0; i < methods.length; i++) {
+          var key = Object.keys(methods[i])[0];
+
+          if (key === "typeString") {
+            typewriter.typeString(methods[i][key]);
+          } else if (key === "pauseFor") {
+            typewriter.pauseFor(methods[i][key]);
+          } else if (key === "deleteAll") {
+            typewriter.deleteAll();
+          } else if (key === "deleteChars") {
+            typewriter.deleteChars(methods[i][key]);
+          } else if (key === "pause") {
+            typewriter.pause();
+          } else if (key === "stop") {
+            typewriter.stop();
+          }
+        }
+
+        typewriter.start();
+      </script>
     
   
     
   
+
 
     
 </header>
