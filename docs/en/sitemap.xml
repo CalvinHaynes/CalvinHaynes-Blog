@@ -80,6 +80,16 @@
   </url><url>
     <loc>https://blog.calvinhaynes.top/en/showcase/</loc>
     <lastmod>2020-01-19T15:43:38+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/showcase/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.calvinhaynes.top/en/showcase/"
+                />
   </url><url>
     <loc>https://blog.calvinhaynes.top/en/categories/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
@@ -273,6 +283,11 @@
   </url><url>
     <loc>https://blog.calvinhaynes.top/en/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/about/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
