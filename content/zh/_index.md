@@ -4,16 +4,16 @@ header:
     methods:
       - typeString: Hi There,I am <strong>Calvin Haynes!</strong>
       - pauseFor: 2500
-      - deleteChars: 11 
-      - typeString: <strong>Guitarist!</strong>
+      - deleteChars: 14 
+      - typeString: <strong>a guitar lover!</strong>
+      - pauseFor: 2500
+      - deleteChars: 15
+      - typeString: <strong>a CS Lover!</strong>
       - pauseFor: 2500
       - deleteChars: 11
-      - typeString: <strong>CS Lover!</strong>
+      - typeString: <strong>a undergraduate!</strong>
       - pauseFor: 2500
-      - deleteChars: 11
-      - typeString: <strong>undergraduate!</strong>
-      - pauseFor: 2500
-      - deleteChars: 13
+      - deleteChars: 16
     options:
       loop: true
       autoStart: false
