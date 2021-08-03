@@ -31,7 +31,7 @@
 <script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
-  
+
 <script>
   "use strict";
 
@@ -123,7 +123,6 @@
       wrapper.appendChild(table);
     }
     
-
 
     
     var footNoteRefs = document.querySelectorAll('.footnote-ref');
@@ -368,7 +367,7 @@
         if (st < 45) {
           return null;
         }
-
+        
         if (navbar.classList.contains('scrolling')) {
           if (!navbar.classList.contains('navbar--hide')) {
             navbar.classList.add('navbar--hide');
@@ -527,7 +526,8 @@
     var rootEleme = document.getElementById('root');
     var selectThemeElem = document.querySelectorAll('.select-theme');
     var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
-    
+
+
     
     var skinDarkCode = JSON.parse("\"dark\"");
     
@@ -570,7 +570,7 @@
         metaThemeColor.setAttribute('content', '#eee8d5');
         metaMsapplicationNavbuttonColor.setAttribute('content', '#eee8d5');
         metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee8d5');
-      }
+      } 
     }
 
     var parseSkinCode = function(themeText) {
@@ -671,20 +671,15 @@
     
     var enableSearch = JSON.parse("true");
     
-    var searchDistance = JSON.parse("100");
-    
-    var searchThreshold = JSON.parse("0.4");
-    
-    var searchContent = JSON.parse("true");
-    
     var enableSearchHighlight = JSON.parse("true");
     
     var searchResultPosition = JSON.parse("\"main\"");
     
     var sectionType = JSON.parse("\"archive\"");
+
     
     var kind = JSON.parse("\"section\"");
-    
+
     var fuse = null;
 
     if (enableSearch) {
@@ -695,18 +690,17 @@
         } else {
           xhr.open('GET', baseurl + langprefix + "/index.json");
         }
-        
+
         xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
         xhr.onload = function () {
           if (xhr.status === 200) {
             fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-              keys: sectionType.includes('publication') ? ['title', 'abstract'] : 
-                searchContent ? ['title', 'description', 'content'] : ['title', 'description'],
+              keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
               includeMatches: enableSearchHighlight,
-              shouldSort: true, 
-              threshold: searchThreshold ? searchThreshold : 0.4, 
-              location: 0, 
-              distance: searchDistance ? searchDistance : 100, 
+              shouldSort: true,
+              threshold: 0.4,
+              location: 0,
+              distance: 100,
               maxPatternLength: 32,
               minMatchCharLength: 1,
               isCaseSensitive: false, 
@@ -730,7 +724,7 @@
       var a = document.createElement('a');
       a.innerHTML = obj.item.title;
       a.setAttribute('class', 'search-result__item--title');
-      a.setAttribute('href', obj.item.uri);
+      a.setAttribute('href', obj.item.permalink);
 
       var descDiv = document.createElement('div');
       descDiv.setAttribute('class', 'search-result__item--desc');
@@ -1441,6 +1435,22 @@
 
     
   
+  <link rel="dns-prefetch" href="https://ga.fuckcloudnative.io">
+  <link href="https://ga.fuckcloudnative.io" rel="preconnect" crossorigin>
+
+  <script>
+  
+  window.ga_tid = "UA-145022311-1";
+  window.ga_url = "https://ga.fuckcloudnative.io";
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/gh/giuem/ga-proxy/packages/ga/dist/ga.min.js" async></script>
+
+
+<script async defer data-website-id="f811ff6e-361e-4bdb-bacc-226cda745586" src="https://umami.fuckcloudnative.io/umami.js"></script>
+
+  
+  
+  <script defer src='https://cf.fuckcloudnative.io/beacon.min.js' data-cf-beacon='{"token": "11f3ac7369f54ca29c00757cfb4cafd1"}'></script>
   
 
 
@@ -1449,10 +1459,30 @@
 
 
 
+
     
+
+
+
+
+<style>
+    #top-grrk{
+    background:url(https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting@second/img/paomadeng.gif);
+    height:2px;
+    position:fixed;
+    width:100%;
+    Z-index:10000;
+}
+</style>    
+<div id="top-grrk"></div>
+
+
+
+
 </head>
 
 <body id="root" class="theme__dark">
+    
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1466,19 +1496,15 @@
 
 
 
+
         <div class="wrapper" data-type="archive" data-kind="section">
             <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
-    
-    <a href="/ko/" title="홈페이지" rel="home" class="navbar__logo-link">
-      <img src="/logo.png" alt="Home" class="navbar__logo">
-    </a>
-    
-    
+  
       <a href="/ko/" title="홈페이지" rel="home" class="navbar__title-link">
-        <h6 class="navbar__title">Calvin Haynes&#39;s Blog</h6>
+	      <h6 class="navbar__title" style="font-size: 1.2rem">🐳&ensp;<span style="color:#23d18b;">>$</span>&nbsp;cd /home/<span class="logo_cursor"></span></h6>
       </a>
-    
+  
   </div>
 
   
@@ -1667,7 +1693,7 @@
   
   
   
-  <a href="/ko/about" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">어바웃</a>
+  <a href="/ko/about" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true" target="_blank">  어바웃</a>
   
   
   
@@ -1675,7 +1701,7 @@
   
   
   
-  <a href="/ko/archive" class="navbar__menu-item navbar__slide-down active" dir="ltr" data-ani="true">아카이브</a>
+  <a href="/ko/archive" class="navbar__menu-item navbar__slide-down active" dir="ltr" data-ani="true" target="_blank">  아카이브</a>
   
   
   
@@ -1684,14 +1710,15 @@
   
   
   <div class="navbar__dropdown navbar__slide-down" data-ani="true">
-    <a href="/ko/gallery" class="navbar__menu-item "
+    <a target="_blank" href="/ko/gallery" class="navbar__menu-item "
       dir="ltr">
+      
       갤러리
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
     </a>
     <div class="navbar__dropdown--content">
       
-      <a href="/ko/gallery/mine" class="navbar__dropdown--item" dir="ltr">fiverr</a>
+      <a target="_blank" href="/ko/gallery/mine" class="navbar__dropdown--item" dir="ltr"> fiverr</a>
       
     </div>
   </div>
@@ -1702,12 +1729,15 @@
   
   
   
-  <a href="/ko/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true">포스트</a>
+  <a href="/ko/posts" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true" target="_blank">  포스트</a>
   
   
 </div>
+
 </nav>
+
             
+
             
 
 
@@ -1792,6 +1822,71 @@
 </main>
 
             
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link href="https://cdn.bootcss.com" rel="preconnect" crossorigin>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+var a_idx = 0;
+jQuery(document).ready(function($) {
+    $("body").click(function(e) {
+        var a = new Array("Docker", "Kubernetes", "Prometheus", "Envoy", "Istio", "coredns", "Service Mesh", "Cloud Native");
+        var $i = $("<span />").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        function randomColor() {
+          var flakeColor = new Array("#FFDA65", "#00BFFF", "#BA55D3", "#FFA07A", "#87CEEB", "#FFB6C1");
+          var snowColor = flakeColor[Math.floor(flakeColor.length * Math.random())];
+          return snowColor;
+        }
+        $i.css({
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": randomColor()
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove();
+        });
+    });
+});
+</script>
+
+
+
+
+
+<script defer type="text/javascript">
+ var OriginTitle = document.title;
+ document.addEventListener('visibilitychange', function () {
+     if (document.hidden) {
+         document.title = '别走啊，官人 _(:з」∠)_';
+     }
+     else {
+         document.title = OriginTitle;
+     }
+ });
+</script>
+
+<script defer src="https://blog.calvinhaynes.top/js/instantpage.min.js" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+
+
+<script>(function(w,d, s, id) {if(typeof(w.webpushr)!=='undefined') return;w.webpushr=w.webpushr||function(){(w.webpushr.q=w.webpushr.q||[]).push(arguments)};var js, fjs = d.getElementsByTagName(s)[0];js = d.createElement(s); js.id = id;js.async=1;js.src = "https://cdn.webpushr.com/app.min.js";
+fjs.parentNode.appendChild(js);}(window,document, 'script', 'webpushr-jssdk'));
+webpushr('setup',{'key':'BKikRogH2hDWxoFo9FQ16mK3NMVWoTdVwI5roUWbdM6iMz-WLqmGScrLDdhV2MkUdBISZWjJBpd9CQdp5qgSMDY' });</script>
+
+
+
+
+
             <footer class="footer">
     
 <div class="dropdown">
@@ -1957,7 +2052,7 @@
 
     <div class="footer__poweredby">
         
-                
+        
             <p class="caption">
                 
                     
@@ -1968,14 +2063,51 @@
                     
                 
             </p>
+	    <p class="caption">
+	    Powered by Hugo on <a rel="license" href="https://fuckcloudnative.io/posts/deploy-k3s-cross-public-cloud/">Kubernetes</a>
+	    </p>
         
 
         
-            <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
+	    <div class="github-badge">
+	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.86.1</a></span>
+              <span class="badge-subject">托管于</span><span class="badge-value bg-brightgreen"><a style="color:#fff" href="https://www.dogyun.com/?ref=ryanyang" target="_blank">狗云</a></span>
+	      <span class="badge-subject">CDN</span><span class="badge-value bg-blueviolet"><a style="color:#fff" href="https://console-api.nodecache.com/f?aff=3Av5mE" target="_blank">Nodecache</a></span>
+	      <span class="badge-subject">图床</span><span class="badge-value bg-orange"><a style="color:#fff" href="https://www.jsdelivr.com/" target="_blank">jsDelivr</a></span>
+	      <span class="badge-subject">主题</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://github.com/zzossig/hugo-theme-zzo" target="_blank">Zzo theme</a></span>
+	    </div>
+	    <section class="caption">
+    <span id="span_dt_dt"> </span> 
+    <script language="javascript">
+      function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("10/8/2019 10:56:12");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=Math.floor(e_hrsold);
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=Math.floor((e_hrsold-hrsold)*60);
+        seconds=Math.floor((e_minsold-minsold)*60);
+        span_dt_dt.innerHTML="本站已经开心运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+      }
+      show_date_time();
+    </script>
+</section>
+
         
-        
-    </div> 
+
+    </div>
 </footer>
+
+
+
+
         </div>
         
 
