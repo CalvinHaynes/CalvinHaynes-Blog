@@ -17,7 +17,7 @@ viewportSize = "normal" # widest, wider, wide, normal, narrow
 enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
 enablePinnedPosts = true
-minItemsToShowInTagCloud = 1 # Minimum items to show in tag cloud
+minItemsToShowInTagCloud = 2 # Minimum items to show in tag cloud
 
 # appbar
 enableAppbarSearchIcon = false
@@ -92,21 +92,22 @@ enableSidebarPostsByOrder = false
 showPoweredBy = true
 showFeedLinks = true
 showSocialLinks = true
-enableLangChange = true
+enableLangChange = false
 enableThemeChange = true
 
 # service
 googleTagManager = "" # GTM-XXXXXX
 baiduAnalytics = ""
-enableBusuanzi = false
+enableBusuanzi = true
 busuanziSiteUV = true
 busuanziSitePV = true
 busuanziPagePV = true
 
 # rss
-updatePeriod = "" # Possible values: 'hourly', 'daily', 'weekly', 'monthly', or 'yearly'.
+updatePeriod = "daily" # Possible values: 'hourly', 'daily', 'weekly', 'monthly', or 'yearly'.
 updateFrequency = ""
-fullContents = false
+fullContents = true 
+rssLimit = 10
 
 # comment
 enableComment = true
@@ -212,6 +213,10 @@ commento = false
   username = ""
 [[share]]
   name = "twitter"
+[[share]]
+  name = "weibo"
+[[share]]
+  name = "linkedin"
 
 [[footerLinks]]
   name = ""

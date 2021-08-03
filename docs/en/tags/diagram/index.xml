@@ -15,6 +15,7 @@
     <webMaster>chx1006488386@163.com (Calvin Haynes)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Sun, 17 Nov 2019 12:00:06 +0900</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://blog.calvinhaynes.top/en/tags/diagram/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,7 +29,63 @@
         <atom:modified>Sun, 17 Nov 2019 12:00:06 +0900</atom:modified>
         <guid>https://blog.calvinhaynes.top/en/posts/test-mermaid/</guid>
         <description>graph TD;A--&amp;gt;B;A--&amp;gt;C;B--&amp;gt;D;C--&amp;gt;D;sequenceDiagramparticipant Aliceparticipant BobAlice-&amp;gt;John: Hello John, how are you?loop HealthcheckJohn-&amp;gt;John: Fight against hypochondriaendNote right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail...John--&amp;gt;Alice: Great!John-&amp;gt;Bob: How about you?Bob--&amp;gt;John: Jolly good!graph TDA[Hard] --&amp;gt;|Text| B(Round)B --&amp;gt; C{Decision}C --&amp;gt;|One| D[Result 1]C --&amp;gt;|Two| E[Result 2]ganttsection SectionCompleted :done, des1, 2014-01-06,2014-01-08Active :active, des2, 2014-01-07, 3dParallel 1 : des3, after des1, 1dParallel 2 : des4, after des1, 1dParallel 3 : des5, after des3, 1dParallel 4 : des6, after des4, 1dclassDiagramClass01 &amp;lt;|-- AveryLongClass : Cool&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01Class09 --&amp;gt; C2 : Where am i?</description>
-        
+        <content:encoded>&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD;
+  A--&amp;gt;B;
+  A--&amp;gt;C;
+  B--&amp;gt;D;
+  C--&amp;gt;D;
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;sequenceDiagram
+  participant Alice
+  participant Bob
+  Alice-&amp;gt;John: Hello John, how are you?
+  loop Healthcheck
+      John-&amp;gt;John: Fight against hypochondria
+  end
+  Note right of John: Rational thoughts &amp;lt;br/&amp;gt;prevail...
+  John--&amp;gt;Alice: Great!
+  John-&amp;gt;Bob: How about you?
+  Bob--&amp;gt;John: Jolly good!
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;graph TD
+A[Hard] --&amp;gt;|Text| B(Round)
+B --&amp;gt; C{Decision}
+C --&amp;gt;|One| D[Result 1]
+C --&amp;gt;|Two| E[Result 2]
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;gantt
+section Section
+Completed :done,    des1, 2014-01-06,2014-01-08
+Active        :active,  des2, 2014-01-07, 3d
+Parallel 1   :         des3, after des1, 1d
+Parallel 2   :         des4, after des1, 1d
+Parallel 3   :         des5, after des3, 1d
+Parallel 4   :         des6, after des4, 1d
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+&amp;lt;&amp;lt;interface&amp;gt;&amp;gt; Class01
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+class Class10 {
+  &amp;lt;&amp;lt;service&amp;gt;&amp;gt;
+  int id
+  size()
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+&lt;/code&gt;&lt;/pre&gt;&lt;pre&gt;&lt;code class=&#34;language-mermaid&#34; data-lang=&#34;mermaid&#34;&gt;pie
+&amp;quot;Dogs&amp;quot; : 386
+&amp;quot;Cats&amp;quot; : 85
+&amp;quot;Rats&amp;quot; : 15 
+&lt;/code&gt;&lt;/pre&gt;</content:encoded>
         <dc:creator>Calvin Haynes</dc:creator>
         <media:content url="https://blog.calvinhaynes.top/images/feature2/workflow.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         

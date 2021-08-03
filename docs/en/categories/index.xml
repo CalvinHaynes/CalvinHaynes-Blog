@@ -15,6 +15,7 @@
     <webMaster>chx1006488386@163.com (Calvin Haynes)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 20 Dec 2019 12:00:06 +0900</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://blog.calvinhaynes.top/en/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -28,7 +29,7 @@
         
         <guid>https://blog.calvinhaynes.top/en/categories/syntax/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Calvin Haynes</dc:creator>
         
         
@@ -46,7 +47,7 @@
         
         <guid>https://blog.calvinhaynes.top/en/categories/themes/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Calvin Haynes</dc:creator>
         
         
@@ -64,7 +65,7 @@
         
         <guid>https://blog.calvinhaynes.top/en/categories/hugo/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Calvin Haynes</dc:creator>
         
         
@@ -82,7 +83,7 @@
         
         <guid>https://blog.calvinhaynes.top/en/categories/diagram/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Calvin Haynes</dc:creator>
         
         
@@ -100,7 +101,7 @@
         
         <guid>https://blog.calvinhaynes.top/en/categories/math/</guid>
         <description></description>
-        
+        <content:encoded></content:encoded>
         <dc:creator>Calvin Haynes</dc:creator>
         
         

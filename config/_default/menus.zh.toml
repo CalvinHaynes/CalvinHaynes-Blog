@@ -67,12 +67,12 @@
   url = "archive/"
   weight = 9
 
-#[[main]]
-#  identifier = "posts"
-#  name = "博客"
-#  pre = '<i class="fab fa-docker"></i>'
-#  url = "posts/"
-#  weight = 11
+[[main]]
+ identifier = "posts"
+ name = "博客"
+ pre = '<i class="fab fa-docker"></i>'
+ url = "posts/"
+ weight = 11
 
 [[main]]
   identifier = "showcase"
