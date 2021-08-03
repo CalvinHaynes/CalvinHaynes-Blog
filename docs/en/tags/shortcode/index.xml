@@ -7,31 +7,31 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>shortcode on Hugo Zzo Theme</title>
-    <link>https://calvinhaynes.github.io/en/tags/shortcode/</link>
+    <link>https://blog.calvinhaynes.top/en/tags/shortcode/</link>
     <description>Recent content in shortcode on Hugo Zzo Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>zzossig@gmail.com (zzossig)</managingEditor>
-    <webMaster>zzossig@gmail.com (zzossig)</webMaster>
+    <managingEditor>chx1006488386@163.com (Calvin Haynes)</managingEditor>
+    <webMaster>chx1006488386@163.com (Calvin Haynes)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 25 Jan 2020 06:40:51 +0900</lastBuildDate>
     
-        <atom:link href="https://calvinhaynes.github.io/en/tags/shortcode/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://blog.calvinhaynes.top/en/tags/shortcode/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Shortcodes</title>
-        <link>https://calvinhaynes.github.io/en/posts/shortcodes/</link>
+        <link>https://blog.calvinhaynes.top/en/posts/shortcodes/</link>
         <pubDate>Sat, 25 Jan 2020 06:40:51 +0900</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Sat, 25 Jan 2020 06:40:51 +0900</atom:modified>
-        <guid>https://calvinhaynes.github.io/en/posts/shortcodes/</guid>
+        <guid>https://blog.calvinhaynes.top/en/posts/shortcodes/</guid>
         <description>Markdownify box This is boxmd shortcode Simple box This is **box** shortcode Code tabs Make it easy to switch between different code
 javajavascript1  System.out.println(&amp;#39;Hello World!&amp;#39;);   1  console.log(&amp;#39;Hello World!&amp;#39;);   &#39;use strict&#39;;var containerId = JSON.parse(&#34;\&#34;6e5f5be4c3565cc2\&#34;&#34;);var containerElem = document.getElementById(containerId);var codetabLinks = null;var codetabContents = null;var ids = [];if (containerElem) {codetabLinks = containerElem.</description>
         
-        <dc:creator>zzossig</dc:creator>
-        <media:content url="https://calvinhaynes.github.io/images/feature3/code-file.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <dc:creator>Calvin Haynes</dc:creator>
+        <media:content url="https://blog.calvinhaynes.top/images/feature3/code-file.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

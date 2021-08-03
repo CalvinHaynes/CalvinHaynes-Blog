@@ -2,142 +2,162 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://calvinhaynes.github.io/ko/</loc>
+    <loc>https://blog.calvinhaynes.top/ko/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/"
+                href="https://blog.calvinhaynes.top/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/"
+                href="https://blog.calvinhaynes.top/ko/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/ko/archive/</loc>
+    <loc>https://blog.calvinhaynes.top/ko/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/archive/"
+                href="https://blog.calvinhaynes.top/en/archive/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/archive/"
+                href="https://blog.calvinhaynes.top/ko/archive/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/ko/about/</loc>
+    <loc>https://blog.calvinhaynes.top/ko/about/</loc>
     <lastmod>2019-10-09T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/about/"
+                href="https://blog.calvinhaynes.top/en/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/about/"
+                href="https://blog.calvinhaynes.top/ko/about/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/ko/gallery/</loc>
+    <loc>https://blog.calvinhaynes.top/ko/gallery/</loc>
     <lastmod>2018-10-12T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/gallery/"
+                href="https://blog.calvinhaynes.top/en/gallery/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/gallery/"
+                href="https://blog.calvinhaynes.top/ko/gallery/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/ko/gallery/photo/</loc>
+    <loc>https://blog.calvinhaynes.top/ko/gallery/photo/</loc>
     <lastmod>2018-10-12T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/gallery/photo/"
+                href="https://blog.calvinhaynes.top/en/gallery/photo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/gallery/photo/"
+                href="https://blog.calvinhaynes.top/ko/gallery/photo/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/ko/gallery/cartoon/</loc>
+    <loc>https://blog.calvinhaynes.top/ko/gallery/cartoon/</loc>
     <lastmod>2018-10-11T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/gallery/cartoon/"
+                href="https://blog.calvinhaynes.top/en/gallery/cartoon/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/gallery/cartoon/"
+                href="https://blog.calvinhaynes.top/ko/gallery/cartoon/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/ko/categories/</loc>
+    <loc>https://blog.calvinhaynes.top/ko/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/categories/"
+                href="https://blog.calvinhaynes.top/en/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/categories/"
+                href="https://blog.calvinhaynes.top/ko/categories/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/ko/tags/index/</loc>
+    <loc>https://blog.calvinhaynes.top/ko/tags/index/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/tags/index/"
+                href="https://blog.calvinhaynes.top/en/tags/index/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/tags/index/"
+                href="https://blog.calvinhaynes.top/ko/tags/index/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/ko/posts/</loc>
+    <loc>https://blog.calvinhaynes.top/ko/posts/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/posts/"
+                href="https://blog.calvinhaynes.top/en/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/posts/"
+                href="https://blog.calvinhaynes.top/ko/posts/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/ko/series/</loc>
+    <loc>https://blog.calvinhaynes.top/ko/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/series/"
+                href="https://blog.calvinhaynes.top/en/series/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/series/"
+                href="https://blog.calvinhaynes.top/ko/series/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/ko/tags/</loc>
+    <loc>https://blog.calvinhaynes.top/ko/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/tags/"
+                href="https://blog.calvinhaynes.top/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/tags/"
+                href="https://blog.calvinhaynes.top/ko/tags/"
                 />
   </url>
 </urlset>

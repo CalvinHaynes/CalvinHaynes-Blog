@@ -1,9 +1,9 @@
-baseURL = "https://calvinhaynes.github.io/"
+baseURL = "https://blog.calvinhaynes.top/"
 title = "Calvin Haynes's Blog"
 theme = "zzo"
 
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = false
 hasCJKLanguage = true
 
 summaryLength = 70

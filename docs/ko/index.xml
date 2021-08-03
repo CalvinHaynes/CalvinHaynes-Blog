@@ -7,16 +7,16 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Hugo Zzo Theme</title>
-    <link>https://calvinhaynes.github.io/ko/</link>
+    <link>https://blog.calvinhaynes.top/ko/</link>
     <description>Recent content on Hugo Zzo Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ko</language>
-    <managingEditor>zzossig@gmail.com (zzossig)</managingEditor>
-    <webMaster>zzossig@gmail.com (zzossig)</webMaster>
+    <managingEditor>chx1006488386@163.com (Calvin Haynes)</managingEditor>
+    <webMaster>chx1006488386@163.com (Calvin Haynes)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 19 Oct 2019 11:44:14 +0900</lastBuildDate>
     
-        <atom:link href="https://calvinhaynes.github.io/ko/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://blog.calvinhaynes.top/ko/index.xml" rel="self" type="application/rss+xml" />
     
       
       

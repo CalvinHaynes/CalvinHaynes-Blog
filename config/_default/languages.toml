@@ -11,3 +11,10 @@
   weight = 2
   languagedir = "ltr"
   contentdir = "content/ko"
+
+[zh]
+  title = "Calvin Haynes的博客站"
+  languageName = "简体中文"
+  weight = 1
+  languagedir = "ltr"
+  contentdir = "content/zh"

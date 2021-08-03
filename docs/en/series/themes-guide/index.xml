@@ -7,30 +7,30 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Themes Guide on Hugo Zzo Theme</title>
-    <link>https://calvinhaynes.github.io/en/series/themes-guide/</link>
+    <link>https://blog.calvinhaynes.top/en/series/themes-guide/</link>
     <description>Recent content in Themes Guide on Hugo Zzo Theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <managingEditor>zzossig@gmail.com (zzossig)</managingEditor>
-    <webMaster>zzossig@gmail.com (zzossig)</webMaster>
+    <managingEditor>chx1006488386@163.com (Calvin Haynes)</managingEditor>
+    <webMaster>chx1006488386@163.com (Calvin Haynes)</webMaster>
     <copyright>©2021, All Rights Reserved</copyright>
     <lastBuildDate>Fri, 20 Dec 2019 12:00:06 +0900</lastBuildDate>
     
-        <atom:link href="https://calvinhaynes.github.io/en/series/themes-guide/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://blog.calvinhaynes.top/en/series/themes-guide/index.xml" rel="self" type="application/rss+xml" />
     
 
       
       <item>
         <title>Markdown Syntax Guide</title>
-        <link>https://calvinhaynes.github.io/en/posts/markdown-syntax/</link>
+        <link>https://blog.calvinhaynes.top/en/posts/markdown-syntax/</link>
         <pubDate>Fri, 20 Dec 2019 12:00:06 +0900</pubDate>
-        <author>zzossig@gmail.com (zzossig)</author>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Fri, 20 Dec 2019 12:00:06 +0900</atom:modified>
-        <guid>https://calvinhaynes.github.io/en/posts/markdown-syntax/</guid>
+        <guid>https://blog.calvinhaynes.top/en/posts/markdown-syntax/</guid>
         <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
         
         <dc:creator>Choi</dc:creator>
-        <media:content url="https://calvinhaynes.github.io/images/feature1/markdown.png" medium="image"><media:title type="html">featured image</media:title></media:content>
+        <media:content url="https://blog.calvinhaynes.top/images/feature1/markdown.png" medium="image"><media:title type="html">featured image</media:title></media:content>
         
         
         

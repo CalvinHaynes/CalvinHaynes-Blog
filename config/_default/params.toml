@@ -1,8 +1,8 @@
 logoText = "Calvin Haynes's Blog"
 logoType = "short" # long, short
 description = "The site of Calvin Haynes's Blog"
-custom_css = []
-custom_js = []
+custom_css = ["css/my.css", "css/fonts-zh.css", "css/fonts-code.css", "fontawesome/css/all.css", "css/pace.css"]
+custom_js = ["js/pace.min.js"]
 useFaviconGenerator = true # https://www.favicon-generator.org/
 meta_image = ""
 themecolor = ""
@@ -60,14 +60,14 @@ publicationIcon = "📚"
 typeIcon = "🎯"
 
 # whoami
-myname = "zzossig"
-email = "zzossig@gmail.com"
-whoami = "Web Developer"
-bioImageUrl = ""
+myname = "Calvin Haynes"
+email = "chx1006488386@163.com"
+whoami = "热爱CS和Music的在读undergraduate"
+bioImageUrl = "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Icon/avatar.4cjkmnmbne.jpg"
 useGravatar = false
-location = "Seoul, Korea"
-organization = "Hugo"
-link = "https://zzossig.io/ko"
+location = "ChangChun, China"
+organization = "JLU"
+link = "https://www.jlu.edu.cn/"
 
 # sidebar
 enableBio = true
@@ -161,11 +161,11 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions]
-  email = "mailto:your@email.com"
+  email = "chx1006488386@163.com"
   phone = ""
-  facebook = "http://example.org/"
-  twitter = "http://example.org/"
-  github = "https://github.com/zzossig/hugo-theme-zzo"
+  facebook = ""
+  twitter = "https://twitter.com/CalvinHaynes412"
+  github = "https://github.com/CalvinHaynes"
   stack-overflow = ""
   instagram = ""
   google-plus = ""
@@ -179,11 +179,11 @@ commento = false
   steam = ""
   weibo = ""
   douban = ""
-  csdn = ""
+  csdn = "https://blog.csdn.net/qq_45772333?spm=1010.2135.3001.5343"
   gitlab = ""
   mastodon = ""
   jianshu = ""
-  zhihu = ""
+  zhihu = "https://www.zhihu.com/people/eternally-92-61"
   signal = ""
   whatsapp = ""
   matrix = ""
@@ -198,6 +198,13 @@ commento = false
   wechat = ""
   paypal = ""
   patreon = ""
+
+[copyrightOptions]
+  enableCopyrightLink = true 
+  copyrightLink = "https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh"
+  copyrightLinkImage = ""
+  copyrightLinkText = "自由转载-非商用-非衍生-保持署名"
+
 
 # possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "pocket", "feedly", "hatena", "pinterest", "delicious", "google"]
 [[share]]

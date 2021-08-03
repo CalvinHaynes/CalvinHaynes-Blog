@@ -2,287 +2,307 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://calvinhaynes.github.io/en/showcase/hugo/hugo-theme-zzo/</loc>
+    <loc>https://blog.calvinhaynes.top/en/showcase/hugo/hugo-theme-zzo/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/showcase/hugo/hugo-theme-zdoc/</loc>
+    <loc>https://blog.calvinhaynes.top/en/showcase/hugo/hugo-theme-zdoc/</loc>
     <lastmod>2020-01-19T21:13:42+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/</loc>
+    <loc>https://blog.calvinhaynes.top/en/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/"
+                href="https://blog.calvinhaynes.top/ko/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/"
+                href="https://blog.calvinhaynes.top/en/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/publication/article/</loc>
+    <loc>https://blog.calvinhaynes.top/en/publication/article/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/publication/book/</loc>
+    <loc>https://blog.calvinhaynes.top/en/publication/book/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/publication/misc/</loc>
+    <loc>https://blog.calvinhaynes.top/en/publication/misc/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/publication/</loc>
+    <loc>https://blog.calvinhaynes.top/en/publication/</loc>
     <lastmod>2020-03-05T14:08:48+00:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/</loc>
     <lastmod>2020-01-25T06:40:51+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/posts/"
+                href="https://blog.calvinhaynes.top/ko/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/posts/"
+                href="https://blog.calvinhaynes.top/en/posts/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/shortcode/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/shortcode/</loc>
     <lastmod>2020-01-25T06:40:51+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/shortcodes/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/shortcodes/</loc>
     <lastmod>2020-01-25T06:40:51+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/</loc>
     <lastmod>2020-01-25T06:40:51+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/tags/"
+                />
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/tags/"
+                href="https://blog.calvinhaynes.top/ko/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/tags/"
+                href="https://blog.calvinhaynes.top/en/tags/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/showcase/hugo/</loc>
+    <loc>https://blog.calvinhaynes.top/en/showcase/hugo/</loc>
     <lastmod>2020-01-19T21:04:11+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/showcase/</loc>
+    <loc>https://blog.calvinhaynes.top/en/showcase/</loc>
     <lastmod>2020-01-19T15:43:38+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/categories/</loc>
+    <loc>https://blog.calvinhaynes.top/en/categories/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/categories/"
+                href="https://blog.calvinhaynes.top/ko/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/categories/"
+                href="https://blog.calvinhaynes.top/en/categories/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/css/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/css/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/html/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/html/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/markdown/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/markdown/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/markdown-syntax/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/markdown-syntax/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/series/</loc>
+    <loc>https://blog.calvinhaynes.top/en/series/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/series/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/series/"
+                href="https://blog.calvinhaynes.top/ko/series/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/series/"
+                href="https://blog.calvinhaynes.top/en/series/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/categories/syntax/</loc>
+    <loc>https://blog.calvinhaynes.top/en/categories/syntax/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/themes/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/themes/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/categories/themes/</loc>
+    <loc>https://blog.calvinhaynes.top/en/categories/themes/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/series/themes-guide/</loc>
+    <loc>https://blog.calvinhaynes.top/en/series/themes-guide/</loc>
     <lastmod>2019-12-20T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/hugo/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/hugo/</loc>
     <lastmod>2019-12-18T10:33:41+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/categories/hugo/</loc>
+    <loc>https://blog.calvinhaynes.top/en/categories/hugo/</loc>
     <lastmod>2019-12-18T10:33:41+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/syntax-highlight/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/syntax-highlight/</loc>
     <lastmod>2019-12-18T10:33:41+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/math-typesetting/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/math-typesetting/</loc>
     <lastmod>2019-12-17T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/amoji/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/amoji/</loc>
     <lastmod>2019-12-16T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/bamoji/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/bamoji/</loc>
     <lastmod>2019-12-16T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/emoji/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/emoji/</loc>
     <lastmod>2019-12-16T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/emoji-support/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/emoji-support/</loc>
     <lastmod>2019-12-16T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/gamoji/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/gamoji/</loc>
     <lastmod>2019-12-16T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/namoji/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/namoji/</loc>
     <lastmod>2019-12-16T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/categories/diagram/</loc>
+    <loc>https://blog.calvinhaynes.top/en/categories/diagram/</loc>
     <lastmod>2019-11-18T21:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/test-viz/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/test-viz/</loc>
     <lastmod>2019-11-18T21:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/test-wavedrom/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/test-wavedrom/</loc>
     <lastmod>2019-11-18T18:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/test-chartjs/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/test-chartjs/</loc>
     <lastmod>2019-11-18T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/test-js-sequence-diagrams/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/test-js-sequence-diagrams/</loc>
     <lastmod>2019-11-18T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/diagram/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/diagram/</loc>
     <lastmod>2019-11-17T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/test-mermaid/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/test-mermaid/</loc>
     <lastmod>2019-11-17T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/categories/math/</loc>
+    <loc>https://blog.calvinhaynes.top/en/categories/math/</loc>
     <lastmod>2019-11-16T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/test-mathjax/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/test-mathjax/</loc>
     <lastmod>2019-11-16T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/test-katex/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/test-katex/</loc>
     <lastmod>2019-11-15T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/posts/test-flowchart/</loc>
+    <loc>https://blog.calvinhaynes.top/en/posts/test-flowchart/</loc>
     <lastmod>2019-11-14T12:00:06+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/gallery/cartoon/</loc>
+    <loc>https://blog.calvinhaynes.top/en/gallery/cartoon/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/gallery/cartoon/"
+                href="https://blog.calvinhaynes.top/ko/gallery/cartoon/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/gallery/cartoon/"
+                href="https://blog.calvinhaynes.top/en/gallery/cartoon/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/gallery/</loc>
+    <loc>https://blog.calvinhaynes.top/en/gallery/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/gallery/"
+                href="https://blog.calvinhaynes.top/ko/gallery/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/gallery/"
+                href="https://blog.calvinhaynes.top/en/gallery/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/gallery/photo/</loc>
+    <loc>https://blog.calvinhaynes.top/en/gallery/photo/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/gallery/photo/"
+                href="https://blog.calvinhaynes.top/ko/gallery/photo/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/gallery/photo/"
+                href="https://blog.calvinhaynes.top/en/gallery/photo/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/presentation/dir/fourth/</loc>
+    <loc>https://blog.calvinhaynes.top/en/presentation/dir/fourth/</loc>
     <lastmod>2019-10-30T20:48:10+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/presentation/</loc>
+    <loc>https://blog.calvinhaynes.top/en/presentation/</loc>
     <lastmod>2019-10-30T20:48:10+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/presentation/third/</loc>
+    <loc>https://blog.calvinhaynes.top/en/presentation/third/</loc>
     <lastmod>2019-10-30T20:46:30+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/presentation/second/</loc>
+    <loc>https://blog.calvinhaynes.top/en/presentation/second/</loc>
     <lastmod>2019-10-30T20:45:24+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/presentation/first/</loc>
+    <loc>https://blog.calvinhaynes.top/en/presentation/first/</loc>
     <lastmod>2019-10-30T19:45:20+09:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/archive/</loc>
+    <loc>https://blog.calvinhaynes.top/en/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/archive/"
+                href="https://blog.calvinhaynes.top/ko/archive/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/archive/"
+                href="https://blog.calvinhaynes.top/en/archive/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/about/</loc>
+    <loc>https://blog.calvinhaynes.top/en/about/</loc>
     <lastmod>2019-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/about/"
+                href="https://blog.calvinhaynes.top/ko/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/about/"
+                href="https://blog.calvinhaynes.top/en/about/"
                 />
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/publication/article/article_any_folder_name_1/</loc>
+    <loc>https://blog.calvinhaynes.top/en/publication/article/article_any_folder_name_1/</loc>
     <lastmod>2018-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/publication/book/book_any_folder_name_1/</loc>
+    <loc>https://blog.calvinhaynes.top/en/publication/book/book_any_folder_name_1/</loc>
     <lastmod>2017-06-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/publication/misc/misc_any_folder_name_1/</loc>
+    <loc>https://blog.calvinhaynes.top/en/publication/misc/misc_any_folder_name_1/</loc>
     <lastmod>2016-11-01T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://calvinhaynes.github.io/en/tags/index/</loc>
+    <loc>https://blog.calvinhaynes.top/en/tags/index/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ko"
-                href="https://calvinhaynes.github.io/ko/tags/index/"
+                href="https://blog.calvinhaynes.top/ko/tags/index/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://calvinhaynes.github.io/en/tags/index/"
+                href="https://blog.calvinhaynes.top/en/tags/index/"
                 />
   </url>
 </urlset>

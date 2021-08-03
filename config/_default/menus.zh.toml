@@ -1,0 +1,112 @@
+# [[main]]
+#   identifier = "more"
+#   name = "百宝箱"
+#   pre = '<i class="fas fa-tools"></i>'
+#   weight = 1
+
+# [[main]]
+#   parent = "more"
+#   name = "谷歌加速"
+#   pre = '<i class="fab fa-google"></i>'
+#   url = "https://google.fuckcloudnative.io"
+#   weight = 1
+
+# [[main]]
+#   parent = "more"
+#   name = "网盘资源"
+#   pre = '<i class="fab fa-google-drive"></i>'
+#   url = "https://www.aliyundrive.com/s/1SpRnYKBZDA"
+#   weight = 3
+
+#   [[main]]
+#   parent = "more"
+#   name = "监控"
+#   pre = '<i class="fas fa-heartbeat"></i>'
+#   url = "uptime-status/"
+#   weight = 4
+
+# [[main]]
+#   parent = "more"
+#   name = "导航"
+#   pre = '<i class="fas fa-map-marked-alt"></i>'
+#   url = "https://nav.ryanyang.workers.dev/"
+#   weight = 5
+
+# [[main]]
+#   identifier = "umami"
+#   name = "实时访客"
+#   pre = '<i class="fas fa-chart-line"></i>'
+#   url = "https://umami.fuckcloudnative.io/share/czt8lZ3q/%E4%BA%91%E5%8E%9F%E7%94%9F%E5%AE%9E%E9%AA%8C%E5%AE%A4"
+#   weight = 2
+
+# [[main]]
+#   identifier = "nav"
+#   name = "图谱"
+#   pre = '<i class="fas fa-atlas"></i>'
+#   url = "https://www.processon.com/view/link/5ac64532e4b00dc8a02f05eb"
+#   weight = 3
+
+[[main]]
+  identifier = "about"
+  name = "关于我"
+  pre = '<i class="fas fa-user-graduate"></i>'
+  url = "about/"
+  weight = 5
+
+[[main]]
+  identifier = "friends"
+  name = "友链"
+  pre = '<i class="fas fa-user-friends"></i>'
+  url = "friends/"
+  weight = 7
+
+[[main]]
+  identifier = "archive"
+  name = "归档"
+  pre = '<i class="fas fa-archive"></i>'
+  url = "archive/"
+  weight = 9
+
+#[[main]]
+#  identifier = "posts"
+#  name = "博客"
+#  pre = '<i class="fab fa-docker"></i>'
+#  url = "posts/"
+#  weight = 11
+
+[[main]]
+  identifier = "showcase"
+  name = "开源项目"
+  pre = '<i class="fab fa-github"></i>'
+  url = "showcase/"
+  weight = 13
+
+[[main]]
+  identifier = "books"
+  name = "电子书"
+  pre = '<i class="fas fa-book"></i>'
+  weight = 15
+
+# [[main]]
+#   parent = "books"
+#   name = "Envoy 中文指南"
+#   url = "https://github.com/yangchuansheng/envoy-handbook"
+#   weight = 1
+
+# [[main]]
+#   parent = "books"
+#   name = "Prometheus 中文文档"
+#   url = "prometheus/"
+#   weight = 2
+
+# [[main]]
+#   parent = "books"
+#   name = "Go 入门指南"
+#   url = "the-way-to-go/"
+#   weight = 3
+
+# [[main]]
+#   parent = "books"
+#   name = "天才源自刻意练习"
+#   url = "talent-is-overrated/"
+#   weight = 5
