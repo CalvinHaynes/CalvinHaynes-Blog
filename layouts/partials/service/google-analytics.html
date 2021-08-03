@@ -1,0 +1,15 @@
+{{ if not .Site.IsServer }}
+  <!--
+  {{ template "_internal/google_analytics.html" . }}
+  {{ template "_internal/google_analytics_async.html" . }}
+  -->
+  <link rel="dns-prefetch" href="https://ga.fuckcloudnative.io">
+  <link href="https://ga.fuckcloudnative.io" rel="preconnect" crossorigin>
+
+  <script>
+  // replace following variables to your own
+  window.ga_tid = "UA-145022311-1";
+  window.ga_url = "https://ga.fuckcloudnative.io";
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/gh/giuem/ga-proxy/packages/ga/dist/ga.min.js" async></script>
+{{ end }}
