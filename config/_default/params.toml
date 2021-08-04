@@ -162,7 +162,7 @@ commento = false
   dataAttrs = "" # "data-isso='https://isso.example.com' data-isso-require-author='true'"
 
 [socialOptions]
-  email = "chx1006488386@163.com"
+  email = "https://email.163.com/"
   phone = ""
   facebook = ""
   twitter = "https://twitter.com/CalvinHaynes412"
