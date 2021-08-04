@@ -13,13 +13,16 @@
     <language>en</language>
     <managingEditor>chx1006488386@163.com (Calvin Haynes)</managingEditor>
     <webMaster>chx1006488386@163.com (Calvin Haynes)</webMaster>
-    <copyright>©2021, All Rights Reserved</copyright>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Sat, 25 Jan 2020 06:40:51 +0900</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://blog.calvinhaynes.top/en/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    
 
+      
       
       <item>
         <title>shortcode</title>
@@ -190,60 +193,6 @@
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         
         <guid>https://blog.calvinhaynes.top/en/tags/gamoji/</guid>
-        <description></description>
-        <content:encoded></content:encoded>
-        <dc:creator>Calvin Haynes</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>namoji</title>
-        <link>https://blog.calvinhaynes.top/en/tags/namoji/</link>
-        <pubDate>Mon, 16 Dec 2019 12:00:06 +0900</pubDate>
-        <author>chx1006488386@163.com (Calvin Haynes)</author>
-        
-        <guid>https://blog.calvinhaynes.top/en/tags/namoji/</guid>
-        <description></description>
-        <content:encoded></content:encoded>
-        <dc:creator>Calvin Haynes</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>diagram</title>
-        <link>https://blog.calvinhaynes.top/en/tags/diagram/</link>
-        <pubDate>Sun, 17 Nov 2019 12:00:06 +0900</pubDate>
-        <author>chx1006488386@163.com (Calvin Haynes)</author>
-        
-        <guid>https://blog.calvinhaynes.top/en/tags/diagram/</guid>
-        <description></description>
-        <content:encoded></content:encoded>
-        <dc:creator>Calvin Haynes</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>index</title>
-        <link>https://blog.calvinhaynes.top/en/tags/index/</link>
-        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-        <author>chx1006488386@163.com (Calvin Haynes)</author>
-        
-        <guid>https://blog.calvinhaynes.top/en/tags/index/</guid>
         <description></description>
         <content:encoded></content:encoded>
         <dc:creator>Calvin Haynes</dc:creator>

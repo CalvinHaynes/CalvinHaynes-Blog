@@ -13,11 +13,13 @@
     <language>en</language>
     <managingEditor>chx1006488386@163.com (Calvin Haynes)</managingEditor>
     <webMaster>chx1006488386@163.com (Calvin Haynes)</webMaster>
-    <copyright>©2021, All Rights Reserved</copyright>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
     <lastBuildDate>Thu, 05 Mar 2020 14:08:48 +0000</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://blog.calvinhaynes.top/en/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     
       
       
@@ -41,6 +43,7 @@
         
       
 
+      
       
       <item>
         <title>Shortcodes</title>
@@ -268,9 +271,9 @@ This is **box** shortcode
           
         
         
-          
             
-          
+              <category>[]</category>
+            
         
         
           
@@ -461,15 +464,9 @@ This is **box** shortcode
           
         
         
-          
             
-              <category>themes</category>
+              <category>[themes syntax]</category>
             
-          
-            
-              <category>syntax</category>
-            
-          
         
         
           
@@ -1019,11 +1016,9 @@ This is **box** shortcode
           
         
         
-          
             
-              <category>hugo</category>
+              <category>[hugo]</category>
             
-          
         
         
           
@@ -1184,11 +1179,9 @@ font-family: Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,And
           
         
         
-          
             
-              <category>diagram</category>
+              <category>[diagram]</category>
             
-          
         
         
           
@@ -1223,11 +1216,9 @@ font-family: Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,And
           
         
         
-          
             
-              <category>diagram</category>
+              <category>[diagram]</category>
             
-          
         
         
           
@@ -1286,11 +1277,9 @@ font-family: Apple Color Emoji,Segoe UI Emoji,NotoColorEmoji,Segoe UI Symbol,And
           
         
         
-          
             
-              <category>diagram</category>
+              <category>[diagram]</category>
             
-          
         
         
           
@@ -1326,11 +1315,9 @@ D--&amp;gt;&amp;gt;A: Dashed open arrow
           
         
         
-          
             
-              <category>diagram</category>
+              <category>[diagram]</category>
             
-          
         
         
           
@@ -1416,146 +1403,9 @@ Crash --&amp;gt; [*]
           
         
         
-          
             
-              <category>diagram</category>
+              <category>[diagram]</category>
             
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>MathJax support</title>
-        <link>https://blog.calvinhaynes.top/en/posts/test-mathjax/</link>
-        <pubDate>Sat, 16 Nov 2019 12:00:06 +0900</pubDate>
-        <author>chx1006488386@163.com (Calvin Haynes)</author>
-        <atom:modified>Sat, 16 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>https://blog.calvinhaynes.top/en/posts/test-mathjax/</guid>
-        <description>When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</description>
-        <content:encoded>&lt;p&gt;When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are&lt;br /&gt;
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$&lt;/p&gt;
-</content:encoded>
-        <dc:creator>Calvin Haynes</dc:creator>
-        <media:content url="https://blog.calvinhaynes.top/images/feature1/infinity.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-              <category>math</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Katex support</title>
-        <link>https://blog.calvinhaynes.top/en/posts/test-katex/</link>
-        <pubDate>Fri, 15 Nov 2019 12:00:06 +0900</pubDate>
-        <author>chx1006488386@163.com (Calvin Haynes)</author>
-        <atom:modified>Fri, 15 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>https://blog.calvinhaynes.top/en/posts/test-katex/</guid>
-        <description>The following
-$$ \int_{a}^{b} x^2 dx $$
-Is an integral
-$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$
-Enable Katex in the config file by setting the katex param to true. This will import the necessary Katex CSS/JS.
-See the online reference of supported TeX functions.
-Note: For inline math to render correctly, your content file extension must be .mmark. See the official mmark site.
-Inline math: $ \varphi = \dfrac{1+\sqrt5}{2}= 1.</description>
-        <content:encoded>&lt;p&gt;The following&lt;/p&gt;
-&lt;p&gt;$$ \int_{a}^{b} x^2 dx $$&lt;/p&gt;
-&lt;p&gt;Is an integral&lt;/p&gt;
-&lt;p&gt;$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$&lt;/p&gt;
-&lt;p&gt;Enable Katex in the config file by setting the &lt;code&gt;katex&lt;/code&gt; param to &lt;code&gt;true&lt;/code&gt;. This will import the necessary Katex CSS/JS.&lt;/p&gt;
-&lt;p&gt;See the online reference of &lt;a href=&#34;https://katex.org/docs/supported.html&#34;&gt;supported TeX functions&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; For inline math to render correctly, your content file extension must be &lt;code&gt;.mmark&lt;/code&gt;. See the &lt;a href=&#34;https://mmark.nl/&#34;&gt;official mmark site&lt;/a&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Inline math: $ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inline math: $ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;Block math:
-
-$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Block math:&lt;/p&gt;
-&lt;p&gt;$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$&lt;/p&gt;
-</content:encoded>
-        <dc:creator>Calvin Haynes</dc:creator>
-        <media:content url="https://blog.calvinhaynes.top/images/feature2/mathbook.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-              <category>math</category>
-            
-          
-        
-        
-          
-            
-          
-        
-      </item>
-      
-      <item>
-        <title>Flowchart support</title>
-        <link>https://blog.calvinhaynes.top/en/posts/test-flowchart/</link>
-        <pubDate>Thu, 14 Nov 2019 12:00:06 +0900</pubDate>
-        <author>chx1006488386@163.com (Calvin Haynes)</author>
-        <atom:modified>Thu, 14 Nov 2019 12:00:06 +0900</atom:modified>
-        <guid>https://blog.calvinhaynes.top/en/posts/test-flowchart/</guid>
-        <description>st=&amp;gt;start: Start|past:&amp;gt;http://www.google.com[blank]e=&amp;gt;end: End|future:&amp;gt;http://www.google.comop1=&amp;gt;operation: My Operation|pastop2=&amp;gt;operation: Stuff|currentsub1=&amp;gt;subroutine: My Subroutine|invalidcond=&amp;gt;condition: Yesor No?|approved:&amp;gt;http://www.google.comc2=&amp;gt;condition: Good idea|rejectedio=&amp;gt;inputoutput: catch something...|futurest-&amp;gt;op1(right)-&amp;gt;condcond(yes, right)-&amp;gt;c2cond(no)-&amp;gt;sub1(left)-&amp;gt;op1c2(yes)-&amp;gt;io-&amp;gt;ec2(no)-&amp;gt;op2-&amp;gt;e</description>
-        <content:encoded>&lt;pre&gt;&lt;code class=&#34;language-flowchart&#34; data-lang=&#34;flowchart&#34;&gt;st=&amp;gt;start: Start|past:&amp;gt;http://www.google.com[blank]
-e=&amp;gt;end: End|future:&amp;gt;http://www.google.com
-op1=&amp;gt;operation: My Operation|past
-op2=&amp;gt;operation: Stuff|current
-sub1=&amp;gt;subroutine: My Subroutine|invalid
-cond=&amp;gt;condition: Yes
-or No?|approved:&amp;gt;http://www.google.com
-c2=&amp;gt;condition: Good idea|rejected
-io=&amp;gt;inputoutput: catch something...|future
-
-st-&amp;gt;op1(right)-&amp;gt;cond
-cond(yes, right)-&amp;gt;c2
-cond(no)-&amp;gt;sub1(left)-&amp;gt;op1
-c2(yes)-&amp;gt;io-&amp;gt;e
-c2(no)-&amp;gt;op2-&amp;gt;e
-&lt;/code&gt;&lt;/pre&gt;</content:encoded>
-        <dc:creator>Calvin Haynes</dc:creator>
-        <media:content url="https://blog.calvinhaynes.top/images/feature1/flowchart.png" medium="image"><media:title type="html">featured image</media:title></media:content>
-        
-        
-        
-          
-            
-          
-        
-        
-          
-            
-              <category>diagram</category>
-            
-          
         
         
           
