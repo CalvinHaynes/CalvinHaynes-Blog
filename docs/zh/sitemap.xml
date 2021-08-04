@@ -55,6 +55,7 @@
                 />
   </url><url>
     <loc>https://blog.calvinhaynes.top/categories/</loc>
+    <lastmod>2016-06-04T13:28:25+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -70,6 +71,61 @@
                 hreflang="zh"
                 href="https://blog.calvinhaynes.top/categories/"
                 />
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/tags/math/</loc>
+    <lastmod>2016-06-04T13:28:25+00:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/categories/math/</loc>
+    <lastmod>2016-06-04T13:28:25+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.calvinhaynes.top/en/categories/math/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/categories/math/"
+                />
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/tags/</loc>
+    <lastmod>2016-06-04T13:28:25+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.calvinhaynes.top/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.calvinhaynes.top/ko/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/tags/"
+                />
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/posts/</loc>
+    <lastmod>2016-06-04T13:28:25+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.calvinhaynes.top/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.calvinhaynes.top/ko/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/posts/"
+                />
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/posts/%E5%8D%81%E5%88%86%E9%92%9F%E5%91%8A%E8%AF%89%E4%BD%A0%E4%BB%80%E4%B9%88%E6%98%AF%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/</loc>
+    <lastmod>2016-06-04T13:28:25+00:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/series/</loc>
     <xhtml:link
@@ -88,23 +144,6 @@
                 href="https://blog.calvinhaynes.top/series/"
                 />
   </url><url>
-    <loc>https://blog.calvinhaynes.top/tags/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.calvinhaynes.top/en/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://blog.calvinhaynes.top/tags/"
-                />
-  </url><url>
     <loc>https://blog.calvinhaynes.top/about/</loc>
     <xhtml:link
                 rel="alternate"
@@ -120,23 +159,6 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://blog.calvinhaynes.top/about/"
-                />
-  </url><url>
-    <loc>https://blog.calvinhaynes.top/posts/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.calvinhaynes.top/en/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="zh"
-                href="https://blog.calvinhaynes.top/posts/"
                 />
   </url>
 </urlset>
