@@ -20,7 +20,6 @@
       {{ partial "body/infos" . }}
       {{ partial "body/tags" . }}
     </div>
-    {{ partial "ad.html" . }}
     <article class="single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
       {{ partial "body/toc" . }}
       {{ $regex := "(?i)src\\s*=\\s*\"([^\"]*(png|jpg|jpeg|gif|bmp|svg))\"" }}
