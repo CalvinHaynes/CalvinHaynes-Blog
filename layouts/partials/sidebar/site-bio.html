@@ -3,7 +3,7 @@
   {{ if ($.Param "enableBioImage" | default true) }}
   <hr class="hr-slash bio-hr"/>
   <div class="about-text">
-    云原生是一种信仰 🤘
+    永远保持热忱的心 🤘
   </div>
   <div class="bio__photo-wrapper">
     {{ $src := "" }}
@@ -25,26 +25,26 @@
     {{ end }}
   </div>
   <div class="about-text">
-    扫码关注后，后台回复◉k8s◉获取史上最方便快捷的 Kubernetes 高可用部署工具，只需一条命令，连 ssh 都不需要！
+    我是一个热爱IT技术和音乐的Dream Catcher，正在努力培养计算机的深度和广度认知，也会和大家伙儿分享我的音乐，大家伙儿多多关照 (๑❛ᴗ❛๑)
     <br />
-    回复◉图谱◉领取 Kubernetes 知识图谱！
+    联系我的话，可以邮箱或者知乎私信哦！！谢谢大家咯(*≧▽≦)
     <br />
-    你也可以扫描下方二维码加我个人微信：
+    下面有我的联系方式哦
   </div>
-  <div class="bio__photo-wrapper">
+  <!-- <div class="bio__photo-wrapper">
     {{ $src := "" }}
     {{ if $.Param "wechatUrl" }}
       <img data-src="{{ $.Param "wechatUrl" }}" alt="{{ if $.Param "myname" }}{{ $.Param "myname" }}{{ else }}Avatar{{ end }}" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload bio__photo" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}"/>
     {{ end }}
-  </div>
+  </div> -->
   {{ end }}
   <hr class="hr-slash bio-hr"/>
   <div class="bio__name">
     {{ $.Param "myname" }}
   </div>
-  <div class="bio__desc">
+  <!-- <div class="bio__desc">
     {{ $.Param "whoami" }}
-  </div>
+  </div> -->
   
   {{ if $.Param "organization" }}
   <div class="bio__info">
