@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <sitemap>
-    <loc>https://blog.calvinhaynes.top/en/sitemap.xml</loc>
-    
-      <lastmod>2020-03-05T14:08:48+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>https://blog.calvinhaynes.top/zh/sitemap.xml</loc>
-    
-      <lastmod>2021-08-04T00:20:10+09:00</lastmod>
-    
-  </sitemap>
-  
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://blog.calvinhaynes.top/</loc>
+    <lastmod>2021-08-04T00:20:10+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/showcase/</loc>
+    <lastmod>2021-08-04T00:20:10+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/showcase/cs-lab/</loc>
+    <lastmod>2020-01-19T21:04:11+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/archive/</loc>
+    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/categories/</loc>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/series/</loc>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/tags/</loc>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/about/</loc>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/posts/</loc>
+  </url>
+</urlset>

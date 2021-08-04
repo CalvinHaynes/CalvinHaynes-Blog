@@ -1,10 +1,3 @@
-[en]
-  title = "Hugo Zzo Theme"
-  languageName = "English"
-  weight = 1
-  languagedir = "ltr"
-  contentdir = "content/en"
-
 [zh]
   title = "Calvin Haynes的博客站"
   languageName = "简体中文"

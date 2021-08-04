@@ -2,8 +2,10 @@ baseURL = "https://blog.calvinhaynes.top/"
 title = "Calvin Haynes's Blog"
 theme = "zzo"
 
+contentDir = "zh"
+
 defaultContentLanguage = "zh"
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 hasCJKLanguage = true
 
 summaryLength = 70
