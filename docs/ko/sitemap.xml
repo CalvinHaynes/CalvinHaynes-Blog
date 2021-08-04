@@ -29,6 +29,11 @@
                 />
     <xhtml:link
                 rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/archive/"
+                />
+    <xhtml:link
+                rel="alternate"
                 hreflang="ko"
                 href="https://blog.calvinhaynes.top/ko/archive/"
                 />
@@ -124,6 +129,11 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://blog.calvinhaynes.top/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/posts/"
                 />
     <xhtml:link
                 rel="alternate"

@@ -36,6 +36,24 @@
     <loc>https://blog.calvinhaynes.top/showcase/cs-lab/</loc>
     <lastmod>2020-01-19T21:04:11+09:00</lastmod>
   </url><url>
+    <loc>https://blog.calvinhaynes.top/archive/</loc>
+    <lastmod>2019-10-19T11:44:14+09:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.calvinhaynes.top/en/archive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.calvinhaynes.top/ko/archive/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/archive/"
+                />
+  </url><url>
     <loc>https://blog.calvinhaynes.top/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -102,6 +120,23 @@
                 rel="alternate"
                 hreflang="zh"
                 href="https://blog.calvinhaynes.top/about/"
+                />
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/posts/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://blog.calvinhaynes.top/en/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ko"
+                href="https://blog.calvinhaynes.top/ko/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="zh"
+                href="https://blog.calvinhaynes.top/posts/"
                 />
   </url>
 </urlset>
