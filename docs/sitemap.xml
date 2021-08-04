@@ -3,7 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.calvinhaynes.top/</loc>
-    <lastmod>2021-08-04T00:20:10+09:00</lastmod>
+    <lastmod>2021-08-05T00:22:49+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/categories/</loc>
+    <lastmod>2021-08-05T00:22:49+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/categories/hugo/</loc>
+    <lastmod>2021-08-05T00:22:49+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/posts/hugo/</loc>
+    <lastmod>2021-08-05T00:22:49+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/posts/</loc>
+    <lastmod>2021-08-05T00:22:49+08:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/showcase/</loc>
     <lastmod>2021-08-04T00:20:10+09:00</lastmod>
@@ -14,14 +26,10 @@
     <loc>https://blog.calvinhaynes.top/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
   </url><url>
-    <loc>https://blog.calvinhaynes.top/categories/</loc>
-  </url><url>
     <loc>https://blog.calvinhaynes.top/series/</loc>
   </url><url>
     <loc>https://blog.calvinhaynes.top/tags/</loc>
   </url><url>
     <loc>https://blog.calvinhaynes.top/about/</loc>
-  </url><url>
-    <loc>https://blog.calvinhaynes.top/posts/</loc>
   </url>
 </urlset>
