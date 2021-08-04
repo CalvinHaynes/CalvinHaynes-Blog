@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blog.calvinhaynes.top/</loc>
+    <loc>https://blog.calvinhaynes.top/zh/</loc>
     <lastmod>2021-08-04T00:20:10+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
@@ -11,16 +11,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/"
+                href="https://blog.calvinhaynes.top/zh/"
                 />
   </url><url>
-    <loc>https://blog.calvinhaynes.top/showcase/</loc>
+    <loc>https://blog.calvinhaynes.top/zh/showcase/</loc>
     <lastmod>2021-08-04T00:20:10+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
@@ -30,13 +25,13 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/showcase/"
+                href="https://blog.calvinhaynes.top/zh/showcase/"
                 />
   </url><url>
-    <loc>https://blog.calvinhaynes.top/showcase/cs-lab/</loc>
+    <loc>https://blog.calvinhaynes.top/zh/showcase/cs-lab/</loc>
     <lastmod>2020-01-19T21:04:11+09:00</lastmod>
   </url><url>
-    <loc>https://blog.calvinhaynes.top/archive/</loc>
+    <loc>https://blog.calvinhaynes.top/zh/archive/</loc>
     <lastmod>2019-10-19T11:44:14+09:00</lastmod>
     <xhtml:link
                 rel="alternate"
@@ -45,16 +40,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/archive/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/archive/"
+                href="https://blog.calvinhaynes.top/zh/archive/"
                 />
   </url><url>
-    <loc>https://blog.calvinhaynes.top/categories/</loc>
+    <loc>https://blog.calvinhaynes.top/zh/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -62,16 +52,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/categories/"
+                href="https://blog.calvinhaynes.top/zh/categories/"
                 />
   </url><url>
-    <loc>https://blog.calvinhaynes.top/series/</loc>
+    <loc>https://blog.calvinhaynes.top/zh/series/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -79,16 +64,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/series/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/series/"
+                href="https://blog.calvinhaynes.top/zh/series/"
                 />
   </url><url>
-    <loc>https://blog.calvinhaynes.top/tags/</loc>
+    <loc>https://blog.calvinhaynes.top/zh/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -96,16 +76,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/tags/"
+                href="https://blog.calvinhaynes.top/zh/tags/"
                 />
   </url><url>
-    <loc>https://blog.calvinhaynes.top/about/</loc>
+    <loc>https://blog.calvinhaynes.top/zh/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -113,16 +88,11 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/about/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/about/"
+                href="https://blog.calvinhaynes.top/zh/about/"
                 />
   </url><url>
-    <loc>https://blog.calvinhaynes.top/posts/</loc>
+    <loc>https://blog.calvinhaynes.top/zh/posts/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -130,13 +100,8 @@
                 />
     <xhtml:link
                 rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/posts/"
+                href="https://blog.calvinhaynes.top/zh/posts/"
                 />
   </url>
 </urlset>

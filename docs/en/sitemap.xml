@@ -13,12 +13,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/"
+                href="https://blog.calvinhaynes.top/zh/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -43,12 +38,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/posts/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/posts/"
+                href="https://blog.calvinhaynes.top/zh/posts/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -67,12 +57,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/tags/"
+                href="https://blog.calvinhaynes.top/zh/tags/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -88,7 +73,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/showcase/"
+                href="https://blog.calvinhaynes.top/zh/showcase/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -101,12 +86,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/categories/"
+                href="https://blog.calvinhaynes.top/zh/categories/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -131,12 +111,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/series/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/series/"
+                href="https://blog.calvinhaynes.top/zh/series/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -221,42 +196,12 @@
   </url><url>
     <loc>https://blog.calvinhaynes.top/en/gallery/cartoon/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/gallery/cartoon/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.calvinhaynes.top/en/gallery/cartoon/"
-                />
   </url><url>
     <loc>https://blog.calvinhaynes.top/en/gallery/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/gallery/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.calvinhaynes.top/en/gallery/"
-                />
   </url><url>
     <loc>https://blog.calvinhaynes.top/en/gallery/photo/</loc>
     <lastmod>2019-10-31T10:20:16+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/gallery/photo/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.calvinhaynes.top/en/gallery/photo/"
-                />
   </url><url>
     <loc>https://blog.calvinhaynes.top/en/presentation/dir/fourth/</loc>
     <lastmod>2019-10-30T20:48:10+09:00</lastmod>
@@ -278,12 +223,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/archive/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/archive/"
+                href="https://blog.calvinhaynes.top/zh/archive/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -296,12 +236,7 @@
     <xhtml:link
                 rel="alternate"
                 hreflang="zh"
-                href="https://blog.calvinhaynes.top/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/about/"
+                href="https://blog.calvinhaynes.top/zh/about/"
                 />
     <xhtml:link
                 rel="alternate"
@@ -319,15 +254,5 @@
     <lastmod>2016-11-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/en/tags/index/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ko"
-                href="https://blog.calvinhaynes.top/ko/tags/index/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://blog.calvinhaynes.top/en/tags/index/"
-                />
   </url>
 </urlset>
