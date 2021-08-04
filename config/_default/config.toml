@@ -3,7 +3,7 @@ title = "Calvin Haynes's Blog"
 theme = "zzo"
 
 defaultContentLanguage = "zh"
-defaultContentLanguageInSubdir = false
+defaultContentLanguageInSubdir = true
 hasCJKLanguage = true
 
 summaryLength = 70
