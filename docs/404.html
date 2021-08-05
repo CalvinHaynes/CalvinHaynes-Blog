@@ -1507,7 +1507,7 @@
     
     
       <a href="/" title="主页" rel="home" class="navbar__title-link">
-        <h6 class="navbar__title"><i class="fas fa-dharmachakra fa-spin"></i> Calvin Haynes&#39;s Blog</h6>
+        <h6 class="navbar__title">Calvin Haynes&#39;s Blog</h6>
       </a>
     
   
@@ -1590,18 +1590,6 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/friends/">友链</a>
-        </li>
-      
-      
-    
-      
-      
-      
-      
-
-      
-        <li class="navbarm__menu--item ">
           <a href="/archive/">归档</a>
         </li>
       
@@ -1626,8 +1614,18 @@
 
       
         <li class="navbarm__menu--item ">
-          <a href="/">电子书</a>
+          <a href="/">
+            电子书
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+          </a>
         </li>
+
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/the-way-to-go/">Go 入门指南</a>
+          </li>
+        
+
       
       
     
@@ -1701,14 +1699,6 @@
   
   
   
-  <a href="/friends/" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true" target="_blank"><i class="fas fa-user-friends"></i>  友链</a>
-  
-  
-  
-  
-  
-  
-  
   <a href="/archive/" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true" target="_blank"><i class="fas fa-archive"></i>  归档</a>
   
   
@@ -1725,7 +1715,19 @@
   
   
   
-  <a href="/" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true" target="_blank"><i class="fas fa-book"></i>  电子书</a>
+  <div class="navbar__dropdown navbar__slide-down" data-ani="true">
+    <a target="_blank" href="/" class="navbar__menu-item "
+      dir="ltr">
+      <i class="fas fa-book"></i>
+      电子书
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+    </a>
+    <div class="navbar__dropdown--content">
+      
+      <a target="_blank" href="/the-way-to-go/" class="navbar__dropdown--item" dir="ltr"> Go 入门指南</a>
+      
+    </div>
+  </div>
   
   
 </div>
