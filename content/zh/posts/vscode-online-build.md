@@ -7,8 +7,8 @@ keywords:
 title: "上课摸鱼必备 -- Vscode网页版的搭建教程"
 date: 2021-08-05T20:41:23+08:00
 lastmod: 2021-08-05T20:41:23+08:00
-description:
-draft: true 
+description: "Vscode网页版"
+draft: false 
 author: Calvin Haynes
 hideToc: false
 enableToc: true

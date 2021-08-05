@@ -3,10 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.calvinhaynes.top/</loc>
-    <lastmod>2021-08-05T00:22:49+08:00</lastmod>
+    <lastmod>2021-08-05T20:41:23+08:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/categories/</loc>
-    <lastmod>2021-08-05T00:22:49+08:00</lastmod>
+    <lastmod>2021-08-05T20:41:23+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/tags/</loc>
+    <lastmod>2021-08-05T20:41:23+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/tags/vscode/</loc>
+    <lastmod>2021-08-05T20:41:23+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/posts/vscode-online-build/</loc>
+    <lastmod>2021-08-05T20:41:23+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/posts/</loc>
+    <lastmod>2021-08-05T20:41:23+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/categories/%E6%9E%81%E5%AE%A2%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2021-08-05T20:41:23+08:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/categories/hugo/</loc>
     <lastmod>2021-08-05T00:22:49+08:00</lastmod>
@@ -15,12 +30,6 @@
     <lastmod>2021-08-05T00:22:49+08:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/posts/hugo/</loc>
-    <lastmod>2021-08-05T00:22:49+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.calvinhaynes.top/tags/</loc>
-    <lastmod>2021-08-05T00:22:49+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.calvinhaynes.top/posts/</loc>
     <lastmod>2021-08-05T00:22:49+08:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/showcase/</loc>
