@@ -1,6 +1,6 @@
 ---
 keywords: 
-- 
+- "hugo"
 title: "Hugo搭建个人博客教程（GithubPages + 阿里云）"
 date: 2021-08-05T00:22:49+08:00
 lastmod: 2021-08-05T00:22:49+08:00
@@ -13,7 +13,7 @@ enableTocContent: false
 tocFolding: false
 tocLevels: ["h2", "h3", "h4"]
 tags:
--
+- "hugo实战基础"
 categories: "hugo"
 img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/35af5124880511ebb6edd017c2d2eca2.6mpycsk390k0.jpg"
 ---
@@ -165,11 +165,11 @@ theme = "zzo"
 
 
 
-## 3 - 资源整理
+## 3 - 资源整理（一些有用的文档）
 
   [Zzo主题官方文档](https://zzo-docs.vercel.app/)
 
   [阿里云云解析DNS文档](https://help.aliyun.com/product/29697.html?spm=a2c4g.11186623.6.540.d0044e82AEgtJN)
 
-  
+  [hugo文章的front matter](https://gohugo.io/content-management/front-matter/)
 
