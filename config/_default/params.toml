@@ -111,7 +111,7 @@ rssLimit = 10
 
 # comment
 enableComment = true
-disqus_shortname = ""
+disqus_shortname = "calvinhaynes"
 commento = false
 
 [telegram]
