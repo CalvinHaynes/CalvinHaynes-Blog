@@ -2,8 +2,6 @@ baseURL = "https://blog.calvinhaynes.top/"
 title = "Calvin Haynes's Blog"
 theme = "zzo"
 
-contentDir = "zh"
-
 defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = false
 hasCJKLanguage = true
