@@ -2353,21 +2353,24 @@ git submodule add https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
   
 </nav>
     
-    <link rel="stylesheet" href="https://blog.calvinhaynes.top/css/iDisqus.min.css" />
-<div id="comment"></div>
-<script src="https://blog.calvinhaynes.top/js/iDisqus.min.js"></script>
-<script>
-var disq = new iDisqus('comment', {
-    forum: 'fuckcloudnative',
-    api: 'https://disqus.fuckcloudnative.io',
-    site: 'https://fuckcloudnative.io',
-    emojiPath: 'https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting/emoji/',
-    mode: 2,
-    timeout: 15,
-    init: true
-});
-</script>
+      
+  
+  <div id="vcomments"></div>
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 
+  <script type="text/javascript">
+    new Valine({
+        el: '#vcomments' ,
+        appId: '3ic2pCzBFIfn5Cm0X7DqPvPU-gzGzoHsz',
+        appKey: 'qFnCvg6Ofy2la1mDziFN57wN',
+        notify: 'false', 
+        verify: 'false', 
+        avatar:'mm', 
+        placeholder: '说点什么吧...',
+        visitor: 'false'
+    });
+  </script>
     <div class="modal micromodal-slide" id="modal" aria-hidden="true">
   <div class="modal__overlay" tabindex="-1" data-micromodal-close>
     <div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-title">
