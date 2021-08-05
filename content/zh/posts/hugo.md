@@ -169,9 +169,9 @@ theme = "zzo"
 
 ## 3 - 资源整理
 
-  Zzo主题官方文档：https://zzo-docs.vercel.app/
+  [Zzo主题官方文档](https://zzo-docs.vercel.app/)
 
-  阿里云云解析DNS文档：https://help.aliyun.com/product/29697.html?spm=a2c4g.11186623.6.540.d0044e82AEgtJN
+  [阿里云云解析DNS文档](https://help.aliyun.com/product/29697.html?spm=a2c4g.11186623.6.540.d0044e82AEgtJN)
 
   
 

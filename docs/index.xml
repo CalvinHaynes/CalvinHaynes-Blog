@@ -215,8 +215,8 @@ git submodule add https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
 &lt;p&gt;​	这部分主要是看主题作者写的详细文档进行自己的设计，在Hugo官网中找到的比较热门的主题的Github库中都有相关的文档，建议小伙伴们自行查看学习，每个主题都有不同之处，我使用的是Zzo主题，它的官方文档在&lt;a href=&#34;https://zzo-docs.vercel.app/&#34;&gt;这里&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;​	我的Github仓库在&lt;a href=&#34;https://github.com/CalvinHaynes/CalvinHaynes.github.io&#34;&gt;这里&lt;/a&gt;，欢迎 fork 和查看配置文件&lt;/p&gt;
 &lt;h2 id=&#34;3---资源整理&#34;&gt;3 - 资源整理&lt;/h2&gt;
-&lt;p&gt;Zzo主题官方文档：https://zzo-docs.vercel.app/&lt;/p&gt;
-&lt;p&gt;阿里云云解析DNS文档：https://help.aliyun.com/product/29697.html?spm=a2c4g.11186623.6.540.d0044e82AEgtJN&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zzo-docs.vercel.app/&#34;&gt;Zzo主题官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://help.aliyun.com/product/29697.html?spm=a2c4g.11186623.6.540.d0044e82AEgtJN&#34;&gt;阿里云云解析DNS文档&lt;/a&gt;&lt;/p&gt;
 </content:encoded>
         <dc:creator>Calvin Haynes</dc:creator>
         
