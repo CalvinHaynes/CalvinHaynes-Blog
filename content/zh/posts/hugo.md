@@ -18,8 +18,6 @@ categories: "hugo"
 img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/35af5124880511ebb6edd017c2d2eca2.6mpycsk390k0.jpg"
 ---
 
-# Hugo部署个人博客教程（GithubPages + 阿里云）
-
 ## 前言
 
 经过种种尝试，还是决定选择了Hugo作为了搭建个人博客的框架，Hugo是目前可以搭建个人博客的框架中部署最快的，而且坑也相对很少，不过还是有的，近几天折腾了不少东西，也终于算是初步搭建完了Hugo+Zoo主题的[个人博客](https://blog.calvinhaynes.top/)
