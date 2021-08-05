@@ -96,4 +96,4 @@ $viewport_size: {{ .Site.Params.viewportSize | default "normal" }};
 @import 'pages/publication';
 @import 'pages/resume';
 
-@import 'layout/idisqus';
+// @import 'layout/idisqus';
