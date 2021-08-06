@@ -3,7 +3,7 @@
 {{ if $.Params.header }}
   {{ range $.Params.header }}
     {{ if eq .type "typewriter" }}
-      <div class="site-header__title site-header__title--shadow basicflex-column site-header__align-{{ .align }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}" style="width: 100%; height: {{ .height }}px; padding: {{ .paddingY }}px {{ .paddingX }}px; font-size: {{ .fontSize }}px; {{ with .fontColor }}color:{{ . }}{{ end }};">
+      <div class="site-header basicflex-column site-header__align-{{ .align }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}" style="width: 100%; height: {{ .height }}px; padding: {{ .paddingY }}px {{ .paddingX }}px; font-size: {{ .fontSize }}px; {{ with .fontColor }}color:{{ . }}{{ end }};">
         <div id="typewriter"></div>
       </div>
 

@@ -15,23 +15,13 @@
     <div class="single__nojs">{{ i18n "nojs-message" }}</div>
     <script>document.querySelector('.single').classList.remove('hide'); document.querySelector('.single__nojs').classList.add('hide');</script>
     <h2 class="single__title" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">{{ .Title }}</h2>
-    <h3 class="single__subtitle">{{ .Params.subtitle }}</h3>
     <div class="single__meta">
       {{ partial "body/infos" . }}
       {{ partial "body/tags" . }}
     </div>
     <article class="single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
       {{ partial "body/toc" . }}
-      {{ $regex := "(?i)src\\s*=\\s*\"([^\"]*(png|jpg|jpeg|gif|bmp|svg))\"" }}
-        {{ $img := findRE $regex .Content }}
-
-        {{ if gt (len $img) 0 }}
-          {{ $replacement := print "data-src=\"$1\" class=\"lazyload\"" }}
-          {{ .Content | replaceRE $regex $replacement | safeHTML }}
-        {{ else }}
-          {{ .Content }}
-        {{ end }}
-	<div style="text-align:center;color: #ccc;font-size:16px;font-family: cursive;">-------他日江湖相逢 <i class="fa fa-umbrella" style="color:#268bd2"></i> 再当杯酒言欢-------</div>
+      {{ .Content }}
     </article>
     
     {{ partial "script/clipboard-script" . }}
@@ -41,8 +31,7 @@
     {{ partial "body/whoami" . }}
     {{ partial "body/related" . }}
     {{ partial "pagination/pagination-single" . }}
-    <!-- <img src="/images/wechat-qr.png" alt="公众号二维码"> -->
-    {{ partial "comments/comment.html" . }}
+    {{ partial "comments/comments.html" . }}
     {{ partial "body/photoswipe" . }}
 
     <div class="hide">

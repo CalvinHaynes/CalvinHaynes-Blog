@@ -4,17 +4,15 @@
     {{ partial "footer/go-to-top" . }}
     <hr />
 
-    <div class="basicflex flexwrap">
+    <div class="basicflex">
         {{ range $.Param "footerLinks" }}
-            {{ if .link }}
-                <a href="{{ .link }}" class="footer__link" target="_blank" rel="noreferrer">{{ .name }}</a>
-            {{ end }}
+            <a href="{{ .link }}" class="footer__link" target="_blank" rel="noreferrer">{{ .name }}</a>
         {{ end }}
     </div>
 
     <div class="footer__poweredby">
         {{ partial "footer/site-counter" . }}
-        {{ if $.Site.Copyright }}
+        {{ if $.Site.Copyright }}        
             <p class="caption">
                 {{ if $.Site.Params.copyrightOptions.enableCopyrightLink }}
                     {{ $leftString := replace (index (split $.Site.Copyright "{}") 0) "{year}" now.Year }}
@@ -29,39 +27,11 @@
                     {{ with $.Site.Copyright }}{{ replace . "{year}" now.Year | markdownify}}{{ end }}
                 {{ end }}
             </p>
-	    <p class="caption">
-	    Powered by Hugo on <a rel="license" href="https://github.com/CalvinHaynes/CalvinHaynes.github.io">Github</a> | 
-        <a href="https://beian.miit.gov.cn">吉ICP备2021002455号</a>
-	    </p>
         {{ end }}
 
         {{ if $.Param "showPoweredBy" }}
-	    <div class="github-badge">
-	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v{{ .Site.Hugo.Version }}</a></span>
-              <span class="badge-subject">托管于</span><span class="badge-value bg-brightgreen"><a style="color:#fff" href="https://cn.aliyun.com/" target="_blank">阿里云</a></span>
-	      <!-- <span class="badge-subject">CDN</span><span class="badge-value bg-blueviolet"><a style="color:#fff" href="https://console-api.nodecache.com/f?aff=3Av5mE" target="_blank">Nodecache</a></span> -->
-	      <span class="badge-subject">图床</span><span class="badge-value bg-orange"><a style="color:#fff" href="https://picx.xpoet.cn/" target="_blank">picX</a></span>
-	      <span class="badge-subject">主题</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://github.com/zzossig/hugo-theme-zzo" target="_blank">Zzo theme</a></span>
-	    </div>
-	    {{ partial "uptime.html" }}
+            <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
         {{ end }}
-
-    </div>
+        
+    </div> 
 </footer>
-
-<!-- 博客导流 -->
-<!--
-<link rel="dns-prefetch" href="https://my.openwrite.cn">
-<link href="https://my.openwrite.cn" rel="preconnect" crossorigin>
-<script src="https://my.openwrite.cn/js/readmore.js" type="text/javascript"></script>
-<script >
-    const btw = new BTWPlugin();
-    btw.init({
-        id: 'container-ow',
-        blogId: '10020-1569254413955-300',
-        name: '云原生实验室',
-        qrcode: 'https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting/img/20200813101211.png',
-        keyword: 'vip',
-    });
-</script>
--->

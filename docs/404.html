@@ -17,14 +17,11 @@
 
 
 
-  
-  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
-
-
-
 <script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
 
 <script defer src="/js/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js"></script>
+
+<script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
 
 <script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
@@ -111,74 +108,6 @@
       }
     }) : null;
     
-
-
-    
-    var tables = document.querySelectorAll('.single__contents > table');
-    for (let i = 0; i < tables.length; i++) {
-      var table = tables[i];
-      var wrapper = document.createElement('div');
-      wrapper.className = 'table-wrapper';
-      table.parentElement.replaceChild(wrapper, table);
-      wrapper.appendChild(table);
-    }
-    
-
-    
-    var footNoteRefs = document.querySelectorAll('.footnote-ref');
-    var footNoteBackRefs = document.querySelectorAll('.footnote-backref');
-
-    footNoteRefs ? 
-    footNoteRefs.forEach(function(elem, idx) {
-      elem.onmouseenter = function () {
-        if (navbar.classList.contains('scrolling')) {
-          navbar.classList.remove('scrolling');
-        }
-      }
-
-      elem.onmouseleave = function () {
-        if (!navbar.classList.contains('scrolling')) {
-          setTimeout(function () {
-            navbar.classList.add('scrolling');
-          }, 100);
-        }
-      }
-
-      elem.onclick = function () {
-        if (!navbar.classList.contains('scrolling')) {
-          navbar.classList.remove('navbar--show');
-          navbar.classList.remove('navbar--hide');
-          navbar.classList.add('navbar--hide');
-        }
-      }
-    }) : null;
-
-    footNoteBackRefs ? 
-    footNoteBackRefs.forEach(function(elem, idx) {
-      elem.onmouseenter = function () {
-        if (navbar.classList.contains('scrolling')) {
-          navbar.classList.remove('scrolling');
-        }
-      }
-
-      elem.onmouseleave = function () {
-        if (!navbar.classList.contains('scrolling')) {
-          setTimeout(function() {
-            navbar.classList.add('scrolling');
-          }, 100);
-        }
-      }
-
-      elem.onclick = function () {
-        if (!navbar.classList.contains('scrolling')) {
-          navbar.classList.remove('navbar--show');
-          navbar.classList.remove('navbar--hide');
-          navbar.classList.add('navbar--hide');
-        }
-      }
-    }) : null;
-    
-
 
     
     var summaryContainer = document.querySelector('.summary__container');
@@ -368,12 +297,10 @@
           return null;
         }
         
-        if (navbar.classList.contains('scrolling')) {
-          if (!navbar.classList.contains('navbar--hide')) {
-            navbar.classList.add('navbar--hide');
-          } else if (navbar.classList.contains('navbar--show')) {
-            navbar.classList.remove('navbar--show');
-          }
+        if (!navbar.classList.contains('navbar--hide')) {
+          navbar.classList.add('navbar--hide');
+        } else if (navbar.classList.contains('navbar--show')) {
+          navbar.classList.remove('navbar--show');
         }
 
         if (singleContentsElem) {
@@ -440,12 +367,10 @@
           gttBtn.style.display = "none";
         }
 
-        if (navbar.classList.contains('scrolling')) {
-          if (navbar.classList.contains('navbar--hide')) {
-            navbar.classList.remove('navbar--hide');
-          } else if (!navbar.classList.contains('navbar--show')) {
-            navbar.classList.add('navbar--show');
-          }
+        if (navbar.classList.contains('navbar--hide')) {
+          navbar.classList.remove('navbar--hide');
+        } else if (!navbar.classList.contains('navbar--show')) {
+          navbar.classList.add('navbar--show');
         }
 
         if (singleContentsElem) {
@@ -527,18 +452,6 @@
     var selectThemeElem = document.querySelectorAll('.select-theme');
     var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
 
-
-    
-    var skinDarkCode = JSON.parse("\"深色模式\"");
-    
-    var skinLightCode = JSON.parse("\"亮色模式\"");
-    
-    var skinHackerCode = JSON.parse("\"hacker\"");
-    
-    var skinSolarizedCode = JSON.parse("\"护眼模式\"");
-    
-    var skinKimbieCode = JSON.parse("\"kimbie\"");
-
     var setMetaColor = function(themeColor) {
       var metaMsapplicationTileColor = document.getElementsByName('msapplication-TileColor')[0];
       var metaThemeColor = document.getElementsByName('theme-color')[0];
@@ -572,20 +485,6 @@
         metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee8d5');
       } 
     }
-
-    var parseSkinCode = function(themeText) {
-      if (themeText === skinDarkCode) {
-        return 'dark';
-      } else if (themeText === skinLightCode) {
-        return 'light';
-      } else if (themeText === skinHackerCode) {
-        return 'hacker';
-      } else if (themeText === skinSolarizedCode) {
-        return 'solarized';
-      } else if (themeText === skinKimbieCode) {
-        return 'kimbie';
-      }
-    }
     
     if (localTheme) {
       selectThemeItemElem ? 
@@ -605,7 +504,7 @@
     selectThemeItemElem ? 
     selectThemeItemElem.forEach(function (v, i) {
       v.addEventListener('click', function (e) {
-        var selectedThemeVariant = parseSkinCode(e.target.text.trim());
+        var selectedThemeVariant = e.target.text.trim();
         localStorage.setItem('theme', selectedThemeVariant);
         setMetaColor(selectedThemeVariant);
 
@@ -659,17 +558,11 @@
 
   
     
-    var baseurl = JSON.parse("\"https://blog.calvinhaynes.top/\"");
-    
     var permalink = JSON.parse("\"https://blog.calvinhaynes.top/404.html\"");
-    
-    var langprefix = JSON.parse("\"\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
     
-    
-    var enableSearch = JSON.parse("true");
     
     var enableSearchHighlight = JSON.parse("true");
     
@@ -677,61 +570,48 @@
     
     var sectionType = JSON.parse("\"page\"");
 
-    
-    var kind = JSON.parse("\"404\"");
-
     var fuse = null;
 
-    if (enableSearch) {
-      (function initFuse() {
-        var xhr = new XMLHttpRequest();
-        if (sectionType === "publication" && kind !== "page") {
-          xhr.open('GET', permalink + "index.json");
-        } else {
-          xhr.open('GET', baseurl + langprefix + "/index.json");
+    (function initFuse() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', permalink + "index.json");
+      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+      xhr.onload = function () {
+        if (xhr.status === 200) {
+          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+            keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
+            includeMatches: enableSearchHighlight,
+            shouldSort: true,
+            threshold: 0.4,
+            location: 0,
+            distance: 100,
+            maxPatternLength: 32,
+            minMatchCharLength: 1,
+          });
+          window.fuse = fuse;
         }
-
-        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-        xhr.onload = function () {
-          if (xhr.status === 200) {
-            fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-              keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
-              includeMatches: enableSearchHighlight,
-              shouldSort: true,
-              threshold: 0.4,
-              location: 0,
-              distance: 100,
-              maxPatternLength: 32,
-              minMatchCharLength: 1,
-              isCaseSensitive: false, 
-              findAllMatches: false, 
-              useExtendedSearch: false, 
-            });
-            window.fuse = fuse;
-          }
-          else {
-            console.error('[' + xhr.status + ']Error:', xhr.statusText);
-          }
-        };
-        xhr.send();
-      })();
-    }
+        else {
+          console.error('[' + xhr.status + ']Error:', xhr.statusText);
+        }
+      };
+      xhr.send();
+    })();
 
     function makeLi(ulElem, obj) {
       var li = document.createElement('li');
       li.className = 'search-result__item';
       
       var a = document.createElement('a');
-      a.innerHTML = obj.item.title;
+      a.innerHTML = obj.title;
       a.setAttribute('class', 'search-result__item--title');
-      a.setAttribute('href', obj.item.permalink);
+      a.setAttribute('href', obj.permalink);
 
       var descDiv = document.createElement('div');
       descDiv.setAttribute('class', 'search-result__item--desc');
-      if (obj.item.description) {
-        descDiv.innerHTML = obj.item.description;
-      } else if (obj.item.content) {
-        descDiv.innerHTML = obj.item.content.substring(0, 225);
+      if (obj.description) {
+        descDiv.innerHTML = obj.description;
+      } else if (obj.content) {
+        descDiv.innerHTML = obj.content.substring(0, 225);
       }
       
       li.appendChild(a);
@@ -1205,7 +1085,7 @@
   
     var mobileSearchInputElem = document.querySelector('#search-mobile');
     var mobileSearchClassElem = document.querySelector('.mobile-search');
-    var mobileSearchBtnElems = document.querySelectorAll('.navbar-search');
+    var mobileSearchBtnElem = document.querySelector('#mobileSearchBtn');
     var mobileSearchCloseBtnElem = document.querySelector('#search-mobile-close');
     var mobileSearchContainer = document.querySelector('#search-mobile-container');
     var mobileSearchResultsElem = document.querySelector('#search-mobile-results');
@@ -1215,21 +1095,19 @@
       mobileSearchClassElem.style.display = 'none';
     }
 
-    mobileSearchBtnElems ? 
-    mobileSearchBtnElems.forEach(function (elem, idx) {
-      elem.addEventListener('click', function () {
-        if (mobileSearchContainer) {
-          mobileSearchContainer.style.display = 'block';
-        }
+    mobileSearchBtnElem ? 
+    mobileSearchBtnElem.addEventListener('click', function () {
+      if (mobileSearchContainer) {
+        mobileSearchContainer.style.display = 'block';
+      }
 
-        if (mobileSearchInputElem) {
-          mobileSearchInputElem.focus();
-        }
+      if (mobileSearchInputElem) {
+        mobileSearchInputElem.focus();
+      }
 
-        if (htmlElem) {
-          htmlElem.style.overflowY = 'hidden';
-        }
-      });
+      if (htmlElem) {
+        htmlElem.style.overflowY = 'hidden';
+      }
     }) : null;
 
     mobileSearchCloseBtnElem ? 
@@ -1418,7 +1296,7 @@
     "@type": "WebPage",
     "url" : "https://blog.calvinhaynes.top/404.html",
     "name": "404 Page not found",
-    "description": "The site of Calvin Haynes\u0027s Blog",
+    "description": "The site of Calvin Haynes's Blog",
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": "https://blog.calvinhaynes.top/"
@@ -1433,24 +1311,7 @@
 
     
   
-  <link rel="dns-prefetch" href="https://ga.fuckcloudnative.io">
-  <link href="https://ga.fuckcloudnative.io" rel="preconnect" crossorigin>
-
-  <script>
   
-  window.ga_tid = "UA-145022311-1";
-  window.ga_url = "https://ga.fuckcloudnative.io";
-  </script>
-  <script defer src="https://cdn.jsdelivr.net/gh/giuem/ga-proxy/packages/ga/dist/ga.min.js" async></script>
-
-
-<script async defer data-website-id="f811ff6e-361e-4bdb-bacc-226cda745586" src="https://umami.fuckcloudnative.io/umami.js"></script>
-
-  
-  
-  <script defer src='https://cf.fuckcloudnative.io/beacon.min.js' data-cf-beacon='{"token": "11f3ac7369f54ca29c00757cfb4cafd1"}'></script>
-  
-
 
 
 
@@ -1465,24 +1326,9 @@
 
 
 
-<style>
-    #top-grrk{
-    background:url(https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting@second/img/paomadeng.gif);
-    height:2px;
-    position:fixed;
-    width:100%;
-    Z-index:10000;
-}
-</style>    
-<div id="top-grrk"></div>
-
-
-
-
 </head>
 
 <body id="root" class="theme__dark">
-    
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1497,12 +1343,11 @@
 
 
         <div class="wrapper" data-type="page" data-kind="404">
-            <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
+            <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
-  
     
     <a href="/" title="主页" rel="home" class="navbar__logo-link">
-      <img src="/logo.webp" alt="Home" class="navbar__logo">
+      <img src="/logo.png" alt="Home" class="navbar__logo">
     </a>
     
     
@@ -1510,7 +1355,6 @@
         <h6 class="navbar__title">Calvin Haynes&#39;s Blog</h6>
       </a>
     
-  
   </div>
 
   
@@ -1736,15 +1580,12 @@
 </div>
 
 </nav>
-
             
-
             
 <main class="main">
   <div class="not-found">
-    <img style="max-width: 150px" src="https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Icon/CalvinHaynes.6x4wl71yvkk0.jpg">
     <h1 class="h1 title">404</h1>
-    <h6 class="h6 subtitle">艾玛，咋整的，这不完dz了吗</h6>
+    <h6 class="h6 subtitle">Page not found</h6>
   </div>
 </main>
 <script>
@@ -1762,69 +1603,6 @@
 </script>
 
             
-<link rel="dns-prefetch" href="https://cdn.bootcss.com">
-<link href="https://cdn.bootcss.com" rel="preconnect" crossorigin>
-<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
-<script type="text/javascript">
-var a_idx = 0;
-jQuery(document).ready(function($) {
-    $("body").click(function(e) {
-        var a = new Array("Docker", "Kubernetes", "Prometheus", "Envoy", "Istio", "coredns", "Service Mesh", "Cloud Native");
-        var $i = $("<span />").text(a[a_idx]);
-        a_idx = (a_idx + 1) % a.length;
-        var x = e.pageX,
-        y = e.pageY;
-        function randomColor() {
-          var flakeColor = new Array("#FFDA65", "#00BFFF", "#BA55D3", "#FFA07A", "#87CEEB", "#FFB6C1");
-          var snowColor = flakeColor[Math.floor(flakeColor.length * Math.random())];
-          return snowColor;
-        }
-        $i.css({
-            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
-            "top": y - 20,
-            "left": x,
-            "position": "absolute",
-            "font-weight": "bold",
-            "color": randomColor()
-        });
-        $("body").append($i);
-        $i.animate({
-            "top": y - 180,
-            "opacity": 0
-        },
-        1500,
-        function() {
-            $i.remove();
-        });
-    });
-});
-</script>
-
-
-
-
-
-<script defer type="text/javascript">
- var OriginTitle = document.title;
- document.addEventListener('visibilitychange', function () {
-     if (document.hidden) {
-         document.title = '别走啊，官人 _(:з」∠)_';
-     }
-     else {
-         document.title = OriginTitle;
-     }
- });
-</script>
-
-<script defer src="https://blog.calvinhaynes.top/js/instantpage.min.js" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
-
-
-
-
-
-
-
-
 
             <footer class="footer">
     
@@ -1920,7 +1698,7 @@ jQuery(document).ready(function($) {
   
   
     
-      <a href="https://feeds.feedburner.com/fuckcloudnative" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
+      <a href="https://blog.calvinhaynes.top/index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle fill="currentColor" cx="6.18" cy="17.82" r="2.18"/><path fill="currentColor" d="M5.59 10.23c-.84-.14-1.59.55-1.59 1.4 0 .71.53 1.28 1.23 1.4 2.92.51 5.22 2.82 5.74 5.74.12.7.69 1.23 1.4 1.23.85 0 1.54-.75 1.41-1.59-.68-4.2-3.99-7.51-8.19-8.18zm-.03-5.71C4.73 4.43 4 5.1 4 5.93c0 .73.55 1.33 1.27 1.4 6.01.6 10.79 5.38 11.39 11.39.07.73.67 1.28 1.4 1.28.84 0 1.5-.73 1.42-1.56-.73-7.34-6.57-13.19-13.92-13.92z"/></svg>
       </a>
     
@@ -1939,11 +1717,11 @@ jQuery(document).ready(function($) {
 
     <hr />
 
-    <div class="basicflex flexwrap">
+    <div class="basicflex">
         
-            
+            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
         
-            
+            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
         
     </div>
 
@@ -1971,7 +1749,7 @@ jQuery(document).ready(function($) {
 
   </div>
 
-        
+                
             <p class="caption">
                 
                     
@@ -1982,52 +1760,14 @@ jQuery(document).ready(function($) {
                     
                 
             </p>
-	    <p class="caption">
-	    Powered by Hugo on <a rel="license" href="https://github.com/CalvinHaynes/CalvinHaynes.github.io">Github</a> | 
-        <a href="https://beian.miit.gov.cn">吉ICP备2021002455号</a>
-	    </p>
         
 
         
-	    <div class="github-badge">
-	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.86.1</a></span>
-              <span class="badge-subject">托管于</span><span class="badge-value bg-brightgreen"><a style="color:#fff" href="https://cn.aliyun.com/" target="_blank">阿里云</a></span>
-	      
-	      <span class="badge-subject">图床</span><span class="badge-value bg-orange"><a style="color:#fff" href="https://picx.xpoet.cn/" target="_blank">picX</a></span>
-	      <span class="badge-subject">主题</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://github.com/zzossig/hugo-theme-zzo" target="_blank">Zzo theme</a></span>
-	    </div>
-	    <section class="caption">
-    <span id="span_dt_dt"> </span> 
-    <script language="javascript">
-      function show_date_time(){
-        window.setTimeout("show_date_time()", 1000);
-        BirthDay=new Date("8/4/2021 00:00:00");
-        today=new Date();
-        timeold=(today.getTime()-BirthDay.getTime());
-        sectimeold=timeold/1000
-        secondsold=Math.floor(sectimeold);
-        msPerDay=24*60*60*1000
-        e_daysold=timeold/msPerDay
-        daysold=Math.floor(e_daysold);
-        e_hrsold=(e_daysold-daysold)*24;
-        hrsold=Math.floor(e_hrsold);
-        e_minsold=(e_hrsold-hrsold)*60;
-        minsold=Math.floor((e_hrsold-hrsold)*60);
-        seconds=Math.floor((e_minsold-minsold)*60);
-        span_dt_dt.innerHTML="本站已经开心运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
-      }
-      show_date_time();
-    </script>
-</section>
-
+            <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
         
-
-    </div>
+        
+    </div> 
 </footer>
-
-
-
-
         </div>
         
 

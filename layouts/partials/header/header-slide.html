@@ -12,7 +12,7 @@
             {{ $header := . }}
             {{ if .title }}            
               {{ range .title }}
-              <div class="site-header__title {{ if $header.titleShadow }}site-header__title--shadow{{ end }}" style="font-size: {{ $header.titleFontSize }}px; padding: {{ $header.paddingY }}px {{ $header.paddingX }}px;">
+              <div class="site-header__title" style="color: #fcfcfa; font-size: {{ $header.titleFontSize }}px; padding: {{ $header.paddingY }}px {{ $header.paddingX }}px;">
                 {{ . }}
               </div>
               {{ end }}      
@@ -22,7 +22,7 @@
             {{ end }}
             {{ if .subtitle }}
               {{ range .subtitle }} 
-              <div class="site-header__subtitle" style="color: #fcfcfa; font-size: {{ $header.subtitleFontSize }}px; padding: {{ $header.paddingY }}px {{ $header.paddingX }}px;">
+              <div class="site-header__subtitle" style="font-size: {{ $header.subtitleFontSize }}px; padding: {{ $header.paddingY }}px {{ $header.paddingX }}px;">
                 {{ . }}
               </div>
               {{ end }}
