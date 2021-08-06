@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/aplayer/1.10.1/APlayer.min.js"></script>
+</head>
+<body>
+    <div class="demo">
+        <div id="player1">
+        </div>
+    </div>
+
+    <script>
+        var ap = new APlayer
+                ({
+                    element: document.getElementById('player1'), //指定元素
+                    narrow: false,
+                    fixed:true,//位置设置为座下角
+                    autoplay: false,
+                    showlrc: false,
+                    mini: true,
+                    theme: '#ebd0c2',
+                    loop: 'all',
+                    order: 'random',
+                    preload: 'auto',
+                    volume: 0.7,
+                    mutex: false,//同时只播放一个，避免多个页面一起播放
+                    listFolded: false,
+                    listMaxHeight: 90,
+                    lrcType: 0,
+                    music:
+                    [
+                      {'title': 'Kubernetes 1.18 is out!',
+                       'author': 'Kubernetes Podcast',
+                       'url': 'https://ryanyang.coding.net/api/share/download/45741b9c-af7e-49a5-ac72-03bdbf0f1207',
+                       'pic': 'https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting/img/20200429165409.png'
+                      },
+                      {'title': 'etcd',
+                       'author': 'Kubernetes Podcast',
+                       'url': 'https://ryanyang.coding.net/api/share/download/de805976-f046-47e9-8523-0b6a689f9c1f',
+                       'pic': 'https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting/img/20200429165409.png'
+                      },
+                      {'title': 'gRPC',
+                       'author': 'Kubernetes Podcast',
+                       'url': 'https://ryanyang.coding.net/api/share/download/fc0b2ead-f29c-43c8-a8ff-c6016f331949',
+                       'pic': 'https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting/img/20200429165409.png'
+                      }
+                    ]
+                });
+        //ap.init();
+    </script>
+
+</body>
+</html>
