@@ -4,7 +4,7 @@ keywords:
 title: "Hugo搭建个人博客教程（GithubPages + 阿里云）"
 date: 2021-08-05T00:22:49+08:00
 lastmod: 2021-08-05T00:22:49+08:00
-description: "Hugo系列"
+description: "hexo迁移到Hugo初探经验总结"
 draft: false
 author: Calvin Haynes
 hideToc: false
