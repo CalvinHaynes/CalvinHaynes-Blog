@@ -22,14 +22,14 @@
     {{ end }}
   </div>
   <div class="whoami__contents">
-    <div class="whoami__written-by">
-      {{ T "single-writtenBy" }}
-    </div>
     <div class="whoami__title">
+      ❉<span class="whoami__written-by">
+        {{ T "single-writtenBy" }}:
+      </span>
       {{ if $.Param "author" }}
-        {{ $.Param "author" }}
+        {{ $.Param "author" }}&ensp;❉
       {{ else }}
-        {{ $.Param "myname" }}
+        {{ $.Param "myname" }}&ensp;❉
       {{ end }}
     </div>
     <div class="whoami__desc">
@@ -47,6 +47,13 @@
       </a>
       {{ end }}
       {{ end }}
+    </div>
+    <div class="whoami__desc">
+      <ul style="list-style-type: circle;">
+        <li>
+	  版权声明：自由转载-非商用-非衍生-转载请注明出处！（<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">创意共享4.0许可证</a>）
+        </li>
+      </ul>
     </div>
   </div>
 </section>

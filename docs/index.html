@@ -17,11 +17,14 @@
 
 
 
+  
+  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+
+
+
 <script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
 
 <script defer src="/js/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js"></script>
-
-<script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
 
 <script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
 
@@ -108,6 +111,74 @@
       }
     }) : null;
     
+
+
+    
+    var tables = document.querySelectorAll('.single__contents > table');
+    for (let i = 0; i < tables.length; i++) {
+      var table = tables[i];
+      var wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      table.parentElement.replaceChild(wrapper, table);
+      wrapper.appendChild(table);
+    }
+    
+
+    
+    var footNoteRefs = document.querySelectorAll('.footnote-ref');
+    var footNoteBackRefs = document.querySelectorAll('.footnote-backref');
+
+    footNoteRefs ? 
+    footNoteRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function () {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
+        }
+      }
+    }) : null;
+
+    footNoteBackRefs ? 
+    footNoteBackRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function() {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
+        }
+      }
+    }) : null;
+    
+
 
     
     var summaryContainer = document.querySelector('.summary__container');
@@ -297,10 +368,12 @@
           return null;
         }
         
-        if (!navbar.classList.contains('navbar--hide')) {
-          navbar.classList.add('navbar--hide');
-        } else if (navbar.classList.contains('navbar--show')) {
-          navbar.classList.remove('navbar--show');
+        if (navbar.classList.contains('scrolling')) {
+          if (!navbar.classList.contains('navbar--hide')) {
+            navbar.classList.add('navbar--hide');
+          } else if (navbar.classList.contains('navbar--show')) {
+            navbar.classList.remove('navbar--show');
+          }
         }
 
         if (singleContentsElem) {
@@ -367,10 +440,12 @@
           gttBtn.style.display = "none";
         }
 
-        if (navbar.classList.contains('navbar--hide')) {
-          navbar.classList.remove('navbar--hide');
-        } else if (!navbar.classList.contains('navbar--show')) {
-          navbar.classList.add('navbar--show');
+        if (navbar.classList.contains('scrolling')) {
+          if (navbar.classList.contains('navbar--hide')) {
+            navbar.classList.remove('navbar--hide');
+          } else if (!navbar.classList.contains('navbar--show')) {
+            navbar.classList.add('navbar--show');
+          }
         }
 
         if (singleContentsElem) {
@@ -452,6 +527,18 @@
     var selectThemeElem = document.querySelectorAll('.select-theme');
     var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
 
+
+    
+    var skinDarkCode = JSON.parse("\"深色模式\"");
+    
+    var skinLightCode = JSON.parse("\"亮色模式\"");
+    
+    var skinHackerCode = JSON.parse("\"hacker\"");
+    
+    var skinSolarizedCode = JSON.parse("\"护眼模式\"");
+    
+    var skinKimbieCode = JSON.parse("\"kimbie\"");
+
     var setMetaColor = function(themeColor) {
       var metaMsapplicationTileColor = document.getElementsByName('msapplication-TileColor')[0];
       var metaThemeColor = document.getElementsByName('theme-color')[0];
@@ -485,6 +572,20 @@
         metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee8d5');
       } 
     }
+
+    var parseSkinCode = function(themeText) {
+      if (themeText === skinDarkCode) {
+        return 'dark';
+      } else if (themeText === skinLightCode) {
+        return 'light';
+      } else if (themeText === skinHackerCode) {
+        return 'hacker';
+      } else if (themeText === skinSolarizedCode) {
+        return 'solarized';
+      } else if (themeText === skinKimbieCode) {
+        return 'kimbie';
+      }
+    }
     
     if (localTheme) {
       selectThemeItemElem ? 
@@ -504,7 +605,7 @@
     selectThemeItemElem ? 
     selectThemeItemElem.forEach(function (v, i) {
       v.addEventListener('click', function (e) {
-        var selectedThemeVariant = e.target.text.trim();
+        var selectedThemeVariant = parseSkinCode(e.target.text.trim());
         localStorage.setItem('theme', selectedThemeVariant);
         setMetaColor(selectedThemeVariant);
 
@@ -558,11 +659,17 @@
 
   
     
+    var baseurl = JSON.parse("\"https://blog.calvinhaynes.top/\"");
+    
     var permalink = JSON.parse("\"https://blog.calvinhaynes.top/\"");
+    
+    var langprefix = JSON.parse("\"\"");
     var searchResults = null;
     var searchMenu = null;
     var searchText = null;
     
+    
+    var enableSearch = JSON.parse("true");
     
     var enableSearchHighlight = JSON.parse("true");
     
@@ -570,48 +677,61 @@
     
     var sectionType = JSON.parse("\"page\"");
 
+    
+    var kind = JSON.parse("\"home\"");
+
     var fuse = null;
 
-    (function initFuse() {
-      var xhr = new XMLHttpRequest();
-      xhr.open('GET', permalink + "index.json");
-      xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
-            keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
-            includeMatches: enableSearchHighlight,
-            shouldSort: true,
-            threshold: 0.4,
-            location: 0,
-            distance: 100,
-            maxPatternLength: 32,
-            minMatchCharLength: 1,
-          });
-          window.fuse = fuse;
+    if (enableSearch) {
+      (function initFuse() {
+        var xhr = new XMLHttpRequest();
+        if (sectionType === "publication" && kind !== "page") {
+          xhr.open('GET', permalink + "index.json");
+        } else {
+          xhr.open('GET', baseurl + langprefix + "/index.json");
         }
-        else {
-          console.error('[' + xhr.status + ']Error:', xhr.statusText);
-        }
-      };
-      xhr.send();
-    })();
+
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+              keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
+              includeMatches: enableSearchHighlight,
+              shouldSort: true,
+              threshold: 0.4,
+              location: 0,
+              distance: 100,
+              maxPatternLength: 32,
+              minMatchCharLength: 1,
+              isCaseSensitive: false, 
+              findAllMatches: false, 
+              useExtendedSearch: false, 
+            });
+            window.fuse = fuse;
+          }
+          else {
+            console.error('[' + xhr.status + ']Error:', xhr.statusText);
+          }
+        };
+        xhr.send();
+      })();
+    }
 
     function makeLi(ulElem, obj) {
       var li = document.createElement('li');
       li.className = 'search-result__item';
       
       var a = document.createElement('a');
-      a.innerHTML = obj.title;
+      a.innerHTML = obj.item.title;
       a.setAttribute('class', 'search-result__item--title');
-      a.setAttribute('href', obj.permalink);
+      a.setAttribute('href', obj.item.permalink);
 
       var descDiv = document.createElement('div');
       descDiv.setAttribute('class', 'search-result__item--desc');
-      if (obj.description) {
-        descDiv.innerHTML = obj.description;
-      } else if (obj.content) {
-        descDiv.innerHTML = obj.content.substring(0, 225);
+      if (obj.item.description) {
+        descDiv.innerHTML = obj.item.description;
+      } else if (obj.item.content) {
+        descDiv.innerHTML = obj.item.content.substring(0, 225);
       }
       
       li.appendChild(a);
@@ -1085,7 +1205,7 @@
   
     var mobileSearchInputElem = document.querySelector('#search-mobile');
     var mobileSearchClassElem = document.querySelector('.mobile-search');
-    var mobileSearchBtnElem = document.querySelector('#mobileSearchBtn');
+    var mobileSearchBtnElems = document.querySelectorAll('.navbar-search');
     var mobileSearchCloseBtnElem = document.querySelector('#search-mobile-close');
     var mobileSearchContainer = document.querySelector('#search-mobile-container');
     var mobileSearchResultsElem = document.querySelector('#search-mobile-results');
@@ -1095,19 +1215,21 @@
       mobileSearchClassElem.style.display = 'none';
     }
 
-    mobileSearchBtnElem ? 
-    mobileSearchBtnElem.addEventListener('click', function () {
-      if (mobileSearchContainer) {
-        mobileSearchContainer.style.display = 'block';
-      }
+    mobileSearchBtnElems ? 
+    mobileSearchBtnElems.forEach(function (elem, idx) {
+      elem.addEventListener('click', function () {
+        if (mobileSearchContainer) {
+          mobileSearchContainer.style.display = 'block';
+        }
 
-      if (mobileSearchInputElem) {
-        mobileSearchInputElem.focus();
-      }
+        if (mobileSearchInputElem) {
+          mobileSearchInputElem.focus();
+        }
 
-      if (htmlElem) {
-        htmlElem.style.overflowY = 'hidden';
-      }
+        if (htmlElem) {
+          htmlElem.style.overflowY = 'hidden';
+        }
+      });
     }) : null;
 
     mobileSearchCloseBtnElem ? 
@@ -1328,6 +1450,23 @@
 
 
 
+
+
+
+<style>
+    #top-grrk{
+    background:url(https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting@second/img/paomadeng.gif);
+    height:2px;
+    position:fixed;
+    width:100%;
+    Z-index:10000;
+}
+</style>    
+<div id="top-grrk"></div>
+
+
+
+
 </head>
 
 <body id="root" class="theme__dark">
@@ -1345,11 +1484,12 @@
 
 
         <div class="wrapper" data-type="page" data-kind="home">
-            <nav class="navbar" role="navigation" aria-label="main navigation" data-dir="ltr">
+            <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
   <div class="navbar__brand">
+  
     
     <a href="/" title="主页" rel="home" class="navbar__logo-link">
-      <img src="/logo.png" alt="Home" class="navbar__logo">
+      <img src="/logo.webp" alt="Home" class="navbar__logo">
     </a>
     
     
@@ -1357,6 +1497,7 @@
         <h6 class="navbar__title">Calvin Haynes&#39;s Blog</h6>
       </a>
     
+  
   </div>
 
   
@@ -1382,6 +1523,10 @@
         
         <a href="#" class="dropdown-item select-theme__item ">
           solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          kimbie
         </a>
         
       
@@ -1527,6 +1672,10 @@
           护眼模式
         </a>
         
+        <a href="#" class="dropdown-item select-theme__item ">
+          kimbie
+        </a>
+        
       
     </div>
   </div>
@@ -1582,13 +1731,57 @@
 </div>
 
 </nav>
+
             
-<header class="header">
+<header class="header ">
     
+        <script src="https://cdn.jsdelivr.net/npm/typewriter-effect@2.13.1/dist/core.js" integrity="sha256-dsvC/UolMujQ/UQ7lVeJ7Q/FV3BSzWO0rc8iz1rqHQo=" crossorigin="anonymous"></script>
+
+
+  
+    
+      <div class="site-header basicflex-column site-header__align-center" data-ani="true" style="width: 100%; height: 190px; padding: px 50px; font-size: 44px; ;">
+        <div id="typewriter"></div>
+      </div>
+
+      <script>
         
+        
+
+        var methods = JSON.parse("[{\"typeString\":\"Hi There,I am \\u003cstrong\\u003eCalvin Haynes!\\u003c/strong\\u003e\"},{\"pauseFor\":2500},{\"deleteChars\":14},{\"typeString\":\"\\u003cstrong\\u003ea guitar lover!\\u003c/strong\\u003e\"},{\"pauseFor\":2500},{\"deleteChars\":15},{\"typeString\":\"\\u003cstrong\\u003ea CS Lover!\\u003c/strong\\u003e\"},{\"pauseFor\":2500},{\"deleteChars\":11},{\"typeString\":\"\\u003cstrong\\u003ea undergraduate!\\u003c/strong\\u003e\"},{\"pauseFor\":2500},{\"deleteChars\":16}]");
+        var options = JSON.parse("{\"autoStart\":false,\"loop\":true}");
+        var typeElem = document.getElementById("typewriter");
+        var typewriter = new Typewriter(typeElem, options);
+        
+        for (var i = 0; i < methods.length; i++) {
+          var key = Object.keys(methods[i])[0];
+
+          if (key === "typeString") {
+            typewriter.typeString(methods[i][key]);
+          } else if (key === "pauseFor") {
+            typewriter.pauseFor(methods[i][key]);
+          } else if (key === "deleteAll") {
+            typewriter.deleteAll();
+          } else if (key === "deleteChars") {
+            typewriter.deleteChars(methods[i][key]);
+          } else if (key === "pause") {
+            typewriter.pause();
+          } else if (key === "stop") {
+            typewriter.stop();
+          }
+        }
+
+        typewriter.start();
+      </script>
+    
+  
+    
+  
+
 
     
 </header>
+
 
             
 <main class="main inner" data-sidebar-position="right">
@@ -1726,7 +1919,7 @@
   
   <hr class="hr-slash bio-hr"/>
   <div class="about-text">
-    云原生是一种信仰 🤘
+    永远保持热忱的心 🤘
   </div>
   <div class="bio__photo-wrapper">
     
@@ -1737,8 +1930,15 @@
     
   </div>
   <div class="about-text">
-    扫码关注后，后台回复◉图谱◉领取史上最强 Kubernetes 知识图谱！
+    我是一个热爱IT技术和音乐的Dream Catcher，正在努力培养计算机的深度和广度认知，也会和大家伙儿分享我的音乐，大家伙儿多多关照 (๑❛ᴗ❛๑)
+    <br />
+    <br />
+    联系我的话，可以邮箱或者知乎私信哦！！谢谢大家咯(*≧▽≦)
+    <br />
+    <br />
+    下面有我的联系方式哦
   </div>
+  
   
   <hr class="hr-slash bio-hr"/>
   <div class="bio__name">
@@ -1750,28 +1950,34 @@
   
   
   <div class="bio__info">
+    <a style="padding-right: 0" title="就职于">
     <div class="bio__info--icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5s-3 1.34-3 3 1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V18c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-1.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05.02.01.03.03.04.04 1.14.83 1.93 1.94 1.93 3.41V18c0 .35-.07.69-.18 1H22c.55 0 1-.45 1-1v-1.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
     </div>
-    JLU
+    </a>
+    <a href="" target="_blank" rel="noreferrer">JLU</a>
   </div>
   
 
   
   <div class="bio__info">
+    <a style="padding-right: 0" title="现居地">
     <div class="bio__info--icon">
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 8c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4zm8.94 3c-.46-4.17-3.77-7.48-7.94-7.94V2c0-.55-.45-1-1-1s-1 .45-1 1v1.06C6.83 3.52 3.52 6.83 3.06 11H2c-.55 0-1 .45-1 1s.45 1 1 1h1.06c.46 4.17 3.77 7.48 7.94 7.94V22c0 .55.45 1 1 1s1-.45 1-1v-1.06c4.17-.46 7.48-3.77 7.94-7.94H22c.55 0 1-.45 1-1s-.45-1-1-1h-1.06zM12 19c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"/></svg>
     </div>
+    </a>
     ChangChun, China
   </div>
   
 
   
   <div class="bio__info">
-    <div class="bio__info--icon">      
+    <a style="padding-right: 0" title="邮箱">
+    <div class="bio__info--icon"> 
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25c-.25-.16-.4-.43-.4-.72 0-.67.73-1.07 1.3-.72L12 11l6.7-4.19c.57-.35 1.3.05 1.3.72 0 .29-.15.56-.4.72z"/></svg>
     </div>
-    <a href="mailto:chx1006488386@163.com">chx1006488386@163.com</a>    
+    </a>
+    <a href="https://email.163.com/">chx1006488386@163.com</a>    
   </div>
   
 
@@ -2052,6 +2258,69 @@
 </script>
 
             
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link href="https://cdn.bootcss.com" rel="preconnect" crossorigin>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+var a_idx = 0;
+jQuery(document).ready(function($) {
+    $("body").click(function(e) {
+        var a = new Array("Docker", "Kubernetes", "Prometheus", "Envoy", "Istio", "coredns", "Service Mesh", "Cloud Native");
+        var $i = $("<span />").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        function randomColor() {
+          var flakeColor = new Array("#FFDA65", "#00BFFF", "#BA55D3", "#FFA07A", "#87CEEB", "#FFB6C1");
+          var snowColor = flakeColor[Math.floor(flakeColor.length * Math.random())];
+          return snowColor;
+        }
+        $i.css({
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": randomColor()
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove();
+        });
+    });
+});
+</script>
+
+
+
+
+
+<script defer type="text/javascript">
+ var OriginTitle = document.title;
+ document.addEventListener('visibilitychange', function () {
+     if (document.hidden) {
+         document.title = '别走啊，官人 _(:з」∠)_';
+     }
+     else {
+         document.title = OriginTitle;
+     }
+ });
+</script>
+
+<script defer src="https://blog.calvinhaynes.top/js/instantpage.min.js" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+
+
+
+
+
+
+
+
 
             <footer class="footer">
     
@@ -2166,11 +2435,11 @@
 
     <hr />
 
-    <div class="basicflex">
+    <div class="basicflex flexwrap">
         
-            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+            
         
-            <a href="" class="footer__link" target="_blank" rel="noreferrer"></a>
+            
         
     </div>
 
@@ -2198,7 +2467,7 @@
 
   </div>
 
-                
+        
             <p class="caption">
                 
                     
@@ -2209,14 +2478,51 @@
                     
                 
             </p>
+	    <p class="caption">
+	    Powered by Hugo on <a rel="license" href="https://github.com/CalvinHaynes/CalvinHaynes.github.io">Github</a> | 
+        <a href="https://beian.miit.gov.cn">吉ICP备2021002455号</a>
+	    </p>
         
 
         
-            <p class="caption">Powered by <a href="https://gohugo.io/" target="_blank" rel="noreferrer">Hugo</a> and the <a href="https://github.com/zzossig/hugo-theme-zzo" target="_blank" rel="noreferrer">Zzo theme</a></p>
+	    <div class="github-badge">
+	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.86.1</a></span>
+              <span class="badge-subject">托管于</span><span class="badge-value bg-brightgreen"><a style="color:#fff" href="https://cn.aliyun.com/" target="_blank">阿里云</a></span>
+	      
+	      <span class="badge-subject">图床</span><span class="badge-value bg-orange"><a style="color:#fff" href="https://picx.xpoet.cn/" target="_blank">picX</a></span>
+	      <span class="badge-subject">主题</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://github.com/zzossig/hugo-theme-zzo" target="_blank">Zzo theme</a></span>
+	    </div>
+	    <section class="caption">
+    <span id="span_dt_dt"> </span> 
+    <script language="javascript">
+      function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("8/4/2021 00:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=Math.floor(e_hrsold);
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=Math.floor((e_hrsold-hrsold)*60);
+        seconds=Math.floor((e_minsold-minsold)*60);
+        span_dt_dt.innerHTML="本站已经开心运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+      }
+      show_date_time();
+    </script>
+</section>
+
         
-        
-    </div> 
+
+    </div>
 </footer>
+
+
+
         </div>
         
 
