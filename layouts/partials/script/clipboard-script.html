@@ -37,7 +37,7 @@
           clip.on('success', function (e) {
             e.clearSelection();
             inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
-            e.trigger.setAttribute('aria-label', 'Copied to clipboard!');
+            e.trigger.setAttribute('aria-label', '复制成功！');
             e.trigger.classList.add('tooltipped');
             e.trigger.classList.add('tooltipped-w');
           });

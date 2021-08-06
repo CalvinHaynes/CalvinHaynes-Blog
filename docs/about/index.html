@@ -1435,7 +1435,24 @@
 
     
   
+  <link rel="dns-prefetch" href="https://ga.fuckcloudnative.io">
+  <link href="https://ga.fuckcloudnative.io" rel="preconnect" crossorigin>
+
+  <script>
   
+  window.ga_tid = "UA-145022311-1";
+  window.ga_url = "https://ga.fuckcloudnative.io";
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/gh/giuem/ga-proxy/packages/ga/dist/ga.min.js" async></script>
+
+
+<script async defer data-website-id="f811ff6e-361e-4bdb-bacc-226cda745586" src="https://umami.fuckcloudnative.io/umami.js"></script>
+
+  
+  
+  <script defer src='https://cf.fuckcloudnative.io/beacon.min.js' data-cf-beacon='{"token": "11f3ac7369f54ca29c00757cfb4cafd1"}'></script>
+  
+
 
 
 
@@ -1446,9 +1463,6 @@
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     
-
-
-
 
 
 
@@ -1470,6 +1484,7 @@
 </head>
 
 <body id="root" class="theme__dark">
+    
     <script>
         var localTheme = localStorage.getItem('theme');
         if (localTheme) {
@@ -1824,7 +1839,7 @@
           clip.on('success', function (e) {
             e.clearSelection();
             inPre = prop(e.trigger.parentNode, 'tagName') == 'PRE';
-            e.trigger.setAttribute('aria-label', 'Copied to clipboard!');
+            e.trigger.setAttribute('aria-label', '复制成功！');
             e.trigger.classList.add('tooltipped');
             e.trigger.classList.add('tooltipped-w');
           });
