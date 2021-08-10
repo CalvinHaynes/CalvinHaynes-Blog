@@ -15,7 +15,7 @@ tocLevels: ["h2", "h3", "h4"]
 tags:
 - "hugo实战基础"
 categories: "hugo"
-img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/35af5124880511ebb6edd017c2d2eca2.6mpycsk390k0.jpg"
+img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/image.3sx4gtcey060.png"
 ---
 
 ## 前言
