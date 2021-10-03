@@ -14,7 +14,7 @@
     <managingEditor>chx1006488386@163.com (Calvin Haynes)</managingEditor>
     <webMaster>chx1006488386@163.com (Calvin Haynes)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Thu, 16 Sep 2021 12:00:04 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 03 Oct 2021 20:47:53 +0800</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://blog.calvinhaynes.top/posts/index.xml" rel="self" type="application/rss+xml" />
@@ -25,22 +25,155 @@
       
       
       <item>
-        <title>属于每一个程序猿和学生的一份高效率软件清单（涵盖多种方面，持续更新）</title>
+        <title>属于每一个程序猿和学生的一份高效率软件清单--第三弹:windows系统优化工具（持续更新）</title>
+        <link>https://blog.calvinhaynes.top/posts/software_3/</link>
+        <pubDate>Sun, 03 Oct 2021 20:47:53 +0800</pubDate>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
+        <atom:modified>Sun, 03 Oct 2021 20:47:53 +0800</atom:modified>
+        <guid>https://blog.calvinhaynes.top/posts/software_3/</guid>
+        <description>前言 这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。 之所以写这篇文章，很大一部分原因是想</description>
+        <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。&lt;/p&gt;
+&lt;p&gt;之所以写这篇文章，很大一部分原因是想和大家分享一下我的效率软件清单，另一个原因是也为自己下次重装系统做一个保障，免得忘记什么。&lt;/p&gt;
+&lt;p&gt;下面我们就正式开始介绍吧，目录我会分好类的，每个超链接都指向一些我认为的非常好的资源以及各个软件的下载地址等等的信息，大家按照自己想要看的点进去就可以了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;这可能是我的一个专栏系列（分享我使用的所有的有趣和高效率的软件或插件，网页等）&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;windows-系统优化工具&#34;&gt;windows 系统优化工具&lt;/h2&gt;
+&lt;h3 id=&#34;1---分区助手httpswwwdisktoolcnfeaturehtml&#34;&gt;&lt;a href=&#34;https://www.disktool.cn/feature.html&#34;&gt;1 - 分区助手&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;想必大家都被分区弄得很头痛吧，在装系统时 C 盘分的太小了，现在 C 盘红了，还不好清理，那么这款分区助手就能完美解决你的问题&lt;/li&gt;
+&lt;li&gt;图形化界面相当友好，电脑小白也能操作&lt;/li&gt;
+&lt;li&gt;附上分区助手官网的使用手册：https://www.disktool.cn/jiaocheng/index.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.30co17hqv740.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2---ccleaner电脑管家httpswwwccleanercom&#34;&gt;&lt;a href=&#34;https://www.ccleaner.com/&#34;&gt;2 - CCleaner：电脑管家&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;虽然网上骂声一片，说 CCleaner 是流氓软件，但是我依旧爱他，爱他简约而不简单的功能&lt;/li&gt;
+&lt;li&gt;CCleaner 的功能列表如下：
+&lt;ul&gt;
+&lt;li&gt;垃圾清理&lt;/li&gt;
+&lt;li&gt;驱动更新&lt;/li&gt;
+&lt;li&gt;注册表清理（超级强的功能）&lt;/li&gt;
+&lt;li&gt;卸载程序&lt;/li&gt;
+&lt;li&gt;管理 PC 启动项&lt;/li&gt;
+&lt;li&gt;重复文件查找&lt;/li&gt;
+&lt;li&gt;系统备份和还原&lt;/li&gt;
+&lt;li&gt;Cookie 和浏览器插件管理&lt;/li&gt;
+&lt;li&gt;等等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;软件界面如下：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-22-06-44.135fh22zoks0.gif&#34; alt=&#34;GIF-2021-9-22-22-06-44&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
+&lt;p&gt;好的工具只是方便我们管理自己的 PC 或者便于开发而已，千万不能陷入工具的陷阱，人和动物最大的区别就是学会了制造工具，但是过分依赖于工具也会毁了一个人，在使用工具时要保持一个态度就是：对于自己十分明确的功能勇敢的使用和尝试，对于自己不明确的功能先去学习原理，再结合搜索引擎上的经验慢慢投入使用。&lt;/p&gt;
+&lt;p&gt;最后希望大家按需取用上述的软件，玩的愉快！！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34; /&gt; &lt;strong&gt;未来我还会持续更新，在清单中添加更加有趣的软件，敬请期待！！！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+        <dc:creator>Calvin Haynes</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>软件清单</category>
+            
+          
+        
+        
+            
+              <category>高效工具系列</category>
+            
+        
+        
+      </item>
+      
+      <item>
+        <title>属于每一个程序猿和学生的一份高效率软件清单--第二弹:程序猿写文档必备工具箱（持续更新）</title>
+        <link>https://blog.calvinhaynes.top/posts/software_2/</link>
+        <pubDate>Sat, 02 Oct 2021 22:55:47 +0800</pubDate>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
+        <atom:modified>Sat, 02 Oct 2021 22:55:47 +0800</atom:modified>
+        <guid>https://blog.calvinhaynes.top/posts/software_2/</guid>
+        <description>前言 这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。 之所以写这篇文章，很大一部分原因是想</description>
+        <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。&lt;/p&gt;
+&lt;p&gt;之所以写这篇文章，很大一部分原因是想和大家分享一下我的效率软件清单，另一个原因是也为自己下次重装系统做一个保障，免得忘记什么。&lt;/p&gt;
+&lt;p&gt;下面我们就正式开始介绍吧，目录我会分好类的，每个超链接都指向一些我认为的非常好的资源以及各个软件的下载地址等等的信息，大家按照自己想要看的点进去就可以了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;这可能是我的一个专栏系列（分享我使用的所有的有趣和高效率的软件或插件，网页等）&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;程序猿写文档必备工具箱&#34;&gt;程序猿写文档必备工具箱&lt;/h2&gt;
+&lt;h3 id=&#34;1---snipaste截图软件httpswwwsnipastecom&#34;&gt;&lt;a href=&#34;https://www.snipaste.com/&#34;&gt;1 - Snipaste：截图软件&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;这绝对是综合看来我用过所有 windows 下截图软件最棒的了，所有的截图功能都有，像全屏截图、窗口截图，自定义像素截图等等基本功能都有。&lt;/li&gt;
+&lt;li&gt;最牛的功能是它的贴图功能，不知道大家有没有遇到过这样一种情况：假如上网课的时候，老师讲的下部分是关于上一张 PPT 的，但是你手中还没有 PPT，或者你想对比一下之前的 PPT 来学习，那么这个时候贴图就发挥其作用了，示例如下：（你还可以发挥你的其他想象利用这个功能）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-32-14.7k11ri8x4ng0.gif&#34; alt=&#34;GIF-2021-9-22-21-32-14&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以设置的选项如下：（==你可以在控制中自定义各个功能的快捷键，设置成你熟悉的==）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-23-05.4s2ojtxk63u0.gif&#34; alt=&#34;GIF-2021-9-22-21-23-05&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2---gifcam一款录制-gif-的软件httpblogbahraniappscomgifcamdownload&#34;&gt;&lt;a href=&#34;http://blog.bahraniapps.com/gifcam/#download&#34;&gt;2 - GifCam：一款录制 GIF 的软件&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;看了上面的 GIF 图，是不是也在奇怪我这些图是怎么自己做的，那么这就向您介绍这款软件：GIFCam，这是一款可以录制 GIF 动图的软件，短小精悍，仅仅只有录制 GIF 的功能，你可以设置输出文件的 FPS，自定义录制的窗口大小或者全屏等等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-39-42.1zze3osdryow.gif&#34; alt=&#34;GIF-2021-9-22-21-39-42&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3---picx-图床一个开源作者写的开源图床httpspicxxpoetcnupload&#34;&gt;&lt;a href=&#34;https://picx.xpoet.cn/#/upload&#34;&gt;3 - PicX 图床：一个开源作者写的开源图床&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;其实这个不能算是软件，但由于 chrome 浏览器可以直接把这个网站直接打包成一个应用在本地，也算个软件把。&lt;/li&gt;
+&lt;li&gt;这个开源图床目前还在优化和更新中，作者也十分努力的在开发和维护这个项目&lt;/li&gt;
+&lt;li&gt;这个图床就是利用你自己建的 Github 库存储图片，然后提供图片的管理和 Markdown+CDN 格式的自动转换，上传图片之后直接复制就可以放在你的 md 文档中了，着实挺方便，而且界面 UI 和交互也都很不错。&lt;/li&gt;
+&lt;li&gt;使用情况如下：（&lt;strong&gt;感谢作者：https://xpoet.cn/&lt;/strong&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-56-04.217loab9zsao.gif&#34; alt=&#34;GIF-2021-9-22-21-56-04&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
+&lt;p&gt;好的工具只是方便我们管理自己的 PC 或者便于开发而已，千万不能陷入工具的陷阱，人和动物最大的区别就是学会了制造工具，但是过分依赖于工具也会毁了一个人，在使用工具时要保持一个态度就是：对于自己十分明确的功能勇敢的使用和尝试，对于自己不明确的功能先去学习原理，再结合搜索引擎上的经验慢慢投入使用。&lt;/p&gt;
+&lt;p&gt;最后希望大家按需取用上述的软件，玩的愉快！！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34; /&gt; &lt;strong&gt;未来我还会持续更新，在清单中添加更加有趣的软件，敬请期待！！！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+        <dc:creator>Calvin Haynes</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>软件清单</category>
+            
+          
+        
+        
+            
+              <category>高效工具系列</category>
+            
+        
+        
+      </item>
+      
+      <item>
+        <title>属于每一个程序猿和学生的一份高效率软件清单--第一弹:程序猿高效开发工具（持续更新）</title>
         <link>https://blog.calvinhaynes.top/posts/software/</link>
         <pubDate>Thu, 16 Sep 2021 12:00:04 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Thu, 16 Sep 2021 12:00:04 +0800</atom:modified>
         <guid>https://blog.calvinhaynes.top/posts/software/</guid>
-        <description>前言 这是一份我正在使用的软件清单，涵盖了时间管理，高效率开发工具，系统优化插件等。 之所以写这篇文章，很大一部分原因是想和大家分享一下我的效率</description>
+        <description>前言 这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。 之所以写这篇文章，很大一部分原因是想</description>
         <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;这是一份我正在使用的软件清单，涵盖了时间管理，高效率开发工具，系统优化插件等。&lt;/p&gt;
+&lt;p&gt;这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。&lt;/p&gt;
 &lt;p&gt;之所以写这篇文章，很大一部分原因是想和大家分享一下我的效率软件清单，另一个原因是也为自己下次重装系统做一个保障，免得忘记什么。&lt;/p&gt;
 &lt;p&gt;下面我们就正式开始介绍吧，目录我会分好类的，每个超链接都指向一些我认为的非常好的资源以及各个软件的下载地址等等的信息，大家按照自己想要看的点进去就可以了。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;这可能是我的一个专栏系列（分享我使用的所有的有趣和高效率的软件或插件，网页等）&lt;/strong&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h2 id=&#34;程序猿高效开发工具&#34;&gt;程序猿高效开发工具&lt;/h2&gt;
-&lt;h3 id=&#34;1---jetbrains-toolboxjetbrains家的工具箱-httpswwwjetbrainscomtoolbox-app&#34;&gt;&lt;a href=&#34;https://www.jetbrains.com/toolbox-app/&#34;&gt;1 - JetBrains Toolbox：JetBrains家的工具箱 &lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;1---jetbrains-toolboxjetbrains-家的工具箱-httpswwwjetbrainscomtoolbox-app&#34;&gt;&lt;a href=&#34;https://www.jetbrains.com/toolbox-app/&#34;&gt;1 - JetBrains Toolbox：JetBrains 家的工具箱 &lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;自从用了 JetBrains 家的 IDEA，就爱上了他们家 IDE 的风格，目前也是离不开了，写各种语言程序的时候都是优先找他们家的 IDE，优秀的插件和特别 Geek 风的界面确实让人眼前一亮，JetBrains 推出的这款 JetBrains Toolbox 集成了 JetBrains 家所有工具的下载，更新，项目管理，对于喜欢 JetBrains 家 IDE 的朋友们确实方便了许多。&lt;/p&gt;
 &lt;p&gt;只需要创建一个 JetBrains 的文件夹，在设置中设置其为下载安装位置，就可以将所有 JetBrains 家的 IDE 集中在一个文件夹中，对于要重装系统的朋友在设置了 IDE 中的插件和配置同步后，直接下载 JetBrains Toolbox，也能免去很多麻烦。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.31wguugc2gk.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
@@ -60,15 +193,15 @@
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.4neb3udouo00.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.2l8ggbrf1y00.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;==&lt;strong&gt;关于高效的插件未来我应该会单独分享。&lt;/strong&gt;==&lt;/p&gt;
-&lt;h3 id=&#34;4---termiusssh终端httpswwwtermiuscom&#34;&gt;&lt;a href=&#34;https://www.termius.com/&#34;&gt;4 - Termius：SSH终端&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;4---termiusssh-终端httpswwwtermiuscom&#34;&gt;&lt;a href=&#34;https://www.termius.com/&#34;&gt;4 - Termius：SSH 终端&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;这是一个我目前用过的所有的SSH终端中最好的一个，它不仅美观，而且跨平台，对于移动端的适配手势简直不要太香，而且&lt;a href=&#34;https://blog.csdn.net/u012195214/article/details/87214085&#34;&gt;申请Github 学生包&lt;/a&gt;还可以免费享用更多的高级特权（Github学生包所有的&lt;a href=&#34;https://education.github.com/pack/offers&#34;&gt;特权&lt;/a&gt; ）&lt;/li&gt;
+&lt;li&gt;这是一个我目前用过的所有的 SSH 终端中最好的一个，它不仅美观，而且跨平台，对于移动端的适配手势简直不要太香，而且&lt;a href=&#34;https://blog.csdn.net/u012195214/article/details/87214085&#34;&gt;申请 Github 学生包&lt;/a&gt;还可以免费享用更多的高级特权（Github 学生包所有的&lt;a href=&#34;https://education.github.com/pack/offers&#34;&gt;特权&lt;/a&gt; ）&lt;/li&gt;
 &lt;li&gt;我之前写过一篇文章就有介绍过这个软件，大家有兴趣也可以去看看：https://zhuanlan.zhihu.com/p/379632978&lt;/li&gt;
-&lt;li&gt;以下是软件界面的图片（可以自定义终端的字体和颜色风格等）（全平台通用和同步，包含Android，IOS，Windows，MacOS，Linux）&lt;/li&gt;
+&lt;li&gt;以下是软件界面的图片（可以自定义终端的字体和颜色风格等）（全平台通用和同步，包含 Android，IOS，Windows，MacOS，Linux）&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.2e00phmhdyck.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;支持SFTP功能，NICE！！！&lt;/li&gt;
+&lt;li&gt;支持 SFTP 功能，NICE！！！&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;![GIF 2021-6-10 16-34-08](&lt;a href=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF&#34;&gt;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF&lt;/a&gt; 2021-6-10 16-34-08.1n12dp0c16ow.gif)&lt;/p&gt;
 &lt;h3 id=&#34;5---beyond-compare文件对比软件httpswwwbeyondcompareprocomdownload&#34;&gt;&lt;a href=&#34;https://www.beyondcomparepro.com/download&#34;&gt;5 - Beyond Compare：文件对比软件&lt;/a&gt;&lt;/h3&gt;
@@ -91,67 +224,41 @@
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.q22z3o8eark.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;==&lt;strong&gt;检测到差异时：&lt;/strong&gt;==&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.5llp6d8z8jk0.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;6---github-desktop迄今为止最好的git-gui工具httpsdesktopgithubcom&#34;&gt;&lt;a href=&#34;https://desktop.github.com/&#34;&gt;6 - Github Desktop：迄今为止最好的Git GUI工具&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;6---github-desktop迄今为止最好的-git-gui-工具httpsdesktopgithubcom&#34;&gt;&lt;a href=&#34;https://desktop.github.com/&#34;&gt;6 - Github Desktop：迄今为止最好的 Git GUI 工具&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;你是否为写Git命令烦恼，找了很多图形化处理工具，但是都不是很人性化，而且界面丑而差，那么Github Desktop这就来了，包您满意诶嘿嘿。&lt;/li&gt;
-&lt;li&gt;Github Desktop是Github官方开发的GIthub图形化软件，就冲这一点，你应该就能知道这个软件应该很好用了吧，毕竟是官方的，起码针对Github的支持是杠杠滴&lt;/li&gt;
+&lt;li&gt;你是否为写 Git 命令烦恼，找了很多图形化处理工具，但是都不是很人性化，而且界面丑而差，那么 Github Desktop 这就来了，包您满意诶嘿嘿。&lt;/li&gt;
+&lt;li&gt;Github Desktop 是 Github 官方开发的 GIthub 图形化软件，就冲这一点，你应该就能知道这个软件应该很好用了吧，毕竟是官方的，起码针对 Github 的支持是杠杠滴&lt;/li&gt;
 &lt;li&gt;具体使用情况我就不细说了，这里附上使用指南：https://docs.github.com/cn/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop&lt;/li&gt;
 &lt;li&gt;==&lt;strong&gt;简单的界面演示如下：&lt;/strong&gt;==&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-46-20.szft3tbxetc.gif&#34; alt=&#34;GIF-2021-9-22-21-46-20&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;程序猿写文档必备工具箱&#34;&gt;程序猿写文档必备工具箱&lt;/h2&gt;
-&lt;h3 id=&#34;1---snipaste截图软件httpswwwsnipastecom&#34;&gt;&lt;a href=&#34;https://www.snipaste.com/&#34;&gt;1 - Snipaste：截图软件&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;7---wireshark最牛的开源免费网络封包分析工具httpswwwwiresharkorg&#34;&gt;&lt;a href=&#34;https://www.wireshark.org/&#34;&gt;7 - WireShark：最牛的开源免费网络封包分析工具&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;这绝对是综合看来我用过所有windows下截图软件最棒的了，所有的截图功能都有，像全屏截图、窗口截图，自定义像素截图等等基本功能都有。&lt;/li&gt;
-&lt;li&gt;最牛的功能是它的贴图功能，不知道大家有没有遇到过这样一种情况：假如上网课的时候，老师讲的下部分是关于上一张PPT的，但是你手中还没有PPT，或者你想对比一下之前的PPT来学习，那么这个时候贴图就发挥其作用了，示例如下：（你还可以发挥你的其他想象利用这个功能）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-32-14.7k11ri8x4ng0.gif&#34; alt=&#34;GIF-2021-9-22-21-32-14&#34; /&gt;&lt;/p&gt;
+&lt;li&gt;软件正如其名字一样，在网线中深潜的鲨鱼。&lt;/li&gt;
+&lt;li&gt;此软件的作用就是抓包，分析网络中各种协议栈各层的数据包，并可以通过一些过滤表达式得到我们需要拿来分析的数据包（比如分析TCP/IP，HTTP，UDP等）&lt;/li&gt;
+&lt;li&gt;使用此软件可以实现
 &lt;ul&gt;
-&lt;li&gt;可以设置的选项如下：（==你可以在控制中自定义各个功能的快捷键，设置成你熟悉的==）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-23-05.4s2ojtxk63u0.gif&#34; alt=&#34;GIF-2021-9-22-21-23-05&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2---gifcam一款录制gif的软件httpblogbahraniappscomgifcamdownload&#34;&gt;&lt;a href=&#34;http://blog.bahraniapps.com/gifcam/#download&#34;&gt;2 - GifCam：一款录制GIF的软件&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;看了上面的GIF图，是不是也在奇怪我这些图是怎么自己做的，那么这就向您介绍这款软件：GIFCam，这是一款可以录制GIF动图的软件，短小精悍，仅仅只有录制GIF的功能，你可以设置输出文件的FPS，自定义录制的窗口大小或者全屏等等。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-39-42.1zze3osdryow.gif&#34; alt=&#34;GIF-2021-9-22-21-39-42&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;3---picx图床一个开源作者写的开源图床httpspicxxpoetcnupload&#34;&gt;&lt;a href=&#34;https://picx.xpoet.cn/#/upload&#34;&gt;3 - PicX图床：一个开源作者写的开源图床&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;其实这个不能算是软件，但由于chrome浏览器可以直接把这个网站直接打包成一个应用在本地，也算个软件把。&lt;/li&gt;
-&lt;li&gt;这个开源图床目前还在优化和更新中，作者也十分努力的在开发和维护这个项目&lt;/li&gt;
-&lt;li&gt;这个图床就是利用你自己建的Github库存储图片，然后提供图片的管理和Markdown+CDN格式的自动转换，上传图片之后直接复制就可以放在你的md文档中了，着实挺方便，而且界面UI和交互也都很不错。&lt;/li&gt;
-&lt;li&gt;使用情况如下：（&lt;strong&gt;感谢作者：https://xpoet.cn/&lt;/strong&gt;）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-56-04.217loab9zsao.gif&#34; alt=&#34;GIF-2021-9-22-21-56-04&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;windows系统优化工具&#34;&gt;windows系统优化工具&lt;/h2&gt;
-&lt;h3 id=&#34;1---分区助手httpswwwdisktoolcnfeaturehtml&#34;&gt;&lt;a href=&#34;https://www.disktool.cn/feature.html&#34;&gt;1 - 分区助手&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;想必大家都被分区弄得很头痛吧，在装系统时C盘分的太小了，现在C盘红了，还不好清理，那么这款分区助手就能完美解决你的问题&lt;/li&gt;
-&lt;li&gt;图形化界面相当友好，电脑小白也能操作&lt;/li&gt;
-&lt;li&gt;附上分区助手官网的使用手册：https://www.disktool.cn/jiaocheng/index.html&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.30co17hqv740.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2---ccleaner电脑管家&#34;&gt;2 - CCleaner：电脑管家&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;虽然网上骂声一片，说CCleaner是流氓软件，但是我依旧爱他，爱他简约而不简单的功能&lt;/li&gt;
-&lt;li&gt;CCleaner的功能列表如下：
-&lt;ul&gt;
-&lt;li&gt;垃圾清理&lt;/li&gt;
-&lt;li&gt;驱动更新&lt;/li&gt;
-&lt;li&gt;注册表清理（超级强的功能）&lt;/li&gt;
-&lt;li&gt;卸载程序&lt;/li&gt;
-&lt;li&gt;管理PC启动项&lt;/li&gt;
-&lt;li&gt;重复文件查找&lt;/li&gt;
-&lt;li&gt;系统备份和还原&lt;/li&gt;
-&lt;li&gt;Cookie和浏览器插件管理&lt;/li&gt;
-&lt;li&gt;等等&lt;/li&gt;
+&lt;li&gt;网络管理员检查网络&lt;/li&gt;
+&lt;li&gt;学习计算机网络，通过抓包深刻理解TCP/IP协议栈&lt;/li&gt;
+&lt;li&gt;Socket编程测试&lt;/li&gt;
+&lt;li&gt;测试工程师使用其测试软件&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;软件界面如下：&lt;/li&gt;
+&lt;li&gt;利用WireShark测试TCP/IP三次握手，四次挥手&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-22-06-44.135fh22zoks0.gif&#34; alt=&#34;GIF-2021-9-22-22-06-44&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.58ghbuhdekg0.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;wireshark与对应的OSI七层模型&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.78rko7uidos0.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;8---postman模拟httphttps请求工具httpswwwpostmancom&#34;&gt;&lt;a href=&#34;https://www.postman.com/&#34;&gt;8 - Postman：模拟HTTP/HTTPS请求工具&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Postman是谷歌开发的一款网页调试和接口测试工具，能够发送任何类型的http请求，支持GET/PUT/POST/DELETE等方法。Postman非常简单易用，可以直接填写URL，header，body等就可以发送一个请求，用来测试api接口非常方便。&lt;/li&gt;
+&lt;li&gt;postman快速上手视频教程推荐（科学上网）：https://www.youtube.com/watch?v=VywxIQ2ZXw4&amp;amp;list=PL6YJmTsHJFpGEDbyDCMFXoC42_WQYJPj&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/Postman%E8%BD%AF%E4%BB%B6%E7%95%8C%E9%9D%A2.3gapnq6u1ci0.png&#34; alt=&#34;Postman软件界面&#34; /&gt;&lt;/p&gt;
 &lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
-&lt;p&gt;好的工具只是方便我们管理自己的PC或者便于开发而已，千万不能陷入工具的陷阱，人和动物最大的区别就是学会了制造工具，但是过分依赖于工具也会毁了一个人，在使用工具时要保持一个态度就是：对于自己十分明确的功能勇敢的使用和尝试，对于自己不明确的功能先去学习原理，再结合搜索引擎上的经验慢慢投入使用。&lt;/p&gt;
+&lt;p&gt;好的工具只是方便我们管理自己的 PC 或者便于开发而已，千万不能陷入工具的陷阱，人和动物最大的区别就是学会了制造工具，但是过分依赖于工具也会毁了一个人，在使用工具时要保持一个态度就是：对于自己十分明确的功能勇敢的使用和尝试，对于自己不明确的功能先去学习原理，再结合搜索引擎上的经验慢慢投入使用。&lt;/p&gt;
 &lt;p&gt;最后希望大家按需取用上述的软件，玩的愉快！！&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34; /&gt; &lt;strong&gt;未来我还会持续更新，在清单中添加更加有趣的软件，敬请期待！！！&lt;/strong&gt;&lt;/li&gt;
