@@ -15,7 +15,7 @@ tocLevels: ["h2", "h3", "h4"]
 tags:
 - "软件清单"
 categories: "高效工具系列"
-img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/wallpaper-1-type.jpg"
+img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/wallpaper-7-type.png"
 ---
 
 ## 前言

@@ -253,10 +253,11 @@
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.78rko7uidos0.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;h3 id=&#34;8---postman模拟httphttps请求工具httpswwwpostmancom&#34;&gt;&lt;a href=&#34;https://www.postman.com/&#34;&gt;8 - Postman：模拟HTTP/HTTPS请求工具&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;Postman是谷歌开发的一款网页调试和接口测试工具，能够发送任何类型的http请求，支持GET/PUT/POST/DELETE等方法。Postman非常简单易用，可以直接填写URL，header，body等就可以发送一个请求，用来测试api接口非常方便。&lt;/li&gt;
+&lt;li&gt;Postman是谷歌开发的一款网页调试和接口测试工具，能够发送任何类型的http请求，支持GET/PUT/POST/DELETE等方法。Postman非常简单易用，可以直接填写URL，header，body等就可以发送一个请求，用来测试api接口非常方便。（对于现在各种浏览器都自动把http请求转换为HTTPS请求的情况，用于测试HTTP请求是个很不错的选择）&lt;/li&gt;
 &lt;li&gt;postman快速上手视频教程推荐（科学上网）：https://www.youtube.com/watch?v=VywxIQ2ZXw4&amp;amp;list=PL6YJmTsHJFpGEDbyDCMFXoC42_WQYJPj&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/Postman%E8%BD%AF%E4%BB%B6%E7%95%8C%E9%9D%A2.3gapnq6u1ci0.png&#34; alt=&#34;Postman软件界面&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;9---windows-terminalwindows命令行的崛起httpswwwmicrosoftcomzh-cnpwindows-terminal9n0dx20hk701activetabpivotoverviewtab&#34;&gt;&lt;a href=&#34;https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab&#34;&gt;9 - Windows Terminal：windows命令行的崛起&lt;/a&gt;&lt;/h3&gt;
 &lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
 &lt;p&gt;好的工具只是方便我们管理自己的 PC 或者便于开发而已，千万不能陷入工具的陷阱，人和动物最大的区别就是学会了制造工具，但是过分依赖于工具也会毁了一个人，在使用工具时要保持一个态度就是：对于自己十分明确的功能勇敢的使用和尝试，对于自己不明确的功能先去学习原理，再结合搜索引擎上的经验慢慢投入使用。&lt;/p&gt;
 &lt;p&gt;最后希望大家按需取用上述的软件，玩的愉快！！&lt;/p&gt;

@@ -15,7 +15,7 @@ tocLevels: ["h2", "h3", "h4"]
 tags:
   - "软件清单"
 categories: "高效工具系列"
-img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/wallpaper-1-type.jpg"
+img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/wallpaper-7-type.png"
 ---
 
 ## 前言
@@ -126,10 +126,14 @@ uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰�
 
 ### [8 - Postman：模拟HTTP/HTTPS请求工具](https://www.postman.com/)
 
-- Postman是谷歌开发的一款网页调试和接口测试工具，能够发送任何类型的http请求，支持GET/PUT/POST/DELETE等方法。Postman非常简单易用，可以直接填写URL，header，body等就可以发送一个请求，用来测试api接口非常方便。
+- Postman是谷歌开发的一款网页调试和接口测试工具，能够发送任何类型的http请求，支持GET/PUT/POST/DELETE等方法。Postman非常简单易用，可以直接填写URL，header，body等就可以发送一个请求，用来测试api接口非常方便。（对于现在各种浏览器都自动把http请求转换为HTTPS请求的情况，用于测试HTTP请求是个很不错的选择）
 - postman快速上手视频教程推荐（科学上网）：https://www.youtube.com/watch?v=VywxIQ2ZXw4&list=PL6YJmTsHJFpGEDbyDCMFXoC42_WQYJPj
 
 ![Postman软件界面](https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/Postman软件界面.3gapnq6u1ci0.png)
+
+### [9 - Windows Terminal：windows命令行的崛起](https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab)
+
+
 
 ## 结语
 
