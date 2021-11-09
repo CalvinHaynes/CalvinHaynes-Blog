@@ -6,7 +6,7 @@ keywords:
 title: "一个玩转国外CSLab的通用环境搭建方案（附我的搭建好的MIT6.S081环境）"
 date: 2021-10-30T10:45:08+08:00
 lastmod: 2021-10-30T10:45:08+08:00
-description:
+description: "一个玩转国外CSLab的通用环境搭建方案（附我的搭建好的MIT6.S081环境）"
 draft: false 
 author: Calvin Haynes
 hideToc: false
@@ -16,6 +16,8 @@ tocFolding: false
 tocLevels: ["h2", "h3", "h4"]
 tags: 
 - "OS操作系统"
+- "Docker"
+- "Vscode"
 categories: "CS基础知识"
 img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/wallpaper-12-type.jpg"
 ---
