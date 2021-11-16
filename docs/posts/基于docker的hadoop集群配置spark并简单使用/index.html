@@ -1840,7 +1840,7 @@
 <h3 id="官网说明">官网说明：</h3>
 <p>Spark 应用程序作为集群上的独立进程集运行，由<code>SparkContext</code> 主程序（称为<em>驱动程序</em>）中的对象协调。</p>
 <p>具体来说，为了在集群上运行，SparkContext 可以连接到多种类型的<em>集群管理器</em> （<strong>Spark 自己的独立集群管理器、Mesos、YARN 或 Kubernetes</strong>），它们在应用程序之间分配资源。连接后，Spark 会在集群中的节点上获取<em>执行</em>程序，这些进程为您的应用程序运行计算和存储数据。接下来，它将您的应用程序代码（由传递给 SparkContext 的 JAR 或 Python 文件定义）发送到执行程序。最后，SparkContext 将<em>任务</em>发送给执行程序以运行。</p>
-<p><img data-src="https://spark.apache.org/docs/latest/img/cluster-overview.png" class="lazyload" alt="Spark 集群组件" /></p>
+<p><img data-src="https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.fbwnal6nc28.png" class="lazyload" alt="image" /></p>
 <p><strong>Spark支持的集群管理器如下：</strong></p>
 <ul>
 <li><a href="https://spark.apache.org/docs/latest/spark-standalone.html">Standalone</a>– Spark 附带的简单集群管理器，可以轻松设置集群。</li>
