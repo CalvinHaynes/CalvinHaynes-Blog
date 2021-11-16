@@ -3,7 +3,7 @@ keywords:
 - "Docker"
 - "Hadoop"
 - "大数据"
-title: "利用Docker搭建一个Hadoop Muti Node Cluster"
+title: "利用Docker搭建一个Hadoop Mutinode Cluster"
 date: 2021-11-09T11:09:02+08:00
 lastmod: 2021-11-09T11:09:02+08:00
 description: "利用Docker搭建一个多节点服务器集群"
