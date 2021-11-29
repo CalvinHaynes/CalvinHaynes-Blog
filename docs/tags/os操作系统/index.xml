@@ -306,7 +306,7 @@ Geographic area:
 &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    make install&lt;span class=&#34;err&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;如果不用&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;和&lt;code&gt;\&lt;/code&gt;关联各行的话，比如第一行&lt;code&gt;cd&lt;/code&gt;到那个&lt;strong&gt;qemu-5.1.0&lt;/strong&gt;目录了，下一行**./configure**执行的时候在新的一层了，就一定会报错不存在**./configure**（因为这个**configure**配置**qemu**的可执行文件就在**qemu-5.1.0**目录下）&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;如果不用&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;和&lt;code&gt;\&lt;/code&gt;关联各行的话，比如第一行&lt;code&gt;cd&lt;/code&gt;到那个&lt;strong&gt;qemu-5.1.0&lt;/strong&gt;目录了，下一行**./configure&lt;strong&gt;执行的时候在新的一层了，就一定会报错不存在&lt;/strong&gt;./configure**（因为这个&lt;strong&gt;configure&lt;/strong&gt;配置&lt;strong&gt;qemu&lt;/strong&gt;的可执行文件就在&lt;strong&gt;qemu-5.1.0&lt;/strong&gt;目录下）&lt;/p&gt;
 &lt;h2 id=&#34;使用篇&#34;&gt;使用篇&lt;/h2&gt;
 &lt;h3 id=&#34;1---方式一dockerhub&#34;&gt;1 - 方式一：DockerHub&lt;/h3&gt;
 &lt;h4 id=&#34;首先pull下来我的docker镜像&#34;&gt;&lt;strong&gt;首先pull下来我的Docker镜像&lt;/strong&gt;：&lt;/h4&gt;

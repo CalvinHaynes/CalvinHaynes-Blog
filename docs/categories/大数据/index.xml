@@ -154,7 +154,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;2---workers&#34;&gt;2 - Workers&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-workers&#34; data-lang=&#34;workers&#34;&gt;#
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-workers&#34; data-lang=&#34;workers&#34;&gt;#
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
 # this work for additional information regarding copyright ownership.
@@ -180,7 +180,7 @@ slave2
 &lt;ul&gt;
 &lt;li&gt;打印Spark运行日志，方便后期排错和检查运行情况&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-properties&#34; data-lang=&#34;properties&#34;&gt;#
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-properties&#34; data-lang=&#34;properties&#34;&gt;#
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
 # this work for additional information regarding copyright ownership.
@@ -255,7 +255,7 @@ log4j.appender.console.filter.1.AcceptOnMatch=false
 &lt;ul&gt;
 &lt;li&gt;启动Spark-shell：&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;spark-shell
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;spark-shell
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.34xsi5bfzj60.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;完整代码如下：&lt;/li&gt;
@@ -1127,7 +1127,7 @@ ssh slave2
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;workers&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;master
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;master
 slave1
 slave2
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;5---将master中的hadoop配置文件复制到两个slave中&#34;&gt;5 - 将master中的Hadoop配置文件复制到两个slave中&lt;/h2&gt;

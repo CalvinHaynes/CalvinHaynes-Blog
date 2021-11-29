@@ -1386,7 +1386,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="使用code-server搭建在线运行的Vscode">
 
-<meta name="generator" content="Hugo 0.86.1" />
+<meta name="generator" content="Hugo 0.89.4" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1848,7 +1848,7 @@
 </ul>
 <p>官网上应该也还有比较完善的使用手册啥的，深入玩一下的话，建议自己多研究研究，上面这几篇文章也是我大体看上去不错的，要想明白究竟怎么用的还是要自己用好搜索引擎。</p>
 </blockquote>
-<pre><code class="language-linux" data-lang="linux">wget https://github.com/cdr/code-server/releases/download/v3.10.2/code-server-3.10.2-linux-amd64.tar.gz
+<pre tabindex="0"><code class="language-linux" data-lang="linux">wget https://github.com/cdr/code-server/releases/download/v3.10.2/code-server-3.10.2-linux-amd64.tar.gz
 </code></pre><blockquote>
 <p>这一步下载速度可能会很慢，甚至中途失败，可以考虑挂代理，不会Linux下挂代理的，看我下面的骚操作</p>
 </blockquote>
@@ -1883,11 +1883,11 @@
 <ul>
 <li>解压</li>
 </ul>
-<pre><code class="language-linux" data-lang="linux">tar -xvzf code-server-3.10.2-linux-amd64.tar.gz
+<pre tabindex="0"><code class="language-linux" data-lang="linux">tar -xvzf code-server-3.10.2-linux-amd64.tar.gz
 </code></pre><ul>
 <li>可以改个名</li>
 </ul>
-<pre><code class="language-linux" data-lang="linux">mv code-server-3.10.2-linux-amd64 code-server
+<pre tabindex="0"><code class="language-linux" data-lang="linux">mv code-server-3.10.2-linux-amd64 code-server
 </code></pre><ul>
 <li>运行试下（建议先看下参数列表）</li>
 </ul>
@@ -1897,7 +1897,7 @@
 </blockquote>
 <p><img data-src="https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.174au3x9jk80.png" class="lazyload" alt="image" /></p>
 <p><img data-src="https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.7jcmo9u92lw0.png" class="lazyload" alt="image" /></p>
-<pre><code class="language-linux" data-lang="linux">cd code-server
+<pre tabindex="0"><code class="language-linux" data-lang="linux">cd code-server
 export PASSWORD=&quot;你想设置的密码&quot;
 ./code-server --port 9999 --host 0.0.0.0 --auth password
 </code></pre><blockquote>
@@ -1910,7 +1910,7 @@ export PASSWORD=&quot;你想设置的密码&quot;
 <ul>
 <li>可以看一下参数列表</li>
 </ul>
-<pre><code class="language-linux" data-lang="linux">./code-server --help
+<pre tabindex="0"><code class="language-linux" data-lang="linux">./code-server --help
 </code></pre><p><img data-src="https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.277j7h3h4x8g.png" class="lazyload" alt="image" /></p>
 <ul>
 <li>运行后，打开 Chrome 访问“服务器公网IP:端口”，效果图：</li>
@@ -1930,7 +1930,7 @@ export PASSWORD=&quot;你想设置的密码&quot;
 <li>记录当前进程的PID，也专门记录一个日志log文件便于以后查看</li>
 <li>将PID存到文件里面</li>
 </ul>
-<pre><code>#start.sh
+<pre tabindex="0"><code>#start.sh
 export PASSWORD=&quot;412523&quot;
 nohup ./code-server --port 9999 --host 0.0.0.0 --auth password &gt; test.log 2&gt;&amp;1 &amp;
 echo $! &gt; save_pid.txt
@@ -1941,7 +1941,7 @@ echo $! &gt; save_pid.txt
 <li>读文件中的PID</li>
 <li>杀死进程</li>
 </ul>
-<pre><code>#shut.sh
+<pre tabindex="0"><code>#shut.sh
 kill -9 'cat save_pid.txt'
 </code></pre></li>
 </ul>
@@ -3533,7 +3533,7 @@ jQuery(document).ready(function($) {
 
         
 	    <div class="github-badge">
-	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.86.1</a></span>
+	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.89.4</a></span>
               <span class="badge-subject">托管于</span><span class="badge-value bg-brightgreen"><a style="color:#fff" href="https://cn.aliyun.com/" target="_blank">阿里云</a></span>
 	      
 	      <span class="badge-subject">图床</span><span class="badge-value bg-orange"><a style="color:#fff" href="https://picx.xpoet.cn/" target="_blank">picX</a></span>

@@ -154,7 +154,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;&lt;h3 id=&#34;2---workers&#34;&gt;2 - Workers&lt;/h3&gt;
-&lt;pre&gt;&lt;code class=&#34;language-workers&#34; data-lang=&#34;workers&#34;&gt;#
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-workers&#34; data-lang=&#34;workers&#34;&gt;#
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
 # this work for additional information regarding copyright ownership.
@@ -180,7 +180,7 @@ slave2
 &lt;ul&gt;
 &lt;li&gt;打印Spark运行日志，方便后期排错和检查运行情况&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code class=&#34;language-properties&#34; data-lang=&#34;properties&#34;&gt;#
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-properties&#34; data-lang=&#34;properties&#34;&gt;#
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
 # this work for additional information regarding copyright ownership.
@@ -255,7 +255,7 @@ log4j.appender.console.filter.1.AcceptOnMatch=false
 &lt;ul&gt;
 &lt;li&gt;启动Spark-shell：&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;spark-shell
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;spark-shell
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.34xsi5bfzj60.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;完整代码如下：&lt;/li&gt;
@@ -1127,7 +1127,7 @@ ssh slave2
 &lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;workers&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;pre&gt;&lt;code&gt;master
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;master
 slave1
 slave2
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;5---将master中的hadoop配置文件复制到两个slave中&#34;&gt;5 - 将master中的Hadoop配置文件复制到两个slave中&lt;/h2&gt;
@@ -1606,7 +1606,7 @@ Geographic area:
 &lt;/span&gt;&lt;span class=&#34;se&#34;&gt;&lt;/span&gt;    make install&lt;span class=&#34;err&#34;&gt;
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;如果不用&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;和&lt;code&gt;\&lt;/code&gt;关联各行的话，比如第一行&lt;code&gt;cd&lt;/code&gt;到那个&lt;strong&gt;qemu-5.1.0&lt;/strong&gt;目录了，下一行**./configure**执行的时候在新的一层了，就一定会报错不存在**./configure**（因为这个**configure**配置**qemu**的可执行文件就在**qemu-5.1.0**目录下）&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;如果不用&lt;code&gt;&amp;amp;&amp;amp;&lt;/code&gt;和&lt;code&gt;\&lt;/code&gt;关联各行的话，比如第一行&lt;code&gt;cd&lt;/code&gt;到那个&lt;strong&gt;qemu-5.1.0&lt;/strong&gt;目录了，下一行**./configure&lt;strong&gt;执行的时候在新的一层了，就一定会报错不存在&lt;/strong&gt;./configure**（因为这个&lt;strong&gt;configure&lt;/strong&gt;配置&lt;strong&gt;qemu&lt;/strong&gt;的可执行文件就在&lt;strong&gt;qemu-5.1.0&lt;/strong&gt;目录下）&lt;/p&gt;
 &lt;h2 id=&#34;使用篇&#34;&gt;使用篇&lt;/h2&gt;
 &lt;h3 id=&#34;1---方式一dockerhub&#34;&gt;1 - 方式一：DockerHub&lt;/h3&gt;
 &lt;h4 id=&#34;首先pull下来我的docker镜像&#34;&gt;&lt;strong&gt;首先pull下来我的Docker镜像&lt;/strong&gt;：&lt;/h4&gt;
