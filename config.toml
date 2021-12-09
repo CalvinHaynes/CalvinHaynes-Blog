@@ -47,6 +47,7 @@ googleAnalytics = ""
     isPlainText = true
     notAlternative = true
 
+# 分类标准
 [taxonomies]
   category = "categories"
   tag = "tags"
