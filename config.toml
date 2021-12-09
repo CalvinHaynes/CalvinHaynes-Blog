@@ -1,6 +1,6 @@
 baseURL = "https://blog.calvinhaynes.top/"
 title = "Calvin Haynes's Blog"
-theme = "zzo"
+theme = ["hugo-notice","zzo"]
 
 defaultContentLanguage = "zh"
 defaultContentLanguageInSubdir = false
