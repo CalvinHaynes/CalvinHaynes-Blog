@@ -17,6 +17,8 @@ tocFolding: false
 tocLevels: ["h2", "h3", "h4"]
 tags:
 - "Docker"
+- "Hadoop"
+- "Spark"
 categories: "大数据"
 img: https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/server-cluster.3p8zh61kpbm0.png
 ---

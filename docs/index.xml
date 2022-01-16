@@ -323,6 +323,14 @@ log4j.appender.console.filter.1.AcceptOnMatch=false
               <category>Docker</category>
             
           
+            
+              <category>Hadoop</category>
+            
+          
+            
+              <category>Spark</category>
+            
+          
         
         
             
@@ -1316,6 +1324,10 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
               <category>Docker</category>
             
           
+            
+              <category>Hadoop</category>
+            
+          
         
         
             
@@ -2203,7 +2215,7 @@ kill -9 &#39;cat save_pid.txt&#39;
         
         
             
-              <category>geek-tools</category>
+              <category>Geek-Tools</category>
             
         
         

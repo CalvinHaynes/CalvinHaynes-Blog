@@ -17,7 +17,7 @@ tocFolding: false
 tocLevels: ["h2", "h3", "h4"]
 tags:
 - "Vscode"
-categories: "geek-tools"
+categories: "Geek-Tools"
 img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image-20210610155903032.3hg5z4x2jgw0.png"
 ---
 ## 前言

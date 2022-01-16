@@ -302,6 +302,14 @@ log4j.appender.console.filter.1.AcceptOnMatch=false
               <category>Docker</category>
             
           
+            
+              <category>Hadoop</category>
+            
+          
+            
+              <category>Spark</category>
+            
+          
         
         
             
@@ -1293,6 +1301,10 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
           
             
               <category>Docker</category>
+            
+          
+            
+              <category>Hadoop</category>
             
           
         

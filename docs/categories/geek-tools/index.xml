@@ -6,9 +6,9 @@
   xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>geek-tools on Calvin Haynes的博客站</title>
+    <title>Geek-Tools on Calvin Haynes的博客站</title>
     <link>https://blog.calvinhaynes.top/categories/geek-tools/</link>
-    <description>Recent content in geek-tools on Calvin Haynes的博客站</description>
+    <description>Recent content in Geek-Tools on Calvin Haynes的博客站</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh</language>
     <managingEditor>chx1006488386@163.com (Calvin Haynes)</managingEditor>
@@ -188,7 +188,7 @@ kill -9 &#39;cat save_pid.txt&#39;
         
         
             
-              <category>geek-tools</category>
+              <category>Geek-Tools</category>
             
         
         

@@ -299,15 +299,11 @@ log4j.appender.console.filter.1.AcceptOnMatch=false
         
           
             
-              <category>Hadoop</category>
-            
-          
-            
-              <category>服务器集群</category>
-            
-          
-            
               <category>Docker</category>
+            
+          
+            
+              <category>Hadoop</category>
             
           
             
@@ -1304,15 +1300,11 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
         
           
             
-              <category>Hadoop</category>
-            
-          
-            
-              <category>服务器集群</category>
-            
-          
-            
               <category>Docker</category>
+            
+          
+            
+              <category>Hadoop</category>
             
           
         
