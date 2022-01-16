@@ -15,10 +15,11 @@ enableTocContent: false
 tocFolding: false
 tocLevels: ["h2", "h3", "h4"]
 tags: 
-- "OS操作系统"
+- "操作系统"
 - "Docker"
 - "Vscode"
-categories: "CS基础知识"
+- "CSLab"
+categories: "计算机基础"
 img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/wallpaper-12-type.jpg"
 ---
 ## 前言

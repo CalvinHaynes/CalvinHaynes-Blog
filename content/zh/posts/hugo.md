@@ -1,10 +1,12 @@
 ---
 keywords: 
 - "hugo"
+- "阿里云"
+- "GithubPages"
 title: "Hugo搭建个人博客教程（GithubPages + 阿里云）"
 date: 2021-08-05T00:22:49+08:00
 lastmod: 2021-08-05T00:22:49+08:00
-description: "hexo迁移到Hugo初探经验总结"
+description: "利用Hugo静态博客框架创建个人博客站的教程"
 draft: false
 author: Calvin Haynes
 hideToc: false
@@ -13,8 +15,9 @@ enableTocContent: false
 tocFolding: false
 tocLevels: ["h2", "h3", "h4"]
 tags:
-- "hugo实战基础"
-categories: "hugo"
+- "Hugo"
+- "Github"
+categories: "个人博客发展"
 img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/wallpaper-3-type.png"
 ---
 

@@ -454,7 +454,7 @@ sudo systemctl restart docker
         
           
             
-              <category>OS操作系统</category>
+              <category>操作系统</category>
             
           
             
@@ -465,10 +465,14 @@ sudo systemctl restart docker
               <category>Vscode</category>
             
           
+            
+              <category>CSLab</category>
+            
+          
         
         
             
-              <category>CS基础知识</category>
+              <category>计算机基础</category>
             
         
         

@@ -43,66 +43,12 @@
       </item>
       
       <item>
-        <title>Hadoop</title>
-        <link>https://blog.calvinhaynes.top/tags/hadoop/</link>
-        <pubDate>Tue, 16 Nov 2021 14:12:23 +0800</pubDate>
-        <author>chx1006488386@163.com (Calvin Haynes)</author>
-        
-        <guid>https://blog.calvinhaynes.top/tags/hadoop/</guid>
-        <description></description>
-        <content:encoded></content:encoded>
-        <dc:creator>Calvin Haynes</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>Spark</title>
-        <link>https://blog.calvinhaynes.top/tags/spark/</link>
-        <pubDate>Tue, 16 Nov 2021 14:12:23 +0800</pubDate>
-        <author>chx1006488386@163.com (Calvin Haynes)</author>
-        
-        <guid>https://blog.calvinhaynes.top/tags/spark/</guid>
-        <description></description>
-        <content:encoded></content:encoded>
-        <dc:creator>Calvin Haynes</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>服务器集群</title>
-        <link>https://blog.calvinhaynes.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4/</link>
-        <pubDate>Tue, 16 Nov 2021 14:12:23 +0800</pubDate>
-        <author>chx1006488386@163.com (Calvin Haynes)</author>
-        
-        <guid>https://blog.calvinhaynes.top/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E9%9B%86%E7%BE%A4/</guid>
-        <description></description>
-        <content:encoded></content:encoded>
-        <dc:creator>Calvin Haynes</dc:creator>
-        
-        
-        
-        
-        
-        
-      </item>
-      
-      <item>
-        <title>OS操作系统</title>
-        <link>https://blog.calvinhaynes.top/tags/os%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+        <title>CSLab</title>
+        <link>https://blog.calvinhaynes.top/tags/cslab/</link>
         <pubDate>Sat, 30 Oct 2021 10:45:08 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         
-        <guid>https://blog.calvinhaynes.top/tags/os%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+        <guid>https://blog.calvinhaynes.top/tags/cslab/</guid>
         <description></description>
         <content:encoded></content:encoded>
         <dc:creator>Calvin Haynes</dc:creator>
@@ -133,6 +79,24 @@
       </item>
       
       <item>
+        <title>操作系统</title>
+        <link>https://blog.calvinhaynes.top/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+        <pubDate>Sat, 30 Oct 2021 10:45:08 +0800</pubDate>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
+        
+        <guid>https://blog.calvinhaynes.top/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+        <description></description>
+        <content:encoded></content:encoded>
+        <dc:creator>Calvin Haynes</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
         <title>软件清单</title>
         <link>https://blog.calvinhaynes.top/tags/%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/</link>
         <pubDate>Sun, 03 Oct 2021 20:47:53 +0800</pubDate>
@@ -151,12 +115,30 @@
       </item>
       
       <item>
-        <title>hugo实战基础</title>
-        <link>https://blog.calvinhaynes.top/tags/hugo%E5%AE%9E%E6%88%98%E5%9F%BA%E7%A1%80/</link>
+        <title>Github</title>
+        <link>https://blog.calvinhaynes.top/tags/github/</link>
         <pubDate>Thu, 05 Aug 2021 00:22:49 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         
-        <guid>https://blog.calvinhaynes.top/tags/hugo%E5%AE%9E%E6%88%98%E5%9F%BA%E7%A1%80/</guid>
+        <guid>https://blog.calvinhaynes.top/tags/github/</guid>
+        <description></description>
+        <content:encoded></content:encoded>
+        <dc:creator>Calvin Haynes</dc:creator>
+        
+        
+        
+        
+        
+        
+      </item>
+      
+      <item>
+        <title>Hugo</title>
+        <link>https://blog.calvinhaynes.top/tags/hugo/</link>
+        <pubDate>Thu, 05 Aug 2021 00:22:49 +0800</pubDate>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
+        
+        <guid>https://blog.calvinhaynes.top/tags/hugo/</guid>
         <description></description>
         <content:encoded></content:encoded>
         <dc:creator>Calvin Haynes</dc:creator>

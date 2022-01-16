@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>个人博客发展 on Calvin Haynes的博客站</title>
+    <link>https://blog.calvinhaynes.top/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95/</link>
+    <description>Recent content in 个人博客发展 on Calvin Haynes的博客站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>chx1006488386@163.com (Calvin Haynes)</managingEditor>
+    <webMaster>chx1006488386@163.com (Calvin Haynes)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Thu, 05 Aug 2021 00:22:49 +0800</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    
+        <atom:link href="https://blog.calvinhaynes.top/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      
+      <item>
+        <title>Hugo搭建个人博客教程（GithubPages &#43; 阿里云）</title>
+        <link>https://blog.calvinhaynes.top/posts/hugo/</link>
+        <pubDate>Thu, 05 Aug 2021 00:22:49 +0800</pubDate>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
+        <atom:modified>Thu, 05 Aug 2021 00:22:49 +0800</atom:modified>
+        <guid>https://blog.calvinhaynes.top/posts/hugo/</guid>
+        <description>前言 经过种种尝试，还是决定选择了Hugo作为了搭建个人博客的框架，Hugo是目前可以搭建个人博客的框架中部署最快的，而且坑也相对很少，不过还</description>
+        <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;经过种种尝试，还是决定选择了Hugo作为了搭建个人博客的框架，Hugo是目前可以搭建个人博客的框架中部署最快的，而且坑也相对很少，不过还是有的，近几天折腾了不少东西，也终于算是初步搭建完了Hugo+Zoo主题的&lt;a href=&#34;https://blog.calvinhaynes.top/&#34;&gt;个人博客&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;在本文中我会讲解部署的详细过程，也会科普一些部署中的原理，毕竟我也刚刚接触，所以有些说的不对的地方也希望评论区的大佬来勘误，谢谢啦。&lt;/p&gt;
+&lt;p&gt;如果遇到部署问题，欢迎在评论区打出你的问题，我和知乎这个优秀社区的所有人都有可能回答你的疑问哦，本文如果对你有帮助的话，还希望多多点赞收藏转发，谢谢啦。&lt;/p&gt;
+&lt;h2 id=&#34;1---使用hugo创建静态网站实战&#34;&gt;1 - 使用Hugo创建静态网站实战&lt;/h2&gt;
+&lt;h4 id=&#34;1安装hugo&#34;&gt;1、安装Hugo&lt;/h4&gt;
+&lt;p&gt;博主用的是Windows系统，所以安装过程中我会基于Windows进行讲解，有关其他操作系统的安装方法可以参考官方的&lt;a href=&#34;https://gohugo.io/getting-started/installing/&#34;&gt;文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Windows下的Hugo安装我推荐使用chocolatey包管理器进行安装，接触过Linux的朋友们都知道，Linux的各种包管理器，利用命令行就可以实现包的更新，删除等操作，Windows下也有类似的包管理器就是chocolatey了。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;安装过程详解&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;安装chocolatey包管理器：在&lt;a href=&#34;https://chocolatey.org/&#34;&gt;官网&lt;/a&gt;点击 &lt;code&gt;Install Now&lt;/code&gt; 即可下载&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;命令行中敲入&lt;code&gt;choco --version&lt;/code&gt;，如果显示版本号证明你的 chocolatey 已经安装完毕，如果有误请检查环境变量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;命令行中安装hugo：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;choco install hugo -confirm
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;安装hugo-extended（扩展版本）：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;choco install hugo-extended -confirm
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;检查hugo是否安装成功：命令行中敲入&lt;code&gt;hugo version&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;2初步建站实战利用githubpages进行部署&#34;&gt;2、初步建站实战（利用GithubPages进行部署）&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;在Github中建立一个仓库，仓库名为&lt;code&gt;用户名.github.io&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.1l0hxny3q7b4.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;将仓库clone到本地一个你想存放网站文件的文件夹&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git clone &amp;lt;YOUR-REPOSITORY_URL&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;创建网站：在存放你博客的根目录 &amp;lt;YOUR-REPOSITORY_URL&amp;gt; 中敲入以下命令&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;//注意site后面是一个点，不能忽略啊，.代表当前目录
+hugo new site .
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;添加主题（以我博客的主题Zzo为例子）：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;git init
+git submodule add https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;把 themes/zzo 下的 exampleSite文件夹的内容复制到你博客的根目录&lt;/li&gt;
+&lt;li&gt;在博客根目录中敲命令：（启动hugo服务器）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;hugo server
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;点击&lt;a href=&#34;http://localhost:1313/&#34;&gt;这里&lt;/a&gt;查看测试（主题和示例网站中的markdown博客都正确显示了）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;3githubpages服务--云托管&#34;&gt;3、GithubPages服务 + 云托管&lt;/h4&gt;
+&lt;h5 id=&#34;1---配置githubpages服务进行个人博客的部署使得所有人都可以访问你的博客站&#34;&gt;1 - 配置GithubPages服务进行个人博客的部署，使得所有人都可以访问你的博客站&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;在 config.toml 文件中设置 baseURL 为 Github Pages 服务的域名（用户名.github.io）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span class=&#34;c&#34;&gt;#config/config.toml&lt;/span&gt;
+
+&lt;span class=&#34;nx&#34;&gt;baseURL&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;https://blog.calvinhaynes.top/&amp;#34;&lt;/span&gt; &lt;span class=&#34;c&#34;&gt;#未设置阿里云托管之前应该是 &amp;#34;https://用户名.github.io&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;title&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;Calvin Haynes&amp;#39;s Blog&amp;#34;&lt;/span&gt;
+&lt;span class=&#34;nx&#34;&gt;theme&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;#34;zzo&amp;#34;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;ul&gt;
+&lt;li&gt;将更改过后的 github 仓库文件夹（就是你的博客根目录）推送到远端&lt;/li&gt;
+&lt;li&gt;在Github上设置GithubPages服务的一些参数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.1ssfj1nz0jkw.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;（Ps：有关 Custom domain 在以下的云托管中进行解释）&lt;/p&gt;
+&lt;h5 id=&#34;2---云托管阿里云&#34;&gt;2 - 云托管（阿里云）&lt;/h5&gt;
+&lt;p&gt;​		博主买了阿里云的学生机，一个1核2GB内存的轻量应用服务器，所以将博客站云托管在这个服务器上，以下就是基于阿里云的教程，其他服务器也都差不太多，可以自行google，有关阿里云服务器购买和初步配置自行到官网查看文档吧。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;拥有一个阿里云服务器还不够，你需要&lt;a href=&#34;https://wanwang.aliyun.com/?spm=5176.19720258.J_8058803260.53.55d32c4axFU59f&#34;&gt;购买注册&lt;/a&gt;一个你自己的专属域名。&lt;/li&gt;
+&lt;li&gt;拥有自己的专属域名之后，进入域名解析的&lt;a href=&#34;https://dns.console.aliyun.com/?spm=5176.12818093.ProductAndService--ali--widget-home-product-recent.dre0.5adc16d05LdZIH#/dns/domainList&#34;&gt;工作台&lt;/a&gt;，就可以看见你的域名了&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.7jhy38mugak0.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解析设置：（点击修改后各种参数的设置都有相关说明，其他问题也都可以在阿里云官网找到文档解释）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.37z6o0rdyam0.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.5faxpze1aqc0.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;服务器绑定域名：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.5u53qpc5aao0.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.3992hz7hv360.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;解析设置完后在你的博客根目录中的 static （静态文件存放的地方）中创建一个 CNMAE 文件（注意没有任何后缀）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.q0epou32e1s.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;CNAME 文件中写入你设置的域名，我的就是 &lt;a href=&#34;https://blog.calvinhaynes.top/&#34;&gt;blog.calvinhaynes.top&lt;/a&gt; ，写完记得更新github库（CNAME文件就是给你这个Github库绑定域名用的，CNAME的全名就是 Canonical Name，意思是别名）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;最后更改 Github pages 配置中的 Custom domain 为你设置的新域名就好咯&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.1ssfj1nz0jkw.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;现在就可以输入你设置的域名进行访问咯，阿里云服务器在中国，所以访问速度快的一批！！！（别忘了config.toml文件的baseURL参数设置）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;2---主题参数设置和个性化&#34;&gt;2 - 主题参数设置和个性化&lt;/h2&gt;
+&lt;p&gt;​	这部分主要是看主题作者写的详细文档进行自己的设计，在Hugo官网中找到的比较热门的主题的Github库中都有相关的文档，建议小伙伴们自行查看学习，每个主题都有不同之处，我使用的是Zzo主题，它的官方文档在&lt;a href=&#34;https://zzo-docs.vercel.app/&#34;&gt;这里&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;​	我的Github仓库在&lt;a href=&#34;https://github.com/CalvinHaynes/CalvinHaynes.github.io&#34;&gt;这里&lt;/a&gt;，欢迎 fork 和查看配置文件&lt;/p&gt;
+&lt;h2 id=&#34;3---资源整理一些有用的文档&#34;&gt;3 - 资源整理（一些有用的文档）&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://zzo-docs.vercel.app/&#34;&gt;Zzo主题官方文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://help.aliyun.com/product/29697.html?spm=a2c4g.11186623.6.540.d0044e82AEgtJN&#34;&gt;阿里云云解析DNS文档&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/content-management/front-matter/&#34;&gt;hugo文章的front matter&lt;/a&gt;&lt;/p&gt;
+</content:encoded>
+        <dc:creator>Calvin Haynes</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>Hugo</category>
+            
+          
+            
+              <category>Github</category>
+            
+          
+        
+        
+            
+              <category>个人博客发展</category>
+            
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>

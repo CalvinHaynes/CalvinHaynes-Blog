@@ -1,0 +1,2452 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr">
+
+<head prefix="og: http://ogp.me/ns#">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>个人博客发展 – Calvin Haynes的博客站</title>
+    
+
+  
+  
+    
+    <script defer src="/js/pace.min.min.c6a4db3975288e1a55878e385454577812b965bc25d4e7d1d11b529065505758.js"></script>
+  
+
+
+
+
+  
+  <script defer src="/js/fuse.min.8dfbf8696f107ab8b55732efbb04c5c51576692a4a2cce6effef9f6e92d341a7.js"></script>
+
+
+
+<script src="/js/enquire.min.aa37bdcb743826eecdae5c5d177fc7d6552340f1b4378ffaa9c82b2c6111400b.js"></script>
+
+<script defer src="/js/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js"></script>
+
+<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+
+<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+
+<script defer src="/js/helper/closest.min.js"></script>
+
+<script>
+  "use strict";
+
+  
+  
+  if (window.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach;
+  }
+
+  
+  if (!String.prototype.includes) {
+    String.prototype.includes = function (search, start) {
+      'use strict';
+
+      if (search instanceof RegExp) {
+        throw TypeError('first argument must not be a RegExp');
+      }
+      if (start === undefined) { start = 0; }
+      return this.indexOf(search, start) !== -1;
+    };
+  }
+
+  
+  Document.prototype.append = Element.prototype.append = function append() {
+    this.appendChild(_mutation(arguments));
+  };
+  function _mutation(nodes) {
+    if (!nodes.length) {
+      throw new Error('DOM Exception 8');
+    } else if (nodes.length === 1) {
+      return typeof nodes[0] === 'string' ? document.createTextNode(nodes[0]) : nodes[0];
+    } else {
+      var
+      fragment = document.createDocumentFragment(),
+      length = nodes.length,
+      index = -1,
+      node;
+
+      while (++index < length) {
+        node = nodes[index];
+
+        fragment.appendChild(typeof node === 'string' ? document.createTextNode(node) : node);
+      }
+
+      return fragment;
+    }
+  }
+
+  
+  if (!String.prototype.startsWith) {
+    String.prototype.startsWith = function (searchString, position) {
+      position = position || 0;
+      return this.indexOf(searchString, position) === position;
+    };
+  }
+  
+
+
+  document.addEventListener('DOMContentLoaded', function () {
+    
+    var navCollapseBtn = document.querySelector('.navbar__burger');
+    navCollapseBtn ? navCollapseBtn.addEventListener('click', function (e) {
+      var navCollapse = document.querySelector('.navbarm__collapse');
+
+      if (navCollapse) {
+        var dataOpen = navCollapse.getAttribute('data-open');
+
+        if (dataOpen === 'true') {
+          navCollapse.setAttribute('data-open', 'false');
+          navCollapse.style.maxHeight = 0;
+          navCollapseBtn.classList.remove('is-active');
+        } else {
+          navCollapse.setAttribute('data-open', 'true');
+          navCollapse.style.maxHeight = navCollapse.scrollHeight + "px";
+          navCollapseBtn.classList.add('is-active');
+        }
+      }
+    }) : null;
+    
+
+
+    
+    var tables = document.querySelectorAll('.single__contents > table');
+    for (let i = 0; i < tables.length; i++) {
+      var table = tables[i];
+      var wrapper = document.createElement('div');
+      wrapper.className = 'table-wrapper';
+      table.parentElement.replaceChild(wrapper, table);
+      wrapper.appendChild(table);
+    }
+    
+
+    
+    var footNoteRefs = document.querySelectorAll('.footnote-ref');
+    var footNoteBackRefs = document.querySelectorAll('.footnote-backref');
+
+    footNoteRefs ? 
+    footNoteRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function () {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
+        }
+      }
+    }) : null;
+
+    footNoteBackRefs ? 
+    footNoteBackRefs.forEach(function(elem, idx) {
+      elem.onmouseenter = function () {
+        if (navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('scrolling');
+        }
+      }
+
+      elem.onmouseleave = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          setTimeout(function() {
+            navbar.classList.add('scrolling');
+          }, 100);
+        }
+      }
+
+      elem.onclick = function () {
+        if (!navbar.classList.contains('scrolling')) {
+          navbar.classList.remove('navbar--show');
+          navbar.classList.remove('navbar--hide');
+          navbar.classList.add('navbar--hide');
+        }
+      }
+    }) : null;
+    
+
+
+    
+    var summaryContainer = document.querySelector('.summary__container');
+    var searchResult = document.querySelector('.search-result');
+    var searchResultCloseBtn = document.querySelector('.search-result__close');
+    searchResultCloseBtn ? searchResultCloseBtn.addEventListener('click', function (e) {
+      searchResult.setAttribute('data-display', 'none');
+      summaryContainer.setAttribute('data-display', 'block');
+    }) : null;
+    
+
+
+    
+    document.querySelectorAll('.tab') ? 
+    document.querySelectorAll('.tab').forEach(function(elem, idx) {
+      var containerId = elem.getAttribute('id');
+      var containerElem = elem;
+      var tabLinks = elem.querySelectorAll('.tab__link');
+      var tabContents = elem.querySelectorAll('.tab__content');
+      var ids = [];
+
+      tabLinks && tabLinks.length > 0 ?
+      tabLinks.forEach(function(link, index, self) {
+        link.onclick = function(e) {
+          for (var i = 0; i < self.length; i++) {
+            if (index === parseInt(i, 10)) {
+              if (!self[i].classList.contains('active')) {
+                self[i].classList.add('active');
+                tabContents[i].style.display = 'block';
+              }
+            } else {
+              self[i].classList.remove('active');
+              tabContents[i].style.display = 'none';
+            }
+          }
+        }
+      }) : null;
+    }) : null;
+    
+
+
+    
+    document.querySelectorAll('.codetab') ? 
+    document.querySelectorAll('.codetab').forEach(function(elem, idx) {
+      var containerId = elem.getAttribute('id');
+      var containerElem = elem;
+      var codetabLinks = elem.querySelectorAll('.codetab__link');
+      var codetabContents = elem.querySelectorAll('.codetab__content');
+      var ids = [];
+
+      codetabLinks && codetabLinks.length > 0 ?
+      codetabLinks.forEach(function(link, index, self) {
+        link.onclick = function(e) {
+          for (var i = 0; i < self.length; i++) {
+            if (index === parseInt(i, 10)) {
+              if (!self[i].classList.contains('active')) {
+                self[i].classList.add('active');
+                codetabContents[i].style.display = 'block';
+              }
+            } else {
+              self[i].classList.remove('active');
+              codetabContents[i].style.display = 'none';
+            }
+          }
+        }
+      }) : null;
+    }) : null;
+    
+
+
+    
+    var gttBtn = document.getElementById("gtt");
+    gttBtn.style.display = "none";
+    gttBtn.addEventListener('click', function () {
+      if (window.document.documentMode) {
+        document.documentElement.scrollTop = 0;
+      } else {
+        scrollToTop(250);
+      }
+    });
+
+    function scrollToTop(scrollDuration) {
+      var scrollStep = -window.scrollY / (scrollDuration / 15);
+      var scrollInterval = setInterval(function () {
+        if (window.scrollY != 0) {
+          window.scrollBy(0, scrollStep);
+        }
+        else clearInterval(scrollInterval);
+      }, 15);
+    }
+
+    var scrollFunction = function () {
+      if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+        gttBtn.style.display = "block";
+      } else {
+        gttBtn.style.display = "none";
+      }
+    }
+    
+
+
+    
+    var expandBtn = document.querySelectorAll('.expand__button');
+
+    for (let i = 0; i < expandBtn.length; i++) {
+      expandBtn[i].addEventListener("click", function () {
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          this.querySelector('svg').classList.add('expand-icon__right');
+          this.querySelector('svg').classList.remove('expand-icon__down');
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          this.querySelector('svg').classList.remove('expand-icon__right');
+          this.querySelector('svg').classList.add('expand-icon__down');
+        }
+      });
+    }
+    
+
+
+    
+    var lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    var tocElem = document.querySelector('.toc');
+    var tableOfContentsElem = tocElem ? tocElem.querySelector('#TableOfContents') : null;
+    var toggleTocElem = document.getElementById('toggle-toc');
+    var singleContentsElem = document.querySelector('.single__contents');
+    var navbar = document.querySelector('.navbar');
+    var tocFlexbox = document.querySelector('.toc__flexbox');
+    var tocFlexboxOuter = document.querySelector('.toc__flexbox--outer');
+    var expandContents = document.querySelectorAll('.expand__content');
+    var boxContents = document.querySelectorAll('.box');
+    var notAllowedTitleIds = null;
+
+    
+    var tocFolding = JSON.parse("true");
+    
+    var tocLevels = JSON.parse("[\"h2\",\"h3\",\"h4\"]");
+    
+    if (tocLevels) {
+      tocLevels = tocLevels.toString();
+    } else {
+      tocLevels = "h1, h2, h3, h4, h5, h6";
+    }
+
+    
+    singleContentsElem && singleContentsElem.querySelectorAll(".tab") ?
+    singleContentsElem.querySelectorAll(".tab").forEach(function (elem) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
+        notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
+          notAllowedTitleIds.concat(element.getAttribute('id')) :
+          [element.getAttribute('id')];
+      });
+    }) : null;
+
+    
+    expandContents ? expandContents.forEach(function(elem) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
+        notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
+          notAllowedTitleIds.concat(element.getAttribute('id')) :
+          [element.getAttribute('id')];
+      });
+    }) : null;
+
+    
+    boxContents ? boxContents.forEach(function(elem) {
+      elem.querySelectorAll(tocLevels).forEach(function (element) {
+        notAllowedTitleIds = Array.isArray(notAllowedTitleIds) ?
+          notAllowedTitleIds.concat(element.getAttribute('id')) :
+          [element.getAttribute('id')];
+      });
+    }) : null;
+
+    
+    window.onscroll = function () {
+      scrollFunction();
+      
+      var st = window.pageYOffset || document.documentElement.scrollTop;
+      if (st > lastScrollTop) { 
+        if (st < 250) {
+          gttBtn.style.display = "none";
+        } else {
+          gttBtn.style.display = "block";
+        }
+
+        if (st < 45) {
+          return null;
+        }
+        
+        if (navbar.classList.contains('scrolling')) {
+          if (!navbar.classList.contains('navbar--hide')) {
+            navbar.classList.add('navbar--hide');
+          } else if (navbar.classList.contains('navbar--show')) {
+            navbar.classList.remove('navbar--show');
+          }
+        }
+
+        if (singleContentsElem) {
+          if (singleContentsElem.querySelectorAll(tocLevels).length > 0) {
+            singleContentsElem.querySelectorAll(tocLevels).forEach(function (elem) {
+              if (toggleTocElem && !toggleTocElem.checked) {
+                return null;
+              }
+
+              if (notAllowedTitleIds && notAllowedTitleIds.includes(elem.getAttribute('id'))) {
+                return null;
+              }
+              
+              if (document.documentElement.scrollTop >= elem.offsetTop) {
+                if (tableOfContentsElem) {
+                  var id = elem.getAttribute('id');
+                  tocElem.querySelectorAll('a').forEach(function (elem) {
+                    elem.classList.remove('active');
+                  });
+                  tocElem.querySelector('a[href="#' + id + '"]') ?
+                    tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
+
+                  if (false === tocFolding) {
+                    
+                  } else {
+                    tableOfContentsElem.querySelectorAll('ul') ?
+                      tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+                        rootUl.querySelectorAll('li').forEach(function (liElem) {
+                          liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                            ulElem.style.display = 'none';
+                          });
+                        });
+                      }) : null;
+                  }
+
+                  var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
+                  if (curElem && curElem.nextElementSibling) {
+                    curElem.nextElementSibling.style.display = 'block';
+                  }
+                  getParents(curElem, 'ul') ?
+                    getParents(curElem, 'ul').forEach(function (elem) {
+                      elem.style.display = 'block';
+                    }) : null;
+                }
+              }
+            });
+          } else {
+            if (tocFlexbox) {
+              tocFlexbox.setAttribute('data-position', '');
+              if (!tocFlexbox.classList.contains('hide')) {
+                tocFlexbox.classList.add('hide');
+              }
+            }
+            if (tocFlexboxOuter) {
+              tocFlexboxOuter.setAttribute('data-position', '');
+              if (!tocFlexboxOuter.classList.contains('hide')) {
+                tocFlexboxOuter.classList.add('hide');
+              }
+            }
+          }
+        }
+      } else { 
+        if (st < 250) {
+          gttBtn.style.display = "none";
+        }
+
+        if (navbar.classList.contains('scrolling')) {
+          if (navbar.classList.contains('navbar--hide')) {
+            navbar.classList.remove('navbar--hide');
+          } else if (!navbar.classList.contains('navbar--show')) {
+            navbar.classList.add('navbar--show');
+          }
+        }
+
+        if (singleContentsElem) {
+          if (singleContentsElem.querySelectorAll(tocLevels).length > 0) {
+            singleContentsElem.querySelectorAll(tocLevels).forEach(function (elem) {
+              if (toggleTocElem && !toggleTocElem.checked) {
+                return null;
+              }
+              
+              if (notAllowedTitleIds && notAllowedTitleIds.includes(elem.getAttribute('id'))) {
+                return null;
+              }
+
+              if (document.documentElement.scrollTop >= elem.offsetTop) {
+                if (tableOfContentsElem) {
+                  var id = elem.getAttribute('id');
+                  tocElem.querySelectorAll('a').forEach(function (elem) {
+                    elem.classList.remove('active');
+                  });
+                  tocElem.querySelector('a[href="#' + id + '"]') ?
+                    tocElem.querySelector('a[href="#' + id + '"]').classList.add('active') : null;
+
+                  if (false === tocFolding) {
+                    
+                  } else {
+                    tableOfContentsElem.querySelectorAll('ul') ?
+                      tableOfContentsElem.querySelectorAll('ul').forEach(function (rootUl) {
+                        rootUl.querySelectorAll('li').forEach(function (liElem) {
+                          liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                            ulElem.style.display = 'none';
+                          });
+                        });
+                      }) : null;
+                  }
+
+                  var curElem = tableOfContentsElem.querySelector("[href='#" + id + "']");
+                  if (curElem && curElem.nextElementSibling) {
+                    curElem.nextElementSibling.style.display = 'block';
+                  }
+                  getParents(curElem, 'ul') ?
+                    getParents(curElem, 'ul').forEach(function (elem) {
+                      elem.style.display = 'block';
+                    }) : null;
+                }
+              }
+            });
+          } else {
+            if (tocFlexbox && !tocFlexbox.classList.contains('hide')) {
+              tocFlexbox.classList.add('hide');
+            }
+            if (tocFlexboxOuter && !tocFlexboxOuter.classList.contains('hide')) {
+              tocFlexboxOuter.classList.add('hide');
+            }
+          }
+          
+        }
+
+        if (tableOfContentsElem && document.documentElement.scrollTop < 250) {
+          if (false === tocFolding) {
+
+          } else {
+            tableOfContentsElem.querySelector('ul') ?
+              tableOfContentsElem.querySelector('ul').querySelectorAll('li').forEach(function (liElem) {
+                liElem.querySelectorAll('ul').forEach(function (ulElem) {
+                  ulElem.style.display = 'none';
+                });
+              }) : null;
+          }
+        }
+      }
+      lastScrollTop = st <= 0 ? 0 : st;
+    };
+  
+
+
+  
+    var localTheme = localStorage.getItem('theme');
+    var rootEleme = document.getElementById('root');
+    var selectThemeElem = document.querySelectorAll('.select-theme');
+    var selectThemeItemElem = document.querySelectorAll('.select-theme__item');
+
+
+    
+    var skinDarkCode = JSON.parse("\"深色模式\"");
+    
+    var skinLightCode = JSON.parse("\"亮色模式\"");
+    
+    var skinHackerCode = JSON.parse("\"hacker\"");
+    
+    var skinSolarizedCode = JSON.parse("\"护眼模式\"");
+    
+    var skinKimbieCode = JSON.parse("\"kimbie\"");
+
+    var setMetaColor = function(themeColor) {
+      var metaMsapplicationTileColor = document.getElementsByName('msapplication-TileColor')[0];
+      var metaThemeColor = document.getElementsByName('theme-color')[0];
+      var metaMsapplicationNavbuttonColor = document.getElementsByName('msapplication-navbutton-color')[0];
+      var metaAppleMobileWebAappStatusBarStyle = document.getElementsByName('apple-mobile-web-app-status-bar-style')[0];
+
+      if (themeColor.includes('dark')) {
+        metaMsapplicationTileColor.setAttribute('content', '#fcfcfa');
+        metaThemeColor.setAttribute('content', '#403E41');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#403E41');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#403E41');
+      } else if (themeColor.includes('light')) {
+        metaMsapplicationTileColor.setAttribute('content', '#555');
+        metaThemeColor.setAttribute('content', '#eee');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#eee');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee');
+      } else if (themeColor.includes('hacker')) {
+        metaMsapplicationTileColor.setAttribute('content', '#e3cd26');
+        metaThemeColor.setAttribute('content', '#252526');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#252526');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#252526');
+      } else if (themeColor.includes('solarized')) {
+        metaMsapplicationTileColor.setAttribute('content', '#d3af86');
+        metaThemeColor.setAttribute('content', '#51412c');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#51412c');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#51412c');
+      } else if (themeColor.includes('kimbie')) {
+        metaMsapplicationTileColor.setAttribute('content', '#586e75');
+        metaThemeColor.setAttribute('content', '#eee8d5');
+        metaMsapplicationNavbuttonColor.setAttribute('content', '#eee8d5');
+        metaAppleMobileWebAappStatusBarStyle.setAttribute('content', '#eee8d5');
+      } 
+    }
+
+    var parseSkinCode = function(themeText) {
+      if (themeText === skinDarkCode) {
+        return 'dark';
+      } else if (themeText === skinLightCode) {
+        return 'light';
+      } else if (themeText === skinHackerCode) {
+        return 'hacker';
+      } else if (themeText === skinSolarizedCode) {
+        return 'solarized';
+      } else if (themeText === skinKimbieCode) {
+        return 'kimbie';
+      }
+    }
+    
+    if (localTheme) {
+      selectThemeItemElem ? 
+      selectThemeItemElem.forEach(function (elem) {
+        if (elem.text.trim() === localTheme) {
+          elem.classList.add('is-active');
+        } else {
+          elem.classList.remove('is-active');
+        }
+      }) : null;
+
+      setMetaColor(localTheme);
+    } else {
+      setMetaColor(rootEleme.className);
+    }
+
+    selectThemeItemElem ? 
+    selectThemeItemElem.forEach(function (v, i) {
+      v.addEventListener('click', function (e) {
+        var selectedThemeVariant = parseSkinCode(e.target.text.trim());
+        localStorage.setItem('theme', selectedThemeVariant);
+        setMetaColor(selectedThemeVariant);
+
+        rootEleme.removeAttribute('class');
+        rootEleme.classList.add('theme__' + selectedThemeVariant);
+        selectThemeElem.forEach(function(rootElem) {
+          rootElem.querySelectorAll('a').forEach(function (elem) {
+            if (elem.classList) {
+              if (elem.text.trim() === selectedThemeVariant) {
+                if (!elem.classList.contains('is-active')) {
+                  elem.classList.add('is-active');
+                }
+              } else {
+                if (elem.classList.contains('is-active')) {
+                  elem.classList.remove('is-active');
+                }
+              }
+            }
+          });
+        });
+
+        if (window.mermaid) {
+          if (selectedThemeVariant === "dark" || selectedThemeVariant === "hacker") {
+            mermaid.initialize({ theme: 'dark' });
+            location.reload();
+          } else {
+            mermaid.initialize({ theme: 'default' });
+            location.reload();
+          }
+        }
+
+        var utterances = document.getElementById('utterances');
+        if (utterances) {
+          utterances.querySelector('iframe').contentWindow.postMessage({
+            type: 'set-theme',
+            theme: selectedThemeVariant === "dark" || selectedThemeVariant === "hacker" ? 'photon-dark' : selectedThemeVariant === 'kimbie' ? 'github-dark-orange' : 'github-light',
+          }, 'https://utteranc.es');
+        }
+
+        var twitterCards = document.querySelectorAll('.twitter-timeline');
+        if (twitterCards) {
+          window.postMessage({
+            type: 'set-twitter-theme',
+            theme: selectedThemeVariant === 'light' || selectedThemeVariant === 'solarized' ? 'light' : 'dark',
+          });
+        }
+      });
+    }) : null;
+  
+
+
+  
+    
+    var baseurl = JSON.parse("\"https://blog.calvinhaynes.top/\"");
+    
+    var permalink = JSON.parse("\"https://blog.calvinhaynes.top/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95/\"");
+    
+    var langprefix = JSON.parse("\"\"");
+    var searchResults = null;
+    var searchMenu = null;
+    var searchText = null;
+    
+    
+    var enableSearch = JSON.parse("true");
+    
+    var enableSearchHighlight = JSON.parse("true");
+    
+    var searchResultPosition = JSON.parse("\"main\"");
+    
+    var sectionType = JSON.parse("\"categories\"");
+
+    
+    var kind = JSON.parse("\"term\"");
+
+    var fuse = null;
+
+    if (enableSearch) {
+      (function initFuse() {
+        var xhr = new XMLHttpRequest();
+        if (sectionType === "publication" && kind !== "page") {
+          xhr.open('GET', permalink + "index.json");
+        } else {
+          xhr.open('GET', baseurl + langprefix + "/index.json");
+        }
+
+        xhr.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            fuse = new Fuse(JSON.parse(xhr.response.toString('utf-8')), {
+              keys: sectionType.includes('publication') ? ['title', 'abstract'] : ['title', 'description', 'content'],
+              includeMatches: enableSearchHighlight,
+              shouldSort: true,
+              threshold: 0.4,
+              location: 0,
+              distance: 100,
+              maxPatternLength: 32,
+              minMatchCharLength: 1,
+              isCaseSensitive: false, 
+              findAllMatches: false, 
+              useExtendedSearch: false, 
+            });
+            window.fuse = fuse;
+          }
+          else {
+            console.error('[' + xhr.status + ']Error:', xhr.statusText);
+          }
+        };
+        xhr.send();
+      })();
+    }
+
+    function makeLi(ulElem, obj) {
+      var li = document.createElement('li');
+      li.className = 'search-result__item';
+      
+      var a = document.createElement('a');
+      a.innerHTML = obj.item.title;
+      a.setAttribute('class', 'search-result__item--title');
+      a.setAttribute('href', obj.item.permalink);
+
+      var descDiv = document.createElement('div');
+      descDiv.setAttribute('class', 'search-result__item--desc');
+      if (obj.item.description) {
+        descDiv.innerHTML = obj.item.description;
+      } else if (obj.item.content) {
+        descDiv.innerHTML = obj.item.content.substring(0, 225);
+      }
+      
+      li.appendChild(a);
+      li.appendChild(descDiv);
+      ulElem.appendChild(li);
+    }
+
+    function makeHighlightLi(ulElem, obj) {
+      var li = document.createElement('li');
+      li.className = 'search-result__item';
+      var descDiv = null;
+
+      var a = document.createElement('a');
+      a.innerHTML = obj.item.title;
+      a.setAttribute('class', 'search-result__item--title');
+      a.setAttribute('href', obj.item.uri);
+
+      if (obj.matches && obj.matches.length) {
+        for (var i = 0; i < obj.matches.length; i++) {
+          if ('title' === obj.matches[i].key) {
+            a = document.createElement('a');
+            a.innerHTML = generateHighlightedText(obj.matches[i].value, obj.matches[i].indices);
+            a.setAttribute('class', 'search-result__item--title');
+            a.setAttribute('href', obj.item.uri);
+          }
+          
+          if ('description' === obj.matches[i].key) {
+            descDiv = document.createElement('div');
+            descDiv.setAttribute('class', 'search-result__item--desc');
+            descDiv.innerHTML = generateHighlightedText(obj.item.description, obj.matches[i].indices);
+          } else if ('content' === obj.matches[i].key) {
+            if (!descDiv) {
+              descDiv = document.createElement('div');
+              descDiv.setAttribute('class', 'search-result__item--desc');
+              descDiv.innerHTML = generateHighlightedText(obj.item.content.substring(0, 150), obj.matches[i].indices);
+            }
+          } else {
+            if (obj.item.description) {
+              descDiv = document.createElement('div');
+              descDiv.setAttribute('class', 'search-result__item--desc');
+              descDiv.innerHTML = obj.item.description;
+            } else {
+              descDiv = document.createElement('div');
+              descDiv.setAttribute('class', 'search-result__item--desc');
+              descDiv.innerHTML = obj.item.content.substring(0, 150);
+            }
+          }
+        }
+
+        li.appendChild(a);
+        if (descDiv) {
+          li.appendChild(descDiv);
+        }
+        if (li) {
+          ulElem.appendChild(li);
+        }
+      }
+    }
+
+    function renderSearchResultsSide(searchText, results) {
+      searchResults = document.getElementById('search-results');
+      searchMenu = document.getElementById('search-menu');
+      searchResults.setAttribute('class', 'dropdown is-active');
+      
+      var ul = document.createElement('ul');
+      ul.setAttribute('class', 'dropdown-content search-content');
+
+      if (results.length) {
+        results.forEach(function (result) {
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          a.setAttribute('href', result.uri);
+          a.setAttribute('class', 'dropdown-item');
+          a.appendChild(li);
+
+          var titleDiv = document.createElement('div');
+          titleDiv.innerHTML = result.title;
+          titleDiv.setAttribute('class', 'menu-item__title');
+
+          var descDiv = document.createElement('div');
+          descDiv.setAttribute('class', 'menu-item__desc');
+          if (result.description) {
+            descDiv.innerHTML = result.description;
+          } else if (result.content) {
+            descDiv.innerHTML = result.content.substring(0, 150);
+          }
+
+          li.appendChild(titleDiv);
+          li.appendChild(descDiv);
+          ul.appendChild(a);
+        });
+      } else {
+        var li = document.createElement('li');
+        li.setAttribute('class', 'dropdown-item');
+        li.innerText = 'No results found';
+        ul.appendChild(li);
+      }
+
+      while (searchMenu.hasChildNodes()) {
+        searchMenu.removeChild(
+          searchMenu.lastChild
+        );
+      }
+      
+      searchMenu.appendChild(ul);
+    }
+
+    function renderSearchHighlightResultsSide(searchText, results) {
+      searchResults = document.getElementById('search-results');
+      searchMenu = document.getElementById('search-menu');
+      searchResults.setAttribute('class', 'dropdown is-active');
+
+      var ul = document.createElement('ul');
+      ul.setAttribute('class', 'dropdown-content search-content');
+
+      if (results.length) {
+        results.forEach(function (result) {
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          var descDiv = null;
+
+          a.setAttribute('href', result.item.uri);
+          a.setAttribute('class', 'dropdown-item');
+          a.appendChild(li);
+
+          var titleDiv = document.createElement('div');
+          titleDiv.innerHTML = result.item.title;
+          titleDiv.setAttribute('class', 'menu-item__title');
+          
+          if (result.matches && result.matches.length) {
+            for (var i = 0; i < result.matches.length; i++) {
+              if ('title' === result.matches[i].key) {
+                titleDiv.innerHTML = generateHighlightedText(result.matches[i].value, result.matches[i].indices);
+              }
+
+              if ('description' === result.matches[i].key) {
+                descDiv = document.createElement('div');
+                descDiv.setAttribute('class', 'menu-item__desc');
+                descDiv.innerHTML = generateHighlightedText(result.item.description, result.matches[i].indices);
+              } else if ('content' === result.matches[i].key) {
+                if (!descDiv) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'menu-item__desc');
+                  descDiv.innerHTML = generateHighlightedText(result.item.content.substring(0, 150), result.matches[i].indices);
+                }
+              } else {
+                if (result.item.description) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'menu-item__desc');
+                  descDiv.innerHTML = result.item.description;
+                } else {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'menu-item__desc');
+                  descDiv.innerHTML = result.item.content.substring(0, 150);
+                }
+              }
+            }
+            
+            li.appendChild(titleDiv);
+            if (descDiv) {
+              li.appendChild(descDiv);
+            }
+            ul.appendChild(a);
+          }
+        });
+      } else {
+        var li = document.createElement('li');
+        li.setAttribute('class', 'dropdown-item');
+        li.innerText = 'No results found';
+        ul.appendChild(li);
+      }
+
+      while (searchMenu.hasChildNodes()) {
+        searchMenu.removeChild(
+          searchMenu.lastChild
+        );
+      }
+      searchMenu.appendChild(ul);
+    }
+
+    function renderSearchResultsMobile(searchText, results) {
+      searchResults = document.getElementById('search-mobile-results');
+
+      var content = document.createElement('div');
+      content.setAttribute('class', 'mobile-search__content');
+
+      if (results.length > 0) {
+        results.forEach(function (result) {
+          var item = document.createElement('a');
+          item.setAttribute('href', result.uri);
+          item.innerHTML = '<div class="mobile-search__item"><div class="mobile-search__item--title">📄 ' + result.title + '</div><div class="mobile-search__item--desc">' + (result.description ? result.description : result.content) + '</div></div>';
+          content.appendChild(item);
+        });
+      } else {
+        var item = document.createElement('span');
+        content.appendChild(item);
+      }
+
+      let wrap = document.getElementById('search-mobile-results');
+      while (wrap.firstChild) {
+        wrap.removeChild(wrap.firstChild)
+      }
+      searchResults.appendChild(content);      
+    }
+
+    function renderSearchHighlightResultsMobile(searchText, results) {
+      searchResults = document.getElementById('search-mobile-results');
+
+      var ul = document.createElement('div');
+      ul.setAttribute('class', 'mobile-search__content');
+
+      if (results.length) {
+        results.forEach(function (result) {
+          var li = document.createElement('li');
+          var a = document.createElement('a');
+          var descDiv = null;
+
+          a.setAttribute('href', result.item.uri);
+          a.appendChild(li);
+          li.setAttribute('class', 'mobile-search__item');
+
+          var titleDiv = document.createElement('div');
+          titleDiv.innerHTML = result.item.title;
+          titleDiv.setAttribute('class', 'mobile-search__item--title');
+          
+          if (result.matches && result.matches.length) {
+            for (var i = 0; i < result.matches.length; i++) {
+              if ('title' === result.matches[i].key) {
+                titleDiv.innerHTML = generateHighlightedText(result.matches[i].value, result.matches[i].indices);
+              }
+
+              if ('description' === result.matches[i].key) {
+                descDiv = document.createElement('div');
+                descDiv.setAttribute('class', 'mobile-search__item--desc');
+                descDiv.innerHTML = generateHighlightedText(result.item.description, result.matches[i].indices);
+              } else if ('content' === result.matches[i].key) {
+                if (!descDiv) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = generateHighlightedText(result.item.content.substring(0, 150), result.matches[i].indices);
+                }
+              } else {
+                if (result.item.description) {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = result.item.description;
+                } else {
+                  descDiv = document.createElement('div');
+                  descDiv.setAttribute('class', 'mobile-search__item--desc');
+                  descDiv.innerHTML = result.item.content.substring(0, 150);
+                }
+              }
+            }
+            
+            li.appendChild(titleDiv);
+            if (descDiv) {
+              li.appendChild(descDiv);
+            }
+            ul.appendChild(a);
+          }
+        });
+      } else {
+        var item = document.createElement('span');
+        ul.appendChild(item);
+      }
+
+      let wrap = document.getElementById('search-mobile-results');
+      while (wrap.firstChild) {
+        wrap.removeChild(wrap.firstChild)
+      }
+      searchResults.appendChild(ul);
+    }
+
+    function generateHighlightedText(text, regions) {
+      if (!regions) {
+        return text;
+      }
+
+      var content = '', nextUnhighlightedRegionStartingIndex = 0;
+
+      regions.forEach(function(region) {
+        if (region[0] === region[1]) {
+          return null;
+        }
+        
+        content += '' +
+          text.substring(nextUnhighlightedRegionStartingIndex, region[0]) +
+          '<span class="search__highlight">' +
+            text.substring(region[0], region[1] + 1) +
+          '</span>' +
+        '';
+        nextUnhighlightedRegionStartingIndex = region[1] + 1;
+      });
+
+      content += text.substring(nextUnhighlightedRegionStartingIndex);
+
+      return content;
+    };
+
+    var searchElem = document.getElementById('search');
+    var searchMobile = document.getElementById('search-mobile');
+    var searchResultsContainer = document.getElementById('search-results');
+
+    searchElem ?
+    searchElem.addEventListener('input', function(e) {
+      if (!e.target.value | window.innerWidth < 770) {
+        searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+        return null;
+      }
+
+      searchText = e.target.value;
+      var results = fuse.search(e.target.value);
+      
+      if (searchResultPosition === "main") {
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsMain(searchText, results);
+        } else {
+          renderSearchResultsMain(searchText, results);
+        }
+      } else {
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsSide(searchText, results);
+        } else {
+          renderSearchResultsSide(searchText, results);
+        }
+        
+        var dropdownItems = searchResultsContainer.querySelectorAll('.dropdown-item');
+        dropdownItems ? dropdownItems.forEach(function(item) {
+          item.addEventListener('mousedown', function(e) {
+            e.target.click();
+          });
+        }) : null;
+      }
+    }) : null;
+
+    searchElem ? 
+    searchElem.addEventListener('blur', function() {
+      if (window.innerWidth < 770) {
+        return null;
+      }
+      searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
+    }) : null;
+
+    searchElem ? 
+    searchElem.addEventListener('click', function(e) {
+      if (window.innerWidth < 770) {
+        return null;
+      }
+      if (!e.target.value) {
+        searchResultsContainer ? searchResultsContainer.setAttribute('class', 'dropdown') : null;
+        return null;
+      }
+
+      searchText = e.target.value;
+      var results = fuse.search(e.target.value);
+
+      if (searchResultPosition === "main") {
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsMain(searchText, results);
+        } else {
+          renderSearchResultsMain(searchText, results);
+        }
+      } else{
+        if (enableSearchHighlight) {
+          renderSearchHighlightResultsSide(searchText, results);
+        } else {
+          renderSearchResultsSide(searchText, results);
+        }
+
+        var dropdownItems = searchResultsContainer.querySelectorAll('.dropdown-item');
+        dropdownItems ? dropdownItems.forEach(function (item) {
+          item.addEventListener('mousedown', function (e) {
+            e.target.click();
+          });
+        }) : null;
+      }
+    }) : null;
+
+    var searchMenuElem = document.getElementById("search-menu");
+    var activeItem = document.querySelector('#search-menu .dropdown-item.is-active');
+    var activeIndex = null;
+    var items = null;
+    var searchContainerMaxHeight = 350;
+
+    searchElem ? 
+    searchElem.addEventListener('keydown', function(e) {
+      if (window.innerWidth < 770) {
+        return null;
+      }
+
+      if (e.key === 'Escape') {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+      }
+
+      var items = document.querySelectorAll('#search-menu .dropdown-item');
+      var keyCode = e.which || e.keyCode;
+
+      if (!items || !items.length) {
+        return null;
+      }
+      
+      if (e.key === 'ArrowDown' || keyCode === 40) {
+        if (activeIndex === null) {
+          activeIndex = 0;
+          items[activeIndex].classList.remove('is-active');
+        } else {
+          items[activeIndex].classList.remove('is-active');
+          activeIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+        }
+        items[activeIndex].classList.add('is-active');
+
+        let overflowedPixel = items[activeIndex].offsetTop + items[activeIndex].clientHeight - searchContainerMaxHeight;
+        if (overflowedPixel > 0) {
+          document.querySelector(".search-content").scrollTop += items[activeIndex].getBoundingClientRect().height;
+        } else if (activeIndex === 0) {
+          document.querySelector(".search-content").scrollTop = 0;
+        }
+      } else if (e.key === 'ArrowUp' || keyCode === 38) {
+        if (activeIndex === null) {
+          activeIndex = items.length - 1;
+          items[activeIndex].classList.remove('is-active');
+        } else {
+          items[activeIndex].classList.remove('is-active');
+          activeIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+        }
+        items[activeIndex].classList.add('is-active');
+        
+        let overflowedPixel = items[activeIndex].offsetTop + items[activeIndex].clientHeight - searchContainerMaxHeight;
+        if (overflowedPixel < 0) {
+          document.querySelector(".search-content").scrollTop -= items[activeIndex].getBoundingClientRect().height;
+        } else {
+          document.querySelector(".search-content").scrollTop = overflowedPixel + items[activeIndex].getBoundingClientRect().height;
+        }
+      } else if (e.key === 'Enter' || keyCode === 13) {
+        if (items[activeIndex] && items[activeIndex].getAttribute('href')) {
+          location.href = items[activeIndex].getAttribute('href');
+        }
+      } else if (e.key === 'Escape' || keyCode === 27) {
+        e.target.value = null;
+        if (searchResults) {
+          searchResults.classList.remove('is-active');
+        }
+      }
+    }) : null;
+
+    searchMobile ? 
+    searchMobile.addEventListener('input', function(e) {
+      if (!e.target.value) {
+        let wrap = document.getElementById('search-mobile-results');
+        while (wrap.firstChild) {
+          wrap.removeChild(wrap.firstChild);
+        }
+        return null;
+      }
+
+      searchText = e.target.value;
+      var results = fuse.search(e.target.value);
+      renderSearchResultsMobile(searchText, results);
+      if (enableSearchHighlight) {
+        renderSearchHighlightResultsMobile(searchText, results);
+      } else {
+        renderSearchResultsMobile(searchText, results);
+      }
+    }) : null;
+  
+
+
+  
+    var mobileSearchInputElem = document.querySelector('#search-mobile');
+    var mobileSearchClassElem = document.querySelector('.mobile-search');
+    var mobileSearchBtnElems = document.querySelectorAll('.navbar-search');
+    var mobileSearchCloseBtnElem = document.querySelector('#search-mobile-close');
+    var mobileSearchContainer = document.querySelector('#search-mobile-container');
+    var mobileSearchResultsElem = document.querySelector('#search-mobile-results');
+    var htmlElem = document.querySelector('html');
+
+    if (mobileSearchClassElem) {
+      mobileSearchClassElem.style.display = 'none';
+    }
+
+    mobileSearchBtnElems ? 
+    mobileSearchBtnElems.forEach(function (elem, idx) {
+      elem.addEventListener('click', function () {
+        if (mobileSearchContainer) {
+          mobileSearchContainer.style.display = 'block';
+        }
+
+        if (mobileSearchInputElem) {
+          mobileSearchInputElem.focus();
+        }
+
+        if (htmlElem) {
+          htmlElem.style.overflowY = 'hidden';
+        }
+      });
+    }) : null;
+
+    mobileSearchCloseBtnElem ? 
+    mobileSearchCloseBtnElem.addEventListener('click', function() {
+      if (mobileSearchContainer) {
+        mobileSearchContainer.style.display = 'none';
+      }
+
+      if (mobileSearchInputElem) {
+        mobileSearchInputElem.value = '';
+      }
+      
+      if (mobileSearchResultsElem) {
+        while (mobileSearchResultsElem.firstChild) {
+          mobileSearchResultsElem.removeChild(mobileSearchResultsElem.firstChild);
+        }
+      }
+
+      if (htmlElem) {
+        htmlElem.style.overflowY = 'visible';
+      }
+    }) : null;
+
+    mobileSearchInputElem ?
+    mobileSearchInputElem.addEventListener('keydown', function(e) {
+      var keyCode = e.which || e.keyCode;
+      if (e.key === 'Escape' || keyCode === 27) {
+        if (mobileSearchContainer) {
+          mobileSearchContainer.style.display = 'none';
+        }
+        
+        if (mobileSearchInputElem) {
+          mobileSearchInputElem.value = '';
+        }
+
+        if (mobileSearchResultsElem) {
+          while (mobileSearchResultsElem.firstChild) {
+            mobileSearchResultsElem.removeChild(mobileSearchResultsElem.firstChild);
+          }
+        }
+        if (htmlElem) {
+          htmlElem.style.overflowY = 'visible';
+        }
+      }
+    }) : null;
+  
+
+
+  
+    function renderSearchResultsMain(searchText, results) {
+      var searchBody = document.querySelector('.search-result__body');
+      var originUl = searchBody.querySelector('ul');
+      var ul = document.createElement('ul');
+      
+      if (!searchText) {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+      } else if (results) {
+        if (results && results.length) {
+          results.forEach(function (result) {
+            makeLi(ul, result);
+          });
+
+          searchResult ? searchResult.setAttribute('data-display', 'block') : null;
+          summaryContainer ? summaryContainer.setAttribute('data-display', 'none') : null;
+        }
+      }
+
+      originUl.parentNode.replaceChild(ul, originUl);
+    }
+
+    function renderSearchHighlightResultsMain(searchText, results) {
+      var searchBody = document.querySelector('.search-result__body');
+      var originUl = searchBody.querySelector('ul');
+      var ul = document.createElement('ul');
+
+      if (!searchText) {
+        searchResult ? searchResult.setAttribute('data-display', 'none') : null;
+        summaryContainer ? summaryContainer.setAttribute('data-display', 'block') : null;
+      } else if (results) {
+        if (results && results.length) {
+          results.forEach(function (result) {
+            makeHighlightLi(ul, result);
+          });
+
+          searchResult ? searchResult.setAttribute('data-display', 'block') : null;
+          summaryContainer ? summaryContainer.setAttribute('data-display', 'none') : null;
+        }
+      }
+
+      originUl.parentNode.replaceChild(ul, originUl);
+    }
+  
+  });
+</script>
+    
+    
+
+
+<link rel="stylesheet" href="/css/main.min.css">
+
+
+
+  
+  
+    
+    <link rel="stylesheet" href="/css/my.min.css">
+  
+
+  
+  
+    
+    <link rel="stylesheet" href="/css/fonts-zh.min.css">
+  
+
+  
+  
+    
+    <link rel="stylesheet" href="/css/fonts-code.min.css">
+  
+
+  
+  
+    
+    <link rel="stylesheet" href="/fontawesome/css/all.min.css">
+  
+
+  
+  
+    
+    <link rel="stylesheet" href="/css/pace.min.css">
+  
+
+
+    
+<link rel="alternate" type="application/rss&#43;xml" title="RSS" href="https://blog.calvinhaynes.top/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95/index.xml">
+
+<meta name="description" content="The site of Calvin Haynes&#39;s Blog" />
+
+
+<meta name="created" content="2021-08-05T00:22:49&#43;0800">
+<meta name="modified" content="2021-08-05T00:22:49&#43;0800">
+<meta property="article:published_time" content="2021-08-05T00:22:49&#43;0800">
+
+<meta name="author" content="Calvin Haynes">
+
+
+<meta property="og:site_name" content="Calvin Haynes的博客站">
+<meta property="og:title" content="个人博客发展">
+<meta property="og:url" content="https://blog.calvinhaynes.top/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95/">
+<meta property="og:type" content="website">
+<meta property="og:description" content="The site of Calvin Haynes&#39;s Blog">
+
+<meta name="generator" content="Hugo 0.89.4" />
+<meta name="msapplication-TileColor" content="#fff">
+
+<meta name="theme-color" content="#fff">
+
+<meta name="msapplication-navbutton-color" content="#fff">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="#fff">
+
+<link rel="canonical" href="https://blog.calvinhaynes.top/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95/">
+
+<link rel="manifest" href="/favicon/manifest.json">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-512x512.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+
+
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url" : "https://blog.calvinhaynes.top/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95/",
+    "name": "个人博客发展",
+    "description": "The site of Calvin Haynes\u0027s Blog",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://blog.calvinhaynes.top/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Calvin Haynes的博客站",
+      "url": "https://blog.calvinhaynes.top/"
+    }
+  }
+</script>
+
+    
+  
+  <link rel="dns-prefetch" href="https://ga.fuckcloudnative.io">
+  <link href="https://ga.fuckcloudnative.io" rel="preconnect" crossorigin>
+
+  <script>
+  
+  window.ga_tid = "UA-145022311-1";
+  window.ga_url = "https://ga.fuckcloudnative.io";
+  </script>
+  <script defer src="https://cdn.jsdelivr.net/gh/giuem/ga-proxy/packages/ga/dist/ga.min.js" async></script>
+
+
+<script async defer data-website-id="f811ff6e-361e-4bdb-bacc-226cda745586" src="https://umami.fuckcloudnative.io/umami.js"></script>
+
+  
+  
+  <script defer src='https://cf.fuckcloudnative.io/beacon.min.js' data-cf-beacon='{"token": "11f3ac7369f54ca29c00757cfb4cafd1"}'></script>
+  
+
+
+
+
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M2D7J9T" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+
+
+
+  
+  
+  <script>
+    var dataLayer = window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      page:'个人博客发展',
+      categories:'only examples about your dataLayer'
+    });
+  </script>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-M2D7J9T');</script>
+  
+
+
+
+
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    
+
+
+
+
+<style>
+    #top-grrk{
+    background:url(https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting@second/img/paomadeng.gif);
+    height:2px;
+    position:fixed;
+    width:100%;
+    Z-index:10000;
+}
+</style>    
+<div id="top-grrk"></div>
+
+
+
+
+</head>
+
+<body id="root" class="theme__dark">
+    
+    <script>
+        var localTheme = localStorage.getItem('theme');
+        if (localTheme) {
+            document.getElementById('root').className = 'theme__' + localTheme;
+        }
+    </script>
+    <div id="container">
+        
+
+
+
+
+
+        <div class="wrapper" data-type="categories" data-kind="term">
+            <nav class="navbar scrolling" role="navigation" aria-label="main navigation" data-dir="ltr">
+  <div class="navbar__brand">
+  
+      <a href="/" title="主页" rel="home" class="navbar__title-link">
+	      <h6 class="navbar__title" style="font-size: 1.2rem">🐳&ensp;<span style="color:#23d18b;">>$</span>&nbsp;cd /home/<span class="logo_cursor"></span></h6>
+      </a>
+  
+  </div>
+
+  
+<div class="theme theme-mobile" data-ani="true">
+  <div class="dropdown">
+    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" style="" data-ani="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
+    </button>
+    <div class="dropdown-content select-theme">
+      
+        
+        <a href="#" class="dropdown-item select-theme__item is-active">
+          dark
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          light
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          hacker
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          solarized
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          kimbie
+        </a>
+        
+      
+    </div>
+  </div>
+</div>
+
+
+<div class="mobile-search__btn navbar-search" data-ani="true">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+</div>
+
+<div id="search-mobile-container" class="mobile-search hide" data-dir="ltr">
+  <div class="mobile-search__top">
+    <input id="search-mobile" type="text" aria-label="Mobile Search" placeholder="搜索" class="mobile-search__top--input"/>
+    <div id="search-mobile-close" class="mobile-search__top--icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
+    </div>
+  </div>
+  <div id="search-mobile-results" class="mobile-search__body">
+    
+  </div>
+</div>
+
+
+<a role="button" class="navbar__burger" aria-label="menu" aria-expanded="false"
+  data-ani="true">
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+  <span aria-hidden="true"></span>
+</a>
+<div class="navbarm__collapse" data-open="false">
+  <ul dir="ltr">
+    
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+		<a href="/about/"><i class="fas fa-user-graduate"></i> 关于我</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+		<a href="/archive/"><i class="fas fa-archive"></i> 归档</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+		<a href="/showcase/"><i class="fab fa-github"></i> 开源项目</a>
+        </li>
+      
+      
+    
+      
+      
+      
+      
+
+      
+        <li class="navbarm__menu--item ">
+          <a href="/">
+            <i class="fas fa-book"></i>
+            电子书
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+          </a>
+        </li>
+
+        
+          <li class="navbarm__menu--item navbarm__menu--subitem">
+            <a href="/the-way-to-go/">Go 入门指南</a>
+          </li>
+        
+
+      
+      
+    
+
+    
+      <li class="navbarm__menu--item ">
+        <a href="/tags" class="navbarm__menu--term" data-index="0">
+          热门标签
+        </a>
+      </li>
+    
+      <li class="navbarm__menu--item active">
+        <a href="/categories" class="navbarm__menu--term" data-index="1">
+          分类
+        </a>
+      </li>
+    
+      <li class="navbarm__menu--item ">
+        <a href="/series" class="navbarm__menu--term" data-index="2">
+          系列
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+  <div class="navbar__menu">
+  
+  
+  
+<div class="theme" data-ani="true">
+  <div class="dropdown">
+    <button class="dropdown-trigger navbar__slide-down" aria-label="Select Theme Button" data-ani="true">
+      <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" d="M24 0H0v24h24V0z"/><path fill="currentColor" d="M6.34 7.93c-3.12 3.12-3.12 8.19 0 11.31C7.9 20.8 9.95 21.58 12 21.58s4.1-.78 5.66-2.34c3.12-3.12 3.12-8.19 0-11.31l-4.95-4.95c-.39-.39-1.02-.39-1.41 0L6.34 7.93zM12 19.59c-1.6 0-3.11-.62-4.24-1.76C6.62 16.69 6 15.19 6 13.59s.62-3.11 1.76-4.24L12 5.1v14.49z"/></svg>      
+    </button>
+    <div class="dropdown-content select-theme">
+      
+        
+        <a href="#" class="dropdown-item select-theme__item is-active">
+          深色模式
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          亮色模式
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          hacker
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          护眼模式
+        </a>
+        
+        <a href="#" class="dropdown-item select-theme__item ">
+          kimbie
+        </a>
+        
+      
+    </div>
+  </div>
+</div>
+
+
+  
+  
+  
+  
+  
+  
+  
+  <a href="/about/" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true" target="_blank"><i class="fas fa-user-graduate"></i>  关于我</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/archive/" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true" target="_blank"><i class="fas fa-archive"></i>  归档</a>
+  
+  
+  
+  
+  
+  
+  
+  <a href="/showcase/" class="navbar__menu-item navbar__slide-down " dir="ltr" data-ani="true" target="_blank"><i class="fab fa-github"></i>  开源项目</a>
+  
+  
+  
+  
+  
+  
+  
+  <div class="navbar__dropdown navbar__slide-down" data-ani="true">
+    <a target="_blank" href="/" class="navbar__menu-item "
+      dir="ltr">
+      <i class="fas fa-book"></i>
+      电子书
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>
+    </a>
+    <div class="navbar__dropdown--content">
+      
+      <a target="_blank" href="/the-way-to-go/" class="navbar__dropdown--item" dir="ltr"> Go 入门指南</a>
+      
+    </div>
+  </div>
+  
+  
+</div>
+
+</nav>
+
+            
+
+            
+
+<main class="main inner" data-sidebar-position="right">
+  <div class="list__main lm">
+    <nav class="breadcrumb hide" aria-label="breadcrumbs">
+  <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
+  <ol>
+    
+  
+  
+  
+  
+  
+  <li >
+    
+      <a href="https://blog.calvinhaynes.top/" class="capitalize">Calvin Haynes的博客站</a>
+    
+  </li>
+  
+  
+  <li >
+    
+      <a href="https://blog.calvinhaynes.top/categories/" class="capitalize">分类</a>
+    
+  </li>
+  
+  
+  <li  class="is-active" >
+    
+      <span>个人博客发展</span>
+    
+  </li>
+  
+  </ol>
+  
+</nav>
+    <header class="list__header">
+      <h5 class="list__header--title capitalize h5">个人博客发展</h5>
+    </header>
+    
+    <div class="list__header--desc p2">
+      
+    </div>
+
+    <div class="summary__container" data-display="block">
+      
+        
+  <article class="summary-classic" data-ani="true">
+  <div class="summary-classic__flex-box" >
+
+    
+    <div class="summary-classic__image-container summary-classic__image-wrapper" data-position="right" data-hwm="">
+      <a href="https://blog.calvinhaynes.top/posts/hugo/">
+        <img data-src="https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/wallpaper-3-type.png" alt="Hugo搭建个人博客教程（GithubPages &#43; 阿里云）" src="data:image/svg+xml,%0A%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath fill='none' d='M0 0h24v24H0V0z'/%3E%3Cpath fill='%23aaa' d='M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H6c-.55 0-1-.45-1-1V6c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v12c0 .55-.45 1-1 1zm-4.44-6.19l-2.35 3.02-1.56-1.88c-.2-.25-.58-.24-.78.01l-1.74 2.23c-.26.33-.02.81.39.81h8.98c.41 0 .65-.47.4-.8l-2.55-3.39c-.19-.26-.59-.26-.79 0z'/%3E%3C/svg%3E" class="lazyload summary-classic__image" data-ani="true" data-hwm="" style=""/>
+      </a>
+    </div>
+    
+
+    <div class="summary-classic__content">
+      <header>
+        <h5 class="title h5"><a href='https://blog.calvinhaynes.top/posts/hugo/'>Hugo搭建个人博客教程（GithubPages &#43; 阿里云）</a> </h5>
+        <h6 class="subtitle caption">
+          <time title="创建日期" dir="ltr">📅&nbsp;2021年08月05日 </time>
+          
+          <span title="阅读时长" dir="ltr"> &middot; ☕&nbsp;4&nbsp;分钟 </span>
+          
+          &middot; <span title="作者" dir="ltr">✍️&nbsp;Calvin Haynes</span>
+          
+        </h6>
+      </header>
+      <div>
+        <div class="summary-classic__text p2">
+          
+            利用Hugo静态博客框架创建个人博客站的教程
+          
+        </div>
+      </div>
+    </div>
+
+    
+    
+  </div>
+  <hr />
+</article>
+
+
+      
+      
+
+
+    </div>
+    <div class="search-result" data-display="none">
+  <div class="search-result__header">
+    <div class="search-result__close" data-dir="ltr">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"><path opacity=".87" fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.59-13L12 10.59 8.41 7 7 8.41 10.59 12 7 15.59 8.41 17 12 13.41 15.59 17 17 15.59 13.41 12 17 8.41z"/></svg>
+    </div>
+  </div>
+  <div class="search-result__body">
+    <ul>
+      <li class="search-result__item">
+        <div class="search-result__item--title">
+        </div>
+        <div class="search-result__item--desc">
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+  </div>
+
+  
+    <aside class="list__sidebar r" data-dir="ltr">
+      
+
+<ul class="sidebar">
+    
+
+<div class="search">
+  <span class="icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path d="M15.5 14h-.79l-.28-.27c1.2-1.4 1.82-3.31 1.48-5.34-.47-2.78-2.79-5-5.59-5.34-4.23-.52-7.79 3.04-7.27 7.27.34 2.8 2.56 5.12 5.34 5.59 2.03.34 3.94-.28 5.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+  </span>
+  <input id="search" aria-label="Site Search" class="input" type="text" placeholder="搜索" autocomplete="off">
+  <div id="search-results" class="dropdown">
+    <div id="search-menu" class="dropdown-menu" role="menu">
+    </div>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+        
+        <li class="sidebar-recent">
+            <a href="/posts/hugo/" class="sidebar-recent__title p1">Hugo搭建个人博客教程（GithubPages &#43; 阿里云）</a>
+        </li>
+        
+        <hr class="hr-fade sidebar-hr" />
+    
+</ul>
+<div class="taxo-root">
+
+<div class="taxo">
+    <section>
+        <span class="title p2">
+            <a href="/tags/" class="taxo__title">
+                热门标签
+            </a>
+        </span>
+        
+        
+            <span class="tag">
+                <a href="/tags/cslab/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        CSLab
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/docker/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Docker
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        3
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/github/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Github
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/hugo/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Hugo
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/vscode/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        Vscode
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        2
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        操作系统
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/tags/%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95/" class="is-tags taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        软件清单
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        3
+                    </span>
+                </a>
+            </span>
+        
+        
+    </section>
+</div>
+
+
+<div class="taxo">
+    <section>
+        <span class="title p2">
+            <a href="/categories/" class="taxo__title">
+                分类
+            </a>
+        </span>
+        
+        
+            <span class="tag">
+                <a href="/categories/geek-tools/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        geek-tools
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        个人博客发展
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/categories/%E5%A4%A7%E6%95%B0%E6%8D%AE/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        大数据
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        2
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        计算机基础
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        1
+                    </span>
+                </a>
+            </span>
+        
+        
+        
+            <span class="tag">
+                <a href="/categories/%E9%AB%98%E6%95%88%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/" class="is-categories taxo__link" data-dir="ltr">
+                    <span class="taxo__text">
+                        高效工具系列
+                    </span>
+                    <span class="taxo__num" dir="auto">
+                        3
+                    </span>
+                </a>
+            </span>
+        
+        
+    </section>
+</div>
+
+
+
+</div>
+
+
+    </aside>
+  
+</main>
+
+<script>
+    
+    var sidebarPosition = JSON.parse("\"right\"");
+    
+    var enableSidebar = JSON.parse("true");
+
+    var listMainElem = document.querySelector('.list__main');
+    var listSideElem = document.querySelector('.list__sidebar');
+
+    var gridSmall = 'l';
+    var gridBig = 'mr';
+    var gridFull = 'lmr'
+
+    if (sidebarPosition === "right") {
+        gridSmall = 'r';
+        gridBig = 'lm'
+    }
+
+    enquire.register("screen and (max-width: 769px)", {
+        match: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridBig);
+                listMainElem.classList.add(gridFull);
+                listSideElem.classList.remove(gridSmall);
+                listSideElem.classList.add('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
+
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
+
+        },
+        unmatch: function () {
+            if (enableSidebar) {
+                listMainElem.classList.remove(gridFull);
+                listMainElem.classList.add(gridBig);
+                listSideElem.classList.add(gridSmall);
+                listSideElem.classList.remove('hide');
+            } else {
+                if (listMainElem && !listMainElem.classList.contains(gridFull)) {
+                    listMainElem.classList.remove(gridBig);
+                    listMainElem.classList.add(gridFull);
+                }
+
+                if (listSideElem && !listSideElem.classList.contains('hide')) {
+                    listSideElem.classList.add('hide');
+                }
+            }
+
+            var navCollapseBtn = document.querySelector('.navbar__burger');
+            var navCollapse = document.getElementsByClassName('navbarm__collapse')[0];
+            if (navCollapse) {
+                navCollapse.setAttribute('data-open', false);
+                navCollapse.style.maxHeight = 0;
+                navCollapseBtn.classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('navbar__menu')[0]) {
+                document.getElementsByClassName('navbar__menu')[0].classList.remove('is-active');
+            }
+            if (document.getElementsByClassName('mobile-search')[0]) {
+                document.getElementsByClassName('mobile-search')[0].classList.add('hide');
+            }
+        },
+        setup: function () { },
+        deferSetup: true,
+        destroy: function () { },
+    });
+</script>
+
+
+
+            
+<link rel="dns-prefetch" href="https://cdn.bootcss.com">
+<link href="https://cdn.bootcss.com" rel="preconnect" crossorigin>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+var a_idx = 0;
+jQuery(document).ready(function($) {
+    $("body").click(function(e) {
+        var a = new Array("CalvinHaynes","Guitar","Hugo","CSAPP","Java","Python");        var $i = $("<span />").text(a[a_idx]);
+        a_idx = (a_idx + 1) % a.length;
+        var x = e.pageX,
+        y = e.pageY;
+        function randomColor() {
+          var flakeColor = new Array("#FFDA65", "#00BFFF", "#BA55D3", "#FFA07A", "#87CEEB", "#FFB6C1");
+          var snowColor = flakeColor[Math.floor(flakeColor.length * Math.random())];
+          return snowColor;
+        }
+        $i.css({
+            "z-index": 999999999999999999999999999999999999999999999999999999999999999999999,
+            "top": y - 20,
+            "left": x,
+            "position": "absolute",
+            "font-weight": "bold",
+            "color": randomColor()
+        });
+        $("body").append($i);
+        $i.animate({
+            "top": y - 180,
+            "opacity": 0
+        },
+        1500,
+        function() {
+            $i.remove();
+        });
+    });
+});
+</script>
+
+
+
+
+
+<script defer type="text/javascript">
+ var OriginTitle = document.title;
+ document.addEventListener('visibilitychange', function () {
+     if (document.hidden) {
+         document.title = '别走啊，官人 _(:з」∠)_';
+     }
+     else {
+         document.title = OriginTitle;
+     }
+ });
+</script>
+
+<script defer src="https://blog.calvinhaynes.top/js/instantpage.min.js" type="module" integrity="sha384-by67kQnR+pyfy8yWP4kPO12fHKRLHZPfEsiSXR8u2IKcTdxD805MGUXBzVPnkLHw"></script>
+
+
+
+
+
+
+
+
+
+            <footer class="footer">
+    
+    
+<div class="footer__social">
+  <div class="social">
+    
+            
+    
+            
+    
+      
+      <a href="https://www.douban.com/people/201198470/" title="douban" aria-label="douban">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000" viewBox="0 0 24 24"><path fill="currentColor" d="M 5 4 A 1.0001 1.0001 0 1 0 5 6 L 19 6 A 1.0001 1.0001 0 1 0 19 4 L 5 4 z M 7 8 C 5.9069372 8 5 8.9069372 5 10 L 5 13 C 5 14.093063 5.9069372 15 7 15 L 7.3242188 15 L 8.5234375 18 L 5 18 A 1.0001 1.0001 0 1 0 5 20 L 19 20 A 1.0001 1.0001 0 1 0 19 18 L 15.476562 18 L 16.675781 15 L 17 15 C 18.093063 15 19 14.093063 19 13 L 19 10 C 19 8.9069372 18.093063 8 17 8 L 7 8 z M 7 10 L 17 10 L 17 13 L 7 13 L 7 10 z M 9.4765625 15 L 14.523438 15 L 13.324219 18 L 10.675781 18 L 9.4765625 15 z"/></svg>
+      </a>
+            
+    
+      
+      <a href="https://email.163.com/" title="email" aria-label="email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-.4 4.25l-7.07 4.42c-.32.2-.74.2-1.06 0L4.4 8.25c-.25-.16-.4-.43-.4-.72 0-.67.73-1.07 1.3-.72L12 11l6.7-4.19c.57-.35 1.3.05 1.3.72 0 .29-.15.56-.4.72z"/></svg>
+      </a>
+            
+    
+            
+    
+            
+    
+      
+      <a href="https://github.com/CalvinHaynes" title="github" aria-label="github">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" version="1.1" viewBox="0 0 24 24"><g id="surface3680"><path fill="currentColor" d="M 10.898438 2.101562 C 6.300781 2.601562 2.601562 6.300781 2.101562 10.800781 C 1.601562 15.5 4.300781 19.699219 8.398438 21.300781 C 8.699219 21.398438 9 21.199219 9 20.800781 L 9 19.199219 C 9 19.199219 8.601562 19.300781 8.101562 19.300781 C 6.699219 19.300781 6.101562 18.101562 6 17.398438 C 5.898438 17 5.699219 16.699219 5.398438 16.398438 C 5.101562 16.300781 5 16.300781 5 16.199219 C 5 16 5.300781 16 5.398438 16 C 6 16 6.5 16.699219 6.699219 17 C 7.199219 17.800781 7.800781 18 8.101562 18 C 8.5 18 8.800781 17.898438 9 17.800781 C 9.101562 17.101562 9.398438 16.398438 10 16 C 7.699219 15.5 6 14.199219 6 12 C 6 10.898438 6.5 9.800781 7.199219 9 C 7.101562 8.800781 7 8.300781 7 7.601562 C 7 7.199219 7 6.601562 7.300781 6 C 7.300781 6 8.699219 6 10.101562 7.300781 C 10.601562 7.101562 11.300781 7 12 7 C 12.699219 7 13.398438 7.101562 14 7.300781 C 15.300781 6 16.800781 6 16.800781 6 C 17 6.601562 17 7.199219 17 7.601562 C 17 8.398438 16.898438 8.800781 16.800781 9 C 17.5 9.800781 18 10.800781 18 12 C 18 14.199219 16.300781 15.5 14 16 C 14.601562 16.5 15 17.398438 15 18.300781 L 15 20.898438 C 15 21.199219 15.300781 21.5 15.699219 21.398438 C 19.398438 19.898438 22 16.300781 22 12.101562 C 22 6.101562 16.898438 1.398438 10.898438 2.101562 Z M 10.898438 2.101562"/></g></svg>
+      </a>
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+            
+    
+      
+      <a href="https://t.me/chx412523" title="telegram" aria-label="telegram">
+        <svg data-name="telegram" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32"><path fill="currentColor" d="M 26.070313 3.996094 C 25.734375 4.011719 25.417969 4.109375 25.136719 4.21875 L 25.132813 4.21875 C 24.847656 4.332031 23.492188 4.902344 21.433594 5.765625 C 19.375 6.632813 16.703125 7.757813 14.050781 8.875 C 8.753906 11.105469 3.546875 13.300781 3.546875 13.300781 L 3.609375 13.277344 C 3.609375 13.277344 3.25 13.394531 2.875 13.652344 C 2.683594 13.777344 2.472656 13.949219 2.289063 14.21875 C 2.105469 14.488281 1.957031 14.902344 2.011719 15.328125 C 2.101563 16.050781 2.570313 16.484375 2.90625 16.722656 C 3.246094 16.964844 3.570313 17.078125 3.570313 17.078125 L 3.578125 17.078125 L 8.460938 18.722656 C 8.679688 19.425781 9.949219 23.597656 10.253906 24.558594 C 10.433594 25.132813 10.609375 25.492188 10.828125 25.765625 C 10.933594 25.90625 11.058594 26.023438 11.207031 26.117188 C 11.265625 26.152344 11.328125 26.179688 11.390625 26.203125 C 11.410156 26.214844 11.429688 26.21875 11.453125 26.222656 L 11.402344 26.210938 C 11.417969 26.214844 11.429688 26.226563 11.441406 26.230469 C 11.480469 26.242188 11.507813 26.246094 11.558594 26.253906 C 12.332031 26.488281 12.953125 26.007813 12.953125 26.007813 L 12.988281 25.980469 L 15.871094 23.355469 L 20.703125 27.0625 L 20.8125 27.109375 C 21.820313 27.550781 22.839844 27.304688 23.378906 26.871094 C 23.921875 26.433594 24.132813 25.875 24.132813 25.875 L 24.167969 25.785156 L 27.902344 6.65625 C 28.007813 6.183594 28.035156 5.742188 27.917969 5.3125 C 27.800781 4.882813 27.5 4.480469 27.136719 4.265625 C 26.769531 4.046875 26.40625 3.980469 26.070313 3.996094 Z M 25.96875 6.046875 C 25.964844 6.109375 25.976563 6.101563 25.949219 6.222656 L 25.949219 6.234375 L 22.25 25.164063 C 22.234375 25.191406 22.207031 25.25 22.132813 25.308594 C 22.054688 25.371094 21.992188 25.410156 21.667969 25.28125 L 15.757813 20.75 L 12.1875 24.003906 L 12.9375 19.214844 C 12.9375 19.214844 22.195313 10.585938 22.59375 10.214844 C 22.992188 9.84375 22.859375 9.765625 22.859375 9.765625 C 22.886719 9.3125 22.257813 9.632813 22.257813 9.632813 L 10.082031 17.175781 L 10.078125 17.15625 L 4.242188 15.191406 L 4.242188 15.1875 C 4.238281 15.1875 4.230469 15.183594 4.226563 15.183594 C 4.230469 15.183594 4.257813 15.171875 4.257813 15.171875 L 4.289063 15.15625 L 4.320313 15.144531 C 4.320313 15.144531 9.53125 12.949219 14.828125 10.71875 C 17.480469 9.601563 20.152344 8.476563 22.207031 7.609375 C 24.261719 6.746094 25.78125 6.113281 25.867188 6.078125 C 25.949219 6.046875 25.910156 6.046875 25.96875 6.046875 Z"/></svg>
+      </a>
+            
+    
+            
+    
+      
+      <a href="https://twitter.com/CalvinHaynes412" title="twitter" aria-label="twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" version="1.1" viewBox="0 0 32 32"><g id="surface676"><path fill="currentColor" d="M 28 8.558594 C 27.117188 8.949219 26.167969 9.214844 25.171875 9.332031 C 26.1875 8.722656 26.96875 7.757812 27.335938 6.609375 C 26.386719 7.171875 25.332031 7.582031 24.210938 7.804688 C 23.3125 6.847656 22.03125 6.246094 20.617188 6.246094 C 17.898438 6.246094 15.691406 8.453125 15.691406 11.171875 C 15.691406 11.558594 15.734375 11.933594 15.820312 12.292969 C 11.726562 12.089844 8.097656 10.128906 5.671875 7.148438 C 5.246094 7.875 5.003906 8.722656 5.003906 9.625 C 5.003906 11.332031 5.871094 12.839844 7.195312 13.722656 C 6.386719 13.695312 5.628906 13.476562 4.964844 13.105469 C 4.964844 13.128906 4.964844 13.148438 4.964844 13.167969 C 4.964844 15.554688 6.660156 17.546875 8.914062 17.996094 C 8.5 18.109375 8.066406 18.171875 7.617188 18.171875 C 7.300781 18.171875 6.988281 18.140625 6.691406 18.082031 C 7.316406 20.039062 9.136719 21.460938 11.289062 21.503906 C 9.605469 22.824219 7.480469 23.609375 5.175781 23.609375 C 4.777344 23.609375 4.386719 23.585938 4 23.539062 C 6.179688 24.9375 8.765625 25.753906 11.546875 25.753906 C 20.605469 25.753906 25.558594 18.25 25.558594 11.742188 C 25.558594 11.53125 25.550781 11.316406 25.542969 11.105469 C 26.503906 10.410156 27.339844 9.542969 28 8.558594 Z M 28 8.558594"/></g></svg>
+      </a>
+            
+    
+      
+      <a href="https://weibo.com/u/5479707456" title="weibo" aria-label="weibo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000" viewBox="0 0 24 24"><path fill="currentColor" d="M 16.28125 3.8125 C 16.054688 3.828125 15.816406 3.859375 15.59375 3.90625 C 15.179688 3.996094 14.910156 4.402344 15 4.8125 C 15.085938 5.226563 15.492188 5.496094 15.90625 5.40625 C 17.179688 5.136719 18.566406 5.53125 19.5 6.5625 C 20.433594 7.597656 20.679688 9.011719 20.28125 10.25 C 20.152344 10.652344 20.378906 11.089844 20.78125 11.21875 C 21.183594 11.347656 21.617188 11.121094 21.75 10.71875 C 22.3125 8.976563 21.96875 7.015625 20.65625 5.5625 C 19.671875 4.46875 18.296875 3.875 16.9375 3.8125 C 16.710938 3.800781 16.507813 3.796875 16.28125 3.8125 Z M 10.0625 6.09375 C 8.667969 6.242188 6.699219 7.332031 4.96875 9.0625 C 3.082031 10.949219 2 12.957031 2 14.6875 C 2 17.996094 6.226563 20 10.375 20 C 15.8125 20 19.4375 16.820313 19.4375 14.3125 C 19.4375 12.796875 18.179688 11.949219 17.03125 11.59375 C 16.75 11.507813 16.539063 11.464844 16.6875 11.09375 C 17.007813 10.289063 17.066406 9.589844 16.71875 9.09375 C 16.070313 8.164063 14.253906 8.210938 12.21875 9.0625 C 12.21875 9.0625 11.585938 9.351563 11.75 8.84375 C 12.0625 7.835938 12.019531 6.988281 11.53125 6.5 C 11.1875 6.152344 10.695313 6.027344 10.0625 6.09375 Z M 16.8125 6.5 C 16.589844 6.488281 16.375 6.515625 16.15625 6.5625 C 15.800781 6.636719 15.578125 7.019531 15.65625 7.375 C 15.734375 7.730469 16.082031 7.953125 16.4375 7.875 C 16.863281 7.785156 17.34375 7.902344 17.65625 8.25 C 17.96875 8.597656 18.042969 9.054688 17.90625 9.46875 C 17.792969 9.816406 17.964844 10.199219 18.3125 10.3125 C 18.660156 10.421875 19.046875 10.253906 19.15625 9.90625 C 19.429688 9.058594 19.265625 8.085938 18.625 7.375 C 18.144531 6.84375 17.476563 6.53125 16.8125 6.5 Z M 10.8125 10.90625 C 13.582031 11.003906 15.8125 12.378906 16 14.28125 C 16.214844 16.457031 13.71875 18.484375 10.40625 18.8125 C 7.09375 19.140625 4.214844 17.640625 4 15.46875 C 3.785156 13.292969 6.316406 11.265625 9.625 10.9375 C 10.039063 10.898438 10.417969 10.890625 10.8125 10.90625 Z M 8.9375 13 C 7.804688 13.101563 6.734375 13.75 6.25 14.6875 C 5.589844 15.964844 6.242188 17.378906 7.75 17.84375 C 9.308594 18.324219 11.140625 17.597656 11.78125 16.21875 C 12.410156 14.871094 11.605469 13.472656 10.0625 13.09375 C 9.691406 13 9.316406 12.964844 8.9375 13 Z M 8.21875 15.0625 C 8.351563 15.066406 8.472656 15.109375 8.59375 15.15625 C 9.082031 15.355469 9.234375 15.878906 8.9375 16.34375 C 8.632813 16.804688 7.988281 17.027344 7.5 16.8125 C 7.019531 16.601563 6.882813 16.074219 7.1875 15.625 C 7.414063 15.289063 7.824219 15.058594 8.21875 15.0625 Z"/></svg>
+      </a>
+            
+    
+            
+    
+            
+    
+            
+    
+      
+      <a href="https://www.zhihu.com/people/calvinhaynes" title="zhihu" aria-label="zhihu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#000" viewBox="0 0 24 24"><path fill="currentColor" d="M 5.921875 2.9511719 C 5.5336094 2.9815469 5.1832344 3.2390625 5.0527344 3.6328125 L 3.6835938 7.7363281 C 3.5085938 8.2593281 3.7924062 8.825 4.3164062 9 C 4.8404063 9.175 5.4050781 8.8911875 5.5800781 8.3671875 L 6.0351562 7 L 6.9941406 7 L 6.9941406 10.222656 C 6.9941406 10.845846 6.9644144 11.431442 6.9199219 12 L 5 12 A 1.0001 1.0001 0 1 0 5 14 L 6.6367188 14 C 6.1575971 16.260332 5.1601574 17.989071 3.4179688 19.189453 C 2.9979688 19.479453 2.8798125 20.049188 3.1328125 20.492188 C 3.4258125 21.004188 4.0960781 21.153359 4.5800781 20.818359 C 6.0994455 19.769009 7.1700075 18.397613 7.8808594 16.720703 A 1.0001 1.0001 0 0 0 8.0449219 17.601562 L 9.5117188 19.59375 A 1.0002375 1.0002375 0 1 0 11.123047 18.408203 L 9.65625 16.416016 A 1.0001 1.0001 0 0 0 8.7929688 15.998047 A 1.0001 1.0001 0 0 0 7.9921875 16.472656 C 8.2917972 15.713486 8.5082238 14.883111 8.6699219 14 L 10 14 A 1.0001 1.0001 0 1 0 10 12 L 8.9316406 12 C 8.9726972 11.4285 8.9941406 10.836947 8.9941406 10.222656 L 8.9941406 7 L 10 7 A 1.0001 1.0001 0 1 0 10 5 L 6.7011719 5 L 6.9472656 4.2636719 C 7.1222656 3.7406719 6.8404063 3.175 6.3164062 3 C 6.1856563 2.95625 6.0512969 2.9410469 5.921875 2.9511719 z M 14 5 A 1.0001 1.0001 0 0 0 13 6 L 13 17 A 1.0001 1.0001 0 0 0 14 18 L 15 18 L 15 20 A 1.0001 1.0001 0 0 0 16.707031 20.707031 L 19.414062 18 L 21 18 A 1.0001 1.0001 0 0 0 22 17 L 22 6 A 1.0001 1.0001 0 0 0 21 5 L 14 5 z M 15 7 L 20 7 L 20 16 L 19 16 A 1.0001 1.0001 0 0 0 18.292969 16.292969 L 17 17.585938 L 17 17 A 1.0001 1.0001 0 0 0 16 16 L 15 16 L 15 7 z"/></svg>
+      </a>
+            
+    
+    
+  
+  
+    
+      <a href="https://blog.calvinhaynes.top/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E5%8F%91%E5%B1%95/index.xml" type="application/rss+xml" title="RSS" aria-label="RSS Feed Link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0V0z"/><circle fill="currentColor" cx="6.18" cy="17.82" r="2.18"/><path fill="currentColor" d="M5.59 10.23c-.84-.14-1.59.55-1.59 1.4 0 .71.53 1.28 1.23 1.4 2.92.51 5.22 2.82 5.74 5.74.12.7.69 1.23 1.4 1.23.85 0 1.54-.75 1.41-1.59-.68-4.2-3.99-7.51-8.19-8.18zm-.03-5.71C4.73 4.43 4 5.1 4 5.93c0 .73.55 1.33 1.27 1.4 6.01.6 10.79 5.38 11.39 11.39.07.73.67 1.28 1.4 1.28.84 0 1.5-.73 1.42-1.56-.73-7.34-6.57-13.19-13.92-13.92z"/></svg>
+      </a>
+    
+  
+
+
+  </div>
+</div>
+
+    
+<div id="gtt">
+  <div class="gtt">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>
+  </div>
+</div>
+
+    <hr />
+
+    <div class="basicflex flexwrap">
+        
+            
+        
+            
+        
+    </div>
+
+    <div class="footer__poweredby">
+        
+  <div class="busuanzi">
+    
+    
+      <div class="busuanzi__item">
+        <span class="busuanzi__item--label">
+          总访客
+        </span>
+        <span id="busuanzi_value_site_uv" class="busuanzi__item--number">...</span>
+      </div>
+    
+
+    
+      <div class="busuanzi__item">
+        <span class="busuanzi__item--label">
+          总浏览
+        </span>
+        <span id="busuanzi_value_site_pv" class="busuanzi__item--number">...</span>
+      </div>
+    
+
+  </div>
+
+        
+            <p class="caption">
+                
+                    
+                    
+
+                    
+                        ©2022, All Rights Reserved<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh">自由转载-非商用-非衍生-保持署名</a>
+                    
+                
+            </p>
+	    <p class="caption">
+	    Powered by Hugo on <a rel="license" href="https://github.com/CalvinHaynes/CalvinHaynes.github.io">Github</a> | 
+        <a href="https://beian.miit.gov.cn">吉ICP备2021002455号</a>
+	    </p>
+        
+
+        
+	    <div class="github-badge">
+	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.89.4</a></span>
+              <span class="badge-subject">托管于</span><span class="badge-value bg-brightgreen"><a style="color:#fff" href="https://cn.aliyun.com/" target="_blank">阿里云</a></span>
+	      
+	      <span class="badge-subject">图床</span><span class="badge-value bg-orange"><a style="color:#fff" href="https://picx.xpoet.cn/" target="_blank">picX</a></span>
+	      <span class="badge-subject">主题</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://github.com/zzossig/hugo-theme-zzo" target="_blank">Zzo theme</a></span>
+	    </div>
+	    <section class="caption">
+    <span id="span_dt_dt"> </span> 
+    <script language="javascript">
+      function show_date_time(){
+        window.setTimeout("show_date_time()", 1000);
+        BirthDay=new Date("8/4/2021 00:00:00");
+        today=new Date();
+        timeold=(today.getTime()-BirthDay.getTime());
+        sectimeold=timeold/1000
+        secondsold=Math.floor(sectimeold);
+        msPerDay=24*60*60*1000
+        e_daysold=timeold/msPerDay
+        daysold=Math.floor(e_daysold);
+        e_hrsold=(e_daysold-daysold)*24;
+        hrsold=Math.floor(e_hrsold);
+        e_minsold=(e_hrsold-hrsold)*60;
+        minsold=Math.floor((e_hrsold-hrsold)*60);
+        seconds=Math.floor((e_minsold-minsold)*60);
+        span_dt_dt.innerHTML="本站已经开心运行 "+daysold+" 天 "+hrsold+" 小时 "+minsold+" 分 "+seconds+" 秒";
+      }
+      show_date_time();
+    </script>
+</section>
+
+        
+
+    </div>
+</footer>
+
+
+
+        </div>
+        
+
+
+
+
+
+<div class="wrapper__right hide" data-pad="false" dir="ltr">
+  <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+  
+</div>
+
+    </div>
+</body>
+
+</html>

@@ -320,19 +320,7 @@ log4j.appender.console.filter.1.AcceptOnMatch=false
         
           
             
-              <category>Hadoop</category>
-            
-          
-            
-              <category>服务器集群</category>
-            
-          
-            
               <category>Docker</category>
-            
-          
-            
-              <category>Spark</category>
             
           
         
@@ -1325,14 +1313,6 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
         
           
             
-              <category>Hadoop</category>
-            
-          
-            
-              <category>服务器集群</category>
-            
-          
-            
               <category>Docker</category>
             
           
@@ -1775,7 +1755,7 @@ sudo systemctl restart docker
         
           
             
-              <category>OS操作系统</category>
+              <category>操作系统</category>
             
           
             
@@ -1786,10 +1766,14 @@ sudo systemctl restart docker
               <category>Vscode</category>
             
           
+            
+              <category>CSLab</category>
+            
+          
         
         
             
-              <category>CS基础知识</category>
+              <category>计算机基础</category>
             
         
         
@@ -2405,13 +2389,17 @@ git submodule add https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
         
           
             
-              <category>hugo实战基础</category>
+              <category>Hugo</category>
+            
+          
+            
+              <category>Github</category>
             
           
         
         
             
-              <category>hugo</category>
+              <category>个人博客发展</category>
             
         
         
