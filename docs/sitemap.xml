@@ -3,10 +3,25 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://blog.calvinhaynes.top/</loc>
-    <lastmod>2021-11-16T14:12:23+08:00</lastmod>
+    <lastmod>2022-01-21T00:27:09+08:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/categories/</loc>
-    <lastmod>2021-11-16T14:12:23+08:00</lastmod>
+    <lastmod>2022-01-21T00:27:09+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/tags/github/</loc>
+    <lastmod>2022-01-21T00:27:09+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/tags/</loc>
+    <lastmod>2022-01-21T00:27:09+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/posts/%E4%B8%80%E6%96%87%E6%95%99%E4%BD%A0%E7%8E%A9%E8%BD%ACgit%E5%92%8Cgithub/</loc>
+    <lastmod>2022-01-21T00:27:09+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/posts/</loc>
+    <lastmod>2022-01-21T00:27:09+08:00</lastmod>
+  </url><url>
+    <loc>https://blog.calvinhaynes.top/categories/%E7%A8%8B%E5%BA%8F%E7%8C%BF%E6%8A%80%E8%83%BD/</loc>
+    <lastmod>2022-01-21T00:27:09+08:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/tags/docker/</loc>
     <lastmod>2021-11-16T14:12:23+08:00</lastmod>
@@ -15,12 +30,6 @@
     <lastmod>2021-11-16T14:12:23+08:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/tags/spark/</loc>
-    <lastmod>2021-11-16T14:12:23+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.calvinhaynes.top/tags/</loc>
-    <lastmod>2021-11-16T14:12:23+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.calvinhaynes.top/posts/</loc>
     <lastmod>2021-11-16T14:12:23+08:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/posts/%E5%9F%BA%E4%BA%8Edocker%E7%9A%84hadoop%E9%9B%86%E7%BE%A4%E9%85%8D%E7%BD%AEspark%E5%B9%B6%E7%AE%80%E5%8D%95%E4%BD%BF%E7%94%A8/</loc>
@@ -67,9 +76,6 @@
   </url><url>
     <loc>https://blog.calvinhaynes.top/posts/vscode-online-build/</loc>
     <lastmod>2021-08-05T20:41:23+08:00</lastmod>
-  </url><url>
-    <loc>https://blog.calvinhaynes.top/tags/github/</loc>
-    <lastmod>2021-08-05T00:22:49+08:00</lastmod>
   </url><url>
     <loc>https://blog.calvinhaynes.top/tags/hugo/</loc>
     <lastmod>2021-08-05T00:22:49+08:00</lastmod>
