@@ -1318,11 +1318,11 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
       
       <item>
         <title>一个玩转国外CSLab的通用环境搭建方案（附我的搭建好的MIT6.S081环境）</title>
-        <link>https://blog.calvinhaynes.top/posts/cslab/</link>
+        <link>https://blog.calvinhaynes.top/posts/%E4%B8%80%E4%B8%AA%E7%8E%A9%E8%BD%AC%E5%9B%BD%E5%A4%96cslab%E7%9A%84%E9%80%9A%E7%94%A8%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%96%B9%E6%A1%88%E9%99%84%E6%88%91%E7%9A%84%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84mit6.s081%E7%8E%AF%E5%A2%83/</link>
         <pubDate>Sat, 30 Oct 2021 10:45:08 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Sat, 30 Oct 2021 10:45:08 +0800</atom:modified>
-        <guid>https://blog.calvinhaynes.top/posts/cslab/</guid>
+        <guid>https://blog.calvinhaynes.top/posts/%E4%B8%80%E4%B8%AA%E7%8E%A9%E8%BD%AC%E5%9B%BD%E5%A4%96cslab%E7%9A%84%E9%80%9A%E7%94%A8%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%96%B9%E6%A1%88%E9%99%84%E6%88%91%E7%9A%84%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84mit6.s081%E7%8E%AF%E5%A2%83/</guid>
         <description>前言 自从学习了Docker，我就无处施展自己的才华了，突然想起之前学习MIT6.S081课程的时候环境搭建完后就一直在吃灰，再加上我突然联想</description>
         <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;自从学习了Docker，我就无处施展自己的才华了，突然想起之前学习MIT6.S081课程的时候环境搭建完后就一直在吃灰，再加上我突然联想到之前搭建的code-server（点&lt;a href=&#34;https://zhuanlan.zhihu.com/p/379632978&#34;&gt;这里&lt;/a&gt;），所以我突然有了个大胆的想法，搭建一个Docker的MIT6.S081实验环境，并且采用code-server的形式，达成一个开箱即用的效果，甚至可以挂到云服务器（阿里云学生机）上，实现随时随地使用code-server进行实验，有灵感的时候随时掏出IPAD或者手机就可以实验搞起，实在是太香了，而且以后其他CSLab也可以采用相似的方案，那么下面我们就开始吧。&lt;/p&gt;

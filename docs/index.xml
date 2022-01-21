@@ -1643,11 +1643,11 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
       
       <item>
         <title>一个玩转国外CSLab的通用环境搭建方案（附我的搭建好的MIT6.S081环境）</title>
-        <link>https://blog.calvinhaynes.top/posts/cslab/</link>
+        <link>https://blog.calvinhaynes.top/posts/%E4%B8%80%E4%B8%AA%E7%8E%A9%E8%BD%AC%E5%9B%BD%E5%A4%96cslab%E7%9A%84%E9%80%9A%E7%94%A8%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%96%B9%E6%A1%88%E9%99%84%E6%88%91%E7%9A%84%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84mit6.s081%E7%8E%AF%E5%A2%83/</link>
         <pubDate>Sat, 30 Oct 2021 10:45:08 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Sat, 30 Oct 2021 10:45:08 +0800</atom:modified>
-        <guid>https://blog.calvinhaynes.top/posts/cslab/</guid>
+        <guid>https://blog.calvinhaynes.top/posts/%E4%B8%80%E4%B8%AA%E7%8E%A9%E8%BD%AC%E5%9B%BD%E5%A4%96cslab%E7%9A%84%E9%80%9A%E7%94%A8%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA%E6%96%B9%E6%A1%88%E9%99%84%E6%88%91%E7%9A%84%E6%90%AD%E5%BB%BA%E5%A5%BD%E7%9A%84mit6.s081%E7%8E%AF%E5%A2%83/</guid>
         <description>前言 自从学习了Docker，我就无处施展自己的才华了，突然想起之前学习MIT6.S081课程的时候环境搭建完后就一直在吃灰，再加上我突然联想</description>
         <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;自从学习了Docker，我就无处施展自己的才华了，突然想起之前学习MIT6.S081课程的时候环境搭建完后就一直在吃灰，再加上我突然联想到之前搭建的code-server（点&lt;a href=&#34;https://zhuanlan.zhihu.com/p/379632978&#34;&gt;这里&lt;/a&gt;），所以我突然有了个大胆的想法，搭建一个Docker的MIT6.S081实验环境，并且采用code-server的形式，达成一个开箱即用的效果，甚至可以挂到云服务器（阿里云学生机）上，实现随时随地使用code-server进行实验，有灵感的时候随时掏出IPAD或者手机就可以实验搞起，实在是太香了，而且以后其他CSLab也可以采用相似的方案，那么下面我们就开始吧。&lt;/p&gt;
@@ -2097,11 +2097,11 @@ sudo systemctl restart docker
       
       <item>
         <title>属于每一个程序猿和学生的一份高效率软件清单--第三弹:windows系统优化工具（持续更新）</title>
-        <link>https://blog.calvinhaynes.top/posts/software_3/</link>
+        <link>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%B8%89%E5%BC%B9-windows%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
         <pubDate>Sun, 03 Oct 2021 20:47:53 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Sun, 03 Oct 2021 20:47:53 +0800</atom:modified>
-        <guid>https://blog.calvinhaynes.top/posts/software_3/</guid>
+        <guid>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%B8%89%E5%BC%B9-windows%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
         <description>前言 这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。 之所以写这篇文章，很大一部分原因是想</description>
         <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。&lt;/p&gt;
@@ -2165,11 +2165,11 @@ sudo systemctl restart docker
       
       <item>
         <title>属于每一个程序猿和学生的一份高效率软件清单--第二弹:程序猿写文档必备工具箱（持续更新）</title>
-        <link>https://blog.calvinhaynes.top/posts/software_2/</link>
+        <link>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%BA%8C%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%86%99%E6%96%87%E6%A1%A3%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E7%AE%B1%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
         <pubDate>Sat, 02 Oct 2021 22:55:47 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Sat, 02 Oct 2021 22:55:47 +0800</atom:modified>
-        <guid>https://blog.calvinhaynes.top/posts/software_2/</guid>
+        <guid>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%BA%8C%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%86%99%E6%96%87%E6%A1%A3%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E7%AE%B1%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
         <description>前言 这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。 之所以写这篇文章，很大一部分原因是想</description>
         <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。&lt;/p&gt;
@@ -2230,11 +2230,11 @@ sudo systemctl restart docker
       
       <item>
         <title>属于每一个程序猿和学生的一份高效率软件清单--第一弹:程序猿高效开发工具（持续更新）</title>
-        <link>https://blog.calvinhaynes.top/posts/software/</link>
+        <link>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%B8%80%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E9%AB%98%E6%95%88%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
         <pubDate>Thu, 16 Sep 2021 12:00:04 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Thu, 16 Sep 2021 12:00:04 +0800</atom:modified>
-        <guid>https://blog.calvinhaynes.top/posts/software/</guid>
+        <guid>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%B8%80%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E9%AB%98%E6%95%88%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
         <description>前言 这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。 之所以写这篇文章，很大一部分原因是想</description>
         <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。&lt;/p&gt;
@@ -2357,11 +2357,11 @@ sudo systemctl restart docker
       
       <item>
         <title>上课摸鱼必备 -- Vscode网页版的搭建教程</title>
-        <link>https://blog.calvinhaynes.top/posts/vscode-online-build/</link>
+        <link>https://blog.calvinhaynes.top/posts/%E4%B8%8A%E8%AF%BE%E6%91%B8%E9%B1%BC%E5%BF%85%E5%A4%87-vscode%E7%BD%91%E9%A1%B5%E7%89%88%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
         <pubDate>Thu, 05 Aug 2021 20:41:23 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Thu, 05 Aug 2021 20:41:23 +0800</atom:modified>
-        <guid>https://blog.calvinhaynes.top/posts/vscode-online-build/</guid>
+        <guid>https://blog.calvinhaynes.top/posts/%E4%B8%8A%E8%AF%BE%E6%91%B8%E9%B1%BC%E5%BF%85%E5%A4%87-vscode%E7%BD%91%E9%A1%B5%E7%89%88%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
         <description>前言 ​ 上课想练练数据结构与算法？或者就是想玩玩儿Vscode？或者有一个自己的服务器，但是觉得没有利用到极致？那么这篇文章将带你搭建一个在线</description>
         <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;​		上课想练练数据结构与算法？或者就是想玩玩儿Vscode？或者有一个自己的服务器，但是觉得没有利用到极致？那么这篇文章将带你搭建一个在线版的Vscode，利用浏览器实现全平台使用Vscode，管你什么手机，Pad，电脑，板砖，咳咳，整就完了！！！&lt;/p&gt;
@@ -2527,11 +2527,11 @@ kill -9 &#39;cat save_pid.txt&#39;
       
       <item>
         <title>Hugo搭建个人博客教程（GithubPages &#43; 阿里云）</title>
-        <link>https://blog.calvinhaynes.top/posts/hugo/</link>
+        <link>https://blog.calvinhaynes.top/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8Bgithubpages-&#43;-%E9%98%BF%E9%87%8C%E4%BA%91/</link>
         <pubDate>Thu, 05 Aug 2021 00:22:49 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Thu, 05 Aug 2021 00:22:49 +0800</atom:modified>
-        <guid>https://blog.calvinhaynes.top/posts/hugo/</guid>
+        <guid>https://blog.calvinhaynes.top/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8Bgithubpages-&#43;-%E9%98%BF%E9%87%8C%E4%BA%91/</guid>
         <description>前言 经过种种尝试，还是决定选择了Hugo作为了搭建个人博客的框架，Hugo是目前可以搭建个人博客的框架中部署最快的，而且坑也相对很少，不过还</description>
         <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;经过种种尝试，还是决定选择了Hugo作为了搭建个人博客的框架，Hugo是目前可以搭建个人博客的框架中部署最快的，而且坑也相对很少，不过还是有的，近几天折腾了不少东西，也终于算是初步搭建完了Hugo+Zoo主题的&lt;a href=&#34;https://blog.calvinhaynes.top/&#34;&gt;个人博客&lt;/a&gt;&lt;/p&gt;
