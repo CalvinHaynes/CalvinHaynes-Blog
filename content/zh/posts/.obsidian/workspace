@@ -1,0 +1,94 @@
+{
+  "main": {
+    "id": "aac51c43597454f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "1c862b93871894a2",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "利用Docker搭建一个Hadoop-muti-node-cluster.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "1dbf1acb143ffda1",
+    "type": "split",
+    "children": [
+      {
+        "id": "5d5dc77a9dad65e7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bd118200e3b364ea",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "9584275ed2381ac4",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "9137bbde882c1061",
+    "type": "split",
+    "children": [
+      {
+        "id": "b81e100d3ea938b9",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "508a8f9530c7b957",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "利用Docker搭建一个Hadoop-muti-node-cluster.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "1c862b93871894a2",
+  "lastOpenFiles": [
+    "利用Docker搭建一个Hadoop-muti-node-cluster.md"
+  ]
+}
