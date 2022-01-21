@@ -18,7 +18,6 @@ tags:
 categories: "程序猿技能"
 img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/Git.34wbc2gdtre0.webp"
 ---
-# 一文教你玩转Git和Github
 
 ## 前言
 

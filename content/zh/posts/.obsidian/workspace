@@ -1,0 +1,96 @@
+{
+  "main": {
+    "id": "2efb335de8c4acc8",
+    "type": "split",
+    "children": [
+      {
+        "id": "8b6db8bbd36e5447",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "一文教你玩转Git和Github.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "a423c06a27d5e52f",
+    "type": "split",
+    "children": [
+      {
+        "id": "894a4e14a395fd2c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "7e2fb5825cfae913",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "b5957e14ca9ede13",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 266
+  },
+  "right": {
+    "id": "fd0d1799cc0499f9",
+    "type": "split",
+    "children": [
+      {
+        "id": "e1006fe562fc0f54",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f98fbec6289b7ca4",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "一文教你玩转Git和Github.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": true,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "8b6db8bbd36e5447",
+  "lastOpenFiles": [
+    "一文教你玩转Git和Github.md",
+    "cslab.md",
+    "基于Docker的Hadoop集群配置Spark并简单使用.md"
+  ]
+}
