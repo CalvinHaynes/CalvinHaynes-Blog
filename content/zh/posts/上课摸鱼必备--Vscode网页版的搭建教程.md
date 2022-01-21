@@ -38,7 +38,7 @@ img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image-202
 
 ## （二）基础配置
 
-#### **1 - 下载code-server到服务器上**
+#### 1 - 下载code-server到服务器上
 
 > 进到服务器的SSH中，这个只要你买了服务器应该都可以用SSH的，服务器还没买的，也不会用服务器的，看以下几篇文章（其实不限制与阿里云的，不是推广阿里云哈，其他云怎么用大家自行选购，因为我用的是阿里云，所以这几篇文章也都是阿里云的一些使用教程）：
 >
