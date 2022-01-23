@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" 
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+  xmlns:dc="http://purl.org/dc/elements/1.1/" 
+  xmlns:atom="http://www.w3.org/2005/Atom" 
+  xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" 
+  xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>高效工具系列 on Calvin Haynes的博客站</title>
+    <link>https://blog.calvinhaynes.top/categories/%E9%AB%98%E6%95%88%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/</link>
+    <description>Recent content in 高效工具系列 on Calvin Haynes的博客站</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh</language>
+    <managingEditor>chx1006488386@163.com (Calvin Haynes)</managingEditor>
+    <webMaster>chx1006488386@163.com (Calvin Haynes)</webMaster>
+    <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
+    <lastBuildDate>Sun, 03 Oct 2021 20:47:53 +0800</lastBuildDate>
+    <sy:updatePeriod>daily</sy:updatePeriod>
+    
+        <atom:link href="https://blog.calvinhaynes.top/categories/%E9%AB%98%E6%95%88%E5%B7%A5%E5%85%B7%E7%B3%BB%E5%88%97/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+
+      
+      
+      <item>
+        <title>属于每一个程序猿和学生的一份高效率软件清单--第三弹:windows系统优化工具（持续更新）</title>
+        <link>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%B8%89%E5%BC%B9-windows%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
+        <pubDate>Sun, 03 Oct 2021 20:47:53 +0800</pubDate>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
+        <atom:modified>Sun, 03 Oct 2021 20:47:53 +0800</atom:modified>
+        <guid>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%B8%89%E5%BC%B9-windows%E7%B3%BB%E7%BB%9F%E4%BC%98%E5%8C%96%E5%B7%A5%E5%85%B7%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
+        <description>前言 这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。 之所以写这篇文章，很大一部分原因是想</description>
+        <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。&lt;/p&gt;
+&lt;p&gt;之所以写这篇文章，很大一部分原因是想和大家分享一下我的效率软件清单，另一个原因是也为自己下次重装系统做一个保障，免得忘记什么。&lt;/p&gt;
+&lt;p&gt;下面我们就正式开始介绍吧，目录我会分好类的，每个超链接都指向一些我认为的非常好的资源以及各个软件的下载地址等等的信息，大家按照自己想要看的点进去就可以了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;这可能是我的一个专栏系列（分享我使用的所有的有趣和高效率的软件或插件，网页等）&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;windows-系统优化工具&#34;&gt;windows 系统优化工具&lt;/h2&gt;
+&lt;h3 id=&#34;1---分区助手httpswwwdisktoolcnfeaturehtml&#34;&gt;&lt;a href=&#34;https://www.disktool.cn/feature.html&#34;&gt;1 - 分区助手&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;想必大家都被分区弄得很头痛吧，在装系统时 C 盘分的太小了，现在 C 盘红了，还不好清理，那么这款分区助手就能完美解决你的问题&lt;/li&gt;
+&lt;li&gt;图形化界面相当友好，电脑小白也能操作&lt;/li&gt;
+&lt;li&gt;附上分区助手官网的使用手册：https://www.disktool.cn/jiaocheng/index.html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.30co17hqv740.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2---ccleaner电脑管家httpswwwccleanercom&#34;&gt;&lt;a href=&#34;https://www.ccleaner.com/&#34;&gt;2 - CCleaner：电脑管家&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;虽然网上骂声一片，说 CCleaner 是流氓软件，但是我依旧爱他，爱他简约而不简单的功能&lt;/li&gt;
+&lt;li&gt;CCleaner 的功能列表如下：
+&lt;ul&gt;
+&lt;li&gt;垃圾清理&lt;/li&gt;
+&lt;li&gt;驱动更新&lt;/li&gt;
+&lt;li&gt;注册表清理（超级强的功能）&lt;/li&gt;
+&lt;li&gt;卸载程序&lt;/li&gt;
+&lt;li&gt;管理 PC 启动项&lt;/li&gt;
+&lt;li&gt;重复文件查找&lt;/li&gt;
+&lt;li&gt;系统备份和还原&lt;/li&gt;
+&lt;li&gt;Cookie 和浏览器插件管理&lt;/li&gt;
+&lt;li&gt;等等&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;软件界面如下：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-22-06-44.135fh22zoks0.gif&#34; alt=&#34;GIF-2021-9-22-22-06-44&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
+&lt;p&gt;好的工具只是方便我们管理自己的 PC 或者便于开发而已，千万不能陷入工具的陷阱，人和动物最大的区别就是学会了制造工具，但是过分依赖于工具也会毁了一个人，在使用工具时要保持一个态度就是：对于自己十分明确的功能勇敢的使用和尝试，对于自己不明确的功能先去学习原理，再结合搜索引擎上的经验慢慢投入使用。&lt;/p&gt;
+&lt;p&gt;最后希望大家按需取用上述的软件，玩的愉快！！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34; /&gt; &lt;strong&gt;未来我还会持续更新，在清单中添加更加有趣的软件，敬请期待！！！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+        <dc:creator>Calvin Haynes</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>软件清单</category>
+            
+          
+        
+        
+            
+              <category>高效工具系列</category>
+            
+        
+        
+      </item>
+      
+      <item>
+        <title>属于每一个程序猿和学生的一份高效率软件清单--第二弹:程序猿写文档必备工具箱（持续更新）</title>
+        <link>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%BA%8C%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%86%99%E6%96%87%E6%A1%A3%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E7%AE%B1%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
+        <pubDate>Sat, 02 Oct 2021 22:55:47 +0800</pubDate>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
+        <atom:modified>Sat, 02 Oct 2021 22:55:47 +0800</atom:modified>
+        <guid>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%BA%8C%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%86%99%E6%96%87%E6%A1%A3%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E7%AE%B1%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
+        <description>前言 这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。 之所以写这篇文章，很大一部分原因是想</description>
+        <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。&lt;/p&gt;
+&lt;p&gt;之所以写这篇文章，很大一部分原因是想和大家分享一下我的效率软件清单，另一个原因是也为自己下次重装系统做一个保障，免得忘记什么。&lt;/p&gt;
+&lt;p&gt;下面我们就正式开始介绍吧，目录我会分好类的，每个超链接都指向一些我认为的非常好的资源以及各个软件的下载地址等等的信息，大家按照自己想要看的点进去就可以了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;这可能是我的一个专栏系列（分享我使用的所有的有趣和高效率的软件或插件，网页等）&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;程序猿写文档必备工具箱&#34;&gt;程序猿写文档必备工具箱&lt;/h2&gt;
+&lt;h3 id=&#34;1---snipaste截图软件httpswwwsnipastecom&#34;&gt;&lt;a href=&#34;https://www.snipaste.com/&#34;&gt;1 - Snipaste：截图软件&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;这绝对是综合看来我用过所有 windows 下截图软件最棒的了，所有的截图功能都有，像全屏截图、窗口截图，自定义像素截图等等基本功能都有。&lt;/li&gt;
+&lt;li&gt;最牛的功能是它的贴图功能，不知道大家有没有遇到过这样一种情况：假如上网课的时候，老师讲的下部分是关于上一张 PPT 的，但是你手中还没有 PPT，或者你想对比一下之前的 PPT 来学习，那么这个时候贴图就发挥其作用了，示例如下：（你还可以发挥你的其他想象利用这个功能）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-32-14.7k11ri8x4ng0.gif&#34; alt=&#34;GIF-2021-9-22-21-32-14&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以设置的选项如下：（==你可以在控制中自定义各个功能的快捷键，设置成你熟悉的==）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-23-05.4s2ojtxk63u0.gif&#34; alt=&#34;GIF-2021-9-22-21-23-05&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2---gifcam一款录制-gif-的软件httpblogbahraniappscomgifcamdownload&#34;&gt;&lt;a href=&#34;http://blog.bahraniapps.com/gifcam/#download&#34;&gt;2 - GifCam：一款录制 GIF 的软件&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;看了上面的 GIF 图，是不是也在奇怪我这些图是怎么自己做的，那么这就向您介绍这款软件：GIFCam，这是一款可以录制 GIF 动图的软件，短小精悍，仅仅只有录制 GIF 的功能，你可以设置输出文件的 FPS，自定义录制的窗口大小或者全屏等等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-39-42.1zze3osdryow.gif&#34; alt=&#34;GIF-2021-9-22-21-39-42&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3---picx-图床一个开源作者写的开源图床httpspicxxpoetcnupload&#34;&gt;&lt;a href=&#34;https://picx.xpoet.cn/#/upload&#34;&gt;3 - PicX 图床：一个开源作者写的开源图床&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;其实这个不能算是软件，但由于 chrome 浏览器可以直接把这个网站直接打包成一个应用在本地，也算个软件把。&lt;/li&gt;
+&lt;li&gt;这个开源图床目前还在优化和更新中，作者也十分努力的在开发和维护这个项目&lt;/li&gt;
+&lt;li&gt;这个图床就是利用你自己建的 Github 库存储图片，然后提供图片的管理和 Markdown+CDN 格式的自动转换，上传图片之后直接复制就可以放在你的 md 文档中了，着实挺方便，而且界面 UI 和交互也都很不错。&lt;/li&gt;
+&lt;li&gt;使用情况如下：（&lt;strong&gt;感谢作者：https://xpoet.cn/&lt;/strong&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-56-04.217loab9zsao.gif&#34; alt=&#34;GIF-2021-9-22-21-56-04&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
+&lt;p&gt;好的工具只是方便我们管理自己的 PC 或者便于开发而已，千万不能陷入工具的陷阱，人和动物最大的区别就是学会了制造工具，但是过分依赖于工具也会毁了一个人，在使用工具时要保持一个态度就是：对于自己十分明确的功能勇敢的使用和尝试，对于自己不明确的功能先去学习原理，再结合搜索引擎上的经验慢慢投入使用。&lt;/p&gt;
+&lt;p&gt;最后希望大家按需取用上述的软件，玩的愉快！！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34; /&gt; &lt;strong&gt;未来我还会持续更新，在清单中添加更加有趣的软件，敬请期待！！！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+        <dc:creator>Calvin Haynes</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>软件清单</category>
+            
+          
+        
+        
+            
+              <category>高效工具系列</category>
+            
+        
+        
+      </item>
+      
+      <item>
+        <title>属于每一个程序猿和学生的一份高效率软件清单--第一弹:程序猿高效开发工具（持续更新）</title>
+        <link>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%B8%80%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E9%AB%98%E6%95%88%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
+        <pubDate>Thu, 16 Sep 2021 12:00:04 +0800</pubDate>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
+        <atom:modified>Thu, 16 Sep 2021 12:00:04 +0800</atom:modified>
+        <guid>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%B8%80%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E9%AB%98%E6%95%88%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
+        <description>前言 这是一个我正在使用的软件清单系列的专栏文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等，对于每个工具我仅会描述其最重要</description>
+        <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;这是一个我正在使用的软件清单系列的专栏文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等，对于每个工具我仅会描述其最重要的功能，其余的学习资料或软件下载链接我会以超链接的形式放在文章中，供大家查看和学习。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;之所以写这篇文章，很大一部分原因是想和大家分享一下我的效率软件清单，另一个原因是也为自己下次重装系统做一个保障，免得忘记什么。&lt;/p&gt;
+&lt;p&gt;下面我们就正式开始介绍吧！！！&lt;/p&gt;
+&lt;h2 id=&#34;程序猿高效开发工具&#34;&gt;程序猿高效开发工具&lt;/h2&gt;
+&lt;h3 id=&#34;1---jetbrains-toolboxjetbrains-家的工具箱-httpswwwjetbrainscomtoolbox-app&#34;&gt;&lt;a href=&#34;https://www.jetbrains.com/toolbox-app/&#34;&gt;1 - JetBrains Toolbox：JetBrains 家的工具箱 &lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自从用了 JetBrains 家的 IDEA，就爱上了他们家 IDE 的风格，目前也是离不开了，写各种语言程序的时候都是优先找他们家的 IDE，优秀的插件和特别 Geek 的界面确实让人眼前一亮，JetBrains 推出的这款 JetBrains Toolbox 集成了 JetBrains 家所有工具的下载，更新，项目管理，对于喜欢 JetBrains 家 IDE 的朋友们确实方便了许多。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;下面这个是这个软件的小窗口界面：&lt;/strong&gt;&lt;br /&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.31wguugc2gk.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2---vscode轻量代码编辑器httpscodevisualstudiocom&#34;&gt;&lt;a href=&#34;https://code.visualstudio.com/&#34;&gt;2 - Vscode：轻量代码编辑器&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;虽然 JetBrains 家的 IDE 十分好用，但是对于简单的代码编辑工作，调试小段代码，确实显得就不太方便了，这时候一个优秀的代码编辑器就能胜任这些快速编辑代码的工作。&lt;/p&gt;
+&lt;p&gt;市面上主流的有 Sublime Text，Vscode，NotePad ++，Atom，Vim 等等，但是 Vscode 现在丰富的插件以及优秀的远程开发的能力确实突出。&lt;/p&gt;
+&lt;p&gt;所以跌跌撞撞最终还是选择了拜倒在 Vscode 的石榴裙下。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.mtp4udsaeb4.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;有关于 Vscode，我还写了一篇利用 code-server 和阿里云搭建在线版 Vscode 的文章，可以让你在网页，手机，Ipad 上随时随地运行 Vscode。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://zhuanlan.zhihu.com/p/379632978&#34;&gt;https://zhuanlan.zhihu.com/p/379632978&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3---utools桌面快速工具箱httpsutools&#34;&gt;&lt;a href=&#34;https://u.tools/&#34;&gt;3 - uTools：桌面快速工具箱&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;uTools 是一个极简、插件化的现代桌面软件，通过自由选配丰富的插件，打造得心应手的工具集合。&lt;/li&gt;
+&lt;li&gt;通过快捷键（默认 &lt;code&gt;alt + space&lt;/code&gt; ）就可以快速呼出这个搜索框。你可以往输入框内粘贴文本、图片、截图、文件、文件夹等等，能够处理此内容的插件也早已准备就绪，统一的设计风格和操作方式，助你高效的得到结果。&lt;/li&gt;
+&lt;li&gt;一旦你熟悉它后，能够为你节约大量时间，即用即走、不中断、无干扰，让你可以更加专注地改变世界。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是一家创业公司做的一款软件，这种一切皆插件，呼出即使用的感觉是前所未有的，大大提高了PC使用效率，减少了无意义的鼠标点击，让我们工作的时候可以更加专注。&lt;/p&gt;
+&lt;p&gt;在插件中心中可以下载很多高效的插件，比如思维导图，Markdown 文档，快速打开最近的项目，翻译，基于 Everything 的搜索，以及最基本的功能&amp;mdash;快速打开 PC 上的任何一款软件&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.4neb3udouo00.png&#34; alt=&#34;uTools窗口&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.2l8ggbrf1y00.png&#34; alt=&#34;uTools插件市场&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;4---termiusssh-终端httpswwwtermiuscom&#34;&gt;&lt;a href=&#34;https://www.termius.com/&#34;&gt;4 - Termius：SSH 终端&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;这是一个我目前用过的所有的 SSH 终端中最好的一个，它不仅美观，而且跨平台，对于移动端的适配手势简直不要太香，而且&lt;a href=&#34;https://zhuanlan.zhihu.com/p/104574959&#34;&gt;申请 Github 学生包&lt;/a&gt;还可以免费享用更多的高级特权（Github 学生包所有的&lt;a href=&#34;https://education.github.com/pack/offers&#34;&gt;特权&lt;/a&gt; ）&lt;/li&gt;
+&lt;li&gt;我之前写过一篇文章就有介绍过这个软件，大家有兴趣也可以去&lt;a href=&#34;https://zhuanlan.zhihu.com/p/379632978&#34;&gt;看看&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;以下是软件界面的图片（可以自定义终端的字体和颜色风格等）（全平台通用和同步，包含 Android，IOS，Windows，MacOS，Linux）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.2e00phmhdyck.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;并且支持 SFTP 功能，NICE！！！&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;![GIF 2021-6-10 16-34-08](&lt;a href=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF&#34;&gt;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF&lt;/a&gt; 2021-6-10 16-34-08.1n12dp0c16ow.gif)&lt;/p&gt;
+&lt;h3 id=&#34;5---windows-terminalwindows命令行的崛起httpswwwmicrosoftcomzh-cnpwindows-terminal9n0dx20hk701activetabpivotoverviewtab&#34;&gt;&lt;a href=&#34;https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab&#34;&gt;5 - Windows Terminal：windows命令行的崛起&lt;/a&gt;&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;自从使用了Linux系统之后，确实大爱命令行，优雅高效完全是GUI无法比拟的，但在尝试了windows的CMD之后觉得windows咋能把这玩意搞这么难用，后来出现了PowerShell确实看到了微软的努力，但是依旧没有一种很顺畅的感觉，bug不断，直到Windows Terminal的出现，让我爱上了Windows命令行，尤其是现在有了WSL和Docker，使得在Windows下运行Linux也不是问题了，使用Windows Terminal使得这些服务也变得很爽！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;我的Windows Terminal配置后的效果如下：&lt;br /&gt;
+&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/WindowsTerminal.28upkxyojwn4.jpg&#34; alt=&#34;WindowsTerminal&#34; /&gt;&lt;/li&gt;
+&lt;li&gt;具体配置文件之后再说&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;6---github-desktop迄今为止最好的-git-gui-工具httpsdesktopgithubcom&#34;&gt;&lt;a href=&#34;https://desktop.github.com/&#34;&gt;6 - Github Desktop：迄今为止最好的 Git GUI 工具&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;你是否为写 Git 命令烦恼，找了很多图形化处理工具，但是都不是很人性化，而且界面丑而差，那么 Github Desktop 这就来了，包您满意诶嘿嘿。&lt;/li&gt;
+&lt;li&gt;Github Desktop 是 Github 官方开发的 GIthub 图形化软件，就冲这一点，你应该就能知道这个软件应该很好用了吧，毕竟是官方的，起码针对 Github 的支持是杠杠滴&lt;/li&gt;
+&lt;li&gt;具体使用情况我就不细说了，这里附上使用指南：https://docs.github.com/cn/desktop/installing-and-configuring-github-desktop/overview/getting-started-with-github-desktop&lt;/li&gt;
+&lt;li&gt;==&lt;strong&gt;简单的界面演示如下：&lt;/strong&gt;==&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-46-20.szft3tbxetc.gif&#34; alt=&#34;GIF-2021-9-22-21-46-20&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;7---postman模拟httphttps请求工具httpswwwpostmancom&#34;&gt;&lt;a href=&#34;https://www.postman.com/&#34;&gt;7 - Postman：模拟HTTP/HTTPS请求工具&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Postman是谷歌开发的一款网页调试和接口测试工具，能够发送任何类型的http请求，支持GET/PUT/POST/DELETE等方法。Postman非常简单易用，可以直接填写URL，header，body等就可以发送一个请求，用来测试api接口非常方便。（对于现在各种浏览器都自动把http请求转换为HTTPS请求的情况，用于测试HTTP请求也是个很不错的选择）&lt;/li&gt;
+&lt;li&gt;学习postman的教程推荐
+&lt;ul&gt;
+&lt;li&gt;postman快速上手视频教程推荐（需要科学上网）：戳&lt;a href=&#34;https://www.youtube.com/watch?v=VywxIQ2ZXw4&amp;amp;list=PL6YJmTsHJFpGEDbyDCMFXoC42_WQYJPj&#34;&gt;这里&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learning.postman.com/docs/getting-started/introduction/&#34;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;postman的界面如下：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/Postman%E8%BD%AF%E4%BB%B6%E7%95%8C%E9%9D%A2.3gapnq6u1ci0.png&#34; alt=&#34;Postman软件界面&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
+&lt;p&gt;好的工具只是方便我们管理自己的 PC 或者便于开发而已，千万不能陷入工具的陷阱，人和动物最大的区别就是学会了制造工具，但是过分依赖于工具也会毁了一个人，在使用工具时我认为需要保持的态度应该是：对于工具的功能所应用的领域自己已经基本了解的情况下再去使用工具，这样不仅能在使用工具的同时加深对那个领域的理解，而且还能够去剖析工具可以优化的点，而不是一头扎进完全依赖工具的漩涡中，就是我认为的填鸭式的学习和自主思考式的学习的区别。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34; /&gt; &lt;strong&gt;最后希望大家按需取用上述的软件，玩的愉快！！未来我还会持续更新，在清单中添加更加有趣的软件，敬请期待！！！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;p&gt;感谢您看到最后，如果本文对您有所帮助的话，还希望给我一个一键三连（狗头保命），如果对于我和我的文章感兴趣的话，欢迎点一个关注，您会收到我回答和文章的更新通知，也欢迎加入我建立的技术交流群QQ：&lt;a href=&#34;https://jq.qq.com/?_wv=1027&amp;amp;k=dD4NZkUt&#34;&gt;725133797&lt;/a&gt; 讨论交流。&lt;/p&gt;
+&lt;p&gt;最后附上我的个人博客站：&lt;a href=&#34;https://blog.calvinhaynes.top/&#34;&gt;https://blog.calvinhaynes.top/&lt;/a&gt;，欢迎访问和交流&lt;/p&gt;
+</content:encoded>
+        <dc:creator>Calvin Haynes</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>软件清单</category>
+            
+          
+        
+        
+            
+              <category>高效工具系列</category>
+            
+        
+        
+      </item>
+      
+
+    
+  </channel>
+</rss>
