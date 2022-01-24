@@ -51,10 +51,12 @@ apt-get install git
   - **克隆**（[clone](https://git-scm.com/book/zh/v2/Git-%E5%9F%BA%E7%A1%80-%E8%8E%B7%E5%8F%96-Git-%E4%BB%93%E5%BA%93)）：从远端服务器将一个git项目下载到本地。
   - **合并**（[merge](https://www.atlassian.com/git/tutorials/using-branches/git-merge)）：将一个分支的内容合并到另一个分支上（这个分支一般是发布项目的[**稳定项目分支**](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E5%88%86%E6%94%AF%E5%BC%80%E5%8F%91%E5%B7%A5%E4%BD%9C%E6%B5%81#:~:text=%E8%AE%B8%E5%A4%9A%E4%BD%BF%E7%94%A8%20Git%20%E7%9A%84%E5%BC%80%E5%8F%91%E8%80%85%E9%83%BD%E5%96%9C%E6%AC%A2%E4%BD%BF%E7%94%A8%E8%BF%99%E7%A7%8D%E6%96%B9%E5%BC%8F%E6%9D%A5%E5%B7%A5%E4%BD%9C%EF%BC%8C%E6%AF%94%E5%A6%82%E5%8F%AA%E5%9C%A8%20master%20%E5%88%86%E6%94%AF%E4%B8%8A%E4%BF%9D%E7%95%99%E5%AE%8C%E5%85%A8%E7%A8%B3%E5%AE%9A%E7%9A%84%E4%BB%A3%E7%A0%81%E2%80%94%E2%80%94%E6%9C%89%E5%8F%AF%E8%83%BD%E4%BB%85%E4%BB%85%E6%98%AF%E5%B7%B2%E7%BB%8F%E5%8F%91%E5%B8%83%E6%88%96%E5%8D%B3%E5%B0%86%E5%8F%91%E5%B8%83%E7%9A%84%E4%BB%A3%E7%A0%81%E3%80%82%20%E4%BB%96%E4%BB%AC%E8%BF%98%E6%9C%89%E4%B8%80%E4%BA%9B%E5%90%8D%E4%B8%BA%20develop%20%E6%88%96%E8%80%85%20next%20%E7%9A%84%E5%B9%B3%E8%A1%8C%E5%88%86%E6%94%AF%EF%BC%8C%E8%A2%AB%E7%94%A8%E6%9D%A5%E5%81%9A%E5%90%8E%E7%BB%AD%E5%BC%80%E5%8F%91%E6%88%96%E8%80%85%E6%B5%8B%E8%AF%95%E7%A8%B3%E5%AE%9A%E6%80%A7%E2%80%94%E2%80%94%E8%BF%99%E4%BA%9B%E5%88%86%E6%94%AF%E4%B8%8D%E5%BF%85%E4%BF%9D%E6%8C%81%E7%BB%9D%E5%AF%B9%E7%A8%B3%E5%AE%9A%EF%BC%8C%E4%BD%86%E6%98%AF%E4%B8%80%E6%97%A6%E8%BE%BE%E5%88%B0%E7%A8%B3%E5%AE%9A%E7%8A%B6%E6%80%81%EF%BC%8C%E5%AE%83%E4%BB%AC%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%A2%AB%E5%90%88%E5%B9%B6%E5%85%A5%20master%20%E5%88%86%E6%94%AF%E4%BA%86%E3%80%82%20%E8%BF%99%E6%A0%B7%EF%BC%8C%E5%9C%A8%E7%A1%AE%E4%BF%9D%E8%BF%99%E4%BA%9B%E5%B7%B2%E5%AE%8C%E6%88%90%E7%9A%84%E4%B8%BB%E9%A2%98%E5%88%86%E6%94%AF%EF%BC%88%E7%9F%AD%E6%9C%9F%E5%88%86%E6%94%AF%EF%BC%8C%E6%AF%94%E5%A6%82%E4%B9%8B%E5%89%8D%E7%9A%84%20iss53%20%E5%88%86%E6%94%AF%EF%BC%89%E8%83%BD%E5%A4%9F%E9%80%9A%E8%BF%87%E6%89%80%E6%9C%89%E6%B5%8B%E8%AF%95%EF%BC%8C%E5%B9%B6%E4%B8%94%E4%B8%8D%E4%BC%9A%E5%BC%95%E5%85%A5%E6%9B%B4%E5%A4%9A%20bug%20%E4%B9%8B%E5%90%8E%EF%BC%8C%E5%B0%B1%E5%8F%AF%E4%BB%A5%E5%90%88%E5%B9%B6%E5%85%A5%E4%B8%BB%E5%B9%B2%E5%88%86%E6%94%AF%E4%B8%AD%EF%BC%8C%E7%AD%89%E5%BE%85%E4%B8%8B%E4%B8%80%E6%AC%A1%E7%9A%84%E5%8F%91%E5%B8%83%E3%80%82)），如果存在**分支冲突**（[conflicts](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)）的话需要手动解决再将冲突的文件重新merge。
   - **获取**（[fetch](https://git-scm.com/book/zh/v2/Git-%E5%88%86%E6%94%AF-%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF#:~:text=git%20branch%20%2Dvv-,%E6%8B%89%E5%8F%96,%E5%BC%8F%E5%9C%B0%E4%BD%BF%E7%94%A8%20fetch%20%E4%B8%8E%20merge%20%E5%91%BD%E4%BB%A4%E4%BC%9A%E6%9B%B4%E5%A5%BD%E4%B8%80%E4%BA%9B%E3%80%82,-%E5%88%A0%E9%99%A4%E8%BF%9C%E7%A8%8B%E5%88%86%E6%94%AF)）：fetch只从远端获取了远端相对于本地更新的数据，但并不会合并到本地的分支上，需要用户手动合并到本地的分支上。
-  - **拉取**（[pull](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1#pull)）：**git pull = git fetch + git merge**，从远程仓库获取最新版本并直接合并到相对应的本地分支上，一般同步远程仓库和本地仓库就用pull一条指令就够了。
-  - **索引更改**（add）：将任何新的或修改的文件放入暂存区。
-  - **提交**（commit）：将在暂存区中的内容提交到远端分支。
+  - **拉取**（[pull](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1#pull)）：`git pull` = `git fetch` + `git merge`**，从远程仓库获取最新版本并直接合并到相对应的本地分支上，一般同步远程仓库和本地仓库就用pull一条指令就够了。
+  - **索引更改**（add）：将任何变化的文件（增加、删除、修改）放入暂存区。
+  - **提交**（commit）：**将暂存区里的改动提交到本地的版本库**。每次使用`git commit`命令我们都会在本地版本库生成一个40位的哈希值，这个哈希值也叫commit-id，commit-id在**版本回退**的时候是非常有用的，它相当于一个**快照**,可以在未来的任何时候通过与`git reset`的组合命令回到这里
+  - **上传**（push）：将本地的分支版本库上传到远程分支并合并。
 
+> 相信大家第一次看了上面的术语有可能也不是很理解，所以在后面我会写一个很长的例子方便大家理解和梳理Git使用的整个流程，继续看下去吧！
 ## 3 - 玩转 Git CLI
 
 > 对于 CLI （Command Line Interface 命令行接口）本身确实是不如 GUI 图形化界面的软件使用起来方便的，但是由于大部分**服务器**的操作系统都是 **Linux**，在远程连接服务器我们往往在命令行界面是最为轻便和稳定的，所以学习 Git 的 CLI 操作是必不可少的，而且计算机程序的命令行版本一直是我觉得计算机领域最优雅的部分，少了很多视觉跟踪和鼠标的点击操作，我们只需要集中于屏幕光标位置利用键盘说出我们想让计算机做的事就可以了，非常的优雅！
@@ -169,11 +171,7 @@ git mergetool
 - `git merge <被合并的分支>`
 - `git mergetool`
 
-### Git基本工作流图片
-
-![GitWorkFlow](https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GitWorkFlow.pjkkod3vq7k.webp)
-
-## 3 - 玩转 Git GUI
+## 4 - 玩转 Git GUI
 
 > 关于Git的GUI （Graphic User Interface） 图形化界面软件有很多，在官网上有一个所有GUI的[清单](https://git-scm.com/downloads/guis/)，但是这其中我个人最为推荐的还是github官方的GUI：[Github Desktop](https://desktop.github.com/) ，有关于其他程序猿的生产力软件推荐可以看我下面这篇文章：
 >
@@ -186,7 +184,7 @@ git mergetool
 
 - 其他操作建议查看官网的手册，中文版的看起来也很舒服：[https://docs.github.com/cn/desktop](https://docs.github.com/cn/desktop)
 
-## 4 - 玩转 GitHub
+## 5 - 玩转 GitHub
 
 > Github是全球最大的开源代码服务器，利用Github可以很好的托管开源作者的代码，也可以方便其他人使用和借鉴，**下面我将介绍几个让你的Github用的更爽的插件和建议**，关于Github的使用我下面不会再讲解，如何使用可以看官方指南：
 >
@@ -217,13 +215,33 @@ git mergetool
 
 ![GithubSelfIntroduction](https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GithubSelfIntroduction.ltrbkjuzkxc.webp)
 
-具体教程可以参考这篇文章：
+**具体教程可以参考以下这篇文章：**
 
 [来弄一个Github的个人介绍页吧~ - 掘金](https://juejin.cn/post/6886826772550123534)
 
+## 6 - Git工作流讲解
+### Git基本工作流图片
+
+![GitWorkFlow](https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GitWorkFlow.pjkkod3vq7k.webp)
+### 通过一个故事理解Git工作流
+小明是一个刚刚毕业的大学生，被一家知名的互联网企业签下了，由于第一次参与企业级大型项目，所以对于复杂的Git工作流十分的不熟悉，于是公司的老员工们纷纷来帮助他。
+
+小明先是打开了公司开源的Git仓库地址，并利用Git工具clone下来了项目的代码，但是一看到上百条分支就头晕了，于是老员工Jack拿出了上面那张Git基本工作流的图片来一一为他讲解，Jack说：其实呢，之所以创建这么多的分支的原因就是为了方便基于老代码进行的优化和更新的新代码能够根据不同的变化占有一个分支，将一大个复杂的问题分类成一个个小的问题，从而下派给各个部门进行工作，这样不同的部门各自管理一条各自的分支，工作就井然有序啦！
+
+小明说：哦，原来是这样，那这个图上这些分支的名字都代表什么含义呢？
+
+这时另一名老员工Smith说：这张图呢是我们企业最初一张基本的Git工作流的图咯，现在已经非常复杂了，不过对于你初步理解整个流程是非常好的，那么这个**Master**分支，顾名思义就是我们的**主分支**啦，是我们所有部门整合起来的一个主分支，代表了我们项目整体的走向，每次一个**子分支**完成测试后就将其 **merge** 到 **Master** 分支然后再进行整体的测试，如果一个版本的功能已经完成全部测试，那么就将其发放到 **Release** 分支啦，也就是正式发行给大众的分支，就像咱们平时使用的某一款软件的一个版本更新一样（类比上图就相当于基于 **Master** 分支创建了一个 **Develop** 分支，然后 Develop 分支开发到一定程度后将其 **merge** 到 **Release** 分支和 **Master** 分支），那么图中的 **HotFix** 分支顾名思义就是处理一些突发bug的分支，进行快速修改再重新 **Merge** 到 **Master** 分支，**Feature** 分支就是代表一个个新功能的分支。
+
+小明说：哦，原来如此，明白了，那我就利用手上的Git工具进行一下实践试试看咯！
+
+另一名老员工小姐姐Mary说：嗯嗯，有什么问题可以继续问我们哦，哦对了，你有没有考虑过这样一种情况呢，如果在 **Master** 分支的某一个节点创建了一个子分支，并在子分支对文件1进行了修改，与此同时 **Master** 分支也对文件1进行了修改，然后子分支 **Merge** 到了 **Master** 分支，这时候怎么处理呐！
+
+小明说：哦，这不是合并冲突嘛！通常我们就手动的查看冲突的内容，通过一些解决冲突的工具，比如 **mergetool** 或者是 IDE 中的一些插件，然后选择自己想要留下的那个文件的内容就可以啦！解决冲突之后再进行 **Merge**
+
+大家露出了欣慰的表情，都回到了自己的工位。。。。。
 ## 结语
 
-创作不易，整理这些内容花费了很大精力，希望大家能有所收获，能尽快熟练使用Git，毕竟coding的产品必然是要走向大众的，一个代码产品的诞生和管理需要一个好的工具，Git是每个程序猿的不二之选，无论是独立开发者亦或是团队开发，Git都是一大利器！
+创作不易，整理这些内容花费了很大精力，希望大家能有所收获，能尽快熟练使用Git，毕竟coding的产品必然是要走向大众的，一个代码产品的诞生和管理需要一个好的版本控制工具，Git在众多的版本控制工具中无疑是每个程序猿的不二之选，无论是独立开发者亦或是团队开发，Git都是一大利器！
 
 ---
 
