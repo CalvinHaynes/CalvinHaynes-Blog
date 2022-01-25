@@ -2157,71 +2157,6 @@ sudo systemctl restart docker
       </item>
       
       <item>
-        <title>属于每一个程序猿和学生的一份高效率软件清单--第二弹:程序猿写文档必备工具箱（持续更新）</title>
-        <link>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%BA%8C%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%86%99%E6%96%87%E6%A1%A3%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E7%AE%B1%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
-        <pubDate>Sat, 02 Oct 2021 22:55:47 +0800</pubDate>
-        <author>chx1006488386@163.com (Calvin Haynes)</author>
-        <atom:modified>Sat, 02 Oct 2021 22:55:47 +0800</atom:modified>
-        <guid>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%BA%8C%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%86%99%E6%96%87%E6%A1%A3%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E7%AE%B1%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
-        <description>前言 这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。 之所以写这篇文章，很大一部分原因是想</description>
-        <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
-&lt;p&gt;这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。&lt;/p&gt;
-&lt;p&gt;之所以写这篇文章，很大一部分原因是想和大家分享一下我的效率软件清单，另一个原因是也为自己下次重装系统做一个保障，免得忘记什么。&lt;/p&gt;
-&lt;p&gt;下面我们就正式开始介绍吧，目录我会分好类的，每个超链接都指向一些我认为的非常好的资源以及各个软件的下载地址等等的信息，大家按照自己想要看的点进去就可以了。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;strong&gt;这可能是我的一个专栏系列（分享我使用的所有的有趣和高效率的软件或插件，网页等）&lt;/strong&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&#34;程序猿写文档必备工具箱&#34;&gt;程序猿写文档必备工具箱&lt;/h2&gt;
-&lt;h3 id=&#34;1---snipaste截图软件httpswwwsnipastecom&#34;&gt;&lt;a href=&#34;https://www.snipaste.com/&#34;&gt;1 - Snipaste：截图软件&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;这绝对是综合看来我用过所有 windows 下截图软件最棒的了，所有的截图功能都有，像全屏截图、窗口截图，自定义像素截图等等基本功能都有。&lt;/li&gt;
-&lt;li&gt;最牛的功能是它的贴图功能，不知道大家有没有遇到过这样一种情况：假如上网课的时候，老师讲的下部分是关于上一张 PPT 的，但是你手中还没有 PPT，或者你想对比一下之前的 PPT 来学习，那么这个时候贴图就发挥其作用了，示例如下：（你还可以发挥你的其他想象利用这个功能）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-32-14.7k11ri8x4ng0.gif&#34; alt=&#34;GIF-2021-9-22-21-32-14&#34; /&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;可以设置的选项如下：（==你可以在控制中自定义各个功能的快捷键，设置成你熟悉的==）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-23-05.4s2ojtxk63u0.gif&#34; alt=&#34;GIF-2021-9-22-21-23-05&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;2---gifcam一款录制-gif-的软件httpblogbahraniappscomgifcamdownload&#34;&gt;&lt;a href=&#34;http://blog.bahraniapps.com/gifcam/#download&#34;&gt;2 - GifCam：一款录制 GIF 的软件&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;看了上面的 GIF 图，是不是也在奇怪我这些图是怎么自己做的，那么这就向您介绍这款软件：GIFCam，这是一款可以录制 GIF 动图的软件，短小精悍，仅仅只有录制 GIF 的功能，你可以设置输出文件的 FPS，自定义录制的窗口大小或者全屏等等。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-39-42.1zze3osdryow.gif&#34; alt=&#34;GIF-2021-9-22-21-39-42&#34; /&gt;&lt;/p&gt;
-&lt;h3 id=&#34;3---picx-图床一个开源作者写的开源图床httpspicxxpoetcnupload&#34;&gt;&lt;a href=&#34;https://picx.xpoet.cn/#/upload&#34;&gt;3 - PicX 图床：一个开源作者写的开源图床&lt;/a&gt;&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;其实这个不能算是软件，但由于 chrome 浏览器可以直接把这个网站直接打包成一个应用在本地，也算个软件把。&lt;/li&gt;
-&lt;li&gt;这个开源图床目前还在优化和更新中，作者也十分努力的在开发和维护这个项目&lt;/li&gt;
-&lt;li&gt;这个图床就是利用你自己建的 Github 库存储图片，然后提供图片的管理和 Markdown+CDN 格式的自动转换，上传图片之后直接复制就可以放在你的 md 文档中了，着实挺方便，而且界面 UI 和交互也都很不错。&lt;/li&gt;
-&lt;li&gt;使用情况如下：（&lt;strong&gt;感谢作者：https://xpoet.cn/&lt;/strong&gt;）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-56-04.217loab9zsao.gif&#34; alt=&#34;GIF-2021-9-22-21-56-04&#34; /&gt;&lt;/p&gt;
-&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
-&lt;p&gt;好的工具只是方便我们管理自己的 PC 或者便于开发而已，千万不能陷入工具的陷阱，人和动物最大的区别就是学会了制造工具，但是过分依赖于工具也会毁了一个人，在使用工具时要保持一个态度就是：对于自己十分明确的功能勇敢的使用和尝试，对于自己不明确的功能先去学习原理，再结合搜索引擎上的经验慢慢投入使用。&lt;/p&gt;
-&lt;p&gt;最后希望大家按需取用上述的软件，玩的愉快！！&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34; /&gt; &lt;strong&gt;未来我还会持续更新，在清单中添加更加有趣的软件，敬请期待！！！&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content:encoded>
-        <dc:creator>Calvin Haynes</dc:creator>
-        
-        
-        
-        
-          
-            
-              <category>软件清单</category>
-            
-          
-        
-        
-            
-              <category>高效工具系列</category>
-            
-        
-        
-      </item>
-      
-      <item>
         <title>属于每一个程序猿和学生的一份高效率软件清单--第一弹:程序猿高效开发工具（持续更新）</title>
         <link>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%B8%80%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E9%AB%98%E6%95%88%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
         <pubDate>Thu, 16 Sep 2021 12:00:04 +0800</pubDate>
@@ -2691,6 +2626,82 @@ git submodule add https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
             
               <category>个人博客发展</category>
             
+        
+        
+      </item>
+      
+      <item>
+        <title></title>
+        <link>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%BA%8C%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%86%99%E6%96%87%E6%A1%A3%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E7%AE%B1%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
+        
+        <guid>https://blog.calvinhaynes.top/posts/%E5%B1%9E%E4%BA%8E%E6%AF%8F%E4%B8%80%E4%B8%AA%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%92%8C%E5%AD%A6%E7%94%9F%E7%9A%84%E4%B8%80%E4%BB%BD%E9%AB%98%E6%95%88%E7%8E%87%E8%BD%AF%E4%BB%B6%E6%B8%85%E5%8D%95-%E7%AC%AC%E4%BA%8C%E5%BC%B9-%E7%A8%8B%E5%BA%8F%E7%8C%BF%E5%86%99%E6%96%87%E6%A1%A3%E5%BF%85%E5%A4%87%E5%B7%A5%E5%85%B7%E7%AE%B1%E6%8C%81%E7%BB%AD%E6%9B%B4%E6%96%B0/</guid>
+        <description>#! https://zhuanlan.zhihu.com/p/461702133 keywords: &amp;ldquo;software&amp;rdquo; title: &amp;ldquo;属于每一个程序猿和学生的一份高效率软件清单&amp;ndash;第二弹:程序猿写文档必备工具箱（持续更新）&amp;rdquo; date: 2021-10-02T22:55:47+08:00</description>
+        <content:encoded>&lt;h2 id=&#34;-httpszhuanlanzhihucomp461702133&#34;&gt;#! &lt;a href=&#34;https://zhuanlan.zhihu.com/p/461702133&#34;&gt;https://zhuanlan.zhihu.com/p/461702133&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;keywords:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;software&amp;rdquo;&lt;br /&gt;
+title: &amp;ldquo;属于每一个程序猿和学生的一份高效率软件清单&amp;ndash;第二弹:程序猿写文档必备工具箱（持续更新）&amp;rdquo;&lt;br /&gt;
+date: 2021-10-02T22:55:47+08:00&lt;br /&gt;
+lastmod: 2021-10-02T22:55:47+08:00&lt;br /&gt;
+description: &amp;ldquo;程序猿写文档必备工具箱清单&amp;rdquo;&lt;br /&gt;
+draft: false&lt;br /&gt;
+author: Calvin Haynes&lt;br /&gt;
+hideToc: false&lt;br /&gt;
+enableToc: true&lt;br /&gt;
+enableTocContent: false&lt;br /&gt;
+tocFolding: false&lt;br /&gt;
+tocLevels: [&amp;ldquo;h2&amp;rdquo;, &amp;ldquo;h3&amp;rdquo;, &amp;ldquo;h4&amp;rdquo;]&lt;br /&gt;
+tags:&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;软件清单&amp;rdquo;&lt;br /&gt;
+categories: &amp;ldquo;高效工具系列&amp;rdquo;&lt;br /&gt;
+img: &amp;ldquo;&lt;a href=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/wallpaper-7-type.png%22&#34;&gt;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/wallpaper-7-type.png&amp;quot;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;这是一个我正在使用的软件清单系列文章，涵盖了时间管理，高效率开发工具，系统优化软件，写文档工具流等。&lt;/p&gt;
+&lt;p&gt;之所以写这篇文章，很大一部分原因是想和大家分享一下我的效率软件清单，另一个原因是也为自己下次重装系统做一个保障，免得忘记什么。&lt;/p&gt;
+&lt;p&gt;下面我们就正式开始介绍吧，目录我会分好类的，每个超链接都指向一些我认为的非常好的资源以及各个软件的下载地址等等的信息，大家按照自己想要看的点进去就可以了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;这可能是我的一个专栏系列（分享我使用的所有的有趣和高效率的软件或插件，网页等）&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;程序猿写文档必备工具箱&#34;&gt;程序猿写文档必备工具箱&lt;/h2&gt;
+&lt;h3 id=&#34;1---snipaste截图软件httpswwwsnipastecom&#34;&gt;&lt;a href=&#34;https://www.snipaste.com/&#34;&gt;1 - Snipaste：截图软件&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;这绝对是综合看来我用过所有 windows 下截图软件最棒的了，所有的截图功能都有，像全屏截图、窗口截图，自定义像素截图等等基本功能都有。&lt;/li&gt;
+&lt;li&gt;最牛的功能是它的贴图功能，不知道大家有没有遇到过这样一种情况：假如上网课的时候，老师讲的下部分是关于上一张 PPT 的，但是你手中还没有 PPT，或者你想对比一下之前的 PPT 来学习，那么这个时候贴图就发挥其作用了，示例如下：（你还可以发挥你的其他想象利用这个功能）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-32-14.7k11ri8x4ng0.gif&#34; alt=&#34;GIF-2021-9-22-21-32-14&#34; /&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以设置的选项如下：（==你可以在控制中自定义各个功能的快捷键，设置成你熟悉的==）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-23-05.4s2ojtxk63u0.gif&#34; alt=&#34;GIF-2021-9-22-21-23-05&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;2---gifcam一款录制-gif-的软件httpblogbahraniappscomgifcamdownload&#34;&gt;&lt;a href=&#34;http://blog.bahraniapps.com/gifcam/#download&#34;&gt;2 - GifCam：一款录制 GIF 的软件&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;看了上面的 GIF 图，是不是也在奇怪我这些图是怎么自己做的，那么这就向您介绍这款软件：GIFCam，这是一款可以录制 GIF 动图的软件，短小精悍，仅仅只有录制 GIF 的功能，你可以设置输出文件的 FPS，自定义录制的窗口大小或者全屏等等。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-39-42.1zze3osdryow.gif&#34; alt=&#34;GIF-2021-9-22-21-39-42&#34; /&gt;&lt;/p&gt;
+&lt;h3 id=&#34;3---picx-图床一个开源作者写的开源图床httpspicxxpoetcnupload&#34;&gt;&lt;a href=&#34;https://picx.xpoet.cn/#/upload&#34;&gt;3 - PicX 图床：一个开源作者写的开源图床&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;其实这个不能算是软件，但由于 chrome 浏览器可以直接把这个网站直接打包成一个应用在本地，也算个软件把。&lt;/li&gt;
+&lt;li&gt;这个开源图床目前还在优化和更新中，作者也十分努力的在开发和维护这个项目&lt;/li&gt;
+&lt;li&gt;这个图床就是利用你自己建的 Github 库存储图片，然后提供图片的管理和 Markdown+CDN 格式的自动转换，上传图片之后直接复制就可以放在你的 md 文档中了，着实挺方便，而且界面 UI 和交互也都很不错。&lt;/li&gt;
+&lt;li&gt;使用情况如下：（&lt;strong&gt;感谢作者：https://xpoet.cn/&lt;/strong&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/GIF-2021-9-22-21-56-04.217loab9zsao.gif&#34; alt=&#34;GIF-2021-9-22-21-56-04&#34; /&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
+&lt;p&gt;好的工具只是方便我们管理自己的 PC 或者便于开发而已，千万不能陷入工具的陷阱，人和动物最大的区别就是学会了制造工具，但是过分依赖于工具也会毁了一个人，在使用工具时要保持一个态度就是：对于自己十分明确的功能勇敢的使用和尝试，对于自己不明确的功能先去学习原理，再结合搜索引擎上的经验慢慢投入使用。&lt;/p&gt;
+&lt;p&gt;最后希望大家按需取用上述的软件，玩的愉快！！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;input disabled=&#34;&#34; type=&#34;checkbox&#34; /&gt; &lt;strong&gt;未来我还会持续更新，在清单中添加更加有趣的软件，敬请期待！！！&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</content:encoded>
+        <dc:creator>Calvin Haynes</dc:creator>
+        
+        
+        
+        
         
         
       </item>
