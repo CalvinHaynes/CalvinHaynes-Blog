@@ -20,6 +20,7 @@ tags:
 - "Hadoop"
 - "Spark"
 categories: "大数据"
+zhihu-url: "https://zhuanlan.zhihu.com/p/434068745"
 img: https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/server-cluster.3p8zh61kpbm0.png
 ---
 
@@ -246,7 +247,9 @@ textFile.take(10)
 
 作为上一篇文章的补充，简单了解一下Spark这个现在流行的通用云计算框架。
 
-感谢您看到最后，如果本文对您有所帮助的话，还希望给我一个一键三连（狗头保命），如果对于我和我的文章感兴趣的话，欢迎点一个关注，您会收到我回答和文章的更新通知，也欢迎加入我建立的技术交流群QQ：725133797 讨论交流。
+---
 
-最后附上我的个人博客站：[https://blog.calvinhaynes.top/](https://link.zhihu.com/?target=https%3A//blog.calvinhaynes.top/)，欢迎访问和交流
+感谢您看到最后，如果本文对您有所帮助的话，还希望给我一个一键三连（狗头保命），如果对于我和我的文章感兴趣的话，欢迎点一个关注，您会收到我回答和文章的更新通知，也欢迎加入我建立的技术交流群QQ：[725133797](https://jq.qq.com/?_wv=1027&k=dD4NZkUt) 讨论交流。
+
+最后附上我的个人博客站：[https://blog.calvinhaynes.top/](https://blog.calvinhaynes.top/)，欢迎访问和交流
 
