@@ -27,7 +27,7 @@ img: https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/server-clu
 
 上一篇文章我写了[如何利用Docker搭建一个Hadoop-muti-node-cluster](https://zhuanlan.zhihu.com/p/430943139)，从中我们得知Hadoop可以通过MapReduce机制实现一些计算任务，但是由于MapReduce任务需要跑很多次而且需要多次迭代，每次迭代计算结果都要存到HDFS中，而HDFS本质上就是硬盘，相当于把每次运算结果写入硬盘，而且还要考虑备份的问题，所以在MapReduce的传统计算中存储占用了绝大部分时间。而Spark不同，它是将中间计算结果存储在内存中并直接在内存中执行迭代计算，速度会更快（CPU直接访问内存速度远远快于访问磁盘），是现在非常流行的通用云计算引擎/框架。
 
-> **官网描述：**Apache Spark 是用于大规模数据处理的统一分析引擎。它提供了 Java、Scala、Python 和 R 中的高级 API，以及支持通用执行图的优化引擎。它还支持一组丰富的更高级别的工具，包括[SparkSQL](https://spark.apache.org/docs/latest/sql-programming-guide.html)用于SQL和结构化数据的处理，[MLlib](https://spark.apache.org/docs/latest/ml-guide.html)机器学习，[GraphX](https://spark.apache.org/docs/latest/graphx-programming-guide.html)用于图形处理，以及[结构化流](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)的增量计算和流处理。
+> **官网描述：** Apache Spark 是用于大规模数据处理的统一分析引擎。它提供了 Java、Scala、Python 和 R 中的高级 API，以及支持通用执行图的优化引擎。它还支持一组丰富的更高级别的工具，包括[SparkSQL](https://spark.apache.org/docs/latest/sql-programming-guide.html)用于SQL和结构化数据的处理，[MLlib](https://spark.apache.org/docs/latest/ml-guide.html)机器学习，[GraphX](https://spark.apache.org/docs/latest/graphx-programming-guide.html)用于图形处理，以及[结构化流](https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html)的增量计算和流处理。
 
 ## 1 - 搭建前注意事项
 
