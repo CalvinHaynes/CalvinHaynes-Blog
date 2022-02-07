@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Hugo搭建个人博客教程（GithubPages + 阿里云）.md",
+            "file": "模板/博客模板.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -70,7 +70,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Hugo搭建个人博客教程（GithubPages + 阿里云）.md"
+                "file": "模板/博客模板.md"
               }
             }
           }
@@ -82,15 +82,15 @@
   },
   "active": "b7cb79943b82fc87",
   "lastOpenFiles": [
-    "Hugo搭建个人博客教程（GithubPages + 阿里云）.md",
     "模板/博客模板.md",
-    "那些年你不知道的git冷门操作.md",
     "基于Docker的Hadoop集群配置Spark并简单使用.md",
+    "那些年你不知道的git冷门操作.md",
+    "一文教你玩转Git和Github.md",
+    "一个玩转国外CSLab的通用环境搭建方案（附我的搭建好的MIT6.S081环境）.md",
+    "属于每一个程序猿和学生的一份高效率软件清单-第一弹-程序猿高效开发工具（持续更新）.md",
     "利用Docker搭建一个Hadoop-muti-node-cluster.md",
+    "Hugo搭建个人博客教程（GithubPages + 阿里云）.md",
     "_index.md",
-    "提问的智慧.md",
-    "上课摸鱼必备--Vscode网页版的搭建教程.md",
-    "属于每一个程序猿和学生的一份高效率软件清单-第二弹-程序猿写文档必备工具箱（持续更新）.md",
-    "一文教你玩转Git和Github.md"
+    "提问的智慧.md"
   ]
 }
