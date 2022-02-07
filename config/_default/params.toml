@@ -217,10 +217,3 @@ commento = false
   name = "weibo"
 [[share]]
   name = "linkedin"
-
-[[footerLinks]]
-  name = ""
-  link = ""
-[[footerLinks]]
-  name = ""
-  link = ""

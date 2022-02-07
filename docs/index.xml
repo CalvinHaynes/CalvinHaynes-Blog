@@ -3207,6 +3207,11 @@ git submodule add https://github.com/zzossig/hugo-theme-zzo.git themes/zzo
 &lt;p&gt;&lt;a href=&#34;https://zzo-docs.vercel.app/&#34;&gt;Zzo主题官方文档&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://help.aliyun.com/product/29697.html?spm=a2c4g.11186623.6.540.d0044e82AEgtJN&#34;&gt;阿里云云解析DNS文档&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://gohugo.io/content-management/front-matter/&#34;&gt;hugo文章的front matter&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;结语&#34;&gt;结语&lt;/h2&gt;
+&lt;p&gt;这是一篇利用hugo框架搭建个人静态博客的基础教程，关于hugo的进阶使用建议大家查看官方文档，当然如果关于我的博客站利用hugo实现了一些有趣的操作我也会写相关的文章，欢迎大家再来阅读。&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;感谢您看到最后，如果本文对您有所帮助的话，还希望给我一个一键三连（狗头保命），如果对于我和我的文章感兴趣的话，欢迎点一个关注，您会收到我回答和文章的更新通知，也欢迎加入我建立的技术交流群QQ：&lt;a href=&#34;https://jq.qq.com/?_wv=1027&amp;amp;k=dD4NZkUt&#34;&gt;725133797&lt;/a&gt; 讨论交流。&lt;/p&gt;
+&lt;p&gt;最后附上我的个人博客站：&lt;a href=&#34;https://blog.calvinhaynes.top/&#34;&gt;https://blog.calvinhaynes.top/&lt;/a&gt;，欢迎访问和交流&lt;/p&gt;
 </content:encoded>
         <dc:creator>Calvin Haynes</dc:creator>
         
