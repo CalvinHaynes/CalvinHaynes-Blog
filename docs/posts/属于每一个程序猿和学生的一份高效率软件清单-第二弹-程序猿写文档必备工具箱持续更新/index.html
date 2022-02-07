@@ -1789,7 +1789,7 @@
 
             
 
-<main id="container-ow" class="single__main main-main">
+<main id="container-ow" class="single__main main">
   
     <nav class="breadcrumb hide" aria-label="breadcrumbs">
   <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
@@ -2646,42 +2646,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </main>
 
 
-<aside class="single__side main-side">
-  
-
-
-<section class="sidebar hide">
-  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
-  <div class="toc__flexbox" data-position="fixed">
-    <h6 class="toc__title" data-ani="true">目录</h6>
-    
-      <label class="switch" data-ani="true">
-        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-    
-  </div>
-  <div class="toc " data-dir="ltr" data-folding="false" data-ani="true">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#程序猿写文档必备工具箱">程序猿写文档必备工具箱</a>
-      <ul>
-        <li><a href="#1---snipaste截图软件httpswwwsnipastecom"><a href="https://www.snipaste.com/">1 - Snipaste：截图软件</a></a></li>
-        <li><a href="#2---gifcam一款录制-gif-的软件httpblogbahraniappscomgifcamdownload"><a href="http://blog.bahraniapps.com/gifcam/#download">2 - GifCam：一款录制 GIF 的软件</a></a></li>
-        <li><a href="#3---picx-图床一个开源作者写的开源图床httpspicxxpoetcnupload"><a href="https://picx.xpoet.cn/#/upload">3 - PicX 图床：一个开源作者写的开源图床</a></a></li>
-      </ul>
-    </li>
-    <li><a href="#结语">结语</a></li>
-  </ul>
-</nav>
-  </div>
-</section>
-
-
-
-</aside>
-
 <script>
   
   
@@ -2689,7 +2653,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var enableToc = JSON.parse("true");
   var toc = JSON.parse("null");
-  var tocPosition = JSON.parse("\"inner\"");
+  var tocPosition = JSON.parse("\"outer\"");
   
   var singleMainElem = document.querySelector('.single__main');
   var singleSideElem = document.querySelector('.single__side');
@@ -3525,6 +3489,35 @@ jQuery(document).ready(function($) {
 
 <div class="wrapper__right hide" data-pad="true" dir="ltr">
   <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+  
+    
+      
+        <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
+          <h6 class="toc__title toc__title--outer" data-ani="true">目录</h6>
+          
+          <label class="switch" data-ani="true">
+            <input id="visible-toc" aria-label="Visible TOC" type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+          
+        </div>
+        <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#程序猿写文档必备工具箱">程序猿写文档必备工具箱</a>
+      <ul>
+        <li><a href="#1---snipaste截图软件httpswwwsnipastecom"><a href="https://www.snipaste.com/">1 - Snipaste：截图软件</a></a></li>
+        <li><a href="#2---gifcam一款录制-gif-的软件httpblogbahraniappscomgifcamdownload"><a href="http://blog.bahraniapps.com/gifcam/#download">2 - GifCam：一款录制 GIF 的软件</a></a></li>
+        <li><a href="#3---picx-图床一个开源作者写的开源图床httpspicxxpoetcnupload"><a href="https://picx.xpoet.cn/#/upload">3 - PicX 图床：一个开源作者写的开源图床</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav>
+        </div>
+      
+    
   
 </div>
 

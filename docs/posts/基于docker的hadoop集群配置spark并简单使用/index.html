@@ -1789,7 +1789,7 @@
 
             
 
-<main id="container-ow" class="single__main main-main">
+<main id="container-ow" class="single__main main">
   
     <nav class="breadcrumb hide" aria-label="breadcrumbs">
   <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
@@ -2877,51 +2877,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </main>
 
 
-<aside class="single__side main-side">
-  
-
-
-<section class="sidebar hide">
-  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
-  <div class="toc__flexbox" data-position="fixed">
-    <h6 class="toc__title" data-ani="true">目录</h6>
-    
-      <label class="switch" data-ani="true">
-        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-    
-  </div>
-  <div class="toc " data-dir="ltr" data-folding="false" data-ani="true">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#1---搭建前注意事项">1 - 搭建前注意事项</a>
-      <ul>
-        <li><a href="#官网说明">官网说明：</a></li>
-      </ul>
-    </li>
-    <li><a href="#2---下载sparkscala">2 - 下载Spark&amp;Scala</a></li>
-    <li><a href="#3---配置环境变量">3 - 配置环境变量</a></li>
-    <li><a href="#4---配置spark配置文件conf目录">4 - 配置Spark配置文件（conf目录）</a>
-      <ul>
-        <li><a href="#1---spark-envsh文件">1 - <strong>spark-env.sh文件</strong></a></li>
-        <li><a href="#2---workers">2 - Workers</a></li>
-        <li><a href="#3---log4jproperties">3 - log4j.properties</a></li>
-      </ul>
-    </li>
-    <li><a href="#5---启动spark">5 - 启动Spark</a></li>
-    <li><a href="#6---启动spark-shell并测试运行一个简单的scala字数计算程序">6 - 启动spark-shell并测试运行一个简单的Scala字数计算程序</a></li>
-    <li><a href="#结语">结语</a></li>
-  </ul>
-</nav>
-  </div>
-</section>
-
-
-
-</aside>
-
 <script>
   
   
@@ -2929,7 +2884,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var enableToc = JSON.parse("true");
   var toc = JSON.parse("null");
-  var tocPosition = JSON.parse("\"inner\"");
+  var tocPosition = JSON.parse("\"outer\"");
   
   var singleMainElem = document.querySelector('.single__main');
   var singleSideElem = document.querySelector('.single__side');
@@ -3765,6 +3720,44 @@ jQuery(document).ready(function($) {
 
 <div class="wrapper__right hide" data-pad="true" dir="ltr">
   <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+  
+    
+      
+        <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
+          <h6 class="toc__title toc__title--outer" data-ani="true">目录</h6>
+          
+          <label class="switch" data-ani="true">
+            <input id="visible-toc" aria-label="Visible TOC" type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+          
+        </div>
+        <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#1---搭建前注意事项">1 - 搭建前注意事项</a>
+      <ul>
+        <li><a href="#官网说明">官网说明：</a></li>
+      </ul>
+    </li>
+    <li><a href="#2---下载sparkscala">2 - 下载Spark&amp;Scala</a></li>
+    <li><a href="#3---配置环境变量">3 - 配置环境变量</a></li>
+    <li><a href="#4---配置spark配置文件conf目录">4 - 配置Spark配置文件（conf目录）</a>
+      <ul>
+        <li><a href="#1---spark-envsh文件">1 - <strong>spark-env.sh文件</strong></a></li>
+        <li><a href="#2---workers">2 - Workers</a></li>
+        <li><a href="#3---log4jproperties">3 - log4j.properties</a></li>
+      </ul>
+    </li>
+    <li><a href="#5---启动spark">5 - 启动Spark</a></li>
+    <li><a href="#6---启动spark-shell并测试运行一个简单的scala字数计算程序">6 - 启动spark-shell并测试运行一个简单的Scala字数计算程序</a></li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav>
+        </div>
+      
+    
   
 </div>
 

@@ -1789,7 +1789,7 @@
 
             
 
-<main id="container-ow" class="single__main main-main">
+<main id="container-ow" class="single__main main">
   
     <nav class="breadcrumb hide" aria-label="breadcrumbs">
   <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
@@ -3576,56 +3576,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </main>
 
 
-<aside class="single__side main-side">
-  
-
-
-<section class="sidebar hide">
-  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
-  <div class="toc__flexbox" data-position="fixed">
-    <h6 class="toc__title" data-ani="true">目录</h6>
-    
-      <label class="switch" data-ani="true">
-        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-    
-  </div>
-  <div class="toc " data-dir="ltr" data-folding="false" data-ani="true">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#搭建思路的顺序图">搭建思路的顺序图</a></li>
-    <li><a href="#1---写基础环境的dockerfile并build一个image">1 - 写基础环境的Dockerfile并build一个image</a></li>
-    <li><a href="#2---配置docker桥接网络">2 - 配置Docker桥接网络</a></li>
-    <li><a href="#3---配置环境变量">3 - 配置环境变量</a></li>
-    <li><a href="#4---配置hadoop配置文件核心部分">4 - 配置Hadoop配置文件（核心部分）</a></li>
-    <li><a href="#5---将master中的hadoop配置文件复制到两个slave中">5 - 将master中的Hadoop配置文件复制到两个slave中</a></li>
-    <li><a href="#6---启动所有服务访问相应的web服务">6 - 启动所有服务&amp;访问相应的Web服务</a></li>
-    <li><a href="#7---简单测试一些基本的hdfs操作">7 - 简单测试一些基本的HDFS操作</a></li>
-    <li><a href="#8---对hadoop的初步学习">8 - 对Hadoop的初步学习</a>
-      <ul>
-        <li><a href="#一什么是hadoop">（一）什么是Hadoop？</a></li>
-        <li><a href="#二为什么出现了hadoop">（二）为什么出现了Hadoop？</a></li>
-        <li><a href="#三初探hadoop">（三）初探Hadoop</a>
-          <ul>
-            <li><a href="#1---hdfs">1 - HDFS</a></li>
-            <li><a href="#2---mapreduce">2 - MapReduce</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-    <li><a href="#结语"><strong>结语</strong></a></li>
-    <li><a href="#参考资料">参考资料</a></li>
-  </ul>
-</nav>
-  </div>
-</section>
-
-
-
-</aside>
-
 <script>
   
   
@@ -3633,7 +3583,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var enableToc = JSON.parse("true");
   var toc = JSON.parse("null");
-  var tocPosition = JSON.parse("\"inner\"");
+  var tocPosition = JSON.parse("\"outer\"");
   
   var singleMainElem = document.querySelector('.single__main');
   var singleSideElem = document.querySelector('.single__side');
@@ -4469,6 +4419,49 @@ jQuery(document).ready(function($) {
 
 <div class="wrapper__right hide" data-pad="true" dir="ltr">
   <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+  
+    
+      
+        <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
+          <h6 class="toc__title toc__title--outer" data-ani="true">目录</h6>
+          
+          <label class="switch" data-ani="true">
+            <input id="visible-toc" aria-label="Visible TOC" type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+          
+        </div>
+        <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#搭建思路的顺序图">搭建思路的顺序图</a></li>
+    <li><a href="#1---写基础环境的dockerfile并build一个image">1 - 写基础环境的Dockerfile并build一个image</a></li>
+    <li><a href="#2---配置docker桥接网络">2 - 配置Docker桥接网络</a></li>
+    <li><a href="#3---配置环境变量">3 - 配置环境变量</a></li>
+    <li><a href="#4---配置hadoop配置文件核心部分">4 - 配置Hadoop配置文件（核心部分）</a></li>
+    <li><a href="#5---将master中的hadoop配置文件复制到两个slave中">5 - 将master中的Hadoop配置文件复制到两个slave中</a></li>
+    <li><a href="#6---启动所有服务访问相应的web服务">6 - 启动所有服务&amp;访问相应的Web服务</a></li>
+    <li><a href="#7---简单测试一些基本的hdfs操作">7 - 简单测试一些基本的HDFS操作</a></li>
+    <li><a href="#8---对hadoop的初步学习">8 - 对Hadoop的初步学习</a>
+      <ul>
+        <li><a href="#一什么是hadoop">（一）什么是Hadoop？</a></li>
+        <li><a href="#二为什么出现了hadoop">（二）为什么出现了Hadoop？</a></li>
+        <li><a href="#三初探hadoop">（三）初探Hadoop</a>
+          <ul>
+            <li><a href="#1---hdfs">1 - HDFS</a></li>
+            <li><a href="#2---mapreduce">2 - MapReduce</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#结语"><strong>结语</strong></a></li>
+    <li><a href="#参考资料">参考资料</a></li>
+  </ul>
+</nav>
+        </div>
+      
+    
   
 </div>
 

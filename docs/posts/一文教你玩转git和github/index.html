@@ -1789,7 +1789,7 @@
 
             
 
-<main id="container-ow" class="single__main main-main">
+<main id="container-ow" class="single__main main">
   
     <nav class="breadcrumb hide" aria-label="breadcrumbs">
   <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
@@ -2898,66 +2898,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </main>
 
 
-<aside class="single__side main-side">
-  
-
-
-<section class="sidebar hide">
-  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
-  <div class="toc__flexbox" data-position="fixed">
-    <h6 class="toc__title" data-ani="true">目录</h6>
-    
-      <label class="switch" data-ani="true">
-        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-    
-  </div>
-  <div class="toc " data-dir="ltr" data-folding="false" data-ani="true">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#1---git的安装">1 - Git的安装</a></li>
-    <li><a href="#2---git-中一些术语的解释和理解">2 - Git 中一些术语的解释和理解</a></li>
-    <li><a href="#3---玩转-git-cli">3 - 玩转 Git CLI</a>
-      <ul>
-        <li><a href="#git-clone">git clone</a></li>
-        <li><a href="#git-pull">git pull</a></li>
-        <li><a href="#git-commit">git commit</a></li>
-        <li><a href="#git-push">git push</a></li>
-        <li><a href="#git-status">git status</a></li>
-        <li><a href="#git-remote">git remote</a></li>
-        <li><a href="#git-branch">git branch</a></li>
-        <li><a href="#git-switch">git switch</a></li>
-        <li><a href="#git-merge--git-mergetool解决冲突">git merge &amp; git mergetool（解决冲突）</a></li>
-        <li><a href="#小结上述命令精简">小结（上述命令精简）</a></li>
-      </ul>
-    </li>
-    <li><a href="#4---玩转-git-gui">4 - 玩转 Git GUI</a></li>
-    <li><a href="#5---玩转-github">5 - 玩转 GitHub</a>
-      <ul>
-        <li><a href="#1---octotree浏览器插件httpschromegooglecomwebstoredetailoctotree-github-code-treebkhaagjahfmjljalopjnoealnfndnagchlzh-cn">1 - <a href="https://chrome.google.com/webstore/detail/octotree-github-code-tree/bkhaagjahfmjljalopjnoealnfndnagc?hl=zh-CN">Octotree浏览器插件</a></a></li>
-        <li><a href="#2---github-web-ide-浏览器插件httpschromegooglecomwebstoredetailgithub-web-ideadjiklnjodbiaioggfpbpkhbfcnhgkfe">2 - <a href="https://chrome.google.com/webstore/detail/github-web-ide/adjiklnjodbiaioggfpbpkhbfcnhgkfe">Github Web IDE 浏览器插件</a></a></li>
-        <li><a href="#3---github-gisthttpsgistgithubcom">3 - <a href="https://gist.github.com/">Github Gist</a></a></li>
-        <li><a href="#4---github-个性个人简介">4 - Github 个性个人简介</a></li>
-      </ul>
-    </li>
-    <li><a href="#6---git工作流讲解">6 - Git工作流讲解</a>
-      <ul>
-        <li><a href="#git基本工作流图片">Git基本工作流图片</a></li>
-        <li><a href="#通过一个故事理解git工作流">通过一个故事理解Git工作流</a></li>
-      </ul>
-    </li>
-    <li><a href="#结语">结语</a></li>
-  </ul>
-</nav>
-  </div>
-</section>
-
-
-
-</aside>
-
 <script>
   
   
@@ -2965,7 +2905,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var enableToc = JSON.parse("true");
   var toc = JSON.parse("null");
-  var tocPosition = JSON.parse("\"inner\"");
+  var tocPosition = JSON.parse("\"outer\"");
   
   var singleMainElem = document.querySelector('.single__main');
   var singleSideElem = document.querySelector('.single__side');
@@ -3801,6 +3741,59 @@ jQuery(document).ready(function($) {
 
 <div class="wrapper__right hide" data-pad="true" dir="ltr">
   <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+  
+    
+      
+        <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
+          <h6 class="toc__title toc__title--outer" data-ani="true">目录</h6>
+          
+          <label class="switch" data-ani="true">
+            <input id="visible-toc" aria-label="Visible TOC" type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+          
+        </div>
+        <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#1---git的安装">1 - Git的安装</a></li>
+    <li><a href="#2---git-中一些术语的解释和理解">2 - Git 中一些术语的解释和理解</a></li>
+    <li><a href="#3---玩转-git-cli">3 - 玩转 Git CLI</a>
+      <ul>
+        <li><a href="#git-clone">git clone</a></li>
+        <li><a href="#git-pull">git pull</a></li>
+        <li><a href="#git-commit">git commit</a></li>
+        <li><a href="#git-push">git push</a></li>
+        <li><a href="#git-status">git status</a></li>
+        <li><a href="#git-remote">git remote</a></li>
+        <li><a href="#git-branch">git branch</a></li>
+        <li><a href="#git-switch">git switch</a></li>
+        <li><a href="#git-merge--git-mergetool解决冲突">git merge &amp; git mergetool（解决冲突）</a></li>
+        <li><a href="#小结上述命令精简">小结（上述命令精简）</a></li>
+      </ul>
+    </li>
+    <li><a href="#4---玩转-git-gui">4 - 玩转 Git GUI</a></li>
+    <li><a href="#5---玩转-github">5 - 玩转 GitHub</a>
+      <ul>
+        <li><a href="#1---octotree浏览器插件httpschromegooglecomwebstoredetailoctotree-github-code-treebkhaagjahfmjljalopjnoealnfndnagchlzh-cn">1 - <a href="https://chrome.google.com/webstore/detail/octotree-github-code-tree/bkhaagjahfmjljalopjnoealnfndnagc?hl=zh-CN">Octotree浏览器插件</a></a></li>
+        <li><a href="#2---github-web-ide-浏览器插件httpschromegooglecomwebstoredetailgithub-web-ideadjiklnjodbiaioggfpbpkhbfcnhgkfe">2 - <a href="https://chrome.google.com/webstore/detail/github-web-ide/adjiklnjodbiaioggfpbpkhbfcnhgkfe">Github Web IDE 浏览器插件</a></a></li>
+        <li><a href="#3---github-gisthttpsgistgithubcom">3 - <a href="https://gist.github.com/">Github Gist</a></a></li>
+        <li><a href="#4---github-个性个人简介">4 - Github 个性个人简介</a></li>
+      </ul>
+    </li>
+    <li><a href="#6---git工作流讲解">6 - Git工作流讲解</a>
+      <ul>
+        <li><a href="#git基本工作流图片">Git基本工作流图片</a></li>
+        <li><a href="#通过一个故事理解git工作流">通过一个故事理解Git工作流</a></li>
+      </ul>
+    </li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav>
+        </div>
+      
+    
   
 </div>
 

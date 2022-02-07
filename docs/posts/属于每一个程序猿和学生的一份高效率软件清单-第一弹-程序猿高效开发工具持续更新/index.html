@@ -1789,7 +1789,7 @@
 
             
 
-<main id="container-ow" class="single__main main-main">
+<main id="container-ow" class="single__main main">
   
     <nav class="breadcrumb hide" aria-label="breadcrumbs">
   <script>document.querySelector('.breadcrumb').classList.remove('hide')</script>
@@ -2674,46 +2674,6 @@ document.addEventListener('DOMContentLoaded', function () {
 </main>
 
 
-<aside class="single__side main-side">
-  
-
-
-<section class="sidebar hide">
-  <script>document.querySelector('.sidebar').classList.remove('hide')</script>
-  <div class="toc__flexbox" data-position="fixed">
-    <h6 class="toc__title" data-ani="true">目录</h6>
-    
-      <label class="switch" data-ani="true">
-        <input id="toggle-toc" aria-label="Toggle TOC" type="checkbox" checked>
-        <span class="slider round"></span>
-      </label>
-    
-  </div>
-  <div class="toc " data-dir="ltr" data-folding="false" data-ani="true">
-    <nav id="TableOfContents">
-  <ul>
-    <li><a href="#前言">前言</a></li>
-    <li><a href="#程序猿高效开发工具">程序猿高效开发工具</a>
-      <ul>
-        <li><a href="#1---jetbrains-toolboxjetbrains-家的工具箱-httpswwwjetbrainscomtoolbox-app"><a href="https://www.jetbrains.com/toolbox-app/">1 - JetBrains Toolbox：JetBrains 家的工具箱 </a></a></li>
-        <li><a href="#2---vscode轻量代码编辑器httpscodevisualstudiocom"><a href="https://code.visualstudio.com/">2 - Vscode：轻量代码编辑器</a></a></li>
-        <li><a href="#3---utools桌面快速工具箱httpsutools"><a href="https://u.tools/">3 - uTools：桌面快速工具箱</a></a></li>
-        <li><a href="#4---termiusssh-终端httpswwwtermiuscom"><a href="https://www.termius.com/">4 - Termius：SSH 终端</a></a></li>
-        <li><a href="#5---windows-terminalwindows命令行的崛起httpswwwmicrosoftcomzh-cnpwindows-terminal9n0dx20hk701activetabpivotoverviewtab"><a href="https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab">5 - Windows Terminal：windows命令行的崛起</a></a></li>
-        <li><a href="#6---github-desktop迄今为止最好的-git-gui-工具httpsdesktopgithubcom"><a href="https://desktop.github.com/">6 - Github Desktop：迄今为止最好的 Git GUI 工具</a></a></li>
-        <li><a href="#7---postman模拟httphttps请求工具httpswwwpostmancom"><a href="https://www.postman.com/">7 - Postman：模拟HTTP/HTTPS请求工具</a></a></li>
-      </ul>
-    </li>
-    <li><a href="#结语">结语</a></li>
-  </ul>
-</nav>
-  </div>
-</section>
-
-
-
-</aside>
-
 <script>
   
   
@@ -2721,7 +2681,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   var enableToc = JSON.parse("true");
   var toc = JSON.parse("null");
-  var tocPosition = JSON.parse("\"inner\"");
+  var tocPosition = JSON.parse("\"outer\"");
   
   var singleMainElem = document.querySelector('.single__main');
   var singleSideElem = document.querySelector('.single__side');
@@ -3557,6 +3517,39 @@ jQuery(document).ready(function($) {
 
 <div class="wrapper__right hide" data-pad="true" dir="ltr">
   <script>document.querySelector('.wrapper__right').classList.remove('hide')</script>
+  
+    
+      
+        <div class="toc__flexbox--outer" data-position="fixed" data-dir="ltr" data-ani="true">
+          <h6 class="toc__title toc__title--outer" data-ani="true">目录</h6>
+          
+          <label class="switch" data-ani="true">
+            <input id="visible-toc" aria-label="Visible TOC" type="checkbox" checked>
+            <span class="slider round"></span>
+          </label>
+          
+        </div>
+        <div class="toc toc__outer " data-dir="ltr" data-folding="false" data-ani="true">
+          <nav id="TableOfContents">
+  <ul>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#程序猿高效开发工具">程序猿高效开发工具</a>
+      <ul>
+        <li><a href="#1---jetbrains-toolboxjetbrains-家的工具箱-httpswwwjetbrainscomtoolbox-app"><a href="https://www.jetbrains.com/toolbox-app/">1 - JetBrains Toolbox：JetBrains 家的工具箱 </a></a></li>
+        <li><a href="#2---vscode轻量代码编辑器httpscodevisualstudiocom"><a href="https://code.visualstudio.com/">2 - Vscode：轻量代码编辑器</a></a></li>
+        <li><a href="#3---utools桌面快速工具箱httpsutools"><a href="https://u.tools/">3 - uTools：桌面快速工具箱</a></a></li>
+        <li><a href="#4---termiusssh-终端httpswwwtermiuscom"><a href="https://www.termius.com/">4 - Termius：SSH 终端</a></a></li>
+        <li><a href="#5---windows-terminalwindows命令行的崛起httpswwwmicrosoftcomzh-cnpwindows-terminal9n0dx20hk701activetabpivotoverviewtab"><a href="https://www.microsoft.com/zh-cn/p/windows-terminal/9n0dx20hk701?activetab=pivot:overviewtab">5 - Windows Terminal：windows命令行的崛起</a></a></li>
+        <li><a href="#6---github-desktop迄今为止最好的-git-gui-工具httpsdesktopgithubcom"><a href="https://desktop.github.com/">6 - Github Desktop：迄今为止最好的 Git GUI 工具</a></a></li>
+        <li><a href="#7---postman模拟httphttps请求工具httpswwwpostmancom"><a href="https://www.postman.com/">7 - Postman：模拟HTTP/HTTPS请求工具</a></a></li>
+      </ul>
+    </li>
+    <li><a href="#结语">结语</a></li>
+  </ul>
+</nav>
+        </div>
+      
+    
   
 </div>
 

@@ -1,11 +1,11 @@
 /* 定制网站鼠标光标 2~8行 */
-* {
+/* * {
     cursor: url(https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting@master/img/mouse.cur), default !important;
 }
 
 a, span {
     cursor: url(https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting@second/img/20201203142116.cur), pointer !important;
-}
+} */
 
 .single__contents ul li {
     margin-left: 1.7rem;
