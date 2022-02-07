@@ -1,13 +1,13 @@
 logoText = "Calvin Haynes's Blog"
-logoType = "short" # long, short
+logoType = "long" # long, short
 description = "The site of Calvin Haynes's Blog"
 custom_css = ["css/my.css", "css/fonts-zh.css", "css/fonts-code.css", "fontawesome/css/all.css", "css/pace.css"]
 custom_js = ["js/pace.min.js"]
 useFaviconGenerator = true # https://www.favicon-generator.org/
 meta_image = "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/Calvin.1nljooch7gio.webp"
-themecolor = "dark"
+themecolor = "hacker"
 
-themeOptions = ["dark", "light", "solarized", "hacker", "kimbie"] 
+themeOptions = ["dark", "light", "solarized", "hacker"] # dark, light, solarized, hacker, kimbie
 notAllowedTypesInHome = ["contact", "talks", "about", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
