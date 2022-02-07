@@ -21,7 +21,7 @@ minItemsToShowInTagCloud = 2 # Minimum items to show in tag cloud
 
 # appbar
 enableAppbarSearchIcon = true
-enableAppbarLangIcon = true
+enableAppbarLangIcon = false
 
 # header
 homeHeaderType = "typewriter" # text, img, slide, typewriter
@@ -33,7 +33,7 @@ showMobileMenuTerms = ["tags", "categories", "series"]
 # search
 enableSearch = true
 enableSearchHighlight = true
-searchResultPosition = "main" # side, main
+searchResultPosition = "side" # side, main
 searchContent = true # include content to search index
 searchDistance = 100 # fuse option
 searchThreshold = 0.4 # 0.0: exact match, 1.0: any match
