@@ -13,15 +13,15 @@ notAllowedTypesInHomeSidebar = ["about", "archive", "showcase", "publication", "
 notAllowedTypesInArchive = ["about", "talks", "showcase", "publication", "presentation", "resume"]
 notAllowedTypesInHomeFeed = ["about", "archive", "contact", "talks", "showcase", "publication", "presentation", "resume", "gallery"]
 
-viewportSize = "widest" # widest, wider, wide, normal, narrow
+viewportSize = "normal" # widest, wider, wide, normal, narrow
 enableUiAnimation = true
 hideSingleContentsWhenJSDisabled = false
 enablePinnedPosts = true
 minItemsToShowInTagCloud = 2 # Minimum items to show in tag cloud
 
 # appbar
-enableAppbarSearchIcon = false
-enableAppbarLangIcon = false
+enableAppbarSearchIcon = true
+enableAppbarLangIcon = true
 
 # header
 homeHeaderType = "typewriter" # text, img, slide, typewriter
