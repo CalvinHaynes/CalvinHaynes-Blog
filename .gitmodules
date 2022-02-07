@@ -1,6 +1,6 @@
-[submodule "themes/zzo"]
-	path = themes/zzo
-	url = https://github.com/zzossig/hugo-theme-zzo.git
 [submodule "themes/hugo-notice"]
 	path = themes/hugo-notice
 	url = https://github.com/martignoni/hugo-notice.git
+[submodule "themes/zzo"]
+	path = themes/zzo
+	url = https://github.com/zzossig/hugo-theme-zzo.git
