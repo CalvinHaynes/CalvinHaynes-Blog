@@ -53,12 +53,12 @@
   url = "about/"
   weight = 5
 
-# [[main]]
-#   identifier = "friends"
-#   name = "友链"
-#   pre = '<i class="fas fa-user-friends"></i>'
-#   url = "friends/"
-#   weight = 7
+[[main]]
+  identifier = "friends"
+  name = "友链"
+  pre = '<i class="fas fa-user-friends"></i>'
+  url = "friends/"
+  weight = 7
 
 [[main]]
   identifier = "archive"

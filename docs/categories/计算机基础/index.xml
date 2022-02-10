@@ -14,7 +14,7 @@
     <managingEditor>chx1006488386@163.com (Calvin Haynes)</managingEditor>
     <webMaster>chx1006488386@163.com (Calvin Haynes)</webMaster>
     <copyright>&amp;copy;{year}, All Rights Reserved</copyright>
-    <lastBuildDate>Sat, 30 Oct 2021 10:45:08 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 09 Feb 2022 22:30:45 +0800</lastBuildDate>
     <sy:updatePeriod>daily</sy:updatePeriod>
     
         <atom:link href="https://blog.calvinhaynes.top/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
@@ -23,6 +23,34 @@
     
 
       
+      
+      <item>
+        <title>CSAPP笔记系列-第一章-计算机系统漫游</title>
+        <link>https://blog.calvinhaynes.top/posts/csapp%E7%AC%94%E8%AE%B0%E7%B3%BB%E5%88%97_%E7%AC%AC%E4%B8%80%E7%AB%A0_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8/</link>
+        <pubDate>Wed, 09 Feb 2022 22:30:45 +0800</pubDate>
+        <author>chx1006488386@163.com (Calvin Haynes)</author>
+        <atom:modified>Wed, 09 Feb 2022 22:30:45 +0800</atom:modified>
+        <guid>https://blog.calvinhaynes.top/posts/csapp%E7%AC%94%E8%AE%B0%E7%B3%BB%E5%88%97_%E7%AC%AC%E4%B8%80%E7%AB%A0_%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%BC%AB%E6%B8%B8/</guid>
+        <description></description>
+        <content:encoded></content:encoded>
+        <dc:creator>Calvin Haynes</dc:creator>
+        
+        
+        
+        
+          
+            
+              <category>CSAPP</category>
+            
+          
+        
+        
+            
+              <category>计算机基础</category>
+            
+        
+        
+      </item>
       
       <item>
         <title>一个玩转国外CSLab的通用环境搭建方案（附我的搭建好的MIT6.S081环境）</title>
