@@ -33,7 +33,7 @@ googleAnalytics = ""
     endLevel = 4
     ordered = false
     startLevel = 2
-
+# 建立搜索索引
 [outputs]
   home = ["HTML", "RSS", "SearchIndex"]
   section = ["HTML", "RSS", "SearchIndex"]

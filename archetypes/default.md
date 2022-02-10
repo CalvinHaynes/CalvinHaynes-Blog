@@ -1,15 +1,14 @@
 ---
 keywords:
-- 
+- ""
 title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 lastmod: {{ .Date }}
-description:
+description: ""
 draft: true 
 author: Calvin Haynes
-enableTocContent: false
 tags:
--
-categories:
-img:
+- ""
+categories: ""
+img: ""
 ---

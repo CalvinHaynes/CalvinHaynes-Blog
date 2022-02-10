@@ -1,9 +1,9 @@
-+++
-title = "我的朋友们"
-type = "about"
-description = "Calvin的友情链接" 
-date = "2021-8-4"
-+++
+---
+title: "我的朋友们"
+type: "about"
+description: "Calvin的友情链接" 
+date: "2021-8-4"
+---
 
 <div class="sidebar-block">
   <h4 class="sidebar-title">友情链接</h4>
