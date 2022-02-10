@@ -20,6 +20,7 @@ tags:
 categories: "Geek-Tools"
 img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image-20210610155903032.3hg5z4x2jgw0.png"
 ---
+{{< featuredImage >}}
 ## 前言
 
 ​		上课想练练数据结构与算法？或者就是想玩玩儿Vscode？或者有一个自己的服务器，但是觉得没有利用到极致？那么这篇文章将带你搭建一个在线版的Vscode，利用浏览器实现全平台使用Vscode，管你什么手机，Pad，电脑，板砖，咳咳，整就完了！！！
