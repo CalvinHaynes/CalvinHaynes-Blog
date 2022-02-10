@@ -190,7 +190,7 @@ commento = false
   matrix = ""
   xmpp = ""
   dev-to = ""
-  gitea = "https://gitee.com/CalvinHaynes"
+  gitea = ""
   google-scholar = ""
 
 [donationOptions]
