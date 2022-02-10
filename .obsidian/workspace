@@ -1,0 +1,106 @@
+{
+  "main": {
+    "id": "b8b378194a2402d3",
+    "type": "split",
+    "children": [
+      {
+        "id": "5ebb2dc8463b94c9",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "content/zh/friends/_index.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "86c17607747b7c57",
+    "type": "split",
+    "children": [
+      {
+        "id": "520efa55202c2fb0",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "72be688264a101aa",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "d6a931a7b0e56f74",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "1c44c7ff40e2ef45",
+    "type": "split",
+    "children": [
+      {
+        "id": "362f12ba2a87db56",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "2c4623a40ca936af",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "content/zh/friends/_index.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "c261623c02c6c4f5",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "5ebb2dc8463b94c9",
+  "lastOpenFiles": [
+    "content/zh/friends/_index.md",
+    "content/zh/posts/_index.md",
+    "modules/友链模板.md",
+    "modules/博客模板.md",
+    "content/zh/_index.md"
+  ]
+}
