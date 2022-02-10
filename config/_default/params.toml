@@ -4,7 +4,7 @@ description = "The site of Calvin Haynes's Blog"
 custom_css = ["css/my.css", "css/fonts-zh.css", "css/fonts-code.css", "fontawesome/css/all.css", "css/pace.css"]
 custom_js = ["js/pace.min.js"]
 useFaviconGenerator = true # https://www.favicon-generator.org/
-meta_image = "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/Calvin.1nljooch7gio.webp"
+meta_image = ""
 themecolor = ""
 
 themeOptions = ["dark", "light", "solarized"] # dark, light, solarized, hacker, kimbie
@@ -20,7 +20,7 @@ enablePinnedPosts = true
 minItemsToShowInTagCloud = 2 # Minimum items to show in tag cloud
 
 # appbar
-enableAppbarSearchIcon = true
+enableAppbarSearchIcon = false
 enableAppbarLangIcon = false
 
 # header
@@ -33,7 +33,7 @@ showMobileMenuTerms = ["tags", "categories", "series"]
 # search
 enableSearch = true
 enableSearchHighlight = true
-searchResultPosition = "side" # side, main
+searchResultPosition = "main" # side, main
 searchContent = true # include content to search index
 searchDistance = 100 # fuse option
 searchThreshold = 0.4 # 0.0: exact match, 1.0: any match
