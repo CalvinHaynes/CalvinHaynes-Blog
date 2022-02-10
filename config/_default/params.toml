@@ -33,7 +33,7 @@ showMobileMenuTerms = ["tags", "categories", "series"]
 # search
 enableSearch = true
 enableSearchHighlight = true
-searchResultPosition = "main" # side, main
+searchResultPosition = "side" # side, main
 searchContent = true # include content to search index
 searchDistance = 100 # fuse option
 searchThreshold = 0.4 # 0.0: exact match, 1.0: any match
@@ -190,7 +190,7 @@ commento = false
   matrix = ""
   xmpp = ""
   dev-to = ""
-  gitea = ""
+  gitea = "https://gitee.com/CalvinHaynes"
   google-scholar = ""
 
 [donationOptions]
@@ -209,11 +209,12 @@ commento = false
 
 # possible share name: ["facebook","twitter", "reddit", "linkedin", "tumblr", "weibo", "douban", "line", "pocket", "feedly", "hatena", "pinterest", "delicious", "google"]
 [[share]]
-  name = "facebook"
-  username = ""
-[[share]]
   name = "twitter"
 [[share]]
   name = "weibo"
 [[share]]
+  name = "google"
+[[share]]
   name = "linkedin"
+[[share]]
+  name = "douban"
