@@ -22,26 +22,5 @@ header:
     align: center
     fontSize: 44
     fontColor: #cb4b16 
-  
-  - type: img
-    imageSrc: images/header/background.jpg
-    imageSize: cover
-    imageRepeat: no-repeat
-    imagePosition: center
-    height: 235
-    paddingX: 50
-    paddingY: 0
-    align: center
-    title:
-      -
-    subtitle:
-      -
-    titleColor:
-    titleShadow: true
-    titleFontSize: 44
-    subtitleColor:
-    subtitleCursive: true
-    subtitleFontSize: 16
-    spaceBetweenTitleSubtitle: 20
 
 ---
