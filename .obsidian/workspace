@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "content/zh/friends/_index.md",
+            "file": "content/zh/posts/基于Docker的Hadoop集群配置Spark并简单使用.md",
             "mode": "source",
             "source": false
           }
@@ -69,13 +69,13 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/zh/friends/_index.md",
-                "collapseAll": false,
+                "file": "content/zh/posts/基于Docker的Hadoop集群配置Spark并简单使用.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
-                "backlinkCollapsed": false,
+                "backlinkCollapsed": true,
                 "unlinkedCollapsed": true
               }
             }
@@ -85,7 +85,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "content/zh/posts/基于Docker的Hadoop集群配置Spark并简单使用.md"
+              }
             }
           }
         ]
@@ -97,6 +99,8 @@
   },
   "active": "5ebb2dc8463b94c9",
   "lastOpenFiles": [
+    "content/zh/posts/基于Docker的Hadoop集群配置Spark并简单使用.md",
+    "themes/zzo/exampleSite/content/en/posts/test-chartjs.md",
     "content/zh/friends/_index.md",
     "content/zh/posts/_index.md",
     "modules/友链模板.md",

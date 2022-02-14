@@ -3,6 +3,7 @@ title: "我的朋友们"
 type: "about"
 description: "Calvin的友情链接" 
 date: "2021-8-4"
+titleWrap: wrap
 ---
 
 <div class="sidebar-block">
@@ -15,6 +16,5 @@ date: "2021-8-4"
       <a target="_blank" href="https://xf2021.com/" title="小费同学" class="friendurl">小费同学<br><span class="link-description">一个不务正业的小弟～QAQ</span></a>
     </div>
   </div>
-
   
 </div>
