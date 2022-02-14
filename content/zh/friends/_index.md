@@ -1,9 +1,8 @@
 ---
 title: "我的朋友们"
-type: "friends"
 description: "Calvin的友情链接" 
-date: "2021-8-4"
-titleWrap: wrap
+date: "2022-2-14"
+type: "about"
 ---
 
 <div class="sidebar-block">
