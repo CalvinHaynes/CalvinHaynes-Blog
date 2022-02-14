@@ -2,7 +2,7 @@
 title: "我的朋友们"
 description: "Calvin的友情链接" 
 date: "2022-2-14"
-type: "about"
+type: "archive"
 ---
 
 <div class="sidebar-block">
