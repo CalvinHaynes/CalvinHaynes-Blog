@@ -3,36 +3,32 @@
 {{ $isPad = or $isPad (and (eq .Kind "section") (eq .Type "publication")) }}
 {{ $isPad = or $isPad (and (eq .Type "tags") (ne .Kind "taxonomyTerm")) }}
 
-{{ if eq .Type "posts" }}
-<div class="wrapper__left" style="left: 2px" data-pad="true" dir="ltr">
-<div class="join-us" style="margin-top: 10px;height: 470px;background-image: linear-gradient(to left,#44bd93,#26a678);">
-  <img class="modalImage" src="https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting@three/img/20210411233552.png" alt="icon"></img>
-  <p style="color: #fff">KubeSphere 愿景是打造一个以 Kubernetes 为内核的云原生分布式操作系统，它的架构可以非常方便地使第三方应用与云原生生态组件进行即插即用（plug-and-play）的集成，支持云原生应用在多云与多集群的统一分发和运维管理。</p>
-  <img class="modalImage" style="max-width: 90%" src="https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting@three/img/20210412004915.png" alt="icon"></img>
-  <p style="height: 38px;text-align: center;background-image: linear-gradient(to bottom,rgba(0,0,0,0),rgba(0,0,0,0.1) 97%),linear-gradient(to bottom,#242e42,#242e42);border-radius: 28px;color: white;padding-top: 6px;font-size: 18px;position: absolute;margin: auto;left: 20%;right: 20%;bottom: 5.6%;">
-  <a href="https://kubesphere.com.cn/" target="_blank">
-  了解详情
-  </a>
-  </p>
+{{ if eq ($.Param "languagedir") "rtl" }}
+<div class="wrapper__left hide" data-pad="{{ $isPad }}" dir="rtl">
+  <script>document.querySelector('.wrapper__left').classList.remove('hide')</script>
+  {{ if and (eq ($.Param "tocPosition") "outer") .IsPage }}
+    {{ if and (ne .Type "about") (ne .Type "contact") (ne .Type "gallery") }}
+      {{ if or ($.Param "enableToc") ($.Param "toc") }}
+        <div class="toc__flexbox--outer" data-position="fixed" data-dir="rtl" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
+          <h6 class="toc__title toc__title--outer" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">{{ i18n "toc-label" }}</h6>
+          {{ if $.Param "enableTocSwitch" }}
+          <label class="switch" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
+            <input id="visible-toc" aria-label="Visible TOC" type="checkbox" {{ if $.Param "hideToc" }}{{ else }}checked{{ end }}>
+            <span class="slider round"></span>
+          </label>
+          {{ end }}
+        </div>
+        <div class="toc toc__outer {{ if $.Param "hideToc" }}hide{{ end }}" data-dir="rtl" data-folding="{{ if $.Param "tocFolding" }}true{{ else }}false{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
+          {{ .TableOfContents }}
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
 </div>
-<div class="join-us" style="top: 500px">
-  <img class="modalImage" src="https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting@three/img/modal-content.svg" alt="icon"></img>
-  <h2>欢迎加入</h2>
-  <p>扫码加入微信群，和云原生大佬们一起探讨云原生和不可描述的事情！</p>
-  <div>
-    <div class="slack">
-      <img style="width: 70px" src="https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting@three/img/20210411173306.png"></img>
-      <p>
-        <a href="https://t.me/gsealyun" target="_blank">
-          加入 Telegram
-        </a>
-      </p>
-    </div>
-    <div class="wechat">
-      <img style="width: 100px" src="https://cdn.jsdelivr.net/gh/yangchuansheng/imghosting/img/20200430221955.png"></img>
-      <p style="color: black">扫码加入微信群</p>
+{{ else if and (eq ($.Param "languagedir") "ltr") ($.Param "enableSidebarMenu") }}
+  <div class="wrapper__left" data-pad="{{ $isPad }}" dir="ltr">
+    <div class="sidebar__menu">
+      {{ partial "sidebar/sidebar-menu" . }}
     </div>
   </div>
-</div>
-</div>
 {{ end }}
