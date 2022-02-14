@@ -1,6 +1,6 @@
 ---
 title: "我的朋友们"
-type: "about"
+type: "friends"
 description: "Calvin的友情链接" 
 date: "2021-8-4"
 titleWrap: wrap
