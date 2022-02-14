@@ -3,7 +3,7 @@
   "name": "Hugo Zzo theme",
   "short_name": "Hugo Zzo theme",
   "version": "1.0.0",
-  "default_locale": "en",
+  "default_locale": "zh",
   "description": "Hugo blog theme with rich features",
   "start_url": "https://themes.gohugo.io/theme/hugo-theme-zzo/",
   "icons": [
