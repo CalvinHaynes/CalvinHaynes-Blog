@@ -14,7 +14,7 @@
     {{ end }}
     {{ if ne .Site.Params.logoType "long" }}
       <a href="{{ "/" | relLangURL }}" title="{{ i18n "tooltip-home" }}" rel="home" class="navbar__title-link">
-        <h6 class="navbar__title">{{ .Site.Params.logoText }}</h6>
+        <h6 class="navbar__title"><i class="fas fa-dharmachakra fa-spin"></i> {{ .Site.Params.logoText }}</h6>
       </a>
     {{ end }}
   {{ end }}

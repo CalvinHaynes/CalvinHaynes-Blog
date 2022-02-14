@@ -20,6 +20,7 @@
       {{ partial "body/infos" . }}
       {{ partial "body/tags" . }}
     </div>
+    {{ partial "ad.html" . }}
     <article class="single__contents" data-dir="{{ if ne ($.Param "languagedir") "rtl" }}ltr{{ else }}rtl{{ end }}" data-ani="{{ $.Site.Params.enableUiAnimation | default "true" }}">
       {{ partial "body/toc" . }}
       {{ $regex := "(?i)src\\s*=\\s*\"([^\"]*(png|jpg|jpeg|gif|bmp|svg))\"" }}
@@ -41,8 +42,8 @@
     {{ partial "body/whoami" . }}
     {{ partial "body/related" . }}
     {{ partial "pagination/pagination-single" . }}
-    <!-- <img src="/images/wechat-qr.png" alt="公众号二维码"> -->
-    {{ partial "comments/comment.html" . }}
+    <img src="/images/wechat-qr.png" alt="公众号二维码">
+    {{ partial "comments/disqus-proxy.html" . }}
     {{ partial "body/photoswipe" . }}
 
     <div class="hide">
