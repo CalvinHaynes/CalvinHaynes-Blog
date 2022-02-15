@@ -20,7 +20,7 @@ tags:
 - "Vscode"
 - "CSLab"
 categories: "计算机基础"
-img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/Wallpaper/wallpaper-12-type.jpg"
+img: "https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/MIT6S081.2w2dhio485k0.jpg"
 ---
 ## 前言
 
