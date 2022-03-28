@@ -81,11 +81,11 @@
   url = "showcase/"
   weight = 13
 
-[[main]]
-  identifier = "books"
-  name = "电子书"
-  pre = '<i class="fas fa-book"></i>'
-  weight = 15
+# [[main]]
+#   identifier = "books"
+#   name = "电子书"
+#   pre = '<i class="fas fa-book"></i>'
+#   weight = 15
 
 # [[main]]
 #   parent = "books"
@@ -99,11 +99,11 @@
 #   url = "prometheus/"
 #   weight = 2
 
-[[main]]
-  parent = "books"
-  name = "Go 入门指南"
-  url = "the-way-to-go/"
-  weight = 3
+# [[main]]
+#   parent = "books"
+#   name = "Go 入门指南"
+#   url = "the-way-to-go/"
+#   weight = 3
 
 # [[main]]
 #   parent = "books"
