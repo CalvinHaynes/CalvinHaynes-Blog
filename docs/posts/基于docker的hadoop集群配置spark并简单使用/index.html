@@ -11,7 +11,7 @@
   
   
     
-    <script defer src="/js/pace.min.min.c6a4db3975288e1a55878e385454577812b965bc25d4e7d1d11b529065505758.js"></script>
+    <script defer src="/js/pace.min.min.32721a28710a610374c71da8af655134fa57ee9dd7ad46b122ae1f3de43df089.js"></script>
   
 
 
@@ -26,9 +26,9 @@
 
 <script defer src="/js/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.1551b6dbdacc77e412a26a29d3b84d2dcdc8f05c3b617433a475dc53c8872bdb.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
 
@@ -1386,7 +1386,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="基于Docker的Hadoop集群配置Spark并简单使用">
 
-<meta name="generator" content="Hugo 0.92.1" />
+<meta name="generator" content="Hugo 0.96.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1922,21 +1922,21 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#SCALA Variables</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span>/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
-<span class="nb">export</span> <span class="nv">HADOOP_CLASSPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span>/lib/tools.jar
-<span class="nb">export</span> <span class="nv">SCALA_HOME</span><span class="o">=</span>/usr/local/scala
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$SCALA_HOME</span>/bin
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$SCALA_HOME</span>/sbin
-<span class="c1">#SCALA Variables</span>
-<span class="c1">#SPARK Variables</span>
-<span class="nb">export</span> <span class="nv">SPARK_HOME</span><span class="o">=</span>/usr/local/spark
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$SPARK_HOME</span>/bin
-<span class="nb">export</span> <span class="nv">SPARK_DIST_CLASSPATH</span><span class="o">=</span>/usr/local/hadoop/bin/hadoop
-<span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$SPARK_HOME</span>/python/:<span class="nv">$SPARK_HOME</span>/python/lib/py4j-0.10.6-src.zip:<span class="nv">$PYTHONPATH</span>
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$SPARK_HOME</span>/sbin
-<span class="c1">#SPARK Variables</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#SCALA Variables</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span>/bin:<span class="si">${</span><span class="nv">PATH</span><span class="si">}</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HADOOP_CLASSPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">JAVA_HOME</span><span class="si">}</span>/lib/tools.jar
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SCALA_HOME</span><span class="o">=</span>/usr/local/scala
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$SCALA_HOME</span>/bin
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$SCALA_HOME</span>/sbin
+</span></span><span class="line"><span class="cl"><span class="c1">#SCALA Variables</span>
+</span></span><span class="line"><span class="cl"><span class="c1">#SPARK Variables</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SPARK_HOME</span><span class="o">=</span>/usr/local/spark
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$SPARK_HOME</span>/bin
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SPARK_DIST_CLASSPATH</span><span class="o">=</span>/usr/local/hadoop/bin/hadoop
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$SPARK_HOME</span>/python/:<span class="nv">$SPARK_HOME</span>/python/lib/py4j-0.10.6-src.zip:<span class="nv">$PYTHONPATH</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$SPARK_HOME</span>/sbin
+</span></span><span class="line"><span class="cl"><span class="c1">#SPARK Variables</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>更新bash配置</strong>：</p>
 <div class="highlight"><div class="chroma">
@@ -1944,8 +1944,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"> <span class="nb">source</span> ~/.bashrc
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"> <span class="nb">source</span> ~/.bashrc
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="4---配置spark配置文件conf目录">4 - 配置Spark配置文件（conf目录）</h2>
 <h3 id="1---spark-envsh文件">1 - <strong>spark-env.sh文件</strong></h3>
@@ -1971,17 +1971,17 @@
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">SPARK_DIST_CLASSPATH</span><span class="o">=</span>/usr/local/hadoop/bin/hadoop
-<span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-8-openjdk-amd64
-<span class="nb">export</span> <span class="nv">SCALA_HOME</span><span class="o">=</span>/usr/local/scala
-<span class="nb">export</span> <span class="nv">HADOOP_HOME</span><span class="o">=</span>/usr/local/hadoop
-<span class="nb">export</span> <span class="nv">HADOOP_CONF_DIR</span><span class="o">=</span>/usr/local/hadoop/etc/hadoop
-<span class="nb">export</span> <span class="nv">SPARK_MASTER_HOST</span><span class="o">=</span>172.18.0.2
-<span class="nb">export</span> <span class="nv">SPARK_HOME</span><span class="o">=</span>/usr/local/spark
-<span class="nb">export</span> <span class="nv">SPARK_WORKER_CORES</span><span class="o">=</span><span class="m">1</span>
-<span class="nb">export</span> <span class="nv">SPARK_WORKER_MEMORY</span><span class="o">=</span>512m
-<span class="nb">export</span> <span class="nv">SPARK_WORKER_INSTANCES</span><span class="o">=</span><span class="m">2</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SPARK_DIST_CLASSPATH</span><span class="o">=</span>/usr/local/hadoop/bin/hadoop
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-8-openjdk-amd64
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SCALA_HOME</span><span class="o">=</span>/usr/local/scala
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HADOOP_HOME</span><span class="o">=</span>/usr/local/hadoop
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HADOOP_CONF_DIR</span><span class="o">=</span>/usr/local/hadoop/etc/hadoop
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SPARK_MASTER_HOST</span><span class="o">=</span>172.18.0.2
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SPARK_HOME</span><span class="o">=</span>/usr/local/spark
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SPARK_WORKER_CORES</span><span class="o">=</span><span class="m">1</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SPARK_WORKER_MEMORY</span><span class="o">=</span>512m
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">SPARK_WORKER_INSTANCES</span><span class="o">=</span><span class="m">2</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="2---workers">2 - Workers</h3>
 <pre tabindex="0"><code class="language-workers" data-lang="workers">#
@@ -1989,13 +1989,13 @@
 # contributor license agreements.  See the NOTICE file distributed with
 # this work for additional information regarding copyright ownership.
 # The ASF licenses this file to You under the Apache License, Version 2.0
-# (the &quot;License&quot;); you may not use this file except in compliance with
+# (the &#34;License&#34;); you may not use this file except in compliance with
 # the License.  You may obtain a copy of the License at
 #
 #    http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
@@ -2015,13 +2015,13 @@ slave2
 # contributor license agreements.  See the NOTICE file distributed with
 # this work for additional information regarding copyright ownership.
 # The ASF licenses this file to You under the Apache License, Version 2.0
-# (the &quot;License&quot;); you may not use this file except in compliance with
+# (the &#34;License&#34;); you may not use this file except in compliance with
 # the License.  You may obtain a copy of the License at
 #
 #    http://www.apache.org/licenses/LICENSE-2.0
 #
 # Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# distributed under the License is distributed on an &#34;AS IS&#34; BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
@@ -2036,7 +2036,7 @@ log4j.appender.console.layout.ConversionPattern=%d{yy/MM/dd HH:mm:ss} %p %c{1}: 
 
 # Set the default spark-shell/spark-sql log level to WARN. When running the
 # spark-shell/spark-sql, the log level for these classes is used to overwrite
-# the root logger's log level, so that the user can have different defaults
+# the root logger&#39;s log level, so that the user can have different defaults
 # for the shell and regular Spark apps.
 log4j.logger.org.apache.spark.repl.Main=WARN
 log4j.logger.org.apache.spark.sql.hive.thriftserver.SparkSQLCLIDriver=WARN
@@ -2058,7 +2058,6 @@ log4j.logger.org.apache.hadoop.hive.ql.exec.FunctionRegistry=ERROR
 log4j.appender.console.filter.1=org.apache.log4j.varia.StringMatchFilter
 log4j.appender.console.filter.1.StringToMatch=Thrift error occurred during processing of message
 log4j.appender.console.filter.1.AcceptOnMatch=false
-
 </code></pre><h2 id="5---启动spark">5 - 启动Spark</h2>
 <ul>
 <li>
@@ -2102,15 +2101,15 @@ log4j.appender.console.filter.1.AcceptOnMatch=false
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="k">#</span> <span class="n">接续上次文章中上传的文件</span>
-<span class="k">val</span> <span class="n">textFile</span> <span class="k">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="o">(</span><span class="s">&#34;hdfs:///calvinhaynes/README.txt&#34;</span><span class="o">)</span>
-<span class="n">textFile</span><span class="o">.</span><span class="n">first</span><span class="o">()</span>
-<span class="k">val</span> <span class="n">wordCount</span> <span class="k">=</span> <span class="n">textFile</span><span class="o">.</span><span class="n">flatMap</span><span class="o">(</span><span class="n">line</span> <span class="k">=&gt;</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="o">(</span><span class="s">&#34; &#34;</span><span class="o">)).</span><span class="n">map</span><span class="o">(</span><span class="n">word</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">word</span><span class="o">,</span> <span class="mi">1</span><span class="o">)).</span><span class="n">reduceByKey</span><span class="o">((</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">)</span>
-<span class="n">wordCount</span><span class="o">.</span><span class="n">collect</span><span class="o">()</span>
-<span class="n">textFile</span><span class="o">.</span><span class="n">count</span><span class="o">()</span>
-<span class="n">textFile</span><span class="o">.</span><span class="n">take</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span>
-<span class="k">:</span><span class="kt">quit</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-scala" data-lang="scala"><span class="line"><span class="cl"><span class="k">#</span> <span class="n">接续上次文章中上传的文件</span>
+</span></span><span class="line"><span class="cl"><span class="k">val</span> <span class="n">textFile</span> <span class="k">=</span> <span class="n">sc</span><span class="o">.</span><span class="n">textFile</span><span class="o">(</span><span class="s">&#34;hdfs:///calvinhaynes/README.txt&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">textFile</span><span class="o">.</span><span class="n">first</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="k">val</span> <span class="n">wordCount</span> <span class="k">=</span> <span class="n">textFile</span><span class="o">.</span><span class="n">flatMap</span><span class="o">(</span><span class="n">line</span> <span class="k">=&gt;</span> <span class="n">line</span><span class="o">.</span><span class="n">split</span><span class="o">(</span><span class="s">&#34; &#34;</span><span class="o">)).</span><span class="n">map</span><span class="o">(</span><span class="n">word</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">word</span><span class="o">,</span> <span class="mi">1</span><span class="o">)).</span><span class="n">reduceByKey</span><span class="o">((</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">wordCount</span><span class="o">.</span><span class="n">collect</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">textFile</span><span class="o">.</span><span class="n">count</span><span class="o">()</span>
+</span></span><span class="line"><span class="cl"><span class="n">textFile</span><span class="o">.</span><span class="n">take</span><span class="o">(</span><span class="mi">10</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="k">:</span><span class="kt">quit</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>运行效果如下：</li>
@@ -2596,7 +2595,7 @@ log4j.appender.console.filter.1.AcceptOnMatch=false
 </div>
 
 
-<script defer src="/js/swipe.min.d2e020e2d405fafaa45c0a10d2af949627bf554a9366c31a905af38f8cc30c30.js"></script>
+<script defer src="/js/swipe.min.32b4505a39624feed6faa09f12dd745a099b8811ea631c29cea9692c45984af8.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3675,7 +3674,7 @@ jQuery(document).ready(function($) {
 
         
 	    <div class="github-badge">
-	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.92.1</a></span>
+	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.96.0</a></span>
               <span class="badge-subject">托管于</span><span class="badge-value bg-brightgreen"><a style="color:#fff" href="https://cn.aliyun.com/" target="_blank">阿里云</a></span>
 	      
 	      <span class="badge-subject">图床</span><span class="badge-value bg-orange"><a style="color:#fff" href="https://picx.xpoet.cn/" target="_blank">picX</a></span>

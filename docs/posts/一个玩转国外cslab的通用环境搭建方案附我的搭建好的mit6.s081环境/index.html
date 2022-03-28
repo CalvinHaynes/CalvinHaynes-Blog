@@ -11,7 +11,7 @@
   
   
     
-    <script defer src="/js/pace.min.min.c6a4db3975288e1a55878e385454577812b965bc25d4e7d1d11b529065505758.js"></script>
+    <script defer src="/js/pace.min.min.32721a28710a610374c71da8af655134fa57ee9dd7ad46b122ae1f3de43df089.js"></script>
   
 
 
@@ -26,9 +26,9 @@
 
 <script defer src="/js/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.1551b6dbdacc77e412a26a29d3b84d2dcdc8f05c3b617433a475dc53c8872bdb.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
 
@@ -1386,7 +1386,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="一个玩转国外CSLab的通用环境搭建方案（附我的搭建好的MIT6.S081环境）">
 
-<meta name="generator" content="Hugo 0.92.1" />
+<meta name="generator" content="Hugo 0.96.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1915,21 +1915,21 @@
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;registry-mirrors&#34;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&#34;https://registry.docker-cn.com&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;http://hub-mirror.c.163.com&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;https://xzahxrmt.mirror.aliyuncs.com&#34;</span>
-  <span class="p">],</span>
-  <span class="nt">&#34;insecure-registries&#34;</span><span class="p">:</span> <span class="p">[],</span>
-  <span class="nt">&#34;debug&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="nt">&#34;experimental&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-  <span class="nt">&#34;features&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;buildkit&#34;</span><span class="p">:</span> <span class="kc">true</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;registry-mirrors&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://registry.docker-cn.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;http://hub-mirror.c.163.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://docker.mirrors.ustc.edu.cn&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;https://xzahxrmt.mirror.aliyuncs.com&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;insecure-registries&#34;</span><span class="p">:</span> <span class="p">[],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;debug&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;experimental&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;features&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;buildkit&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -2011,71 +2011,71 @@
 </span><span class="lnt">64
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="k">FROM</span><span class="s"> ubuntu:20.04</span><span class="err">
-</span><span class="err"></span><span class="k">ARG</span> <span class="nv">arch_name</span><span class="o">=</span>amd64
-
-<span class="c"># 前几步因为针对本实验依赖不全的原因问题百出，所以放弃了，还是ubuntu20.04官方镜像源对于MIT6.S081所需依赖最全面</span><span class="err">
-</span><span class="err"></span><span class="c"># 1.备份源列表</span><span class="err">
-</span><span class="err"></span><span class="c"># RUN cp /etc/apt/sources.list /etc/apt/sources.backup.list</span><span class="err">
-</span><span class="err"></span><span class="c"># 2.把本目录下的sources.list中的镜像源添加到Docker中，下载速度起飞</span><span class="err">
-</span><span class="err"></span><span class="c"># COPY sources.list /etc/apt/sources.list</span><span class="err">
-</span><span class="err"></span><span class="c"># 3.更新源</span><span class="err">
-</span><span class="err"></span><span class="c"># RUN apt-get update </span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 创建一个mit6s081的用户和其home目录</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> useradd -m mit6s081 <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    <span class="nb">echo</span> <span class="s2">&#34;root ALL=(ALL) NOPASSWD: ALL&#34;</span> &gt;&gt; /etc/sudoers <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    <span class="nb">echo</span> <span class="s2">&#34;mit6s081 ALL=(ALL) NOPASSWD: ALL&#34;</span> &gt;&gt; /etc/sudoers <span class="err">
-</span><span class="err"></span>    <span class="err">
-</span><span class="err"></span><span class="c"># 设置一些环境变量</span><span class="err">
-</span><span class="err"></span><span class="k">ENV</span> <span class="nv">TZ</span><span class="o">=</span>Asia/Shanghai <span class="se">\
-</span><span class="se"></span>    <span class="nv">LANG</span><span class="o">=</span>en_US.utf8 <span class="se">\
-</span><span class="se"></span>    <span class="nv">LANGUAGE</span><span class="o">=</span>en_US.UTF-8 <span class="se">\
-</span><span class="se"></span>    <span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF-8 <span class="se">\
-</span><span class="se"></span>    <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="err">
-</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># MIT6.S081 Lab所用依赖</span><span class="err">
-</span><span class="err"></span><span class="c"># 1.安装RISC-V交叉编译工具和一些其他的常用工具</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    apt-get install -y sudo locales git wget vim build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu libpixman-1-dev gcc-riscv64-unknown-elf libglib2.0-dev pkg-config<span class="err">
-</span><span class="err"></span><span class="c"># 2.安装QEMU和配置QEMU</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> wget https://download.qemu.org/qemu-5.1.0.tar.xz <span class="err">
-</span><span class="err"></span><span class="k">RUN</span> tar xf qemu-5.1.0.tar.xz <span class="err">
-</span><span class="err"></span><span class="k">RUN</span> <span class="nb">cd</span> qemu-5.1.0 <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    ./configure --disable-kvm --disable-werror --prefix<span class="o">=</span>/usr/local --target-list<span class="o">=</span>riscv64-softmmu <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    make <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    make install<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 下载code-server并安装</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> apt-get install -y aria2 <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    aria2c https://github.com.cnpmjs.org/cdr/code-server/releases/download/v3.12.0/code-server_3.12.0_<span class="si">${</span><span class="nv">arch_name</span><span class="si">}</span>.deb <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    dpkg -i code-server_3.12.0_<span class="si">${</span><span class="nv">arch_name</span><span class="si">}</span>.deb<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 切换用户mit6s081</span><span class="err">
-</span><span class="err"></span><span class="k">USER</span><span class="s"> mit6s081</span><span class="err">
-</span><span class="err"></span><span class="c"># 下载一些code-server的插件</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> mkdir /home/mit6s081/extensions<span class="err">
-</span><span class="err"></span><span class="c"># 1.Markdown Extension</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> code-server --install-extension yzhang.markdown-all-in-one<span class="err">
-</span><span class="err"></span><span class="c"># 2.Cpp Extension</span><span class="err">
-</span><span class="err"></span><span class="k">ADD</span> cpptools-linux.vsix /home/mit6s081/extensions<span class="err">
-</span><span class="err"></span><span class="k">RUN</span> code-server --install-extension /home/mit6s081/extensions/cpptools-linux.vsix<span class="err">
-</span><span class="err"></span><span class="c"># 3.Material Theme Extension</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> code-server --install-extension equinusocio.vsc-material-theme <span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 切换回Root用户，拥有最高权限</span><span class="err">
-</span><span class="err"></span><span class="k">USER</span><span class="s"> root</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> apt-get update<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 暴露8848端口，用于code-server本地运行的端口</span><span class="err">
-</span><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 8848</span><span class="err">
-</span><span class="err"></span><span class="c"># 设置code-server密码</span><span class="err">
-</span><span class="err"></span><span class="k">ENV</span> <span class="nv">PASSWORD</span><span class="o">=</span>mit6s081
-
-<span class="k">USER</span><span class="s"> mit6s081</span><span class="err">
-</span><span class="err"></span><span class="k">CMD</span> <span class="p">[</span> <span class="s2">&#34;code-server&#34;</span><span class="p">,</span> <span class="s2">&#34;--bind-addr&#34;</span><span class="p">,</span> <span class="s2">&#34;0.0.0.0:8848&#34;</span><span class="p">,</span> <span class="s2">&#34;--auth&#34;</span><span class="p">,</span> <span class="s2">&#34;password&#34;</span> <span class="p">]</span><span class="err">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">FROM</span><span class="s"> ubuntu:20.04</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ARG</span> <span class="nv">arch_name</span><span class="o">=</span>amd64
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 前几步因为针对本实验依赖不全的原因问题百出，所以放弃了，还是ubuntu20.04官方镜像源对于MIT6.S081所需依赖最全面</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 1.备份源列表</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># RUN cp /etc/apt/sources.list /etc/apt/sources.backup.list</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 2.把本目录下的sources.list中的镜像源添加到Docker中，下载速度起飞</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># COPY sources.list /etc/apt/sources.list</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 3.更新源</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># RUN apt-get update </span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 创建一个mit6s081的用户和其home目录</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> useradd -m mit6s081 <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nb">echo</span> <span class="s2">&#34;root ALL=(ALL) NOPASSWD: ALL&#34;</span> &gt;&gt; /etc/sudoers <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nb">echo</span> <span class="s2">&#34;mit6s081 ALL=(ALL) NOPASSWD: ALL&#34;</span> &gt;&gt; /etc/sudoers <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span>    <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 设置一些环境变量</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ENV</span> <span class="nv">TZ</span><span class="o">=</span>Asia/Shanghai <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nv">LANG</span><span class="o">=</span>en_US.utf8 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nv">LANGUAGE</span><span class="o">=</span>en_US.UTF-8 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nv">LC_ALL</span><span class="o">=</span>en_US.UTF-8 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># MIT6.S081 Lab所用依赖</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 1.安装RISC-V交叉编译工具和一些其他的常用工具</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    apt-get install -y sudo locales git wget vim build-essential gdb-multiarch qemu-system-misc gcc-riscv64-linux-gnu binutils-riscv64-linux-gnu libpixman-1-dev gcc-riscv64-unknown-elf libglib2.0-dev pkg-config<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 2.安装QEMU和配置QEMU</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> wget https://download.qemu.org/qemu-5.1.0.tar.xz <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> tar xf qemu-5.1.0.tar.xz <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> <span class="nb">cd</span> qemu-5.1.0 <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    ./configure --disable-kvm --disable-werror --prefix<span class="o">=</span>/usr/local --target-list<span class="o">=</span>riscv64-softmmu <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    make <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    make install<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 下载code-server并安装</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> apt-get install -y aria2 <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    aria2c https://github.com.cnpmjs.org/cdr/code-server/releases/download/v3.12.0/code-server_3.12.0_<span class="si">${</span><span class="nv">arch_name</span><span class="si">}</span>.deb <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    dpkg -i code-server_3.12.0_<span class="si">${</span><span class="nv">arch_name</span><span class="si">}</span>.deb<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 切换用户mit6s081</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">USER</span><span class="s"> mit6s081</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 下载一些code-server的插件</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> mkdir /home/mit6s081/extensions<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 1.Markdown Extension</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> code-server --install-extension yzhang.markdown-all-in-one<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 2.Cpp Extension</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ADD</span> cpptools-linux.vsix /home/mit6s081/extensions<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> code-server --install-extension /home/mit6s081/extensions/cpptools-linux.vsix<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 3.Material Theme Extension</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> code-server --install-extension equinusocio.vsc-material-theme <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 切换回Root用户，拥有最高权限</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">USER</span><span class="s"> root</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> apt-get update<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 暴露8848端口，用于code-server本地运行的端口</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 8848</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 设置code-server密码</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ENV</span> <span class="nv">PASSWORD</span><span class="o">=</span>mit6s081
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">USER</span><span class="s"> mit6s081</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span> <span class="s2">&#34;code-server&#34;</span><span class="p">,</span> <span class="s2">&#34;--bind-addr&#34;</span><span class="p">,</span> <span class="s2">&#34;0.0.0.0:8848&#34;</span><span class="p">,</span> <span class="s2">&#34;--auth&#34;</span><span class="p">,</span> <span class="s2">&#34;password&#34;</span> <span class="p">]</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>写好<code>Dockerfile</code>之后，直接<code>docker build -t &lt;镜像名&gt;:&lt;版本号/标签&gt; .</code>就构建好镜像了，注意后面那个<code>.</code>可不能省略，具体原因看<a href="https://yeasy.gitbook.io/docker_practice/image/build#jing-xiang-gou-jian-shang-xia-wen-context">这里</a></li>
@@ -2100,15 +2100,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Please <span class="k">select</span> the geographic area in which you live. Subsequent configuration
-questions will narrow this down by presenting a list of cities, representing
-the <span class="nb">time</span> zones in which they are located.
-
-  1. Africa      4. Australia  7. Atlantic  10. Pacific  13. Etc
-  2. America     5. Arctic     8. Europe    11. SystemV
-  3. Antarctica  6. Asia       9. Indian    12. US
-Geographic area:
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Please <span class="k">select</span> the geographic area in which you live. Subsequent configuration
+</span></span><span class="line"><span class="cl">questions will narrow this down by presenting a list of cities, representing
+</span></span><span class="line"><span class="cl">the <span class="nb">time</span> zones in which they are located.
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  1. Africa      4. Australia  7. Atlantic  10. Pacific  13. Etc
+</span></span><span class="line"><span class="cl">  2. America     5. Arctic     8. Europe    11. SystemV
+</span></span><span class="line"><span class="cl">  3. Antarctica  6. Asia       9. Indian    12. US
+</span></span><span class="line"><span class="cl">Geographic area:
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>可以通过配置环境变量，来跳过这个步骤</strong></p>
 <div class="highlight"><div class="chroma">
@@ -2116,8 +2116,8 @@ Geographic area:
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="k">ENV</span> <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">ENV</span> <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="2">
 <li>RUN的使用不当，导致环境搭建过程中一直出错</li>
@@ -2132,11 +2132,11 @@ Geographic area:
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="k">RUN</span> <span class="nb">cd</span> qemu-5.1.0 <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    ./configure --disable-kvm --disable-werror --prefix<span class="o">=</span>/usr/local --target-list<span class="o">=</span>riscv64-softmmu <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    make <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    make install<span class="err">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="k">RUN</span> <span class="nb">cd</span> qemu-5.1.0 <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    ./configure --disable-kvm --disable-werror --prefix<span class="o">=</span>/usr/local --target-list<span class="o">=</span>riscv64-softmmu <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    make <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    make install<span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果不用<code>&amp;&amp;</code>和<code>\</code>关联各行的话，比如第一行<code>cd</code>到那个<strong>qemu-5.1.0</strong>目录了，下一行**./configure<strong>执行的时候在新的一层了，就一定会报错不存在</strong>./configure**（因为这个<strong>configure</strong>配置<strong>qemu</strong>的可执行文件就在<strong>qemu-5.1.0</strong>目录下）</p>
 <h2 id="使用篇">使用篇</h2>
@@ -2152,8 +2152,8 @@ Geographic area:
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker pull calvinhaynes412/mit6.s081:v1.3.1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull calvinhaynes412/mit6.s081:v1.3.1
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="然后去github上fork我上传的mit6s081原版纯净的实验环境"><strong>然后去Github上Fork我上传的MIT6.S081原版纯净的实验环境</strong></h4>
 <blockquote>
@@ -2200,8 +2200,8 @@ Geographic area:
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker pull registry.cn-beijing.aliyuncs.com/calvin_haynes/mit6.s081:release-v1.0.0
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull registry.cn-beijing.aliyuncs.com/calvin_haynes/mit6.s081:release-v1.0.0
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>之后<strong>创建一个Container</strong>的方法和上述一致</li>
@@ -2225,15 +2225,15 @@ Geographic area:
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo mkdir -p /etc/docker
-sudo tee /etc/docker/daemon.json <span class="s">&lt;&lt;-&#39;EOF&#39;
-</span><span class="s">{
-</span><span class="s">  &#34;registry-mirrors&#34;: [&#34;https://xzahxrmt.mirror.aliyuncs.com&#34;]
-</span><span class="s">}
-</span><span class="s">EOF</span>
-sudo systemctl daemon-reload
-sudo systemctl restart docker
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sudo mkdir -p /etc/docker
+</span></span><span class="line"><span class="cl">sudo tee /etc/docker/daemon.json <span class="s">&lt;&lt;-&#39;EOF&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s">{
+</span></span></span><span class="line"><span class="cl"><span class="s">  &#34;registry-mirrors&#34;: [&#34;https://xzahxrmt.mirror.aliyuncs.com&#34;]
+</span></span></span><span class="line"><span class="cl"><span class="s">}
+</span></span></span><span class="line"><span class="cl"><span class="s">EOF</span>
+</span></span><span class="line"><span class="cl">sudo systemctl daemon-reload
+</span></span><span class="line"><span class="cl">sudo systemctl restart docker
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="3">
 <li>pull镜像（最新版本，之后版本更新的通知我会在评论区说明，记得偶尔来看看）</li>
@@ -2243,8 +2243,8 @@ sudo systemctl restart docker
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker pull registry.cn-beijing.aliyuncs.com/calvin_haynes/mit6.s081:release-v1.3.1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker pull registry.cn-beijing.aliyuncs.com/calvin_haynes/mit6.s081:release-v1.3.1
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="4">
 <li>clone实验源代码(<strong>我还会慢慢在这个项目中增加我学习过程中的笔记和实验代码等资料,如果对你有帮助的话,希望帮我点个<code>STAR</code>哦</strong>)</li>
@@ -2254,8 +2254,8 @@ sudo systemctl restart docker
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/CalvinHaynes/MIT6.S081-2020-labs &lt;放实验文件的任何你想要放的位置&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git clone https://github.com/CalvinHaynes/MIT6.S081-2020-labs &lt;放实验文件的任何你想要放的位置&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="5">
 <li>创建Container（<code>-u 0:0</code>是为了保证<code>Container</code>中的<code>root</code>用户和本机的<code>root</code>用户权限一致,不过其实不建议用<code>root</code>权限，所以如果本机和<code>Container</code>的其他非<code>root</code>用户有相同的<code>uid</code>的话最好 <code>-u uid:uid</code>）</li>
@@ -2265,8 +2265,8 @@ sudo systemctl restart docker
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker run -p 8848:8848 --name<span class="o">=</span>mit6.s081 -u 0:0 -v <span class="s2">&#34;&lt;刚才clone的项目的位置&gt;:&lt;设置一个Container中的位置映射到前面的clone的项目的位置&gt;&#34;</span> registry.cn-beijing.aliyuncs.com/calvin_haynes/mit6.s081:release-v1.3.1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">docker run -p 8848:8848 --name<span class="o">=</span>mit6.s081 -u 0:0 -v <span class="s2">&#34;&lt;刚才clone的项目的位置&gt;:&lt;设置一个Container中的位置映射到前面的clone的项目的位置&gt;&#34;</span> registry.cn-beijing.aliyuncs.com/calvin_haynes/mit6.s081:release-v1.3.1
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="6">
 <li>本地用户浏览器访问 <strong>http://localhost:8848/</strong>  密码： <strong>mit6s081</strong>.</li>
@@ -2654,7 +2654,7 @@ sudo systemctl restart docker
     <ul class="related-ul">
         
         <li>
-          <a href="/posts/%E4%B8%8A%E8%AF%BE%E6%91%B8%E9%B1%BC%E5%BF%85%E5%A4%87-vscode%E7%BD%91%E9%A1%B5%E7%89%88%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" class="related__link">上课摸鱼必备 -- Vscode网页版的搭建教程</a>
+          <a href="/posts/%E4%B8%8A%E8%AF%BE%E6%91%B8%E9%B1%BC%E5%BF%85%E5%A4%87--vscode%E7%BD%91%E9%A1%B5%E7%89%88%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" class="related__link">上课摸鱼必备 -- Vscode网页版的搭建教程</a>
         </li>
         
     </ul>
@@ -2748,7 +2748,7 @@ sudo systemctl restart docker
 </div>
 
 
-<script defer src="/js/swipe.min.d2e020e2d405fafaa45c0a10d2af949627bf554a9366c31a905af38f8cc30c30.js"></script>
+<script defer src="/js/swipe.min.32b4505a39624feed6faa09f12dd745a099b8811ea631c29cea9692c45984af8.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -3827,7 +3827,7 @@ jQuery(document).ready(function($) {
 
         
 	    <div class="github-badge">
-	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.92.1</a></span>
+	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.96.0</a></span>
               <span class="badge-subject">托管于</span><span class="badge-value bg-brightgreen"><a style="color:#fff" href="https://cn.aliyun.com/" target="_blank">阿里云</a></span>
 	      
 	      <span class="badge-subject">图床</span><span class="badge-value bg-orange"><a style="color:#fff" href="https://picx.xpoet.cn/" target="_blank">picX</a></span>

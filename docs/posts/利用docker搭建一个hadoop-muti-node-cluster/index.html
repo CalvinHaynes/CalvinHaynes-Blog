@@ -11,7 +11,7 @@
   
   
     
-    <script defer src="/js/pace.min.min.c6a4db3975288e1a55878e385454577812b965bc25d4e7d1d11b529065505758.js"></script>
+    <script defer src="/js/pace.min.min.32721a28710a610374c71da8af655134fa57ee9dd7ad46b122ae1f3de43df089.js"></script>
   
 
 
@@ -26,9 +26,9 @@
 
 <script defer src="/js/lazysizes.min.876b4c12685e991d88378c1b6dd3638fd2da0c88f3c24da1ada950c1f26604e1.js"></script>
 
-<script defer src="/js/helper/getParents.min.ccd45f158c1b17849307ba913a72beac239c410f2b6e648496a79842da84e55b.js"></script>
+<script defer src="/js/helper/getParents.min.cd44056d552c69703dced61ae60f99166a0ddf44be93d6aa5d5127d98bf98984.js"></script>
 
-<script defer src="/js/helper/fadeinout.min.1d13d3e810c3940e80cbba6216a1c76fbf42b5431fc83537ea6997863802362b.js"></script>
+<script defer src="/js/helper/fadeinout.min.1551b6dbdacc77e412a26a29d3b84d2dcdc8f05c3b617433a475dc53c8872bdb.js"></script>
 
 <script defer src="/js/helper/closest.min.js"></script>
 
@@ -1386,7 +1386,7 @@
 <meta property="og:type" content="article">
 <meta property="og:description" content="利用Docker搭建一个多节点服务器集群">
 
-<meta name="generator" content="Hugo 0.92.1" />
+<meta name="generator" content="Hugo 0.96.0" />
 <meta name="msapplication-TileColor" content="#fff">
 
 <meta name="theme-color" content="#fff">
@@ -1947,75 +1947,75 @@
 </span><span class="lnt">68
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="c"># 实验一利用Hadoop搭建服务器集群的基础环境Dockerfile</span><span class="err">
-</span><span class="err"></span><span class="k">FROM</span><span class="s"> ubuntu:20.04</span><span class="err">
-</span><span class="err"></span><span class="k">ARG</span> <span class="nv">arch_name</span><span class="o">=</span>amd64
-
-<span class="c"># 1.备份源列表</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> cp /etc/apt/sources.list /etc/apt/sources.backup.list<span class="err">
-</span><span class="err"></span><span class="c"># 2.把本目录下的sources.list中的镜像源添加到Docker中，下载速度起飞</span><span class="err">
-</span><span class="err"></span><span class="k">COPY</span> sources.list /etc/apt/sources.list<span class="err">
-</span><span class="err"></span><span class="c"># 3.更新源</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> apt-get update <span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 翻墙代理</span><span class="err">
-</span><span class="err"></span><span class="c"># RUN export hostip=$(cat /etc/resolv.conf |grep -oP &#39;(?&lt;=nameserver\ ).*&#39;) &amp;&amp; \</span><span class="err">
-</span><span class="err"></span><span class="c"># export https_proxy=&#34;http://${hostip}:7890&#34; &amp;&amp; \</span><span class="err">
-</span><span class="err"></span><span class="c"># export http_proxy=&#34;http://${hostip}:7890&#34;</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 设置一些环境变量</span><span class="err">
-</span><span class="err"></span><span class="k">ENV</span> <span class="nv">TZ</span><span class="o">=</span>Asia/Shanghai <span class="se">\
-</span><span class="se"></span>    <span class="nv">LANG</span><span class="o">=</span>en_US.utf8 <span class="se">\
-</span><span class="se"></span>    <span class="nv">LANGUAGE</span><span class="o">=</span>en_US.UTF-8 <span class="se">\
-</span><span class="se"></span>    <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 安装一些Hadoop集群需要的基本环境和辅助程序</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> apt-get install -y openjdk-8-jdk sudo vim ssh openssl wget openssh-server openssh-client net-tools iputils-ping<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># pdsh全称是parallel distributed shell，可以并行执行对远程目标主机的操作，利于解决批量执行命令或分发任务的运维需求。</span><span class="err">
-</span><span class="err"></span><span class="c"># 适用于大批量服务器的配置，部署，文件复制等运维操作。</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> apt-get install -y pdsh <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    <span class="nb">echo</span> ssh &gt;&gt; /etc/pdsh/rcmd_default<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># SSH配置</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> ssh-keygen -t rsa -P <span class="s2">&#34;&#34;</span> -f ~/.ssh/id_rsa <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    chmod <span class="m">600</span> ~/.ssh/authorized_keys <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    chmod <span class="m">700</span> ~/.ssh <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    <span class="nb">echo</span> <span class="s2">&#34;service ssh start&#34;</span> &gt;&gt; ~/.bashrc <span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 安装Hadoop</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> wget https://dlcdn.apache.org/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    tar -xzf hadoop-3.2.2.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    mv hadoop-3.2.2 /usr/local/hadoop <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    rm hadoop-3.2.2.tar.gz <span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 安装Scala</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> wget  https://downloads.lightbend.com/scala/2.12.6/scala-2.12.6.tgz <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    tar -xzf scala-2.12.6.tgz <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    mv scala-2.12.6 /usr/local/scala <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    rm scala-2.12.6.tgz<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 安装Spark</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> wget https://dlcdn.apache.org/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2-scala2.13.tgz <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    tar -xzf spark-3.2.0-bin-hadoop3.2-scala2.13.tgz <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    mv spark-3.2.0-bin-hadoop3.2-scala2.13 /usr/local/spark <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    rm spark-3.2.0-bin-hadoop3.2-scala2.13.tgz<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 创建一些目录，一会儿配置Hadoop文件要用到</span><span class="err">
-</span><span class="err"></span><span class="k">RUN</span> mkdir -p /usr/local/hadoop/hadoop_data/hdfs <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/tmp <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/namenode <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/datanode <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/edits <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/checkpoints <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/checkpoints/edits<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c"># 开放Hadoop相关端口，方便外部进行访问</span><span class="err">
-</span><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 8088 50090 9864 19888 50070 8080</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;/bin/bash&#34;</span><span class="p">]</span><span class="err">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-dockerfile" data-lang="dockerfile"><span class="line"><span class="cl"><span class="c"># 实验一利用Hadoop搭建服务器集群的基础环境Dockerfile</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> ubuntu:20.04</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ARG</span> <span class="nv">arch_name</span><span class="o">=</span>amd64
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 1.备份源列表</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> cp /etc/apt/sources.list /etc/apt/sources.backup.list<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 2.把本目录下的sources.list中的镜像源添加到Docker中，下载速度起飞</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> sources.list /etc/apt/sources.list<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 3.更新源</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> apt-get update <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 翻墙代理</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># RUN export hostip=$(cat /etc/resolv.conf |grep -oP &#39;(?&lt;=nameserver\ ).*&#39;) &amp;&amp; \</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># export https_proxy=&#34;http://${hostip}:7890&#34; &amp;&amp; \</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># export http_proxy=&#34;http://${hostip}:7890&#34;</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 设置一些环境变量</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">ENV</span> <span class="nv">TZ</span><span class="o">=</span>Asia/Shanghai <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nv">LANG</span><span class="o">=</span>en_US.utf8 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nv">LANGUAGE</span><span class="o">=</span>en_US.UTF-8 <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nv">DEBIAN_FRONTEND</span><span class="o">=</span>noninteractive<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 安装一些Hadoop集群需要的基本环境和辅助程序</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> apt-get install -y openjdk-8-jdk sudo vim ssh openssl wget openssh-server openssh-client net-tools iputils-ping<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># pdsh全称是parallel distributed shell，可以并行执行对远程目标主机的操作，利于解决批量执行命令或分发任务的运维需求。</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 适用于大批量服务器的配置，部署，文件复制等运维操作。</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> apt-get install -y pdsh <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nb">echo</span> ssh &gt;&gt; /etc/pdsh/rcmd_default<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># SSH配置</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> ssh-keygen -t rsa -P <span class="s2">&#34;&#34;</span> -f ~/.ssh/id_rsa <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    cat ~/.ssh/id_rsa.pub &gt;&gt; ~/.ssh/authorized_keys <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chmod <span class="m">600</span> ~/.ssh/authorized_keys <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    chmod <span class="m">700</span> ~/.ssh <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nb">echo</span> <span class="s2">&#34;service ssh start&#34;</span> &gt;&gt; ~/.bashrc <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 安装Hadoop</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> wget https://dlcdn.apache.org/hadoop/common/hadoop-3.2.2/hadoop-3.2.2.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    tar -xzf hadoop-3.2.2.tar.gz <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    mv hadoop-3.2.2 /usr/local/hadoop <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    rm hadoop-3.2.2.tar.gz <span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 安装Scala</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> wget  https://downloads.lightbend.com/scala/2.12.6/scala-2.12.6.tgz <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    tar -xzf scala-2.12.6.tgz <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    mv scala-2.12.6 /usr/local/scala <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    rm scala-2.12.6.tgz<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 安装Spark</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> wget https://dlcdn.apache.org/spark/spark-3.2.0/spark-3.2.0-bin-hadoop3.2-scala2.13.tgz <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    tar -xzf spark-3.2.0-bin-hadoop3.2-scala2.13.tgz <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    mv spark-3.2.0-bin-hadoop3.2-scala2.13 /usr/local/spark <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    rm spark-3.2.0-bin-hadoop3.2-scala2.13.tgz<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 创建一些目录，一会儿配置Hadoop文件要用到</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> mkdir -p /usr/local/hadoop/hadoop_data/hdfs <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/tmp <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/namenode <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/datanode <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/edits <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/checkpoints <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    mkdir -p /usr/local/hadoop/hadoop_data/hdfs/checkpoints/edits<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># 开放Hadoop相关端口，方便外部进行访问</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 8088 50090 9864 19888 50070 8080</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">CMD</span> <span class="p">[</span><span class="s2">&#34;/bin/bash&#34;</span><span class="p">]</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><blockquote>
 <p>从上述Dockerfile中不难看出这步仅仅是安装一些必备的环境、配置SSH、声明开放一些端口、创建一些Hadoop的HDFS需要用到的目录，当然Spark和Scala的安装是第二个大作业的要求，我会在下一篇博文分享</p>
@@ -2026,8 +2026,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">docker</span> <span class="n">build</span> <span class="n">-t</span><span class="p">=</span><span class="s2">&#34;hadoop-mutinode-cluster&#34;</span> <span class="p">.</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">build</span> <span class="n">-t</span><span class="p">=</span><span class="s2">&#34;hadoop-mutinode-cluster&#34;</span> <span class="p">.</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="2---配置docker桥接网络">2 - 配置Docker桥接网络</h2>
 <blockquote>
@@ -2042,8 +2042,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">docker</span> <span class="n">network</span> <span class="n">create</span> <span class="p">-</span><span class="n">-driver</span> <span class="n">bridge</span> <span class="nb">hadoop-br</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">network</span> <span class="n">create</span> <span class="p">-</span><span class="n">-driver</span> <span class="n">bridge</span> <span class="nb">hadoop-br</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>以上命令创建了一个名为<code>hadoop-br</code>的bridge类型的网络</p>
 <ul>
@@ -2059,13 +2059,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="c"># master节点创建命令如下：</span>
-<span class="n">docker</span> <span class="n">run</span> <span class="n">-itd</span> <span class="p">-</span><span class="n">-network</span> <span class="nb">hadoop-br</span> <span class="p">-</span><span class="n">-name</span> <span class="n">hadoop_master</span> <span class="p">-</span><span class="n">-hostname</span> <span class="n">master</span> <span class="p">-</span><span class="n">-ip</span> <span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">2</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">slave1</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">3</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">slave2</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">4</span> <span class="n">-p</span> <span class="n">8088</span><span class="err">:</span><span class="n">8088</span> <span class="n">-p</span> <span class="n">8080</span><span class="err">:</span><span class="n">8080</span> <span class="n">-p</span> <span class="n">50090</span><span class="err">:</span><span class="n">50090</span> <span class="n">-p</span> <span class="n">9864</span><span class="err">:</span><span class="n">9864</span> <span class="n">-p</span> <span class="n">19888</span><span class="err">:</span><span class="n">19888</span> <span class="n">-p</span> <span class="n">50070</span><span class="err">:</span><span class="n">50070</span> <span class="n">calvinhaynes412</span><span class="p">/</span><span class="nb">hadoop-mutinodes</span><span class="n">-cluster</span><span class="err">:</span><span class="n">v1</span><span class="p">.</span><span class="n">2</span><span class="p">.</span><span class="n">0</span>
-<span class="c"># slave1</span>
-<span class="n">docker</span> <span class="n">run</span> <span class="n">-itd</span> <span class="p">-</span><span class="n">-network</span> <span class="nb">hadoop-br</span> <span class="p">-</span><span class="n">-name</span> <span class="n">hadoop_slave1</span> <span class="p">-</span><span class="n">-hostname</span> <span class="n">slave1</span> <span class="p">-</span><span class="n">-ip</span> <span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">3</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">master</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">2</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">slave2</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">4</span> <span class="n">calvinhaynes412</span><span class="p">/</span><span class="nb">hadoop-mutinodes</span><span class="n">-cluster</span><span class="err">:</span><span class="n">v1</span><span class="p">.</span><span class="n">2</span><span class="p">.</span><span class="n">0</span>
-<span class="c"># slave2</span>
-<span class="n">docker</span> <span class="n">run</span> <span class="n">-itd</span> <span class="p">-</span><span class="n">-network</span> <span class="nb">hadoop-br</span> <span class="p">-</span><span class="n">-name</span> <span class="n">hadoop_slave2</span> <span class="p">-</span><span class="n">-hostname</span> <span class="n">slave2</span> <span class="p">-</span><span class="n">-ip</span> <span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">4</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">master</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">2</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">slave1</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">3</span> <span class="n">calvinhaynes412</span><span class="p">/</span><span class="nb">hadoop-mutinodes</span><span class="n">-cluster</span><span class="err">:</span><span class="n">v1</span><span class="p">.</span><span class="n">2</span><span class="p">.</span><span class="n">0</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># master节点创建命令如下：</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">run</span> <span class="n">-itd</span> <span class="p">-</span><span class="n">-network</span> <span class="nb">hadoop-br</span> <span class="p">-</span><span class="n">-name</span> <span class="n">hadoop_master</span> <span class="p">-</span><span class="n">-hostname</span> <span class="n">master</span> <span class="p">-</span><span class="n">-ip</span> <span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">2</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">slave1</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">3</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">slave2</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">4</span> <span class="n">-p</span> <span class="n">8088</span><span class="err">:</span><span class="n">8088</span> <span class="n">-p</span> <span class="n">8080</span><span class="err">:</span><span class="n">8080</span> <span class="n">-p</span> <span class="n">50090</span><span class="err">:</span><span class="n">50090</span> <span class="n">-p</span> <span class="n">9864</span><span class="err">:</span><span class="n">9864</span> <span class="n">-p</span> <span class="n">19888</span><span class="err">:</span><span class="n">19888</span> <span class="n">-p</span> <span class="n">50070</span><span class="err">:</span><span class="n">50070</span> <span class="n">calvinhaynes412</span><span class="p">/</span><span class="nb">hadoop-mutinodes</span><span class="n">-cluster</span><span class="err">:</span><span class="n">v1</span><span class="p">.</span><span class="n">2</span><span class="p">.</span><span class="n">0</span>
+</span></span><span class="line"><span class="cl"><span class="c"># slave1</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">run</span> <span class="n">-itd</span> <span class="p">-</span><span class="n">-network</span> <span class="nb">hadoop-br</span> <span class="p">-</span><span class="n">-name</span> <span class="n">hadoop_slave1</span> <span class="p">-</span><span class="n">-hostname</span> <span class="n">slave1</span> <span class="p">-</span><span class="n">-ip</span> <span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">3</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">master</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">2</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">slave2</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">4</span> <span class="n">calvinhaynes412</span><span class="p">/</span><span class="nb">hadoop-mutinodes</span><span class="n">-cluster</span><span class="err">:</span><span class="n">v1</span><span class="p">.</span><span class="n">2</span><span class="p">.</span><span class="n">0</span>
+</span></span><span class="line"><span class="cl"><span class="c"># slave2</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">run</span> <span class="n">-itd</span> <span class="p">-</span><span class="n">-network</span> <span class="nb">hadoop-br</span> <span class="p">-</span><span class="n">-name</span> <span class="n">hadoop_slave2</span> <span class="p">-</span><span class="n">-hostname</span> <span class="n">slave2</span> <span class="p">-</span><span class="n">-ip</span> <span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">4</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">master</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">2</span> <span class="p">-</span><span class="n">-add-host</span> <span class="n">slave1</span><span class="err">:</span><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">3</span> <span class="n">calvinhaynes412</span><span class="p">/</span><span class="nb">hadoop-mutinodes</span><span class="n">-cluster</span><span class="err">:</span><span class="n">v1</span><span class="p">.</span><span class="n">2</span><span class="p">.</span><span class="n">0</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>查看网络情况</li>
@@ -2075,8 +2075,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">docker</span> <span class="n">network</span> <span class="n">inspect</span> <span class="nb">hadoop-br</span> 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">network</span> <span class="n">inspect</span> <span class="nb">hadoop-br</span> 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>执行上述命令会得到类似下面的结果：</strong></p>
 <div class="highlight"><div class="chroma">
@@ -2135,59 +2135,59 @@
 </span><span class="lnt">52
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">[</span>
-    <span class="p">{</span>
-        <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;hadoop-br&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;Id&#34;</span><span class="p">:</span> <span class="s2">&#34;273d82ad790f475ef14a78bd5f203d3e441f446683a89e01da5b8240aae731a9&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;Created&#34;</span><span class="p">:</span> <span class="s2">&#34;2021-11-05T07:04:49.300557Z&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;Scope&#34;</span><span class="p">:</span> <span class="s2">&#34;local&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;Driver&#34;</span><span class="p">:</span> <span class="s2">&#34;bridge&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;EnableIPv6&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&#34;IPAM&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;Driver&#34;</span><span class="p">:</span> <span class="s2">&#34;default&#34;</span><span class="p">,</span>
-            <span class="nt">&#34;Options&#34;</span><span class="p">:</span> <span class="p">{},</span>
-            <span class="nt">&#34;Config&#34;</span><span class="p">:</span> <span class="p">[</span>
-                <span class="p">{</span>
-                    <span class="nt">&#34;Subnet&#34;</span><span class="p">:</span> <span class="s2">&#34;172.18.0.0/16&#34;</span><span class="p">,</span>
-                    <span class="nt">&#34;Gateway&#34;</span><span class="p">:</span> <span class="s2">&#34;172.18.0.1&#34;</span>
-                <span class="p">}</span>
-            <span class="p">]</span>
-        <span class="p">},</span>
-        <span class="nt">&#34;Internal&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&#34;Attachable&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&#34;Ingress&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&#34;ConfigFrom&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;Network&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
-        <span class="p">},</span>
-        <span class="nt">&#34;ConfigOnly&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="nt">&#34;Containers&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;1440ea1055bf14ded8c756bea2ad3f185b00e5663e76b1cf382dd08574be4965&#34;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;hadoop_master&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;EndpointID&#34;</span><span class="p">:</span> <span class="s2">&#34;f193c3bc481b9e447fcffefa50b10519ee6488a34862b51a1f77be52b1d2c922&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;MacAddress&#34;</span><span class="p">:</span> <span class="s2">&#34;02:42:ac:12:00:02&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;IPv4Address&#34;</span><span class="p">:</span> <span class="s2">&#34;172.18.0.2/16&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;IPv6Address&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
-            <span class="p">},</span>
-            <span class="nt">&#34;627843643b974c89063fdd8659c6f2f3b00c1e5ad232b56a3a6513d50d30ce06&#34;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;hadoop_slave2&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;EndpointID&#34;</span><span class="p">:</span> <span class="s2">&#34;1366b734f7579ae61bae3f41ba53a1f2433bd8df9edc115364dc83e7926b0461&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;MacAddress&#34;</span><span class="p">:</span> <span class="s2">&#34;02:42:ac:12:00:04&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;IPv4Address&#34;</span><span class="p">:</span> <span class="s2">&#34;172.18.0.4/16&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;IPv6Address&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
-            <span class="p">},</span>
-            <span class="nt">&#34;62a874539d08a4074374cf74f75832cb2c2245a7c95e809f36cbf1250e8a49ac&#34;</span><span class="p">:</span> <span class="p">{</span>
-                <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;hadoop_slave1&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;EndpointID&#34;</span><span class="p">:</span> <span class="s2">&#34;324e045b4bc61b44967c246fe7ee363582f5cc7c3b78c1327270e3f504ce6ab6&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;MacAddress&#34;</span><span class="p">:</span> <span class="s2">&#34;02:42:ac:12:00:03&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;IPv4Address&#34;</span><span class="p">:</span> <span class="s2">&#34;172.18.0.3/16&#34;</span><span class="p">,</span>
-                <span class="nt">&#34;IPv6Address&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
-            <span class="p">}</span>
-        <span class="p">},</span>
-        <span class="nt">&#34;Options&#34;</span><span class="p">:</span> <span class="p">{},</span>
-        <span class="nt">&#34;Labels&#34;</span><span class="p">:</span> <span class="p">{}</span>
-    <span class="p">}</span>
-<span class="p">]</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;hadoop-br&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Id&#34;</span><span class="p">:</span> <span class="s2">&#34;273d82ad790f475ef14a78bd5f203d3e441f446683a89e01da5b8240aae731a9&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Created&#34;</span><span class="p">:</span> <span class="s2">&#34;2021-11-05T07:04:49.300557Z&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Scope&#34;</span><span class="p">:</span> <span class="s2">&#34;local&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Driver&#34;</span><span class="p">:</span> <span class="s2">&#34;bridge&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;EnableIPv6&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;IPAM&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Driver&#34;</span><span class="p">:</span> <span class="s2">&#34;default&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Options&#34;</span><span class="p">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Config&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">                <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&#34;Subnet&#34;</span><span class="p">:</span> <span class="s2">&#34;172.18.0.0/16&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nt">&#34;Gateway&#34;</span><span class="p">:</span> <span class="s2">&#34;172.18.0.1&#34;</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">]</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Internal&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Attachable&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Ingress&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ConfigFrom&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;Network&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;ConfigOnly&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Containers&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;1440ea1055bf14ded8c756bea2ad3f185b00e5663e76b1cf382dd08574be4965&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;hadoop_master&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;EndpointID&#34;</span><span class="p">:</span> <span class="s2">&#34;f193c3bc481b9e447fcffefa50b10519ee6488a34862b51a1f77be52b1d2c922&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;MacAddress&#34;</span><span class="p">:</span> <span class="s2">&#34;02:42:ac:12:00:02&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;IPv4Address&#34;</span><span class="p">:</span> <span class="s2">&#34;172.18.0.2/16&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;IPv6Address&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;627843643b974c89063fdd8659c6f2f3b00c1e5ad232b56a3a6513d50d30ce06&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;hadoop_slave2&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;EndpointID&#34;</span><span class="p">:</span> <span class="s2">&#34;1366b734f7579ae61bae3f41ba53a1f2433bd8df9edc115364dc83e7926b0461&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;MacAddress&#34;</span><span class="p">:</span> <span class="s2">&#34;02:42:ac:12:00:04&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;IPv4Address&#34;</span><span class="p">:</span> <span class="s2">&#34;172.18.0.4/16&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;IPv6Address&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;62a874539d08a4074374cf74f75832cb2c2245a7c95e809f36cbf1250e8a49ac&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;Name&#34;</span><span class="p">:</span> <span class="s2">&#34;hadoop_slave1&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;EndpointID&#34;</span><span class="p">:</span> <span class="s2">&#34;324e045b4bc61b44967c246fe7ee363582f5cc7c3b78c1327270e3f504ce6ab6&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;MacAddress&#34;</span><span class="p">:</span> <span class="s2">&#34;02:42:ac:12:00:03&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;IPv4Address&#34;</span><span class="p">:</span> <span class="s2">&#34;172.18.0.3/16&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nt">&#34;IPv6Address&#34;</span><span class="p">:</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Options&#34;</span><span class="p">:</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;Labels&#34;</span><span class="p">:</span> <span class="p">{}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>从以上输出不难看出三台机器的ip</strong>：</p>
 <div class="highlight"><div class="chroma">
@@ -2197,10 +2197,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">2</span> <span class="n">master</span>
-<span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">3</span> <span class="n">slave1</span>
-<span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">4</span> <span class="n">slave2</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">2</span> <span class="n">master</span>
+</span></span><span class="line"><span class="cl"><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">3</span> <span class="n">slave1</span>
+</span></span><span class="line"><span class="cl"><span class="n">172</span><span class="p">.</span><span class="n">18</span><span class="p">.</span><span class="n">0</span><span class="p">.</span><span class="n">4</span> <span class="n">slave2</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>可以登录三个Container，尝试互相可不可以ping的通：</strong></p>
 <div class="highlight"><div class="chroma">
@@ -2211,11 +2211,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="c"># 在每个Container中分别测试能不能ping通另外两台机器，如果ping的通代表网络没问题了</span>
-<span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">master</span> <span class="n">bash</span>
-<span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">slave1</span> <span class="n">bash</span>
-<span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">slave2</span> <span class="n">bash</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 在每个Container中分别测试能不能ping通另外两台机器，如果ping的通代表网络没问题了</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">master</span> <span class="n">bash</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">slave1</span> <span class="n">bash</span>
+</span></span><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">exec</span> <span class="n">-it</span> <span class="n">slave2</span> <span class="n">bash</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>测试互相SSH免密登录</li>
@@ -2230,13 +2230,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">ping master 
-ping slave1
-ping slave2
-ssh master
-ssh slave1
-ssh slave2
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ping master 
+</span></span><span class="line"><span class="cl">ping slave1
+</span></span><span class="line"><span class="cl">ping slave2
+</span></span><span class="line"><span class="cl">ssh master
+</span></span><span class="line"><span class="cl">ssh slave1
+</span></span><span class="line"><span class="cl">ssh slave2
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果上述均没问题，那么到此为止修改Hadoop配置之前的预备操作就到此结束了</p>
 <h2 id="3---配置环境变量">3 - 配置环境变量</h2>
@@ -2266,28 +2266,28 @@ ssh slave2
 </span><span class="lnt">21
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1">#Hadoop Variables</span>
-<span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-8-openjdk-amd64
-<span class="nb">export</span> <span class="nv">CLASSPATH</span><span class="o">=</span>.:<span class="nv">$JAVA_HOME</span>/lib/dt.jar:<span class="nv">$JAVA_HOME</span>/lib/tools.jar
-<span class="nb">export</span> <span class="nv">HADOOP_HOME</span><span class="o">=</span>/usr/local/hadoop
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HADOOP_HOME</span>/bin
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HADOOP_HOME</span>/sbin
-<span class="nb">export</span> <span class="nv">HADOOP_MAPPED_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
-<span class="nb">export</span> <span class="nv">HADOOP_COMMON_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
-<span class="nb">export</span> <span class="nv">HADOOP_HDFS_HOME</span><span class="o">=</span><span class="nv">$HODOOP_HOME</span>
-<span class="nb">export</span> <span class="nv">CLASSPATH</span><span class="o">=</span><span class="nv">$CLASSPATH</span>:/usr/local/hadoop/lib/*:.
-<span class="nb">export</span> <span class="nv">YARN_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
-<span class="nb">export</span> <span class="nv">HADOOP_COMMON_LIB_NATIVE_DIR</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>/lib/native
-<span class="nb">export</span> <span class="nv">HADOOP_OPTS</span><span class="o">=</span><span class="s2">&#34;-Djava.library.path=</span><span class="nv">$HADOOP_HOME</span><span class="s2">/lib&#34;</span>
-<span class="nb">export</span> <span class="nv">HADOOP_CONF_DIR</span><span class="o">=</span>/usr/local/hadoop/etc/hadoop
-<span class="nb">export</span> <span class="nv">JAVA_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>/lib/native:<span class="nv">$JAVA_LIBRARY_PATH</span>
-<span class="nb">export</span> <span class="nv">HDFS_NAMENODE_USER</span><span class="o">=</span>root
-<span class="nb">export</span> <span class="nv">HDFS_DATANODE_USER</span><span class="o">=</span>root
-<span class="nb">export</span> <span class="nv">HDFS_SECONDARYNAMENODE_USER</span><span class="o">=</span>root
-<span class="nb">export</span> <span class="nv">YARN_RESOURCEMANAGER_USER</span><span class="o">=</span>root
-<span class="nb">export</span> <span class="nv">YARN_NODEMANAGER_USER</span><span class="o">=</span>root
-<span class="c1">#Hadoop Variables</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1">#Hadoop Variables</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">JAVA_HOME</span><span class="o">=</span>/usr/lib/jvm/java-8-openjdk-amd64
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CLASSPATH</span><span class="o">=</span>.:<span class="nv">$JAVA_HOME</span>/lib/dt.jar:<span class="nv">$JAVA_HOME</span>/lib/tools.jar
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HADOOP_HOME</span><span class="o">=</span>/usr/local/hadoop
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HADOOP_HOME</span>/bin
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HADOOP_HOME</span>/sbin
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HADOOP_MAPPED_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HADOOP_COMMON_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HADOOP_HDFS_HOME</span><span class="o">=</span><span class="nv">$HODOOP_HOME</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">CLASSPATH</span><span class="o">=</span><span class="nv">$CLASSPATH</span>:/usr/local/hadoop/lib/*:.
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">YARN_HOME</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HADOOP_COMMON_LIB_NATIVE_DIR</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>/lib/native
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HADOOP_OPTS</span><span class="o">=</span><span class="s2">&#34;-Djava.library.path=</span><span class="nv">$HADOOP_HOME</span><span class="s2">/lib&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HADOOP_CONF_DIR</span><span class="o">=</span>/usr/local/hadoop/etc/hadoop
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">JAVA_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$HADOOP_HOME</span>/lib/native:<span class="nv">$JAVA_LIBRARY_PATH</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HDFS_NAMENODE_USER</span><span class="o">=</span>root
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HDFS_DATANODE_USER</span><span class="o">=</span>root
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">HDFS_SECONDARYNAMENODE_USER</span><span class="o">=</span>root
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">YARN_RESOURCEMANAGER_USER</span><span class="o">=</span>root
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">YARN_NODEMANAGER_USER</span><span class="o">=</span>root
+</span></span><span class="line"><span class="cl"><span class="c1">#Hadoop Variables</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>更新bash配置</strong>：</p>
 <div class="highlight"><div class="chroma">
@@ -2295,8 +2295,8 @@ ssh slave2
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">source</span> ~/.bashrc
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">source</span> ~/.bashrc
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="4---配置hadoop配置文件核心部分">4 - 配置Hadoop配置文件（核心部分）</h2>
 <p><strong>在hadoop集群中，需要配置的文件主要包括四个，分别是core-site.xml、hdfs-site.xml、mapred-site.xml和yarn-site.xml，这四个文件分别是对不同组件的配置参数</strong>：</p>
@@ -2328,19 +2328,19 @@ ssh slave2
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;configuration&gt;</span>
-<span class="c">&lt;!--配置namenode的地址--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>fs.defaultFS<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>hdfs://master:9000<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-<span class="c">&lt;!-- 指定hadoop运行时产生文件的存储目录 --&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>hadoop.tmp.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/tmp<span class="nt">&lt;/value&gt;</span>
- <span class="nt">&lt;/property&gt;</span>        
-<span class="nt">&lt;/configuration&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--配置namenode的地址--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>fs.defaultFS<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>hdfs://master:9000<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- 指定hadoop运行时产生文件的存储目录 --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>hadoop.tmp.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/tmp<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="nt">&lt;/property&gt;</span>        
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/configuration&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><strong>hdfs-site.xml</strong></li>
@@ -2410,68 +2410,68 @@ ssh slave2
 </span><span class="lnt">61
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;configuration&gt;</span>
-
-  <span class="c">&lt;!--上传的文件的副本数(数据备份数，缺省值为3)--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.replication<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-    
-  <span class="c">&lt;!-- HDFS的webapp允许使用 --&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.webhdfs.enabled<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>true<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-    
-  <span class="c">&lt;!-- namenode web应用端口地址 --&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.http-address<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>master:50070<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  <span class="c">&lt;!--存放namenode所使用的元数据的路径（文件名、副本的数量、每一个块的Datanode的位置）--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.name.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/namenode<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  <span class="c">&lt;!--namenode 存放 edits 的路径（edits中存储的是HDFS操作的日志记录）--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.edits.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/edits<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-
-  <span class="c">&lt;!-- SecondaryNameNode的作用是合并fsimage和edits文件。--&gt;</span>
-  <span class="c">&lt;!--但是如果NameNode执行了很多操作的话，就会导致edits文件会很大，那么在下一次启动的过程中，
-</span><span class="c">      就会导致NameNode的启动速度很慢，慢到几个小时也不是不可能，所以出现了SecondNameNode。--&gt;</span>
-  <span class="c">&lt;!-- secondary namenode web 监听端口 --&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.secondary.http-address<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>master:50090<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  <span class="c">&lt;!-- secondary namenode 节点存储 checkpoint 目录--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.checkpoint.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/checkpoints<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  <span class="c">&lt;!-- secondary namenode 节点存储 edits 目录--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.checkpoint.edits.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/checkpoints/edits<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  
-  <span class="c">&lt;!--DataNode所使用的元数据保存路径--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.datanode.name.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/datanode<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  <span class="c">&lt;!--DataNode 节点存储 edit 文件--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.datanode.edits.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/edits<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-
-<span class="nt">&lt;/configuration&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--上传的文件的副本数(数据备份数，缺省值为3)--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.replication<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>1<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- HDFS的webapp允许使用 --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.webhdfs.enabled<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>true<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- namenode web应用端口地址 --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.http-address<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>master:50070<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--存放namenode所使用的元数据的路径（文件名、副本的数量、每一个块的Datanode的位置）--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.name.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/namenode<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--namenode 存放 edits 的路径（edits中存储的是HDFS操作的日志记录）--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.edits.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/edits<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- SecondaryNameNode的作用是合并fsimage和edits文件。--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--但是如果NameNode执行了很多操作的话，就会导致edits文件会很大，那么在下一次启动的过程中，
+</span></span></span><span class="line"><span class="cl"><span class="c">      就会导致NameNode的启动速度很慢，慢到几个小时也不是不可能，所以出现了SecondNameNode。--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- secondary namenode web 监听端口 --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.secondary.http-address<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>master:50090<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- secondary namenode 节点存储 checkpoint 目录--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.checkpoint.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/checkpoints<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- secondary namenode 节点存储 edits 目录--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.checkpoint.edits.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/checkpoints/edits<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--DataNode所使用的元数据保存路径--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.datanode.name.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/datanode<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--DataNode 节点存储 edit 文件--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.datanode.edits.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/edits<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/configuration&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><strong>mapred-site.xml</strong></li>
@@ -2535,62 +2535,62 @@ ssh slave2
 </span><span class="lnt">55
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;configuration&gt;</span>
-
-  <span class="c">&lt;!--上传的文件的副本数--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.replication<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>2<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-
-  <span class="c">&lt;!-- namenode web 监听端口 --&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.http-address<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>master:50070<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  <span class="c">&lt;!--namenode 所使用的元数据保存路径设置--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.name.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/namenode<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  <span class="c">&lt;!--namenode 存放 edits 的路径（edits中存储的是HDFS操作的日志记录）--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.edits.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/edits<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-
-  <span class="c">&lt;!-- SecondaryNameNode的作用是合并fsimage和edits文件。--&gt;</span>
-  <span class="c">&lt;!--但是如果NameNode执行了很多操作的话，就会导致edits文件会很大，那么在下一次启动的过程中，
-</span><span class="c">      就会导致NameNode的启动速度很慢，慢到几个小时也不是不可能，所以出现了SecondNameNode。--&gt;</span>
-  <span class="c">&lt;!-- secondary namenode web 监听端口 --&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.secondary.http-address<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>master:50090<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  <span class="c">&lt;!-- secondary namenode 节点存储 checkpoint 文件目录--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.checkpoint.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/checkpoints<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  <span class="c">&lt;!-- secondary namenode 节点存储 edits 文件目录--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.namenode.checkpoint.edits.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/checkpoints/edits<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  
-  <span class="c">&lt;!--DataNode所使用的元数据保存路径--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.datanode.name.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/datanode<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  <span class="c">&lt;!--DataNode 节点存储 edit 文件--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>dfs.datanode.edits.dir<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/edits<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-
-<span class="nt">&lt;/configuration&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--上传的文件的副本数--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.replication<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>2<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- namenode web 监听端口 --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.http-address<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>master:50070<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--namenode 所使用的元数据保存路径设置--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.name.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/namenode<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--namenode 存放 edits 的路径（edits中存储的是HDFS操作的日志记录）--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.edits.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/edits<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- SecondaryNameNode的作用是合并fsimage和edits文件。--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--但是如果NameNode执行了很多操作的话，就会导致edits文件会很大，那么在下一次启动的过程中，
+</span></span></span><span class="line"><span class="cl"><span class="c">      就会导致NameNode的启动速度很慢，慢到几个小时也不是不可能，所以出现了SecondNameNode。--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- secondary namenode web 监听端口 --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.secondary.http-address<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>master:50090<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- secondary namenode 节点存储 checkpoint 文件目录--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.checkpoint.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/checkpoints<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- secondary namenode 节点存储 edits 文件目录--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.namenode.checkpoint.edits.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/checkpoints/edits<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--DataNode所使用的元数据保存路径--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.datanode.name.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/datanode<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--DataNode 节点存储 edit 文件--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>dfs.datanode.edits.dir<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>file:/usr/local/hadoop/hadoop_data/hdfs/edits<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/configuration&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><strong>yarn-site.xml</strong></li>
@@ -2625,33 +2625,33 @@ ssh slave2
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="nt">&lt;configuration&gt;</span>
-
-<span class="c">&lt;!-- Site specific YARN configuration properties --&gt;</span>
-  
-  <span class="c">&lt;!-- 指定nodeManager组件在哪个机子上跑 --&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>yarn.nodemanager.aux-services<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>mapreduce_shuffle<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>yarn.nodemanager.aux-services.mapreduce.shuffle.class<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>org.apache.hadoop.mapred.shuffleHandler<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-  
-  <span class="c">&lt;!-- 指定resourcemanager组件在哪个机子上跑 --&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>yarn.resourcemanager.hostname<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>master<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span> 
-  <span class="c">&lt;!--resourcemanager web地址--&gt;</span>
-  <span class="nt">&lt;property&gt;</span>
-    <span class="nt">&lt;name&gt;</span>yarn.resourcemanager.webapp.address<span class="nt">&lt;/name&gt;</span>
-    <span class="nt">&lt;value&gt;</span>master:8088<span class="nt">&lt;/value&gt;</span>
-  <span class="nt">&lt;/property&gt;</span>
-
-<span class="nt">&lt;/configuration&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!-- Site specific YARN configuration properties --&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- 指定nodeManager组件在哪个机子上跑 --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>yarn.nodemanager.aux-services<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>mapreduce_shuffle<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>yarn.nodemanager.aux-services.mapreduce.shuffle.class<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>org.apache.hadoop.mapred.shuffleHandler<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!-- 指定resourcemanager组件在哪个机子上跑 --&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>yarn.resourcemanager.hostname<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>master<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span> 
+</span></span><span class="line"><span class="cl">  <span class="c">&lt;!--resourcemanager web地址--&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;property&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;name&gt;</span>yarn.resourcemanager.webapp.address<span class="nt">&lt;/name&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;value&gt;</span>master:8088<span class="nt">&lt;/value&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/property&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/configuration&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><strong>workers</strong></li>
@@ -2667,9 +2667,9 @@ slave2
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">scp -r /usr/local/hadoop/etc/hadoop root@slave2:/usr/local/hadoop/etc
-scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">scp -r /usr/local/hadoop/etc/hadoop root@slave2:/usr/local/hadoop/etc
+</span></span><span class="line"><span class="cl">scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="6---启动所有服务访问相应的web服务">6 - 启动所有服务&amp;访问相应的Web服务</h2>
 <ol>
@@ -2680,8 +2680,8 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bin/hdfs namenode -format
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bin/hdfs namenode -format
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="2">
 <li>启动HDFS</li>
@@ -2691,8 +2691,8 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sbin/start-all.sh
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">sbin/start-all.sh
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="3">
 <li>JPS命令查看各节点HDFS运行情况</li>
@@ -2702,8 +2702,8 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">jps
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">jps
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -2715,13 +2715,13 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="m">20528</span> NodeManager
-<span class="m">20368</span> ResourceManager
-<span class="m">20065</span> SecondaryNameNode
-<span class="m">19636</span> NameNode
-<span class="m">19791</span> DataNode
-<span class="m">27423</span> Jps
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="m">20528</span> NodeManager
+</span></span><span class="line"><span class="cl"><span class="m">20368</span> ResourceManager
+</span></span><span class="line"><span class="cl"><span class="m">20065</span> SecondaryNameNode
+</span></span><span class="line"><span class="cl"><span class="m">19636</span> NameNode
+</span></span><span class="line"><span class="cl"><span class="m">19791</span> DataNode
+</span></span><span class="line"><span class="cl"><span class="m">27423</span> Jps
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="4">
 <li>通过浏览器访问HDFS对外提供的web服务端口</li>
@@ -2734,8 +2734,8 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="n">docker</span> <span class="n">container</span> <span class="nb">ls
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="n">docker</span> <span class="n">container</span> <span class="nb">ls
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>
@@ -2771,8 +2771,8 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bin/hdfs dfs -mkdir /testHDFS
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bin/hdfs dfs -mkdir /testHDFS
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>上传一个文件（<strong>为了方便我上传的就是hadoop的README文件</strong>）</li>
@@ -2782,8 +2782,8 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">bin/hdfs dfs -put /usr/local/hadoop/README.txt /testHDFS
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">bin/hdfs dfs -put /usr/local/hadoop/README.txt /testHDFS
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li><code>Webapp</code>查看新建的文件夹和文件</li>
@@ -3295,7 +3295,7 @@ scp -r /usr/local/hadoop/etc/hadoop root@slave1:/usr/local/hadoop/etc
 </div>
 
 
-<script defer src="/js/swipe.min.d2e020e2d405fafaa45c0a10d2af949627bf554a9366c31a905af38f8cc30c30.js"></script>
+<script defer src="/js/swipe.min.32b4505a39624feed6faa09f12dd745a099b8811ea631c29cea9692c45984af8.js"></script>
 
 <script defer src="/js/micromodal.min.de01b44b2f383056bbcaf6ee921fd385d79108ec1129afd0eb2f3f5a07e11f45.js"></script>
 
@@ -4374,7 +4374,7 @@ jQuery(document).ready(function($) {
 
         
 	    <div class="github-badge">
-	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.92.1</a></span>
+	      <span class="badge-subject">构建工具</span><span class="badge-value bg-blue"><a style="color:#fff" href="https://gohugo.io/" target="_blank">Hugo v0.96.0</a></span>
               <span class="badge-subject">托管于</span><span class="badge-value bg-brightgreen"><a style="color:#fff" href="https://cn.aliyun.com/" target="_blank">阿里云</a></span>
 	      
 	      <span class="badge-subject">图床</span><span class="badge-value bg-orange"><a style="color:#fff" href="https://picx.xpoet.cn/" target="_blank">picX</a></span>

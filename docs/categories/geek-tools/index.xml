@@ -26,11 +26,11 @@
       
       <item>
         <title>上课摸鱼必备 -- Vscode网页版的搭建教程</title>
-        <link>https://blog.calvinhaynes.top/posts/%E4%B8%8A%E8%AF%BE%E6%91%B8%E9%B1%BC%E5%BF%85%E5%A4%87-vscode%E7%BD%91%E9%A1%B5%E7%89%88%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
+        <link>https://blog.calvinhaynes.top/posts/%E4%B8%8A%E8%AF%BE%E6%91%B8%E9%B1%BC%E5%BF%85%E5%A4%87--vscode%E7%BD%91%E9%A1%B5%E7%89%88%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
         <pubDate>Thu, 05 Aug 2021 20:41:23 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Thu, 05 Aug 2021 20:41:23 +0800</atom:modified>
-        <guid>https://blog.calvinhaynes.top/posts/%E4%B8%8A%E8%AF%BE%E6%91%B8%E9%B1%BC%E5%BF%85%E5%A4%87-vscode%E7%BD%91%E9%A1%B5%E7%89%88%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
+        <guid>https://blog.calvinhaynes.top/posts/%E4%B8%8A%E8%AF%BE%E6%91%B8%E9%B1%BC%E5%BF%85%E5%A4%87--vscode%E7%BD%91%E9%A1%B5%E7%89%88%E7%9A%84%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
         <description>前言 ​ 上课想练练数据结构与算法？或者就是想玩玩儿Vscode？或者有一个自己的服务器，但是觉得没有利用到极致？那么这篇文章将带你搭建一个在线</description>
         <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;​		上课想练练数据结构与算法？或者就是想玩玩儿Vscode？或者有一个自己的服务器，但是觉得没有利用到极致？那么这篇文章将带你搭建一个在线版的Vscode，利用浏览器实现全平台使用Vscode，管你什么手机，Pad，电脑，板砖，咳咳，整就完了！！！&lt;/p&gt;
@@ -105,7 +105,7 @@
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.174au3x9jk80.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://cdn.jsdelivr.net/gh/CalvinHaynes/ImageHub@main/BlogImage/image.7jcmo9u92lw0.png&#34; alt=&#34;image&#34; /&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-linux&#34; data-lang=&#34;linux&#34;&gt;cd code-server
-export PASSWORD=&amp;quot;你想设置的密码&amp;quot;
+export PASSWORD=&amp;#34;你想设置的密码&amp;#34;
 ./code-server --port 9999 --host 0.0.0.0 --auth password
 &lt;/code&gt;&lt;/pre&gt;&lt;blockquote&gt;
 &lt;ul&gt;
@@ -138,7 +138,7 @@ export PASSWORD=&amp;quot;你想设置的密码&amp;quot;
 &lt;li&gt;将PID存到文件里面&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#start.sh
-export PASSWORD=&amp;quot;412523&amp;quot;
+export PASSWORD=&amp;#34;412523&amp;#34;
 nohup ./code-server --port 9999 --host 0.0.0.0 --auth password &amp;gt; test.log 2&amp;gt;&amp;amp;1 &amp;amp;
 echo $! &amp;gt; save_pid.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
@@ -149,7 +149,7 @@ echo $! &amp;gt; save_pid.txt
 &lt;li&gt;杀死进程&lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#shut.sh
-kill -9 &#39;cat save_pid.txt&#39;
+kill -9 &amp;#39;cat save_pid.txt&amp;#39;
 &lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&#34;四ios端ipados端的最佳使用方式&#34;&gt;（四）Ios端/IpadOS端的最佳使用方式&lt;/h2&gt;
