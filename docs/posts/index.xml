@@ -3013,11 +3013,11 @@ kill -9 &amp;#39;cat save_pid.txt&amp;#39;
       
       <item>
         <title>Hugo搭建个人博客教程</title>
-        <link>https://blog.calvinhaynes.top/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8Bgithubpages-&#43;-%E9%98%BF%E9%87%8C%E4%BA%91/</link>
+        <link>https://blog.calvinhaynes.top/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</link>
         <pubDate>Thu, 05 Aug 2021 00:22:49 +0800</pubDate>
         <author>chx1006488386@163.com (Calvin Haynes)</author>
         <atom:modified>Thu, 05 Aug 2021 00:22:49 +0800</atom:modified>
-        <guid>https://blog.calvinhaynes.top/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8Bgithubpages-&#43;-%E9%98%BF%E9%87%8C%E4%BA%91/</guid>
+        <guid>https://blog.calvinhaynes.top/posts/hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%95%99%E7%A8%8B/</guid>
         <description>前言 经过种种尝试，还是决定选择了Hugo作为了搭建个人博客的框架，Hugo是目前可以搭建个人博客的框架中部署最快的，而且坑也相对很少，不过还</description>
         <content:encoded>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
 &lt;p&gt;经过种种尝试，还是决定选择了Hugo作为了搭建个人博客的框架，Hugo是目前可以搭建个人博客的框架中部署最快的，而且坑也相对很少，不过还是有的，近几天折腾了不少东西，也终于算是初步搭建完了Hugo+Zoo主题的&lt;a href=&#34;https://blog.calvinhaynes.top/&#34;&gt;个人博客&lt;/a&gt;&lt;/p&gt;
