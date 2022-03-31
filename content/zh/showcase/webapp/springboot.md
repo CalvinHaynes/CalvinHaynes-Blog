@@ -6,5 +6,5 @@ weight: 1
 link: https://zhuanlan.zhihu.com/p/413266154
 repo: https://github.com/CalvinHaynes/Spring_Boot_Application
 pinned: true
-thumb: https://pic2.zhimg.com/v2-01f026ab5ed9e64cccc6cd708b35f1b8_r.jpg?source=172ae18b
+thumb: /repository/SpringBoot.png
 ---
