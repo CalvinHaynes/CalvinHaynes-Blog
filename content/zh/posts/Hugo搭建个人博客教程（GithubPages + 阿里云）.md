@@ -3,7 +3,7 @@ keywords:
 - "hugo"
 - "阿里云"
 - "GithubPages"
-title: "Hugo搭建个人博客教程（GithubPages + 阿里云）"
+title: "Hugo搭建个人博客教程（GithubPages+阿里云）"
 date: 2021-08-05T00:22:49+08:00
 lastmod: 2021-08-05T00:22:49+08:00
 description: "利用Hugo静态博客框架创建个人博客站的教程"
