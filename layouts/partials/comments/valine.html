@@ -17,11 +17,9 @@
       verify: {{ .Site.Params.valine.verify }},
       avatar:'{{ .Site.Params.valine.avatar }}',
       placeholder: '{{ .Site.Params.valine.placeholder }}',
-      visitor: {{ .Site.Params.valine.visitor }}
-      // 设置Bilibili表情包地址
-      emojiCDN: '//i0.hdslb.com/bfs/emote/', 
-      // 表情title和图片映射
-      emojiMaps: {
+      visitor: {{ .Site.Params.valine.visitor }},
+      emojiCDN: {{ .Site.Params.valine.emojiCDN }}, 
+      emojiMaps: {      // 表情title和图片映射
           "tv_doge": "6ea59c827c414b4a2955fe79e0f6fd3dcd515e24.png",
           "tv_亲亲": "a8111ad55953ef5e3be3327ef94eb4a39d535d06.png",
           "tv_偷笑": "bb690d4107620f1c15cff29509db529a73aee261.png",

@@ -145,6 +145,7 @@ commento = false
   notify = false  # mail notifier , https://github.com/xCss/Valine/wiki
   verify = false # Verification code
   avatar = 'mm' 
+  emojiCDN = '//i0.hdslb.com/bfs/emote/'
   placeholder = '说点什么吧...'
   visitor = true
 
