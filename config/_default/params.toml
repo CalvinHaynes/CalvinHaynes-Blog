@@ -146,7 +146,7 @@ commento = false
   verify = false # Verification code
   avatar = 'mm' 
   placeholder = '说点什么吧...'
-  visitor = false
+  visitor = true
 
 [changyan]
   changyanAppid = ""        # Changyan app id             # 畅言
