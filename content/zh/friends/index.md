@@ -15,5 +15,14 @@ type: "about"
       <a target="_blank" href="https://xf2021.com/" title="小费同学" class="friendurl">小费同学<br><span class="link-description">一个不务正业的小弟～QAQ</span></a>
     </div>
   </div>
+
+  <div class="frienddiv">
+    <div class="frienddivleft">
+      <img class="myfriend" src="https://cdn.jsdelivr.net/gh/XPoet/image-hosting@master/common-use/avatar.jpg">
+    </div>
+    <div class="frienddivright">
+      <a target="_blank" href="https://xpoet.cn/" title="XPoet" class="friendurl">XPoet<br><span class="link-description">前端鼓励师 | 公众号作者</span></a>
+    </div>
+  </div>
   
 </div>
