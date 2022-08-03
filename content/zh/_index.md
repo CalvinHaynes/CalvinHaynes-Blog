@@ -11,7 +11,7 @@ header:
       - typeString: <strong>a CS Lover!</strong>
       - pauseFor: 2500
       - deleteChars: 11
-      - typeString: <strong>a undergraduate!</strong>
+      - typeString: <strong>a geek!</strong>
       - pauseFor: 2500
       - deleteChars: 16
     options:
