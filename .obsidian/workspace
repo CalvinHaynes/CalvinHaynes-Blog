@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "content/zh/posts/基于Docker的Hadoop集群配置Spark并简单使用.md",
+            "file": "content/zh/posts/属于每一个程序猿和学生的一份高效率软件清单-第三弹-windows系统优化工具（持续更新）.md",
             "mode": "source",
             "source": false
           }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "content/zh/posts/基于Docker的Hadoop集群配置Spark并简单使用.md",
+                "file": "content/zh/posts/属于每一个程序猿和学生的一份高效率软件清单-第三弹-windows系统优化工具（持续更新）.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,7 +86,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "content/zh/posts/基于Docker的Hadoop集群配置Spark并简单使用.md"
+                "file": "content/zh/posts/属于每一个程序猿和学生的一份高效率软件清单-第三弹-windows系统优化工具（持续更新）.md"
               }
             }
           }
@@ -99,14 +99,15 @@
   },
   "active": "5ebb2dc8463b94c9",
   "lastOpenFiles": [
+    "content/zh/posts/属于每一个程序猿和学生的一份高效率软件清单-第二弹-程序猿写文档必备工具箱（持续更新）.md",
+    "content/zh/posts/属于每一个程序猿和学生的一份高效率软件清单-第三弹-windows系统优化工具（持续更新）.md",
+    "content/zh/posts/属于每一个程序猿和学生的一份高效率软件清单-第一弹-程序猿高效开发工具（持续更新）.md",
+    "content/zh/posts/一个玩转国外CSLab的通用环境搭建方案（附我的搭建好的MIT6.S081环境）.md",
+    "content/zh/posts/一文教你玩转Git和Github.md",
+    "content/zh/posts/Hugo搭建个人博客教程.md",
+    "content/zh/posts/CSAPP笔记系列_第一章_计算机系统漫游.md",
+    "content/zh/posts/利用Docker搭建一个Hadoop-muti-node-cluster.md",
     "content/zh/posts/基于Docker的Hadoop集群配置Spark并简单使用.md",
-    "docs/logo.png",
-    "docs/logo-512.png",
-    "themes/zzo/exampleSite/content/en/posts/test-chartjs.md",
-    "content/zh/friends/_index.md",
-    "content/zh/posts/_index.md",
-    "modules/友链模板.md",
-    "modules/博客模板.md",
-    "content/zh/_index.md"
+    "content/zh/posts/提问的智慧.md"
   ]
 }
